@@ -23,12 +23,12 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
 
 How does a **software communicate with hardware**:
 
-**Synthesis process** will help to convert software's instruction which is written in high level language to gate level language/machine language which is normally in binary format.
+**Synthesis process** will help to convert software's instructions which is written in high level language to gate level language/machine language which is normally in binary format.
 
 ![software to hardware](https://user-images.githubusercontent.com/62828746/203840905-0b291241-5af6-40d1-9f6a-a8acb8176b7d.png)
 
 **Synthesis process flow**:
-1. **Specification/instruction** written in RTL (**high-level language** such as C, C++ or Java) as inputs.
+1. **Specification/instructions** written in RTL (**high-level language** such as C, C++ or Java) as inputs.
 1. **Compiler** will compile the instruction into **assembly language** (.exe).
 1. **Assembler** will then convert **assembly language** into **gate level language** (low-level language.machine language) which is in binary format (operands), and it is the language understood by a computer.
 
