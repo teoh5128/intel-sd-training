@@ -1,3 +1,3 @@
 this is my first repository.
 
-![My image](https://github.com/teoh5128/intel-sd-training/blob/main/Day0.PNG)
+![Day0](https://user-images.githubusercontent.com/62828746/203705052-b1a7f71d-54c5-4892-8727-92c325354d91.PNG)
