@@ -34,7 +34,12 @@ How does a **software communicate with hardware**:
 
 
 
-### Lab Result
+### Lab 
+#### Steps to enable labs:
+
+* [Day0 Lab Steps](https://intel-my.sharepoint.com/:u:/r/personal/huifen_teoh_intel_com/Documents/Desktop/Intel_SD_Training/Lab/Day0_lab.msg?csf=1&web=1&e=Kat8QI)
+
+#### Result:
 
 ![Day0 Lab Result](https://user-images.githubusercontent.com/62828746/203844716-f72c32ab-2353-4f42-bbd2-c3bb49c88ecb.PNG)
 
