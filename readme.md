@@ -82,7 +82,7 @@ How does a **software communicate with hardware**:
 
 **iVerilog** - is an open source verilog simulator tool that used to check design specification is adherence to RTL design or not.
 
-![iVerilog Based Simulation Flow_0](https://user-images.githubusercontent.com/62828746/205501616-c40a5770-8b56-4c05-93ea-4dd2edde8919.jpg)
+![iVerilog Based Simulation Flow_1a](https://user-images.githubusercontent.com/62828746/205515413-06107299-7637-4000-a983-5ab9c8d46210.jpg)
 
 1. **RTL design** and **testbench** are applied to iVerilog as inputs.
 2. **iVerilog** simulating the design while any changes in value will be generated as VCD file.
