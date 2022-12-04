@@ -20,7 +20,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
   * **Macro** - a simple core/cell with simple functionality and can be easily found online.
   * **Foundry IP's** - cell with more specific functionality and the design was patent/owned by a company. Has higher value compared to macro.
   
-===========================================================================
+================================================================================
 
 How does a **software communicate with hardware**:
 
