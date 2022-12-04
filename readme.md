@@ -248,7 +248,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 
 #### Result:
 ![SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1_result_1_0_0](https://user-images.githubusercontent.com/62828746/205514500-9fedde6a-dd2c-4a7a-b86a-094072f3f2a5.jpg)
-*mux2_1 is a multiplexer that will switch switch two input lines to a single common output line.*
+*mux2_1 is a multiplexer that will switch two input lines to a single common output line.*
 
 ## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3
 
