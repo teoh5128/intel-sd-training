@@ -84,9 +84,9 @@ How does a **software communicate with hardware**:
 
 ![iVerilog Based Simulation Flow_0](https://user-images.githubusercontent.com/62828746/205501616-c40a5770-8b56-4c05-93ea-4dd2edde8919.jpg)
 
-1. RTL design and testbench are applied to iVerilog as inputs.
-2. iVerilog simulating the design while any changes in value will be generated as VCD file.
-3. GTKwave which is a graphic application helps in viewing the waveform.
+1. **RTL design** and **testbench** are applied to iVerilog as inputs.
+2. **iVerilog** simulating the design while any changes in value will be generated as VCD file.
+3. **GTKwave** which is a graphic application helps in viewing the waveform.
 4. Through the waveform, we can observe whether the input and output meet design specification. 
 
 ===========================================================================
@@ -111,9 +111,9 @@ To confirm the netlist generated in synthesis is meet the requirement, will need
 
 **Simulation flow** and the **outputs waveform** for both RTL design and synthesized netlist will be the same. The only difference is the inputs (RTL design[.v] or synthesized netlist[netlist.v]).
 
-1. Netlist and testbench are applied to iVerilog as inputs.
-2. iVerilog simulating the design while any changes in value will be generated as VCD file.
-3. GTKwave which is a graphic application helps in viewing the waveform.
+1. **Netlist** and **testbench** are applied to iVerilog as inputs.
+2. **iVerilog** simulating the design while any changes in value will be generated as VCD file.
+3. **GTKwave** which is a graphic application helps in viewing the waveform.
 4. Through the waveform, we can observe whether the input and output meet design specification. 
 
 ===========================================================================
@@ -124,7 +124,7 @@ Combinational delay in logic path determine the maximum operation speed of digit
 
 ![Flavours of Gate (Fast vs Slow)](https://user-images.githubusercontent.com/62828746/205507225-0ab7c70d-3752-4aa8-8e97-dcf57d984a3f.jpg)
 
-* The minimum clock period must be larger than the total time taken for propogation delay in both DFF A and combinational logic and setup time in DFF B.
+* The **minimum clock period** must be larger than the total time taken for propogation delay in both DFF A and combinational logic and setup time in DFF B.
 * Minimum clock period signal let signals have enough time to travel from DFF A to DFF B.
 * Better performance circuit must have **low clock period** and **high clock frequency**, so that operation speed will be higher.
 * High speed standard cells can help in reduce propogation delay and thus reduce overall clock period.
@@ -140,10 +140,10 @@ Combinational delay in logic path determine the maximum operation speed of digit
 
 ![How Capacitance Effect Circuit's Speed](https://user-images.githubusercontent.com/62828746/205509103-b8a090bb-48eb-4854-abff-5e7c4500ab87.jpg)
 
-* Capacitance - it's a load in digital logic ciruit. Faster charging/discharging rate will reduce cell delay and make cell A to drive cell B faster.
-* Transistor - Wider transistor has higher capable of sourcing larger current and will result in faster capacitance charging/discharging rate. However, will wider transistor will consume larger area and power.
+* **Capacitance** - it's a load in digital logic ciruit. Faster charging/discharging rate will reduce cell delay and make cell A to drive cell B faster.
+* **Transistor** - Wider transistor has higher capable of sourcing larger current and will result in faster capacitance charging/discharging rate. However, will wider transistor will consume larger area and power.
 
-* In shorts, faster cells need to trade off with area and power.
+* In shorts, faster cells need to trade off with **area and power**.
 
 
 ===========================================================================
