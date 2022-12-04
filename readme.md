@@ -20,7 +20,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
   * **Macro** - a simple core/cell with simple functionality and can be easily found online.
   * **Foundry IP's** - cell with more specific functionality and the design was patent/owned by a company. Has higher value compared to macro.
   
-================================================================================
+===========================================================================
 
 How does a **software communicate with hardware**:
 
@@ -76,7 +76,7 @@ How does a **software communicate with hardware**:
 * **Stimulator** - it will apply stimulus to design input (stimulus generator) and obseve stimulus from design output (stimulus observer).
 * **Design** - a verilog code/ a set of verilog codes that has intended functionality to meet required specification (Ex: an inverter).
 
-==========================================================================================
+===========================================================================
 
 ### **iVerilog (Icarus Verilog) Based RTL Design Simulation Flow**
 
@@ -89,7 +89,7 @@ How does a **software communicate with hardware**:
 3. GTKwave which is a graphic application helps in viewing the waveform.
 4. Through the waveform, we can observe whether the input and output meet design specification. 
 
-==========================================================================================
+===========================================================================
 
 ### **yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow**
 
@@ -101,7 +101,7 @@ How does a **software communicate with hardware**:
 * **.lib** - a collection of standard cell/logical modules. It includes basic logic gates (Ex: AND,OR,NAND,NOR) of different flavor such as number of inputs, speeds (slow, medium or fast) and functionality.
 * **Netlist** - it's the representation of design in term of standard cell stored in the .lib.
 
-==========================================================================================
+===========================================================================
 
 ### **iVerilog (Icarus Verilog) Based Synthesized Netlist Simulation Flow**
 
@@ -116,7 +116,7 @@ To confirm the netlist generated in synthesis is meet the requirement, will need
 3. GTKwave which is a graphic application helps in viewing the waveform.
 4. Through the waveform, we can observe whether the input and output meet design specification. 
 
-==========================================================================================
+===========================================================================
 
 ### **How Flavours of Gate Effect Ciruit Operation Speed**
 
@@ -134,7 +134,7 @@ Combinational delay in logic path determine the maximum operation speed of digit
 * In shorts, we need **fast cells to meet required performance** and also need **slow cells to meet minimum hold time**.
 
 
-==========================================================================================
+===========================================================================
 
 ### **How Capacitance Effect Circuit's Speed**
 
@@ -146,7 +146,7 @@ Combinational delay in logic path determine the maximum operation speed of digit
 * In shorts, faster cells need to trade off with area and power.
 
 
-==========================================================================================
+===========================================================================
 
 ### **Cell Selection and Trade Off**
 
@@ -157,7 +157,7 @@ Trade Off for Fast Cell                          | Trade off for Slow Cell
 Bad ciruit in term of area and power             | Slow speed circuit
 Concern in hold time violation                   | Failed required performance
 
-==========================================================================================
+===========================================================================
 
 ## Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab
 
