@@ -39,7 +39,7 @@ How does a **software communicate with hardware**:
 
 
 
-## Lab 
+## Lab Topic - Setup Labs
 #### Steps to enable labs:
 
 * [Day0 Lab Steps](https://intel-my.sharepoint.com/:u:/r/personal/huifen_teoh_intel_com/Documents/Desktop/Intel_SD_Training/Lab/Day0_lab.msg?csf=1&web=1&e=Kat8QI)
@@ -181,7 +181,7 @@ Concern in hold time violation                   | Failed required performance
 #### Result:
 ![SKY130RTL D1SK2 L1 Lab1 introduction to lab_result](https://user-images.githubusercontent.com/62828746/205509273-3c3774d7-75c2-4293-8306-29d9af55b0c8.jpg)
 
-## Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
+## Lab Topic - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
 Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#iverilog-icarus-verilog-based-synthesized-netlist-simulation-flow)
 
 #### Steps:
