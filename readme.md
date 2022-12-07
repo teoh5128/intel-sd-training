@@ -225,7 +225,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 > 1. Invoke synthesizer tools, yosys
 >> *yosys*
 > 2. Read the library
->> *read_library -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
 > 3. Read the design. there should no error and will see "successfully finished verilog frontend" printed.
 >> *read_verilog good_mux.v*
 > 4. Link to the module name that want to be synthesized.
