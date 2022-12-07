@@ -2,11 +2,24 @@
 
 ## Table of contents
 + **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)**
-  * [ Lab Topic -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic---setup-labs)
+  * [ Lab -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---setup-labs)
 + **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
-  * [ Lab Topic - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab)
+  * [Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab)
+  * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part1)
+  * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part2)
+  * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part1)
+  * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part2)
+  * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part3)
 + **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-2)**
-  * [ Lab Topic - SKY130RTL D2SK1 - Introduction to timing .libs
+  * [Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l1-lab4-introduction-to-dot-lib-part1)
+  * [Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l2-lab4-introduction-to-dot-lib-part2)
+  * [Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l3-lab4-introduction-to-dot-lib-part3)
+  * [Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk2-l1-lab05-hier-synthesis-flat-synthesis-part1)
+  * [Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk2-l2-lab05-hier-synthesis-flat-synthesis-part2)
+  * [Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l3-lab-flop-synthesis-simulations-part1)
+  * [Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l4-lab-flop-synthesis-simulations-part2)
+  * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part1)
+  * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2]()
 
 ## Day 0
 ## Topic - System/Tool Setup Check. GitHub ID creation
@@ -521,7 +534,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D2SK3 L5 Interesting optimisations part1_0](https://user-images.githubusercontent.com/62828746/206079676-189935c3-e858-4d57-8684-16880b3f6a6b.jpg)
 
 
-## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1
+## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2
 
 #### Steps:
 1. Run multiplexer_8 synthesis and review it's netlist and grpahical block.
