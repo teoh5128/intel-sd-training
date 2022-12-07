@@ -2,11 +2,11 @@
 
 ## Table of contents
 + **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)**
-  * sss
+  * [ Lab Topic -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic---setup-labs)
 + **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
-  * sss
+  * [ Lab Topic - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab)
 + **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-2)**
-  * sss
+  * [ Lab Topic - SKY130RTL D2SK1 - Introduction to timing .libs
 
 ## Day 0
 ## Topic - System/Tool Setup Check. GitHub ID creation
