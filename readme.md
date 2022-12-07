@@ -19,7 +19,7 @@
   * [Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l3-lab-flop-synthesis-simulations-part1)
   * [Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l4-lab-flop-synthesis-simulations-part2)
   * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part1)
-  * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2]()
+  * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part2)
 
 ## Day 0
 ## Topic - System/Tool Setup Check. GitHub ID creation
