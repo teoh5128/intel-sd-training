@@ -387,9 +387,11 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 #### Result:
 ![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_0a](https://user-images.githubusercontent.com/62828746/205701105-9d011958-99a0-49aa-9948-bd993caf6c6d.jpg)
+
 *resut_1*
 
 ![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_1a](https://user-images.githubusercontent.com/62828746/205701108-a5bf7783-2d6f-49f1-9864-7d5cbe98d6df.jpg)
+
 *resut_2*
 
 ![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_2a](https://user-images.githubusercontent.com/62828746/205701110-67e8a486-fd22-4e4b-9c24-6cb99faf31f3.jpg)
@@ -429,9 +431,11 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1_result](https://user-images.githubusercontent.com/62828746/205941637-f46452bf-1c33-4c2a-9520-ec809fe51dd7.jpg)
 
 ![SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1_result_0](https://user-images.githubusercontent.com/62828746/205940021-e3550d9f-5d2f-4093-abc5-bbf904e1ecc0.jpg)
+
 *Instead of AND and OR logic gate, we see U1 and U2, this is the hierachical design*
 
 ![SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1_result_1](https://user-images.githubusercontent.com/62828746/205940035-aca88f85-7eeb-4b22-adb1-09a46b43664d.jpg)
+
 *result_2.jpg*
 
 
