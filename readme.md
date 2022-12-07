@@ -5,7 +5,7 @@
   * sss
 + **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
   * sss
-+
++ **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-2)**
   * sss
 
 ## Day 0
