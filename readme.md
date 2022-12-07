@@ -1,8 +1,12 @@
 # Intel SD Training 
 
 ## Table of contents
-* [ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)
-* [ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)
++ **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)**
+  * sss
++ **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
+  * sss
++
+  * sss
 
 ## Day 0
 ## Topic - System/Tool Setup Check. GitHub ID creation
@@ -262,3 +266,272 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 #### Result:
 ![SKY130RTL D1SK4 L3 Lab3 Yosys 1 good mux Part3_result_0_0](https://user-images.githubusercontent.com/62828746/205514343-4116c058-f43d-449d-8772-dda8f0572d92.jpg)
 *With no attribute switch, a more simplified netlist (without cell instantiation) will be generated.*
+
+
+## Day 2
+## Topic - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
+
+
+## **Cell Library Characterization**
+* Cell library characterization important for moedeling standard cells in library.
+* Models suitable for each chip implementations flows are different due to variations.
+* Standard cell characterization used for collection cell's information such as leakage power, area, pins and timing.
+* Synthesis tools need to know cell logic function, load, speed of cell under variation, power consumed, area and etc to synthesize behavioral description for standard cells.
+* Even variation exist will effect cell's performance, but we need to make Silicon die works well in every corner.
+
+===========================================================================
+
+## **PVT**
+* Cells behavior strongly depends on factors such as PVT, input signals and output load.
+* To make fabricated chips working in all possible condition, stimulate it at different corners of process, voltage and temperature.
+* While looking at best and worst PVT conditions allows us to predict lower and upper limitation of cell bahvior which are important to ensure the overall functionality of the design.
+
+
+P (Process)                                      | V (Voltage)                                    | T (Temperature)
+---------------------------------------------    | ---------------------------------------------  | --------------------------------------------- 
+Different task or die area (center/boundary) has different process variation during fabrication | IR drop or supply noise might cause voltage variation. Even supplied voltage might not be stable all the time |  Density of transistor is inconsistent throughout the chip and resulting in power dissipation and temperature variation across the chip
+
+===========================================================================
+
+## **Hierachical and Flat Synthesis**
+
+Content   | Hierachical Synthesis | Flat Synthesis
+---| --------------------  | -------------------- 
+Definitions | Contains more than one module inside entire design. Each modules has interdependencies and have signals travelling between modules. | Contains only one module for entire design. It's a set of flat schematics and has no module interdependencies.
+Pros | Sub-modules pins are accessible, it's easier to track path during functional debugging and timing analysis.  | Synthesis tool can optimize the circuit for better speed, area and power. 
+Cons | Might cause issues when synthesize large design with massive sub-modules. | Debugging capabilities are limited.
+Prefered | Prefered for human read-ability and debug purposes | Prefered when design has massive sub_modules, can synthezie one of it and stitch each netlist into top-level netlist.
+
+===========================================================================
+
+## **Glitch**
+* For combinational logic, propagation delay will cause output glitch.
+* **Glitch** is unwanted and must be fixed.
+
+![Glitch](https://user-images.githubusercontent.com/62828746/206111766-51f85c9d-62fd-4a7e-a331-9750b338ed2e.jpg)
+
+===========================================================================
+
+## **DFF**
+* To fix glitch we need an element to store value periodically.
+* **D Flip-flop** - acts as an electronic memory component since the output remains constant unless deliberately changed by altering the state of the D input at the given edge of clock.
+
+![glitch combi](https://user-images.githubusercontent.com/62828746/206115287-75f6b5b8-5554-4464-9063-b0a9d8635d4c.jpg)
+* Combinational circuit for sure will have output glitch due to logic gate propagational delay.
+* Continous combitional circuit will even cause output continously has glitchy output and never settle down.
+
+![stable combi](https://user-images.githubusercontent.com/62828746/206115291-cb106a81-7ce0-43f9-ab94-e0edf2e222b8.jpg)
+* To avoid that, insert DFF for each combinational circuit.
+* DFF shielded from D through clock, which means Q will only change whenever clk edge rise/fall and will not effcted by D.
+* Even input is glitch, output of DFF will become stable and feed stable signal to next combinational circuit.
+
+
+===========================================================================
+
+## **Different type of flop and function**
+* Initial state of flip-flop is importtant to avoid next combinational logic grab and evaluate flip-flop value that are not yet initialized.
+* Initialze of flip flop included set, reset, synchronous and asynchronous.
+
+![asyn_dff](https://user-images.githubusercontent.com/62828746/206149008-ab6e106a-de71-4be7-a552-d327920d37b9.jpg)
+* In **asynchronous reset**, the Flip Flop will not wait for the clock and sets the output right at the edge of the reset.
+* Fast implmentation cause no need to wait for clock signal to be applied.
+
+![sync_dff](https://user-images.githubusercontent.com/62828746/206149022-31e6c2b9-a46c-444c-89e1-e0c60325e8f3.jpg)
+* In **synchronous Reset**, the Flip Flop waits for the next edge of the clock ( rising or falling), before applying the Reset of Data.
+* If duration of rising edge of clock and reset edge is too short might causing metastability issues.
+* DFF must have certain minimum time between reset edge and clock edge, which is reset recovery time. 
+
+![asyn_sync_dff](https://user-images.githubusercontent.com/62828746/206149017-a90fa6d4-1492-46da-9d63-c432c00a727e.jpg)
+* If both **aysnchronous reset and synchronous** reset are used, asynchronous reset has higher priority compared to synchronous reset.
+
+===========================================================================
+
+## Lab Topic - SKY130RTL D2SK1 - Introduction to timing .libs
+
+## Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
+
+#### Steps:
+> 1. Open library file and review what contains in .lib file. [*DO NOT EDIT .LIB FILE, ONLY READ]
+>> *vim /lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+> 2. Tips to switch off syntax for more pleasant review experience. 
+>> *:syn off*
+> 3. Look into the information contains in .lib, such as library name, power, voltage and temperature of cell.
+
+#### Result:
+
+![SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1_result](https://user-images.githubusercontent.com/62828746/205701093-f65384e7-3f54-4ad0-b684-2d55bac72677.jpg)
+*PVT information in .lib are important variations for a design to work.*
+
+## Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
+
+#### Steps:
+> 1. There are various type of standard cells inside .lib file, we will see each cell features inside .lib.
+>> *refer to resut_1.jpg*
+> 2. To understand cell functionality, can review its equivalent verilog model.
+>> *:sp ../my_lib/verilog_model/*
+> 3. Delay and leakage power for all possible combitional inputs for a cell are also listed inside .lib.
+>> *refer to result_2.jpg*
+
+#### Result:
+![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_0a](https://user-images.githubusercontent.com/62828746/205701105-9d011958-99a0-49aa-9948-bd993caf6c6d.jpg)
+*resut_1*
+
+![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_1a](https://user-images.githubusercontent.com/62828746/205701108-a5bf7783-2d6f-49f1-9864-7d5cbe98d6df.jpg)
+*resut_2*
+
+![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_2a](https://user-images.githubusercontent.com/62828746/205701110-67e8a486-fd22-4e4b-9c24-6cb99faf31f3.jpg)
+
+## Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
+Related with theory part: [How Capacitance Effect Circuit's Speed](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#how-capacitance-effect-circuits-speed)
+
+#### Steps:
+> 1. Same cell type with different flavour will have different value in leakage power and area.
+>> *:vsp*
+
+#### Result:
+![SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3_result_0a](https://user-images.githubusercontent.com/62828746/205701114-6f4f12b9-da8b-4143-b160-bcab608269d4.jpg)
+*Faster cell with higher power has larger transistor, and will trade off with area consumed.*
+
+
+## Lab Topic - SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis
+
+## Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
+
+#### Steps:
+> 1.Take multiple_modules as example, may load multiple_modules.v file and review it's sub-module functionality.
+>> *vim multiple_modules.v*
+> 2. Run synthesis to see how top modules and sub-modules synthesis result make differences.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog multiple_modules.v*
+>> * *synth -top multiple_modules*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show multiple_modules*
+>> * *write_verilog -noattr multiple_modules_hier.v*
+> 3. Open and review generated netlist.
+>> * *!vim multiple_modules_hier.v*
+>> * *refer to result_2.jpg*
+
+#### Result:
+![SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1_result](https://user-images.githubusercontent.com/62828746/205941637-f46452bf-1c33-4c2a-9520-ec809fe51dd7.jpg)
+
+![SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1_result_0](https://user-images.githubusercontent.com/62828746/205940021-e3550d9f-5d2f-4093-abc5-bbf904e1ecc0.jpg)
+*Instead of AND and OR logic gate, we see U1 and U2, this is the hierachical design*
+
+![SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1_result_1](https://user-images.githubusercontent.com/62828746/205940035-aca88f85-7eeb-4b22-adb1-09a46b43664d.jpg)
+*result_2.jpg*
+
+
+## Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
+
+#### Steps:
+> 1. Use command to write out flat netlist.
+>> * *flatten*
+>> * *write_verilog -noattr multiple_modules_flat.v*
+> 2. Open and review generated netlist.
+>> *!vim multiple_modules_flat.v*
+> 3. Instead of multiple_modules, now try to do a sub-module level synthesis.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+>> * *read_verilog multiple_modules.v*
+>> * *synth -top sub_module1*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+
+![SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2_0](https://user-images.githubusercontent.com/62828746/205951977-f5421835-b178-46d7-9fc5-6129d4cb07f0.jpg)
+
+![SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2_1](https://user-images.githubusercontent.com/62828746/205951986-657e5cee-aefa-4a79-9738-0303eba015ea.jpg)
+
+![SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2_2](https://user-images.githubusercontent.com/62828746/205951994-b0a98ae0-f52c-4d5e-baef-206a4ab6cb30.jpg)
+
+
+## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
+## Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
+
+#### Steps:
+> 1. Take asynchronous reset flip flop as example. Run simulation by apply RTL Design (dff_asyncres.v) and testbench (tb_dff_asyncres.v) as inputs.
+>> * *iverilog dff_asyncres.v tb_dff_asyncres.v*
+>> * *./a.out*
+>>  *gtkwave tb_dff_asyncres.vcd*
+> 2. Take synchronous reset flip flop as example. Run simulation by apply RTL Design (dff_syncres.v) and testbench (tb_dff_syncres.v) as inputs.
+>> * *iverilog dff_syncres.v tb_dff_syncres.v
+>> * *./a.out*
+>> * *gtkwave tb_dff_syncres.vcd*
+
+#### Result:
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part1_0](https://user-images.githubusercontent.com/62828746/206079681-127eb22e-f0fd-4a01-8ba5-6c99e106ab35.jpg)
+*asynchronous reset flip flop waveform*
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part1_1](https://user-images.githubusercontent.com/62828746/206079656-679d86f4-36e9-49f9-9add-94d2acdd0d80.jpg)
+*asynchronous reset flip flop waveform*
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part1_2](https://user-images.githubusercontent.com/62828746/206079660-462b73df-ad21-476a-a32b-8c75b3a49aed.jpg)
+*synchronous reset flip flop waveform*
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part1_3](https://user-images.githubusercontent.com/62828746/206079666-3ba2f68f-6a04-430d-aa37-8d51ac88a8aa.jpg)
+*synchronous reset flip flop waveform*
+
+## Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
+
+#### Steps:
+> 1. We have done simulation of flip flop in part1, now run synthesis for asynchronous_reset flip flop and see the netlist.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog dff_asyncres.v*
+>> * *synth -top dff_asyncres*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib -> this will make it only looking for flip flop standard cell in .lib*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+> 2. Read asynchronous_set flip flop netlist.
+>> * *read_verilog dff_async_set.v*
+>> * *synth -top dff_async_set*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+> 3. Read synchronous_reset flip flop netlist.
+>> * *read_verilog dff_syncres.v*
+>> * *synth -top dff_syncres*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2_0](https://user-images.githubusercontent.com/62828746/206079667-6627f537-235f-4f98-98dd-49e506b7e50a.jpg)
+*Command dfflibmap used will only looking for flip flop standard cell in .lib file.*
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2_1](https://user-images.githubusercontent.com/62828746/206079670-39d2ba3f-005f-4d7a-b9a6-0e71333b4d8c.jpg)
+*Differences of asynchronous_reset with asynchronous_set*
+![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2_2](https://user-images.githubusercontent.com/62828746/206079674-bc8452b9-4bfa-4194-a0ed-22dc56f95deb.jpg)
+*Synchronous_reset flip flop grapgical block*
+
+## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
+## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1
+
+#### Steps:
+1. Run multiplexer_2 synthesis and review it's netlist and grpahical block.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib* 
+>> * *read_verilog mult_2.v*
+>> * *synth -top dff_asyncres*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+>> * *write_verilog -noattr mul2_net.v*
+
+#### Result:
+![SKY130RTL D2SK3 L5 Interesting optimisations part1_0](https://user-images.githubusercontent.com/62828746/206079676-189935c3-e858-4d57-8684-16880b3f6a6b.jpg)
+
+
+## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1
+
+#### Steps:
+1. Run multiplexer_8 synthesis and review it's netlist and grpahical block.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog mult_8.v*
+>> * *synth -top mult8*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+>> * *write_verilog -noattr mul8_net.v*
+
+#### Result:
+![SKY130RTL D2SK3 L5 Interesting optimisations part1_1](https://user-images.githubusercontent.com/62828746/206079678-c3a23b3d-59c1-4b40-bb79-010964f8ae09.jpg)
