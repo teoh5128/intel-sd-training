@@ -669,8 +669,8 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
 >> * *read_verilog multiple_module_opt2.v*
 >> * *synth -top multiple_module_opt2*
->> * *flatten -> to get flat schematic*
->> * *opt_clean -purge-> command to do the optimization such as constant propagation*
+>> * *flatten->to get flat schematic*
+>> * *opt_clean -purge->command to do the optimization such as constant propagation*
 >> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
 >> * *show*
 
