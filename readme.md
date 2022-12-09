@@ -676,7 +676,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 #### Result:
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_0](https://user-images.githubusercontent.com/62828746/206799866-4a387398-cdba-4283-916d-956567df71f0.jpg)
-*Review multiple_module verliog file (multiple_module*.v and multiple_module_opt2.v)*
+*Review multiple_module verliog file (multiple_module_opt.v and multiple_module_opt2.v)*
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_1](https://user-images.githubusercontent.com/62828746/206799870-a47c7051-7b14-4041-a2c6-de493194b7a2.jpg)
 *Synthesis result of multiple_module*.v*
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_2](https://user-images.githubusercontent.com/62828746/206799872-3bb846d1-90c1-4ce2-966b-d51ab1131b7c.jpg)
