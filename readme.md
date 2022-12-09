@@ -553,24 +553,6 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 #### Result:
 ![SKY130RTL D2SK3 L5 Interesting optimisations part1_1](https://user-images.githubusercontent.com/62828746/206079678-c3a23b3d-59c1-4b40-bb79-010964f8ae09.jpg)
 
-#### Steps:
-1. Review the counter_opt verilog and take it as example for optimisation of unused outputs in circuit.
->> * *gvim counter_opt.v*
-> 2. Now, run synthesis and review the result.
->> * *yosys*
->> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
->> * *read_verilog counter_opt.v*
->> * *synth -top counter_opt*
->> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
->> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
->> * *show*
-
-#### Result:
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_0](https://user-images.githubusercontent.com/62828746/206759754-754de599-73ae-4d1e-8305-fa332c80d887.jpg)
-*Review 3-bit counter, counter_opt.v file.*
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206759759-36715001-bede-44d9-9448-44340b96ebf0.jpg)
-*Only one DFF used in circuit cause unused flop are optimized.*
-
 
 
 ## Day 3
