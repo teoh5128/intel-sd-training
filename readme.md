@@ -21,6 +21,19 @@
   * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part1)
   * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part2)
 
++ **[ Day 3 - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-3)**
+  * [Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l1-lab06-combinational-logic-optimisations-part1)
+  * [Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l2-lab06-combinational-logic-optimisations-part2)
+  * [Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l2-lab06-combinational-logic-optimisations-exercise)
+  * [Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk3-l1-lab07-sequential-logic-optimisations-part1)
+  * [ab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk3-l2-lab07-sequential-logic-optimisations-part2)
+  * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3)
+  * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3-exercise)
+  * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part1)
+  * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part2)
+
+
+
 ## Day 0
 ## Topic - System/Tool Setup Check. GitHub ID creation
 
