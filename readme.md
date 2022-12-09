@@ -624,12 +624,13 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206727335-f2b3df1c-69a5-4ace-b8cc-c9d8891fe40e.jpg)
+![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206799590-79949c0b-a29b-4ed3-aea5-67b5adeae60c.jpg)
 *Review opt_check.v and opt_check2.v file.*
-![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206726304-8a0a4a5b-9f2e-4500-bed8-4674d34cd15f.jpg)
+![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206799599-febe29b7-b91a-4ca9-8b0c-a1da420e26c9.jpg)
 *An AND gate was inferred in the circuit as expected*
-![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206726308-afa07d44-49bb-4666-b83e-76fe05e756af.jpg)
+![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206799603-7f31f792-c06a-4538-b4f1-b9e7f35b89b4.jpg)
 *An OR gate was inferred in the circuit as expected*
+
 
 ## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
@@ -643,9 +644,9 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_0](https://user-images.githubusercontent.com/62828746/206750459-01d2b915-44c5-4f2a-9911-d4d78482b7a8.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_0](https://user-images.githubusercontent.com/62828746/206799763-a6f440ad-869e-48a4-9b01-ff01c2ea4111.jpg)
 *Review opt_check3.v file.*
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206750466-f99b75c9-0616-4cb9-908d-0ba60c32c49c.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206799757-90d69bc5-476a-40ac-8832-f0ccc9cfb5e2.jpg)
 *An 3-input AND gate was inferred in the circuit as expected*
 
 
@@ -674,16 +675,17 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_0](https://user-images.githubusercontent.com/62828746/206782967-0e5b60ff-a6ff-46ea-bc63-35ac4c425597.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_0](https://user-images.githubusercontent.com/62828746/206799866-4a387398-cdba-4283-916d-956567df71f0.jpg)
 *Review multiple_module verliog file (multiple_module*.v and multiple_module_opt2.v)*
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_1](https://user-images.githubusercontent.com/62828746/206782972-ab808b1e-f9ac-4a42-8d46-d9ff1501395d.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_1](https://user-images.githubusercontent.com/62828746/206799870-a47c7051-7b14-4041-a2c6-de493194b7a2.jpg)
 *Synthesis result of multiple_module*.v*
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_2](https://user-images.githubusercontent.com/62828746/206782974-101b5f8c-cd69-46a8-ae79-3129d480cbd4.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_2](https://user-images.githubusercontent.com/62828746/206799872-3bb846d1-90c1-4ce2-966b-d51ab1131b7c.jpg)
 *After flatten the hierachical and optimization, 3-input AND-OR gate is used for output Y.*
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_3](https://user-images.githubusercontent.com/62828746/206782977-a29ef59e-a6e8-42a2-89e6-cfbd178279a9.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_3](https://user-images.githubusercontent.com/62828746/206799873-a6d92257-7ea8-46cf-8258-9ee41870dfa0.jpg)
 *Synthesis result of multiple_module2*.v*
-![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_4](https://user-images.githubusercontent.com/62828746/206782980-fb84f836-2bb3-400b-9873-eeb409349b93.jpg)
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_4](https://user-images.githubusercontent.com/62828746/206799874-21d36b85-c6d3-4561-a6f3-9b9b42651534.jpg)
 *After flatten the hierachical and optimization, output Y is direct assigned to value 0*
+
 
 ## Lab Topic - SKY130RTL D3SK3 - Sequential logic optimizations
 ## Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
@@ -709,14 +711,16 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206746231-982c4c9e-6911-4236-b4d8-eeb705ea0126.jpg)
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206800029-a2a33821-33fb-405b-b6a0-46c461b81a47.jpg)
 *Review dff verilog file.*
-![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206746236-974d9d1e-6cd1-481d-800d-4ca30db35982.jpg)
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206800034-f72f23b8-16eb-4922-b9ad-ca7cf55e5068.jpg)
 *Resulted waveform of tb_dff_const1.vcd*
-![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206746241-eb52a0a0-cf91-49bc-b935-3347c662524e.jpg)
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206800036-48810996-470b-4ee5-b718-1a7044c4d45d.jpg)
 *Resulted waveform of tb_dff_const2.vcd*
-![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_3](https://user-images.githubusercontent.com/62828746/206746243-a4305e30-02df-40d0-bdd7-a3e73cbb145e.jpg)
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_3](https://user-images.githubusercontent.com/62828746/206800039-17e98ebf-6270-4ada-b961-64c6afa67456.jpg)
 *Resulted graphic design is as expected.*
+
+
 
 ## Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 #### Steps:
@@ -730,10 +734,11 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 > *gvim dff_const3.v*
 
 #### Result:
-![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_0](https://user-images.githubusercontent.com/62828746/206744609-74b11328-eebb-42c3-923b-ad6c2db56c18.jpg)
+![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_0](https://user-images.githubusercontent.com/62828746/206800108-9b7dff16-df81-4d23-a506-649899d2830c.jpg)
 *D flip flop are optmized in the constant propagation optimization steps.*
-![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206744615-e3f07634-d893-4b24-8d97-0853f9077978.jpg)
+![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206800112-3efadaeb-489a-4c22-8f54-c8d227ee6007.jpg)
 *Review dff_const3.v file.*
+
 
 ## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 #### Steps:
@@ -751,11 +756,11 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_0](https://user-images.githubusercontent.com/62828746/206744617-5819f2c9-0a6d-443d-abb2-1600ea928294.jpg)
+![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_0](https://user-images.githubusercontent.com/62828746/206800170-a00e923d-05a9-4989-966d-f57417518e60.jpg)
 *Resulted waveform of tb_dff_const3.vcd as expected.*
-![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_1](https://user-images.githubusercontent.com/62828746/206744621-f06500b8-7345-4af5-973e-50fe1a3538fa.jpg)
+![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_1](https://user-images.githubusercontent.com/62828746/206800178-fcc2258f-c250-49f7-b411-62ec74abc160.jpg)
 *There are 2 flip flop inferring in the circuit as expected.*
-![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_2](https://user-images.githubusercontent.com/62828746/206744623-0cd0d6e6-ef59-4af0-892c-80cd0b2a4c3b.jpg)
+![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_2](https://user-images.githubusercontent.com/62828746/206800180-f9e39367-51a2-4fb0-a353-8922b87333fe.jpg)
 *Resulted graphic design is as expected.*
 
 
@@ -791,18 +796,20 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_0](https://user-images.githubusercontent.com/62828746/206790121-51c92a6d-79f3-4778-8f7e-72decedc3c8d.jpg)
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_0](https://user-images.githubusercontent.com/62828746/206800243-62f5e767-a4d0-416e-8712-704f4f7a7cff.jpg)
 *Review dff_const4.v file.*
-![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_1](https://user-images.githubusercontent.com/62828746/206790127-8b8a1d1e-df49-42eb-b67f-947f8610855c.jpg)
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_1](https://user-images.githubusercontent.com/62828746/206800246-e479b304-4b9c-4c1b-b298-5471625d0349.jpg)
 *Resulted waveform of tb_dff_const4.vcd as expected, q1 and q value is constant.*
-![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_2](https://user-images.githubusercontent.com/62828746/206790129-45b196fe-5ccd-4968-a34c-5b0f87c3a45d.jpg)
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_2](https://user-images.githubusercontent.com/62828746/206800251-1744bef1-c422-4fc4-8ca4-a0be846869b2.jpg)
 *Resulted graphic design is as expected, flop,clk and reset are optimized.*
-![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_3](https://user-images.githubusercontent.com/62828746/206790133-e780c243-1cba-4e5a-aef8-fdcd49803462.jpg)
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_3](https://user-images.githubusercontent.com/62828746/206800253-1ad61fa2-5928-40ff-8665-93fd63e37e5b.jpg)
 *Review dff_const5.v file.*
-![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_4](https://user-images.githubusercontent.com/62828746/206790137-9666e8cd-28bd-4f22-8177-399591c07cde.jpg)
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_4](https://user-images.githubusercontent.com/62828746/206800256-990bf112-bc6f-49f3-a109-f574bb9384ec.jpg)
 *Resulted waveform of tb_dff_const5.vcd as expected, q1 and q value is not constant.*
-![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_5](https://user-images.githubusercontent.com/62828746/206790142-eab18bef-035f-426c-af6c-da16290a8d0e.jpg)
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_5](https://user-images.githubusercontent.com/62828746/206800261-6f33b73a-9113-4078-bd03-ad867d14e23e.jpg)
 *Resulted graphic design is as expected, flop can't be optimized.*
+
+
 
 ## Lab Topic - SKY130RTL D3SK4 - Sequential optimzations for unused outputs
 ## Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
@@ -820,9 +827,9 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_0](https://user-images.githubusercontent.com/62828746/206759754-754de599-73ae-4d1e-8305-fa332c80d887.jpg)
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_0](https://user-images.githubusercontent.com/62828746/206800384-09212387-6ff5-48cd-808a-60629c718502.jpg)
 *Review 3-bit counter, counter_opt.v file.*
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206759759-36715001-bede-44d9-9448-44340b96ebf0.jpg)
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206800390-9ac3772b-da06-4ed1-b972-89673ced638a.jpg)
 *Only one DFF used in circuit cause unused flop are optimized.*
 
 ## Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
@@ -842,13 +849,17 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 >> * *show*
 
 #### Result:
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_3](https://user-images.githubusercontent.com/62828746/206722298-4250f112-2ded-498d-b013-3b8310b16fac.jpg)
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_3](https://user-images.githubusercontent.com/62828746/206800449-e1829e70-88e6-44c1-bad0-d2947e56d408.jpg)
 *Edit counter_opt2 verilog file and assigned q to counter[2] when bit 3'b100*
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_2](https://user-images.githubusercontent.com/62828746/206722320-38ec7662-e8ed-4452-8393-da6024c5b822.jpg)
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_2](https://user-images.githubusercontent.com/62828746/206800447-c5125ee0-73ea-4b28-8ae2-9f15590eac50.jpg)
 *There are 3 flops are inferred in the circuit as expected.*
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_1](https://user-images.githubusercontent.com/62828746/206722312-3975a68f-16ea-4073-b142-449195616ad9.jpg)
-![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_0](https://user-images.githubusercontent.com/62828746/206722307-065c78cb-26d1-4a2b-8b1c-9e1141ccfe02.jpg)
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_1](https://user-images.githubusercontent.com/62828746/206800444-feda61e3-1b53-4474-9181-1d36abc56d6f.jpg)
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_0](https://user-images.githubusercontent.com/62828746/206800450-15bbd3b8-305a-4536-a644-d16c0c067b26.jpg)
 *Highlighted path is the path of input to output path in summary.*
+
+
+
+
 
 
 
