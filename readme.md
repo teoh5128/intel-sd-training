@@ -571,6 +571,265 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206759759-36715001-bede-44d9-9448-44340b96ebf0.jpg)
 *Only one DFF used in circuit cause unused flop are optimized.*
 
+
+
+## Day 3
+## Topic - Combinational and sequential optmizations
+
+
+## **Optimisation of Synthesis Tools**
+* When device library cells are instantiated, **synthesis tools do not optimize them by default**. 
+* Even when instructed to optimize the device library cells, synthesis tools generally cannot perform the same level of optimization as with the RTL. 
+* Therefore, synthesis tools typically **only perform optimizations on the paths to and from these cells** but not through the cells.
+* Synthesis optmization helps to reduce circuit delay by reduce gate count without effecting original logic to meet timing constraints.
+* Synthesis tool perform optimization by minimize cost function.
+* **Cost function** comes in various flavour depend on EDA tool vendor.
+* Two of the important cost function to minimize: time related and delay cost. 
+
+## **Constant propagation**
+* Constant propagation - a process of substituting the constant value of variables in the expression.
+* It is one of the local code optimization technique for compiler.
+
+## **Combinational vs Sequential optimization**
+Key          | Combinational Circuit                                   | Sequential Circuit
+-------------    | ---------------------------------------------  | ------------------
+Definition | Combinational Circuit is the type of circuit in which output is independent of time and only relies on the current input. |Sequential circuit is the type of circuit where output relies on both current input and also previous output. 
+Optimization | constant propagation is Boolean algebra. | constant propagation is Boolean algebra + timing.
+
+## **Boolean Logic Optimisation**
+* **logic optimisation** improves simulation efficiency by simplyfy a complex boolean expression to simpler one which would ultimately produce same result.
+
+## **Boundary Optimisation**
+*  Boundary optimisation is the optimisation undergo across boundary. 
+*  Boundary optimisation including conatant optimization across hierarhies, remove unloaded logic connected, collapse equal and opposite pins, rewiring of equivalent signals across hierarchy and etc.
+*  For example: Boundary optimisation will remove unused buffers that are inserted for allowing signal out of the module, then it will replace an inverters to see is it good enough for signal going out.
+
+
+## Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
+## Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
+
+#### Steps:
+> 1. Review optimization verilog file (opt_check.v and opt_check2.v).
+>> *ls *opt_check**
+>> *gvim opt_check.v*
+>> *gvim opt_check2.v*
+> 2. Run synthesis for opt_check.v and review it's netlist and grpahical block.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog opt_check.v*
+>> * *synth -top opt_check*
+>> * *opt_clean -purge-> command to do the optimization such as constant propagation*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+> 3. Run synthesis for opt_check2.v and review it's netlist and grpahical block.
+>> * *read_verilog opt_check2.v*
+>> * *synth -top opt_check2*
+>> * *opt_clean -purge-> command to do the optimization such as constant propagation*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206727335-f2b3df1c-69a5-4ace-b8cc-c9d8891fe40e.jpg)
+*Review opt_check.v and opt_check2.v file.*
+![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206726304-8a0a4a5b-9f2e-4500-bed8-4674d34cd15f.jpg)
+*An AND gate was inferred in the circuit as expected*
+![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206726308-afa07d44-49bb-4666-b83e-76fe05e756af.jpg)
+*An OR gate was inferred in the circuit as expected*
+
+## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
+
+#### Steps:
+> 1. Review third optimization verliog file (opt_check3.v).
+> 2. Run synthesis for opt_check3.v and review it's netlist and grpahical block.
+>> * *read_verilog opt_check3.v*
+>> * *synth -top opt_check3*
+>> * *opt_clean -purge-> command to do the optimization such as constant propagation*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_0](https://user-images.githubusercontent.com/62828746/206750459-01d2b915-44c5-4f2a-9911-d4d78482b7a8.jpg)
+*Review opt_check3.v file.*
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206750466-f99b75c9-0616-4cb9-908d-0ba60c32c49c.jpg)
+*An 3-input AND gate was inferred in the circuit as expected*
+
+
+## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)
+
+#### Steps:
+> 1. Review the two multiple_module verliog file (multiple_module*.v and multiple_module_opt2.v).
+>> * *gvim multiple_module_opt.v -o multiple_module_opt2.v*
+> 2. Run synthesis for multiple_module_opt.v and review it's netlist and grpahical block.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog multiple_module_opt.v*
+>> * *synth -top multiple_module_opt*
+>> * *flatten -> to get flat schematic*
+>> * *opt_clean -purge-> command to do the optimization such as constant propagation*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+> 3. Run synthesis for multiple_module_opt2.v and review it's netlist and grpahical block.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog multiple_module_opt2.v*
+>> * *synth -top multiple_module_opt2*
+>> * *flatten -> to get flat schematic*
+>> * *opt_clean -purge-> command to do the optimization such as constant propagation*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_0](https://user-images.githubusercontent.com/62828746/206782967-0e5b60ff-a6ff-46ea-bc63-35ac4c425597.jpg)
+*Review multiple_module verliog file (multiple_module*.v and multiple_module_opt2.v)*
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_1](https://user-images.githubusercontent.com/62828746/206782972-ab808b1e-f9ac-4a42-8d46-d9ff1501395d.jpg)
+*Synthesis result of multiple_module*.v*
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_2](https://user-images.githubusercontent.com/62828746/206782974-101b5f8c-cd69-46a8-ae79-3129d480cbd4.jpg)
+*After flatten the hierachical and optimization, 3-input AND-OR gate is used for output Y.*
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_3](https://user-images.githubusercontent.com/62828746/206782977-a29ef59e-a6e8-42a2-89e6-cfbd178279a9.jpg)
+*Synthesis result of multiple_module2*.v*
+![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_4](https://user-images.githubusercontent.com/62828746/206782980-fb84f836-2bb3-400b-9873-eeb409349b93.jpg)
+*After flatten the hierachical and optimization, output Y is direct assigned to value 0*
+
+## Lab Topic - SKY130RTL D3SK3 - Sequential logic optimizations
+## Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
+
+#### Steps:
+> 1. Review the dff file that will be the example for sequential logic optimization.
+>> *gvim dff_const1.v -o dff_const2.v*
+> 2. Run simulation by apply RTL Design (dff_const1.v) and testbench (tb_dff_const1.v) as inputs.
+>> *iverilog dff_const1.v tb_dff_const1.v*
+>> *./a.out*
+>> *gtkwave tb_dff_const1.vcd*
+> 3. Run simulation by apply RTL Design (dff_const2.v) and testbench (tb_dff_const2.v) as inputs.
+>> *iverilog dff_const2.v tb_dff_const2.v*
+>> *./a.out*
+>> *gtkwave tb_dff_const2.vcd*
+> 4. Now, run synthesis for dff_const1 and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog dff_const1.v*
+>> * *synth -top dff_const1*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib -> tell synthesis tool the sequential circuit is mainly for dff latches and only pick flip flop standard cell in .lib*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206746231-982c4c9e-6911-4236-b4d8-eeb705ea0126.jpg)
+*Review dff verilog file.*
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206746236-974d9d1e-6cd1-481d-800d-4ca30db35982.jpg)
+*Resulted waveform of tb_dff_const1.vcd*
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206746241-eb52a0a0-cf91-49bc-b935-3347c662524e.jpg)
+*Resulted waveform of tb_dff_const2.vcd*
+![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_3](https://user-images.githubusercontent.com/62828746/206746243-a4305e30-02df-40d0-bdd7-a3e73cbb145e.jpg)
+*Resulted graphic design is as expected.*
+
+## Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
+#### Steps:
+> 1. Now, run synthesis for dff_const2 and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog dff_const2.v*
+>> * *synth -top dff_const2*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib -> tell synthesis tool the sequential circuit is mainly for dff latches and only pick flip flop standard cell in .lib*
+> 2. Review the dff_const3 verilog file that will be the next example for sequential logic optimization.
+> *gvim dff_const3.v*
+
+#### Result:
+![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_0](https://user-images.githubusercontent.com/62828746/206744609-74b11328-eebb-42c3-923b-ad6c2db56c18.jpg)
+*D flip flop are optmized in the constant propagation optimization steps.*
+![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206744615-e3f07634-d893-4b24-8d97-0853f9077978.jpg)
+*Review dff_const3.v file.*
+
+## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
+#### Steps:
+> 1. Run simulation by apply RTL Design (dff_const3.v) and testbench (tb_dff_const3.v) as inputs.
+> >> *iverilog dff_const3.v tb_dff_const3.v*
+>> *./a.out*
+>> *gtkwave tb_dff_const3.vcd*
+> 2. Now, run synthesis for dff_const3 and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog dff_const3.v*
+>> * *synth -top dff_const3*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib -> tell synthesis tool the sequential circuit is mainly for dff latches and only pick flip flop standard cell in .lib*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_0](https://user-images.githubusercontent.com/62828746/206744617-5819f2c9-0a6d-443d-abb2-1600ea928294.jpg)
+*Resulted waveform of tb_dff_const3.vcd as expected.*
+![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_1](https://user-images.githubusercontent.com/62828746/206744621-f06500b8-7345-4af5-973e-50fe1a3538fa.jpg)
+*There are 2 flip flop inferring in the circuit as expected.*
+![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_2](https://user-images.githubusercontent.com/62828746/206744623-0cd0d6e6-ef59-4af0-892c-80cd0b2a4c3b.jpg)
+*Resulted graphic design is as expected.*
+
+
+## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)
+> 1. Review the dff file.
+>> gvim dff_const4.v 
+> 2. Run simulation by apply RTL Design (dff_const4.v) and testbench (tb_dff_const4.v) as inputs.
+> >> *iverilog dff_const4.v tb_dff_const4.v*
+>> *./a.out*
+>> *gtkwave tb_dff_const4.vcd*
+> 3. Now, run synthesis for dff_const4 and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog dff_const4.v*
+>> * *synth -top dff_const4*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+> 1. Review the dff file.
+>> gvim dff_const4.v 
+> 2. Run simulation by apply RTL Design (dff_const5.v) and testbench (tb_dff_const5.v) as inputs.
+> >> *iverilog dff_const5.v tb_dff_const5.v*
+>> *./a.out*
+>> *gtkwave tb_dff_const5.vcd*
+> 3. Now, run synthesis for dff_const3 and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog dff_const5.v*
+>> * *synth -top dff_const5*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_0](https://user-images.githubusercontent.com/62828746/206790121-51c92a6d-79f3-4778-8f7e-72decedc3c8d.jpg)
+*Review dff_const4.v file.*
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_1](https://user-images.githubusercontent.com/62828746/206790127-8b8a1d1e-df49-42eb-b67f-947f8610855c.jpg)
+*Resulted waveform of tb_dff_const4.vcd as expected, q1 and q value is constant.*
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_2](https://user-images.githubusercontent.com/62828746/206790129-45b196fe-5ccd-4968-a34c-5b0f87c3a45d.jpg)
+*Resulted graphic design is as expected, flop,clk and reset are optimized.*
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_3](https://user-images.githubusercontent.com/62828746/206790133-e780c243-1cba-4e5a-aef8-fdcd49803462.jpg)
+*Review dff_const5.v file.*
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_4](https://user-images.githubusercontent.com/62828746/206790137-9666e8cd-28bd-4f22-8177-399591c07cde.jpg)
+*Resulted waveform of tb_dff_const5.vcd as expected, q1 and q value is not constant.*
+![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_5](https://user-images.githubusercontent.com/62828746/206790142-eab18bef-035f-426c-af6c-da16290a8d0e.jpg)
+*Resulted graphic design is as expected, flop can't be optimized.*
+
+## Lab Topic - SKY130RTL D3SK4 - Sequential optimzations for unused outputs
+## Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
+
+#### Steps:
+1. Review the counter_opt verilog and take it as example for optimisation of unused outputs in circuit.
+>> * *gvim counter_opt.v*
+> 2. Now, run synthesis and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog counter_opt.v*
+>> * *synth -top counter_opt*
+>> * *dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *show*
+
+#### Result:
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_0](https://user-images.githubusercontent.com/62828746/206759754-754de599-73ae-4d1e-8305-fa332c80d887.jpg)
+*Review 3-bit counter, counter_opt.v file.*
+![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206759759-36715001-bede-44d9-9448-44340b96ebf0.jpg)
+*Only one DFF used in circuit cause unused flop are optimized.*
+
 ## Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2
 
 #### Steps:
@@ -595,4 +854,6 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_1](https://user-images.githubusercontent.com/62828746/206722312-3975a68f-16ea-4073-b142-449195616ad9.jpg)
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_0](https://user-images.githubusercontent.com/62828746/206722307-065c78cb-26d1-4a2b-8b1c-9e1141ccfe02.jpg)
 *Highlighted path is the path of input to output path in summary.
+
+
 
