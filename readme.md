@@ -30,7 +30,7 @@
   * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3)
   * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3-exercise)
   * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part1)
-  * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part2)
+  * [Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2]()
 
 
 
@@ -825,7 +825,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206759759-36715001-bede-44d9-9448-44340b96ebf0.jpg)
 *Only one DFF used in circuit cause unused flop are optimized.*
 
-## Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2
+## Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
 #### Steps:
 1. Modidy counter_opt verilog and take it as second example for optimisation of unused outputs in circuit.
@@ -843,12 +843,12 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 #### Result:
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_3](https://user-images.githubusercontent.com/62828746/206722298-4250f112-2ded-498d-b013-3b8310b16fac.jpg)
-*Edit counter_opt2 verilog file and assigned q to counter[2] when bit 3'b100
+*Edit counter_opt2 verilog file and assigned q to counter[2] when bit 3'b100*
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_2](https://user-images.githubusercontent.com/62828746/206722320-38ec7662-e8ed-4452-8393-da6024c5b822.jpg)
-*There are 3 flops are inferred in the circuit as expected.
+*There are 3 flops are inferred in the circuit as expected.*
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_1](https://user-images.githubusercontent.com/62828746/206722312-3975a68f-16ea-4073-b142-449195616ad9.jpg)
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_0](https://user-images.githubusercontent.com/62828746/206722307-065c78cb-26d1-4a2b-8b1c-9e1141ccfe02.jpg)
-*Highlighted path is the path of input to output path in summary.
+*Highlighted path is the path of input to output path in summary.*
 
 
 
