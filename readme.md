@@ -676,14 +676,19 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 #### Result:
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_0](https://user-images.githubusercontent.com/62828746/206799866-4a387398-cdba-4283-916d-956567df71f0.jpg)
+
 *Review multiple_module verliog file(multiple_module_opt.v and multiple_module_opt2.v)*
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_1](https://user-images.githubusercontent.com/62828746/206799870-a47c7051-7b14-4041-a2c6-de493194b7a2.jpg)
+
 *Synthesis result of multiple_module_opt.v*
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_2](https://user-images.githubusercontent.com/62828746/206799872-3bb846d1-90c1-4ce2-966b-d51ab1131b7c.jpg)
+
 *After flatten the hierachical and optimization, 3-input AND-OR gate is used for output Y.*
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_3](https://user-images.githubusercontent.com/62828746/206799873-a6d92257-7ea8-46cf-8258-9ee41870dfa0.jpg)
+
 *Synthesis result of multiple_module_opt2.v*
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)_4](https://user-images.githubusercontent.com/62828746/206799874-21d36b85-c6d3-4561-a6f3-9b9b42651534.jpg)
+
 *After flatten the hierachical and optimization, output Y is direct assigned to value 0*
 
 
