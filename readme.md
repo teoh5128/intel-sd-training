@@ -593,6 +593,14 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 ## **Boolean Logic Optimisation**
 * **logic optimisation** improves simulation efficiency by simplyfy a complex boolean expression to simpler one which would ultimately produce same result.
+* **Boolean algebra** refers to symbolic manipulation of expressions made up of boolean variables and boolean operators.
+* **Axioms of Boolean algebra** : identity, commutative, distributive, and associative
+
+<img width="615" alt="Boolean algebra" src="https://user-images.githubusercontent.com/62828746/206801948-d9fdeb1b-aafc-47d1-aeeb-e4574b9eba88.png">
+*Axioms of Boolean algebra [reference from: 7.1   Boolean Logic](https://introcs.cs.princeton.edu/java/71boolean/)*
+
+<img width="516" alt="identities" src="https://user-images.githubusercontent.com/62828746/206801941-30dd7c69-dcfc-457a-8eb3-8d89be6ee89b.png">
+*Laws of Boolean Algebra [reference from: 7.1   Boolean Logic](https://introcs.cs.princeton.edu/java/71boolean/)*
 
 ## **Boundary Optimisation**
 *  Boundary optimisation is the optimisation undergo across boundary. 
