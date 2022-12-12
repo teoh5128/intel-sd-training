@@ -635,10 +635,13 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 #### Result:
 ![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_0](https://user-images.githubusercontent.com/62828746/206799590-79949c0b-a29b-4ed3-aea5-67b5adeae60c.jpg)
+
 *Review opt_check.v and opt_check2.v file.*
 ![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_1](https://user-images.githubusercontent.com/62828746/206799599-febe29b7-b91a-4ca9-8b0c-a1da420e26c9.jpg)
+
 *An AND gate was inferred in the circuit as expected*
 ![SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1_2](https://user-images.githubusercontent.com/62828746/206799603-7f31f792-c06a-4538-b4f1-b9e7f35b89b4.jpg)
+
 *An OR gate was inferred in the circuit as expected*
 
 
