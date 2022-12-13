@@ -84,7 +84,7 @@
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
 
-<details><summary> Package </summary>
+<details open><summary> Package </summary>
  
 ### **Package**
 Package is a container that holds die and was connected to outside (external device) by using wire bonding.
