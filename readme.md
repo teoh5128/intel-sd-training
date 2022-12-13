@@ -766,7 +766,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 ## Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
 
-<details><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
+<details open><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
   
 ### Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
