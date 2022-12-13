@@ -251,10 +251,10 @@ Concern in hold time violation                   | Failed required performance
 
   </details>
 
-## Lab -  SKY130RTL D1SK2 Labs using iverilog and gtkwave and SKY130RTL D1SK4 Labs using Yosys and Sky130 PDKs
+## Lab Topic-  SKY130RTL D1SK2 Labs using iverilog and gtkwave
 <details><summary> SKY130RTL D1SK2 L1 Lab1 introduction to lab </summary>
  
-## Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab
+### Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab
 
 #### Steps:
 
@@ -274,9 +274,11 @@ Concern in hold time violation                   | Failed required performance
 
   </details>
  
+ ## Lab Topic- SKY130RTL D1SK4 Labs using Yosys and Sky130 PDKs
+  
  <details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
   
-## Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
+### Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
 Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#iverilog-icarus-verilog-based-synthesized-netlist-simulation-flow)
 
 #### Steps:
@@ -298,7 +300,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
   
 <details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
   
-## Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2
+### Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2
 
 #### Steps:
 > 1. Explore verilog file and testbench file to compare it with generated waveform.
@@ -322,7 +324,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 
 <details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
  
-## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
+### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
 Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#yosys-yosys-open-synthesis-suite-based-synthesis-flow)
 
 #### Steps:
@@ -346,7 +348,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
  
 <details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
  
-## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2
+### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2
 
 #### Steps:
 > 1. Load verilog file and review it togther with graphical version of the logic.
@@ -360,7 +362,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 
 <details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
  
-## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3
+### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3
 
 #### Steps:
 > 1. To write out synthesized netlist
@@ -470,7 +472,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 <details><summary> SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1 </summary>
   
-## Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
+### Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
 
 #### Steps:
 > 1. Open library file and review what contains in .lib file. [*DO NOT EDIT .LIB FILE, ONLY READ]
@@ -489,7 +491,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 <details><summary> SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2 </summary>
   
-## Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
+### Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
 
 #### Steps:
 > 1. There are various type of standard cells inside .lib file, we will see each cell features inside .lib.
@@ -514,7 +516,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
   
 <details><summary> SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3 </summary>
   
-## Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
+### Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
 Related with theory part: [How Capacitance Effect Circuit's Speed](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#how-capacitance-effect-circuits-speed)
 
 #### Steps:
@@ -531,7 +533,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
 <details><summary> SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1 </summary>
     
-## Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
+### Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
 
 #### Steps:
 > 1.Take multiple_modules as example, may load multiple_modules.v file and review it's sub-module functionality.
@@ -563,7 +565,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   
 <details><summary> SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2 </summary>
   
-## Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
+### Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
 
 #### Steps:
 > 1. Use command to write out flat netlist.
@@ -593,7 +595,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   
 <details><summary> SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1 </summary>
   
-## Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
+### Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
 
 #### Steps:
 > 1. Take asynchronous reset flip flop as example. Run simulation by apply RTL Design (dff_asyncres.v) and testbench (tb_dff_asyncres.v) as inputs.
@@ -619,7 +621,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   
 <details><summary> SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2 </summary>
   
-## Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
+### Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
 #### Steps:
 > 1. We have done simulation of flip flop in part1, now run synthesis for asynchronous_reset flip flop and see the netlist.
@@ -658,7 +660,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
 <details><summary> SKY130RTL D2SK3 L5 Interesting optimisations part1 </summary>
   
-## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1
+### Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1
 
 #### Steps:
 1. Run multiplexer_2 synthesis and review it's netlist and grpahical block.
@@ -677,7 +679,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   
 <details><summary>  SKY130RTL D2SK3 L5 Interesting optimisations part2 </summary>
   
-## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2
+### Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2
 
 #### Steps:
 1. Run multiplexer_8 synthesis and review it's netlist and grpahical block.
@@ -753,7 +755,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
   
-## Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
+### Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
 #### Steps:
 > 1. Review optimization verilog file (opt_check.v and opt_check2.v).
@@ -790,7 +792,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2 </summary>
   
-## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
+### Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
 #### Steps:
 > 1. Review third optimization verliog file (opt_check3.v).
@@ -812,7 +814,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise) </summary>
   
-## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)
+### Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)
 
 #### Steps:
 > 1. Review the two multiple_module verliog file (multiple_module*.v and multiple_module_opt2.v).
@@ -864,7 +866,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1 </summary>
   
-## Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
+### Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
 
 #### Steps:
 > 1. Review the dff file that will be the example for sequential logic optimization.
@@ -900,7 +902,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2 </summary>
   
-## Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
+### Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 #### Steps:
 > 1. Now, run synthesis for dff_const2 and review the result.
 >> * *yosys*
@@ -922,7 +924,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 </summary>
 
-## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
+### Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 #### Steps:
 > 1. Run simulation by apply RTL Design (dff_const3.v) and testbench (tb_dff_const3.v) as inputs.
 > >> *iverilog dff_const3.v tb_dff_const3.v*
@@ -949,7 +951,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise) </summary>
 
-## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)
+### Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)
 > 1. Review the dff file.
 >> gvim dff_const4.v 
 > 2. Run simulation by apply RTL Design (dff_const4.v) and testbench (tb_dff_const4.v) as inputs.
@@ -1000,7 +1002,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 <details><summary> SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1 </summary>
   
-## Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
+### Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
 #### Steps:
 1. Review the counter_opt verilog and take it as example for optimisation of unused outputs in circuit.
@@ -1024,7 +1026,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   
 <details><summary> SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2 </summary>
   
-## Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
+### Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
 #### Steps:
 1. Modidy counter_opt verilog and take it as second example for optimisation of unused outputs in circuit.
@@ -1138,7 +1140,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
 <details open><summary> SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1 </summary>
 
-## Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
+### Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
 
 #### Steps:
 > 1. Review the ternary operator mux file.
@@ -1175,7 +1177,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
   
 <details open><summary> SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2 </summary>
   
-## Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
+### Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
 
 #### Steps:
 > 1. Review the bad mux file.
@@ -1211,7 +1213,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
   
 <details open><summary> SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1 </summary>
   
-## Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
+### Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
 
 #### Steps:
 > 1. Review the blocking_caveat file.
@@ -1244,7 +1246,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
 <details open><summary> SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2 </summary>
 
-## Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
+### Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
 
 #### Steps:
 > 1. Now, run synthesis for blocking_caveat and review the result.
