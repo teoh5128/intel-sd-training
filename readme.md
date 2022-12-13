@@ -2,15 +2,31 @@
 
 ## Table of contents
 + **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)**
+  <details><summary> Theory </summary>
+  </details>
+  <details><summary> Lab </summary>
+  <br>
+  
   * [ Lab -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---setup-labs)
-+ **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
+  </details>
+  
+- **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
+  <details><summary> Theory </summary>
+  </details>
+  <details><summary> Lab </summary>
+  
   * [Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab)
   * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part1)
   * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part2)
   * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part1)
   * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part2)
   * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part3)
+  
 + **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-2)**
+  <details><summary> Theory </summary>
+  </details>
+  <details><summary> Lab </summary>
+  
   * [Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l1-lab4-introduction-to-dot-lib-part1)
   * [Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l2-lab4-introduction-to-dot-lib-part2)
   * [Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l3-lab4-introduction-to-dot-lib-part3)
@@ -20,8 +36,13 @@
   * [Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l4-lab-flop-synthesis-simulations-part2)
   * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part1)
   * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part2)
-
-+ **[ Day 3 - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-3)**
+   </details>
+  
+- **[ Day 3 - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-3)**
+  <details><summary> Theory </summary>
+  </details>
+  <details><summary> Lab </summary>
+  
   * [Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l1-lab06-combinational-logic-optimisations-part1)
   * [Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l2-lab06-combinational-logic-optimisations-part2)
   * [Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l2-lab06-combinational-logic-optimisations-exercise)
@@ -31,17 +52,29 @@
   * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3-exercise)
   * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part1)
   * [Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l2-seq-optimisation-unused-outputs-part2)
-
+  
+  </details>
+  
 + **[ Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
+  <details><summary> Theory </summary>
+  </details>
+  <details><summary> Lab </summary>
+  
   * [Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic---sky130rtl-d4sk2---labs-on-gls-and-synthesis-simulation-mismatch)
   * [Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk2-l2-lab-gls-synth-sim-mismatch-part2)
   * [Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l1-lab-synth-sim-mismatch-blocking-statement-part1)
   * [Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l2-lab-synth-sim-mismatch-blocking-statement-part2)
   
+  </details>
+ 
+ 
 ## Day 0
-## Topic - System/Tool Setup Check. GitHub ID creation
+## Theory - System/Tool Setup Check. GitHub ID creation
 
-**Package** is a container that holds die and was connected to outside (external device) by using wire bonding.
+<details><summary> Package </summary>
+ 
+### **Package**
+Package is a container that holds die and was connected to outside (external device) by using wire bonding.
 Example of package - Quadruple in-line package (QIP) and Dual in-line package (DIP).
 
 ![die](https://user-images.githubusercontent.com/62828746/203833674-a44e1aa2-42f1-43eb-8890-016e0bc186e1.png)
@@ -54,22 +87,26 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
   * **Macro** - a simple core/cell with simple functionality and can be easily found online.
   * **Foundry IP's** - cell with more specific functionality and the design was patent/owned by a company. Has higher value compared to macro.
   
-===========================================================================
+  </details>
 
-How does a **software communicate with hardware**:
+<details><summary> How does a **software communicate with hardware**</summary>
 
+### **How does a software communicate with hardware**
 **Synthesis process** will help to convert software's instructions which is written in high level language to gate level language/machine language which is normally in binary format.
 
 ![software to hardware](https://user-images.githubusercontent.com/62828746/203840905-0b291241-5af6-40d1-9f6a-a8acb8176b7d.png)
-
+ 
 **Synthesis process flow**:
 1. **Specification/instructions** written in RTL (**high-level language** such as C, C++ or Java) as inputs.
 1. **Compiler** will compile the instruction into **assembly language** (.exe).
 1. **Assembler** will then convert **assembly language** into **gate level language** (low-level language.machine language) which is in binary format (operands), and it is the language understood by a computer.
 
-
+   </details>
 
 ## Lab - Setup Labs
+
+<details><summary> Steps to enable labs </summary>
+ 
 #### Steps to enable labs:
 
 * [Day0 Lab Steps](https://intel-my.sharepoint.com/:u:/r/personal/huifen_teoh_intel_com/Documents/Desktop/Intel_SD_Training/Lab/Day0_lab.msg?csf=1&web=1&e=Kat8QI)
@@ -77,31 +114,42 @@ How does a **software communicate with hardware**:
 #### Result:
 
 ![Day0 Lab Result](https://user-images.githubusercontent.com/62828746/203844716-f72c32ab-2353-4f42-bbd2-c3bb49c88ecb.PNG)
-
+ 
+   </details>
 
 
 ## Day 1
-## Topic - Introduction to Verilog RTL design and Synthesis
+## Theory - Introduction to Verilog RTL design and Synthesis
+
+<details><summary> HDL (Hardware description Language) </summary>
 
 ### **HDL (Hardware description Language)**
 * It is a language that used to model electronic circuit/system by describing their structure and behavior precisely.
 * Commonly used in the design and verification of digital circuit.
 * Most widely used and well-supported HDL used in industry: **Verilog** and VHDL (VHSIC Hardware Description Language)
 * HDL code can be written in 3 model/levels of abstraction. (Behavioural, RTL and Gate-level)
-
+   </details>
+ 
+<details><summary> RTL Design (Register Transfer Level) </summary>
+  
 ### **RTL Design (Register Transfer Level)**
 * It's a design abstraction which models the signal flow between hardware registers and also the logical operations that performed on those signals.
 * RTL written in Verilog decribes how signal is changed as it passed from register to register. 
 * In shorts, HDL is a language used to decribe circuit's specification (structure and bahaviour) while RTL is a way of describing the circuit. 
-
+   </details>
+ 
+<details><summary> Synthesis </summary>
+ 
 ### **Synthesis**
 * Synthesis tool (synthesizer) will turning an abstract design (**RTL**) into a correctly implmented chip in term of logic gates (**netlist**).
 * Translation - Translate Verilog that describe design specification/functionality into basic logic gates.
 * Mapping - Map logic gates to actual technology dependent logic gate that are readily avaiable in tech file.
 * Optimization - Optimized mapped netlist while maintaining design's specification/functionality.
 
+   </details>
 
-
+<details><summary> Testbench </summary>
+ 
 ### **Testbench**
 
 ![testbench](https://user-images.githubusercontent.com/62828746/205500508-8e14ec1a-86b0-443f-aa71-f6570a717609.jpg)
@@ -110,8 +158,10 @@ How does a **software communicate with hardware**:
 * **Stimulator** - it will apply stimulus to design input (stimulus generator) and obseve stimulus from design output (stimulus observer).
 * **Design** - a verilog code/ a set of verilog codes that has intended functionality to meet required specification (Ex: an inverter).
 
-===========================================================================
+   </details>
 
+<details><summary> iVerilog (Icarus Verilog) Based RTL Design Simulation Flow </summary>
+ 
 ### **iVerilog (Icarus Verilog) Based RTL Design Simulation Flow**
 
 **iVerilog** - is an open source verilog simulator tool that used to check design specification is adherence to RTL design or not.
@@ -123,8 +173,10 @@ How does a **software communicate with hardware**:
 3. **GTKwave** which is a graphic application helps in viewing the waveform.
 4. Through the waveform, we can observe whether the input and output meet design specification. 
 
-===========================================================================
+   </details>
 
+<details><summary> yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow </summary>
+ 
 ### **yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow**
 
 **yosys** is a framework for RTL synthesis tools that is used to convert RTL to netlist.
@@ -135,8 +187,10 @@ How does a **software communicate with hardware**:
 * **.lib** - a collection of standard cell/logical modules. It includes basic logic gates (Ex: AND,OR,NAND,NOR) of different flavor such as number of inputs, speeds (slow, medium or fast) and functionality.
 * **Netlist** - it's the representation of design in term of standard cell stored in the .lib.
 
-===========================================================================
+   </details>
 
+ <details><summary> iVerilog (Icarus Verilog) Based Synthesized Netlist Simulation Flow </summary>
+  
 ### **iVerilog (Icarus Verilog) Based Synthesized Netlist Simulation Flow**
 
 To confirm the netlist generated in synthesis is meet the requirement, will need to verify the netlist by using the simulator tool.
@@ -150,8 +204,10 @@ To confirm the netlist generated in synthesis is meet the requirement, will need
 3. **GTKwave** which is a graphic application helps in viewing the waveform.
 4. Through the waveform, we can observe whether the input and output meet design specification. 
 
-===========================================================================
-
+   </details>
+ 
+ <details><summary> How Flavours of Gate Effect Ciruit Operation Speed </summary>
+  
 ### **How Flavours of Gate Effect Ciruit Operation Speed**
 
 Combinational delay in logic path determine the maximum operation speed of digital logic circuit.
@@ -167,9 +223,10 @@ Combinational delay in logic path determine the maximum operation speed of digit
 * Slower cells can help in meeting the required hold time.
 * In shorts, we need **fast cells to meet required performance** and also need **slow cells to meet minimum hold time**.
 
+   </details>
 
-===========================================================================
-
+<details><summary> How Capacitance Effect Circuit's Speed* </summary>
+ 
 ### **How Capacitance Effect Circuit's Speed**
 
 ![How Capacitance Effect Circuit's Speed](https://user-images.githubusercontent.com/62828746/205509103-b8a090bb-48eb-4854-abff-5e7c4500ab87.jpg)
@@ -179,9 +236,9 @@ Combinational delay in logic path determine the maximum operation speed of digit
 
 * In shorts, faster cells need to trade off with **area and power**.
 
+   </details>
 
-===========================================================================
-
+<details><summary> Cell Selection and Trade Off </summary>
 ### **Cell Selection and Trade Off**
 
 Synthesizer required **constraints** as guidance in cell selection to select correct cell flavour that is optimum for logic circuit implementation.
@@ -191,8 +248,11 @@ Trade Off for Fast Cell                          | Trade off for Slow Cell
 Bad ciruit in term of area and power             | Slow speed circuit
 Concern in hold time violation                   | Failed required performance
 
-===========================================================================
+  </details>
 
+## Lab -  SKY130RTL D1SK2 Labs using iverilog and gtkwave and SKY130RTL D1SK4 Labs using Yosys and Sky130 PDKs
+<details><summary> SKY130RTL D1SK2 L1 Lab1 introduction to lab </summary>
+ 
 ## Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab
 
 #### Steps:
@@ -211,6 +271,10 @@ Concern in hold time violation                   | Failed required performance
 #### Result:
 ![SKY130RTL D1SK2 L1 Lab1 introduction to lab_result](https://user-images.githubusercontent.com/62828746/205509273-3c3774d7-75c2-4293-8306-29d9af55b0c8.jpg)
 
+   </details>
+ 
+ <details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
+  
 ## Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
 Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#iverilog-icarus-verilog-based-synthesized-netlist-simulation-flow)
 
@@ -229,8 +293,9 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 > 2. Review waveform in GTKwave after pull all the signals to "signal" column and zoom to fit.
 
 ![SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1_result_2_a](https://user-images.githubusercontent.com/62828746/205514717-bdef7d9c-0f8a-4c13-a65e-58a95c6f1df0.jpg)
-
-
+     </details>
+  
+<details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
 ## Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2
 
 #### Steps:
@@ -252,6 +317,10 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 ![SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2_result_5_0](https://user-images.githubusercontent.com/62828746/205514403-96f1e1e3-26bb-436a-ada1-e415a13627ab.jpg)
 *After 75ns, sel is triggered, hence output will follow i1 value, y=0.*
 
+    </details>
+
+<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
+ 
 ## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
 Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#yosys-yosys-open-synthesis-suite-based-synthesis-flow)
 
@@ -269,11 +338,14 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 > 6. To see graphical version of the logic it does realized.
 >> *show*
 
-
 #### Result:
 ![SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1_result_1_0](https://user-images.githubusercontent.com/62828746/205514365-a1c5b714-5856-4f31-8220-0ede601699a9.jpg)
 *Total inputs, library version used and total outputs shown in graphic should be the same with the ABC results.*
 
+     </details>
+ 
+<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
+ 
 ## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2
 
 #### Steps:
@@ -283,7 +355,11 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 #### Result:
 ![SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1_result_1_0_0](https://user-images.githubusercontent.com/62828746/205514500-9fedde6a-dd2c-4a7a-b86a-094072f3f2a5.jpg)
 *mux2_1 is a multiplexer that will switch two input lines to a single common output line.*
+     
+ </details>
 
+<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
+ 
 ## Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3
 
 #### Steps:
@@ -292,10 +368,11 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 > 2. To write out synthesized netlist in more simplified way.
 >> *write_verilog -noattr good_mux_netlist.v*
 
-
 #### Result:
 ![SKY130RTL D1SK4 L3 Lab3 Yosys 1 good mux Part3_result_0_0](https://user-images.githubusercontent.com/62828746/205514343-4116c058-f43d-449d-8772-dda8f0572d92.jpg)
 *With no attribute switch, a more simplified netlist (without cell instantiation) will be generated.*
+    
+  </details>
 
 
 ## Day 2
