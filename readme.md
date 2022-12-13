@@ -3,19 +3,23 @@
 ## Table of contents
 + **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)**
   <details><summary> Theory </summary>
+  
+  [Theory - System/Tool Setup Check. GitHub ID creation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---systemtool-setup-check-github-id-creation)
   </details>
   <details><summary> Lab </summary>
-  <br>
   
-  * [ Lab -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---setup-labs)
+  * [ Lab -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#steps-to-enable-labs)
   </details>
   
 - **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
   <details><summary> Theory </summary>
+  
+  [Theory - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-verilog-rtl-design-and-synthesis)
+  
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab)
+  * [Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab) 
   * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part1)
   * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part2)
   * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part1)
@@ -24,6 +28,9 @@
   
 + **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-2)**
   <details><summary> Theory </summary>
+    
+   [Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---timing-libsqtmsetms-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
+    
   </details>
   <details><summary> Lab </summary>
   
@@ -40,6 +47,9 @@
   
 - **[ Day 3 - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-3)**
   <details><summary> Theory </summary>
+    
+    [Theory - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---combinational-and-sequential-optmizations)
+    
   </details>
   <details><summary> Lab </summary>
   
@@ -57,10 +67,13 @@
   
 + **[ Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
   <details><summary> Theory </summary>
+    
+   [Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
+    
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic---sky130rtl-d4sk2---labs-on-gls-and-synthesis-simulation-mismatch)
+  * [Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk2-l1-lab-gls-synth-sim-mismatch-part1)
   * [Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk2-l2-lab-gls-synth-sim-mismatch-part2)
   * [Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l1-lab-synth-sim-mismatch-blocking-statement-part1)
   * [Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l2-lab-synth-sim-mismatch-blocking-statement-part2)
