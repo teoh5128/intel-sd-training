@@ -378,7 +378,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 
 
 ## Day 2
-## Topic - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
+## Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
 
 <details><summary> Cell Library Characterization </summary>
   
@@ -697,7 +697,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   </details>
 
 ## Day 3
-## Topic - Combinational and sequential optmizations
+## Theory - Combinational and sequential optmizations
 
 <details><summary> Optimisation of Synthesis Tools </summary>
   
@@ -1054,7 +1054,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   </details>
 
 ## Day 4
-## Topic - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+## Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 <details open><summary> Gate Level Simulation (GLS) </summary>
   
