@@ -880,6 +880,185 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 *Highlighted path is the path of input to output path in summary.*
 
 
+## Day 4
+## Topic - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+
+## **Gate Level Simulation (GLS):**
+* **GLS** process also used to verify design's functionality but it includes standard cell/gate propagation delay into consideration in the verification process. And delays will change according to library used for synthesis.
+* While **RTL simulation** process doesn't include standard cell/gate propagation delay into consideration while verify design's functionality.
+* GLS used to verify dynamic circuit behaviour which can't be verified accurately by static methods.
+
+## **GLS using Iverilog Flow:**
+![GLS using Iverilog Flow](https://user-images.githubusercontent.com/62828746/206912462-bf416918-dbad-49f7-b07b-232ffbe067a4.jpg)
+* It's similar with the simulation flow that using RTL code as DUT(design under test), just that now using **netlist as DUT**.
+* Plus we have **gate-level verilog model** as inputs to simulator to define standard cell inside netlist to the tool.
+
+## **RTL Simulation vs Gate-level Simulation(GLS)**
+Key   | RTL Simulation | Gate-level Simulation(GLS)
+---| --------------------  | -------------------- 
+**Function** | Simulates the code directly, it's a zero delay environment and intends only for functional check. | Simulate code using real timing, can be zero delay (functional only) but mostly with standard cell delays.
+**Process** | Pre-synthesis | Post-synthesis
+**Process Inputs** | RTL code (with functionality without timing information) | Compiled netlist (with/without timing information)
+**Process Speed** | Fast (more simple since state of DUT updated once per clock cycle) | Very slow (more complex and event to calculate due to actual timing delays from layout)
+
+## **Gate Level Verilog Model:**
+* **Gate-level modeling** involves gates and has a one to one relationship between a hardware schematic and the Verilog code.
+* **Gate level verilog model** is used to define gate/standard cell inside the netlist.
++ **Type of gate level verilog model:**
+  * **Timing aware:** ensure both design functionality and timing.
+  * **Functional:** only ensure design functionality.
+
+![Gate Level Verilog Model](https://user-images.githubusercontent.com/62828746/206912030-dc67e1f1-6d2b-4876-b097-8b16eb2f2c93.jpg)
+
+## **Sensitivity List**
+* Simulators are event based. This means that simulators operate by taking events one at a time and propagating them through design until reached steady condition.
+
+![Missing sensitivity list](https://user-images.githubusercontent.com/62828746/207013728-bb850dff-ceef-41f9-b5f6-e697ba1899f0.jpg)
+
+* **Events:** Any transitions of input signals or always statement.
+* **Sensitivity lists:** Used to indicate which events may trigger the process.
++ **Simulator:** 
+  * will observe the sensitivity list. 
+  * If an input of a procedure or always statement is not in the sensitivity list, a transition of that signal will not trigger the procedure, and no new output is produced.
++ **Synthesizer:**
+  * will ignore the sensitivity list.
+  * A new output is calculated according to the code of the procedure or always statement. 
+  * May warn for an incomplete sensitivity list.
+* Missing items in sensitivity list cause or hide a design flaw and cause **synthesis-simulation mismatch**.
+ 
+
+ ## **Blocking and Non-Blocking Statements in Verilog:**
+
+* **Blocking (=)** and **Non-blocking (<=)** assignments are provided to control the execution order within an always block.
+* Coding styles (blocking and non-blocking assignment) in RTL code can cause mismatches between pre-synthesis (RTL Simulation) and post-synthesis (Gate-level Simulation) simulations. -> **Synthesis and simulation mismatch**
+
+Blocking Assignments |  Non-Blocking Assignments
+--------------------  | -------------------- 
+Executes the statements in the order it is written | Executes all the RHS when always block is entered and assigns to LHS
+Preserves logic flow, works better for combinational logic | Doesn't preserve logic flow, work better for sequential lofic
+ 
+![BlockingAndNonBlockingStatementsInVerilog](https://user-images.githubusercontent.com/62828746/207052068-978ac909-5e02-42f7-8531-33c1cc1e7de7.jpg)
+
+ 
+## Lab Topic - SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch
+## Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
+
+#### Steps:
+> 1. Review the ternary operator mux file.
+>> gvim ternary_operator_mux.v 
+> 2. Run simulation by apply RTL Design (ternary_operator_mux.v) and testbench (tb_ternary_operator_mux.v) as inputs.
+> >> *iverilog ternary_operator_mux.v tb_ternary_operator_mux.v*
+>> *./a.out*
+>> *gtkwave tb_ternary_operator_mux.vcd*
+> 3. Now, run synthesis for ternary_operator_mux and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog ternary_operator_mux.v*
+>> * *synth -top ternary_operator_mux*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *write_verilog -noattr ternary_operator_mux.v*
+>> * *show*
+4. Now run the GLS simulation for ternary operator mux using generated mux netlist.
+>> *iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux.v tb_ternary_operator_mux.v -> point to verilog model to find verilog model of the standard cell, library, verilog and testbench.
+>> *./a.out*
+>> *gtkwave tb_ternary_operator_mux.vcd*
+
+#### Result:
+
+![SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1_0](https://user-images.githubusercontent.com/62828746/207109722-5a504299-1f03-48a1-9c28-899f11e64afc.jpg)
+*Review ternary operator mux verilog file.*
+![SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1_1](https://user-images.githubusercontent.com/62828746/207109729-f81fb4e3-26d0-4b4a-a058-2a60e981fdda.jpg)
+*Resulted waveform of ternary operator mux is as expected.*
+![SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1_2](https://user-images.githubusercontent.com/62828746/207109713-4993db5a-9558-44df-98f5-6e89c790d6aa.jpg)
+*Resulted circuit is as expected, infered with two cross one mux standard cell.*
+![SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1_3](https://user-images.githubusercontent.com/62828746/207109719-7a84573f-9f2a-4ec7-8ccd-33ba2299f9d0.jpg)
+*Resulted waveform as expected, GlS output follow mux behaviour.*
+
+## Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
+
+#### Steps:
+> 1. Review the bad mux file.
+>> gvim bad_mux.v 
+> 2. Run simulation by apply RTL Design (bad_mux.v) and testbench (tb_bad_mux.v) as inputs.
+> >> *iverilog bad_mux.v tb_bad_mux.v*
+>> *./a.out*
+>> *gtkwave tb_bad.vcd*
+> 3. Now, run synthesis for bad_mux and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog bad_mux.v*
+>> * *synth -top bad_mux*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *write_verilog -noattr bad_mux_net.v*
+>> * *show*
+4. Now run the GLS simulation for bad mux using generated bad mux netlist.
+>> *iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux.v tb_bad_mux_net.v -> point to verilog model to find verilog model of the standard cell, library, verilog and testbench.
+>> *./a.out*
+>> *gtkwave tb_bad.vcd*
+
+#### Result:
+![SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2_0](https://user-images.githubusercontent.com/62828746/207128208-7a8a738d-fd69-4d5e-886f-cd590e5648ca.jpg)
+*Review bad mux verilog file.*
+![SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2_1](https://user-images.githubusercontent.com/62828746/207128215-6175d4ff-970a-4531-ac81-18e8024a6454.jpg)
+*Resulted RTL simulation waveform showing flop behaviour instead of mux.*
+![SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2_2](https://user-images.githubusercontent.com/62828746/207128219-05d5ce3f-7d1f-4784-97dd-760b35edcdc2.jpg)
+*Resulted gate-level simulation(GLS) waveform showing mux.*
+![SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2_3](https://user-images.githubusercontent.com/62828746/207128224-7dd4bc3d-f108-4268-b54a-c2a28fb1fd2e.jpg)
+*Comparison of RTL simulation and GLS waveform.*
+
+## Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
+
+#### Steps:
+> 1. Review the blocking_caveat file.
+>> *gvim blocking_caveat.v*
+> 2. Run simulation by apply RTL Design (blocking_caveat.v) and testbench (tb_blocking_caveat.v) as inputs.
+> >> *iverilog blocking_caveat.v tb_blocking_caveat.v*
+>> *./a.out*
+>> *gtkwave tb_blocking_caveat.vcd*
+> 3. Now, run synthesis for blocking_caveat and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog blocking_caveat.v*
+>> * *synth -top blocking_caveat*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *write_verilog -noattr blocking_caveat_net.v*
+>> * *show*
+4. Now run the GLS simulation for bad mux using generated bad mux netlist.
+>> *iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v -> point to verilog model to find verilog model of the standard cell, library, verilog and testbench.
+>> *./a.out*
+>> *gtkwave tb_blocking_caveat.vcd*
+
+
+#### Result:
+![SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1_0](https://user-images.githubusercontent.com/62828746/207128418-8408fbf0-aec3-49fd-ae66-fdc33c145cc1.jpg)
+*Review blocking_caveat verilog file.*
+![SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1_1](https://user-images.githubusercontent.com/62828746/207128420-a6e8c67e-d94a-4c7e-af2f-c52b385afc01.jpg)
+*Resulted RTL simulation waveform shows that output depends on previous a value.*
+
+## Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
+
+#### Steps:
+> 1. Now, run synthesis for blocking_caveat and review the result.
+>> * *yosys*
+>> * *read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *read_verilog blocking_caveat.v*
+>> * *synth -top blocking_caveat*
+>> * *abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+>> * *write_verilog -noattr blocking_caveat_net.v*
+>> * *show*
+2. Now run the GLS simulation for bad mux using generated bad mux netlist.
+>> *iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v -> point to verilog model to find verilog model of the standard cell, library, verilog and testbench.
+>> *./a.out*
+>> *gtkwave tb_blocking_caveat.vcd*
+
+
+#### Result:
+![SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2_0](https://user-images.githubusercontent.com/62828746/207128424-689b8d9c-8a16-41d4-b229-89e069235a1b.jpg)
+*Resulted circuit is as expected, only include OR2AND Gate and no latch.*
+![SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2_1](https://user-images.githubusercontent.com/62828746/207128427-cdec553e-5854-4e2c-a61c-4df7662fa1ae.jpg)
+*Resulted gate-level simulation waveform shows expected result.*
+![SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2_2](https://user-images.githubusercontent.com/62828746/207128431-44c8e7b2-01d9-4fdd-95ab-ab53476a7589.jpg)
+*Comparison of RTL simulation and GLS waveform.*
 
 
 
