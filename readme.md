@@ -239,6 +239,7 @@ Combinational delay in logic path determine the maximum operation speed of digit
    </details>
 
 <details><summary> Cell Selection and Trade Off </summary>
+  
 ### **Cell Selection and Trade Off**
 
 Synthesizer required **constraints** as guidance in cell selection to select correct cell flavour that is optimum for logic circuit implementation.
@@ -271,7 +272,7 @@ Concern in hold time violation                   | Failed required performance
 #### Result:
 ![SKY130RTL D1SK2 L1 Lab1 introduction to lab_result](https://user-images.githubusercontent.com/62828746/205509273-3c3774d7-75c2-4293-8306-29d9af55b0c8.jpg)
 
-   </details>
+  </details>
  
  <details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
   
@@ -293,9 +294,10 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 > 2. Review waveform in GTKwave after pull all the signals to "signal" column and zoom to fit.
 
 ![SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1_result_2_a](https://user-images.githubusercontent.com/62828746/205514717-bdef7d9c-0f8a-4c13-a65e-58a95c6f1df0.jpg)
-     </details>
+  </details>
   
 <details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
+  
 ## Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2
 
 #### Steps:
@@ -304,7 +306,6 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 > 2. Review generated waveform, result must follow all the specification in verilog and testbench.
 
 #### Result:
-
 ![SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2_result_1](https://user-images.githubusercontent.com/62828746/205509398-b41f44e7-e9e7-445a-8a4d-e79a5a9e11bf.jpg)
 *Testbench contains design instantiation (UUT) and will not have primary inputs/outputs assigned.*
 
@@ -317,7 +318,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 ![SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2_result_5_0](https://user-images.githubusercontent.com/62828746/205514403-96f1e1e3-26bb-436a-ada1-e415a13627ab.jpg)
 *After 75ns, sel is triggered, hence output will follow i1 value, y=0.*
 
-    </details>
+  </details>
 
 <details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
  
@@ -341,8 +342,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 #### Result:
 ![SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1_result_1_0](https://user-images.githubusercontent.com/62828746/205514365-a1c5b714-5856-4f31-8220-0ede601699a9.jpg)
 *Total inputs, library version used and total outputs shown in graphic should be the same with the ABC results.*
-
-     </details>
+  </details>
  
 <details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
  
@@ -356,7 +356,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 ![SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1_result_1_0_0](https://user-images.githubusercontent.com/62828746/205514500-9fedde6a-dd2c-4a7a-b86a-094072f3f2a5.jpg)
 *mux2_1 is a multiplexer that will switch two input lines to a single common output line.*
      
- </details>
+  </details>
 
 <details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
  
@@ -378,7 +378,8 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 ## Day 2
 ## Topic - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
 
-
+<details><summary> Cell Library Characterization </summary>
+  
 ## **Cell Library Characterization**
 * Cell library characterization important for moedeling standard cells in library.
 * Models suitable for each chip implementations flows are different due to variations.
@@ -386,8 +387,10 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 * Synthesis tools need to know cell logic function, load, speed of cell under variation, power consumed, area and etc to synthesize behavioral description for standard cells.
 * Even variation exist will effect cell's performance, but we need to make Silicon die works well in every corner.
 
-===========================================================================
+  </details>
 
+<details><summary> PVT </summary>
+ 
 ## **PVT**
 * Cells behavior strongly depends on factors such as PVT, input signals and output load.
 * To make fabricated chips working in all possible condition, stimulate it at different corners of process, voltage and temperature.
@@ -398,8 +401,11 @@ P (Process)                                      | V (Voltage)                  
 ---------------------------------------------    | ---------------------------------------------  | --------------------------------------------- 
 Different task or die area (center/boundary) has different process variation during fabrication | IR drop or supply noise might cause voltage variation. Even supplied voltage might not be stable all the time |  Density of transistor is inconsistent throughout the chip and resulting in power dissipation and temperature variation across the chip
 
-===========================================================================
+  </details>
 
+ 
+<details><summary> Hierachical and Flat Synthesis </summary>
+  
 ## **Hierachical and Flat Synthesis**
 
 Content   | Hierachical Synthesis | Flat Synthesis
@@ -409,7 +415,9 @@ Pros | Sub-modules pins are accessible, it's easier to track path during functio
 Cons | Might cause issues when synthesize large design with massive sub-modules. | Debugging capabilities are limited.
 Prefered | Prefered for human read-ability and debug purposes | Prefered when design has massive sub_modules, can synthezie one of it and stitch each netlist into top-level netlist.
 
-===========================================================================
+  </details>
+
+<details><summary> Glitch </summary>
 
 ## **Glitch**
 * For combinational logic, propagation delay will cause output glitch.
@@ -417,8 +425,10 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 ![Glitch](https://user-images.githubusercontent.com/62828746/206111766-51f85c9d-62fd-4a7e-a331-9750b338ed2e.jpg)
 
-===========================================================================
+  </details>
 
+<details><summary> DFF </summary>
+  
 ## **DFF**
 * To fix glitch we need an element to store value periodically.
 * **D Flip-flop** - acts as an electronic memory component since the output remains constant unless deliberately changed by altering the state of the D input at the given edge of clock.
@@ -433,8 +443,10 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 * Even input is glitch, output of DFF will become stable and feed stable signal to next combinational circuit.
 
 
-===========================================================================
+  </details>
 
+<details><summary> Different type of flop and function </summary>
+  
 ## **Different type of flop and function**
 * Initial state of flip-flop is importtant to avoid next combinational logic grab and evaluate flip-flop value that are not yet initialized.
 * Initialze of flip flop included set, reset, synchronous and asynchronous.
@@ -451,10 +463,13 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 ![asyn_sync_dff](https://user-images.githubusercontent.com/62828746/206149017-a90fa6d4-1492-46da-9d63-c432c00a727e.jpg)
 * If both **aysnchronous reset and synchronous** reset are used, asynchronous reset has higher priority compared to synchronous reset.
 
-===========================================================================
+  </details>
+  
 
 ## Lab Topic - SKY130RTL D2SK1 - Introduction to timing .libs
 
+<details><summary> SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1 </summary>
+  
 ## Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
 
 #### Steps:
@@ -469,6 +484,11 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 ![SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1_result](https://user-images.githubusercontent.com/62828746/205701093-f65384e7-3f54-4ad0-b684-2d55bac72677.jpg)
 *PVT information in .lib are important variations for a design to work.*
 
+  </details>
+ 
+
+<details><summary> SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2 </summary>
+  
 ## Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
 
 #### Steps:
@@ -490,6 +510,10 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 ![SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2_2a](https://user-images.githubusercontent.com/62828746/205701110-67e8a486-fd22-4e4b-9c24-6cb99faf31f3.jpg)
 
+  </details>
+  
+<details><summary> SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3 </summary>
+  
 ## Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
 Related with theory part: [How Capacitance Effect Circuit's Speed](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#how-capacitance-effect-circuits-speed)
 
@@ -501,9 +525,12 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3_result_0a](https://user-images.githubusercontent.com/62828746/205701114-6f4f12b9-da8b-4143-b160-bcab608269d4.jpg)
 *Faster cell with higher power has larger transistor, and will trade off with area consumed.*
 
-
+  </details>
+  
 ## Lab Topic - SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis
 
+<details><summary> SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1 </summary>
+    
 ## Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
 
 #### Steps:
@@ -532,7 +559,10 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
 *result_2.jpg*
 
-
+  </details>
+  
+<details><summary> SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2 </summary>
+  
 ## Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
 
 #### Steps:
@@ -557,8 +587,12 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
 ![SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2_2](https://user-images.githubusercontent.com/62828746/205951994-b0a98ae0-f52c-4d5e-baef-206a4ab6cb30.jpg)
 
+  </details>
 
-## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
+## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization 
+  
+<details><summary> SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1 </summary>
+  
 ## Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
 
 #### Steps:
@@ -581,6 +615,10 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part1_3](https://user-images.githubusercontent.com/62828746/206079666-3ba2f68f-6a04-430d-aa37-8d51ac88a8aa.jpg)
 *synchronous reset flip flop waveform*
 
+  </details>
+  
+<details><summary> SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2 </summary>
+  
 ## Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
 #### Steps:
@@ -615,7 +653,11 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ![SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2_2](https://user-images.githubusercontent.com/62828746/206079674-bc8452b9-4bfa-4194-a0ed-22dc56f95deb.jpg)
 *Synchronous_reset flip flop grapgical block*
 
+  </details>
+  
 ## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
+<details><summary> SKY130RTL D2SK3 L5 Interesting optimisations part1 </summary>
+  
 ## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1
 
 #### Steps:
@@ -631,7 +673,10 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 #### Result:
 ![SKY130RTL D2SK3 L5 Interesting optimisations part1_0](https://user-images.githubusercontent.com/62828746/206079676-189935c3-e858-4d57-8684-16880b3f6a6b.jpg)
 
-
+  </details>
+  
+<details><summary>  SKY130RTL D2SK3 L5 Interesting optimisations part2 </summary>
+  
 ## Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2
 
 #### Steps:
@@ -647,7 +692,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 #### Result:
 ![SKY130RTL D2SK3 L5 Interesting optimisations part1_1](https://user-images.githubusercontent.com/62828746/206079678-c3a23b3d-59c1-4b40-bb79-010964f8ae09.jpg)
 
-
+  </details>
 
 ## Day 3
 ## Topic - Combinational and sequential optmizations
