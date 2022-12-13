@@ -89,7 +89,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
   
   </details>
 
-<details><summary> How does a **software communicate with hardware**</summary>
+<details><summary> How does a software communicate with hardware</summary>
 
 ### **How does a software communicate with hardware**
 **Synthesis process** will help to convert software's instructions which is written in high level language to gate level language/machine language which is normally in binary format.
@@ -697,7 +697,8 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 ## Day 3
 ## Topic - Combinational and sequential optmizations
 
-
+<details><summary> Optimisation of Synthesis Tools </summary>
+  
 ## **Optimisation of Synthesis Tools**
 * When device library cells are instantiated, **synthesis tools do not optimize them by default**. 
 * Even when instructed to optimize the device library cells, synthesis tools generally cannot perform the same level of optimization as with the RTL. 
@@ -706,17 +707,26 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 * Synthesis tool perform optimization by minimize cost function.
 * **Cost function** comes in various flavour depend on EDA tool vendor.
 * Two of the important cost function to minimize: time related and delay cost. 
+  </details>
 
+<details><summary> Constant propagation </summary>
+  
 ## **Constant propagation**
 * Constant propagation - a process of substituting the constant value of variables in the expression.
 * It is one of the local code optimization technique for compiler.
+  </details>
 
+<details><summary> Combinational vs Sequential optimization </summary>
+  
 ## **Combinational vs Sequential optimization**
 Key          | Combinational Circuit                                   | Sequential Circuit
 -------------    | ---------------------------------------------  | ------------------
 Definition | Combinational Circuit is the type of circuit in which output is independent of time and only relies on the current input. |Sequential circuit is the type of circuit where output relies on both current input and also previous output. 
 Optimization | constant propagation is Boolean algebra. | constant propagation is Boolean algebra + timing.
+  </details>
 
+<details><summary> Boolean Logic Optimisation </summary>
+  
 ## **Boolean Logic Optimisation**
 * **logic optimisation** improves simulation efficiency by simplyfy a complex boolean expression to simpler one which would ultimately produce same result.
 * **Boolean algebra** refers to symbolic manipulation of expressions made up of boolean variables and boolean operators.
@@ -729,14 +739,20 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 <img width="516" alt="identities" src="https://user-images.githubusercontent.com/62828746/206801941-30dd7c69-dcfc-457a-8eb3-8d89be6ee89b.png">
 
 *Laws of Boolean Algebra [reference from: 7.1   Boolean Logic](https://introcs.cs.princeton.edu/java/71boolean/)*
+  </details>
 
+<details><summary> Boundary Optimisation </summary>
+  
 ## **Boundary Optimisation**
 *  Boundary optimisation is the optimisation undergo across boundary. 
 *  Boundary optimisation including conatant optimization across hierarhies, remove unloaded logic connected, collapse equal and opposite pins, rewiring of equivalent signals across hierarchy and etc.
 *  For example: Boundary optimisation will remove unused buffers that are inserted for allowing signal out of the module, then it will replace an inverters to see is it good enough for signal going out.
-
+  </details>
 
 ## Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
+
+<details><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
+  
 ## Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
 #### Steps:
@@ -770,7 +786,10 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 *An OR gate was inferred in the circuit as expected*
 
+  </details>
 
+<details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2 </summary>
+  
 ## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
 #### Steps:
@@ -788,7 +807,11 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206799757-90d69bc5-476a-40ac-8832-f0ccc9cfb5e2.jpg)
 *An 3-input AND gate was inferred in the circuit as expected*
 
+  </details>
+  
 
+<details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise) </summary>
+  
 ## Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)
 
 #### Steps:
@@ -835,7 +858,12 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 *After flatten the hierachical and optimization, output Y is direct assigned to value 0*
 
 
+  </details>
+  
 ## Lab Topic - SKY130RTL D3SK3 - Sequential logic optimizations
+
+<details><summary> SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1 </summary>
+  
 ## Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
 
 #### Steps:
@@ -868,8 +896,10 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1_3](https://user-images.githubusercontent.com/62828746/206800039-17e98ebf-6270-4ada-b961-64c6afa67456.jpg)
 *Resulted graphic design is as expected.*
 
+  </details>
 
-
+<details><summary> SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2 </summary>
+  
 ## Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 #### Steps:
 > 1. Now, run synthesis for dff_const2 and review the result.
@@ -887,6 +917,10 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2_1](https://user-images.githubusercontent.com/62828746/206800112-3efadaeb-489a-4c22-8f54-c8d227ee6007.jpg)
 *Review dff_const3.v file.*
 
+  </details>
+  
+
+<details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 </summary>
 
 ## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 #### Steps:
@@ -911,6 +945,9 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3_2](https://user-images.githubusercontent.com/62828746/206800180-f9e39367-51a2-4fb0-a353-8922b87333fe.jpg)
 *Resulted graphic design is as expected.*
 
+  </details>
+
+<details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise) </summary>
 
 ## Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)
 > 1. Review the dff file.
@@ -957,9 +994,12 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![KY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)_5](https://user-images.githubusercontent.com/62828746/206800261-6f33b73a-9113-4078-bd03-ad867d14e23e.jpg)
 *Resulted graphic design is as expected, flop can't be optimized.*
 
-
+  </details>
 
 ## Lab Topic - SKY130RTL D3SK4 - Sequential optimzations for unused outputs
+
+<details><summary> SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1 </summary>
+  
 ## Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
 #### Steps:
@@ -980,6 +1020,10 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1_2](https://user-images.githubusercontent.com/62828746/206800390-9ac3772b-da06-4ed1-b972-89673ced638a.jpg)
 *Only one DFF used in circuit cause unused flop are optimized.*
 
+  </details>
+  
+<details><summary> SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2 </summary>
+  
 ## Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
 #### Steps:
@@ -1005,6 +1049,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ![SKY130RTL D3SK4 L1 Seq optimisation unused outputs part2_0](https://user-images.githubusercontent.com/62828746/206800450-15bbd3b8-305a-4536-a644-d16c0c067b26.jpg)
 *Highlighted path is the path of input to output path in summary.*
 
+  </details>
 
 ## Day 4
 ## Topic - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
