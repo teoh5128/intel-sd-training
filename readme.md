@@ -32,8 +32,12 @@
   * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part1)
   * [Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l2-seq-optimisation-unused-outputs-part2)
 
-
-
++ **[ Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
+  * [Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic---sky130rtl-d4sk2---labs-on-gls-and-synthesis-simulation-mismatch)
+  * [Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk2-l2-lab-gls-synth-sim-mismatch-part2)
+  * [Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l1-lab-synth-sim-mismatch-blocking-statement-part1)
+  * [Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l2-lab-synth-sim-mismatch-blocking-statement-part2)
+  
 ## Day 0
 ## Topic - System/Tool Setup Check. GitHub ID creation
 
