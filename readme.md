@@ -84,7 +84,7 @@
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
 
-<details open><summary> Package </summary>
+<details><summary> Package </summary>
  
 ### **Package**
 Package is a container that holds die and was connected to outside (external device) by using wire bonding.
@@ -118,7 +118,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
 
 ## Lab - Setup Labs
 
-<details><summary> Steps to enable labs </summary>
+<details open><summary> Steps to enable labs </summary>
  
 #### Steps to enable labs:
 
@@ -265,7 +265,7 @@ Concern in hold time violation                   | Failed required performance
   </details>
 
 ## Lab Topic-  SKY130RTL D1SK2 Labs using iverilog and gtkwave
-<details><summary> SKY130RTL D1SK2 L1 Lab1 introduction to lab </summary>
+<details open><summary> SKY130RTL D1SK2 L1 Lab1 introduction to lab </summary>
  
 ### Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab
 
@@ -289,7 +289,7 @@ Concern in hold time violation                   | Failed required performance
  
  ## Lab Topic- SKY130RTL D1SK4 Labs using Yosys and Sky130 PDKs
   
- <details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
+<details open><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
   
 ### Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
 Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#iverilog-icarus-verilog-based-synthesized-netlist-simulation-flow)
@@ -311,7 +311,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 ![SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1_result_2_a](https://user-images.githubusercontent.com/62828746/205514717-bdef7d9c-0f8a-4c13-a65e-58a95c6f1df0.jpg)
   </details>
   
-<details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
+<details open><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
   
 ### Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2
 
@@ -335,7 +335,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 
   </details>
 
-<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
+<details open><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
  
 ### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
 Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#yosys-yosys-open-synthesis-suite-based-synthesis-flow)
@@ -359,7 +359,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 *Total inputs, library version used and total outputs shown in graphic should be the same with the ABC results.*
   </details>
  
-<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
+<details open><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
  
 ### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2
 
@@ -373,7 +373,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
      
   </details>
 
-<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
+<details open><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
  
 ### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3
 
@@ -483,7 +483,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 ## Lab Topic - SKY130RTL D2SK1 - Introduction to timing .libs
 
-<details><summary> SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1 </summary>
+<details open><summary> SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1 </summary>
   
 ### Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
 
@@ -502,7 +502,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
   </details>
  
 
-<details><summary> SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2 </summary>
+<details open><summary> SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2 </summary>
   
 ### Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
 
@@ -527,7 +527,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
   </details>
   
-<details><summary> SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3 </summary>
+<details open><summary> SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3 </summary>
   
 ### Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
 Related with theory part: [How Capacitance Effect Circuit's Speed](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#how-capacitance-effect-circuits-speed)
@@ -544,7 +544,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   
 ## Lab Topic - SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis
 
-<details><summary> SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1 </summary>
+<details open><summary> SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1 </summary>
     
 ### Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
 
@@ -576,7 +576,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-<details><summary> SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2 </summary>
+<details open><summary> SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2 </summary>
   
 ### Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
 
@@ -604,9 +604,9 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
 
-## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization 
+## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
   
-<details><summary> SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1 </summary>
+<details open><summary> SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1 </summary>
   
 ### Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
 
@@ -632,7 +632,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-<details><summary> SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2 </summary>
+<details open><summary> SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2 </summary>
   
 ### Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
@@ -690,7 +690,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-<details><summary>  SKY130RTL D2SK3 L5 Interesting optimisations part2 </summary>
+<details open><summary>  SKY130RTL D2SK3 L5 Interesting optimisations part2 </summary>
   
 ### Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2
 
@@ -803,7 +803,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2 </summary>
+<details open><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2 </summary>
   
 ### Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
@@ -825,7 +825,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   </details>
   
 
-<details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise) </summary>
+<details open><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise) </summary>
   
 ### Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)
 
@@ -877,7 +877,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   
 ## Lab Topic - SKY130RTL D3SK3 - Sequential logic optimizations
 
-<details><summary> SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1 </summary>
+<details open><summary> SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1 </summary>
   
 ### Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
 
@@ -913,7 +913,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details><summary> SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2 </summary>
+<details open><summary> SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2 </summary>
   
 ### Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 #### Steps:
@@ -935,7 +935,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   </details>
   
 
-<details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 </summary>
+<details open><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 </summary>
 
 ### Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 #### Steps:
@@ -962,7 +962,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise) </summary>
+<details open><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise) </summary>
 
 ### Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)
 > 1. Review the dff file.
@@ -1013,7 +1013,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 ## Lab Topic - SKY130RTL D3SK4 - Sequential optimzations for unused outputs
 
-<details><summary> SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1 </summary>
+<details open><summary> SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1 </summary>
   
 ### Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
@@ -1037,7 +1037,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
   
-<details><summary> SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2 </summary>
+<details open><summary> SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2 </summary>
   
 ### Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
