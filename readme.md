@@ -1054,16 +1054,26 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ## Day 4
 ## Topic - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
+<details open><summary> Gate Level Simulation (GLS) </summary>
+  
 ## **Gate Level Simulation (GLS):**
 * **GLS** process also used to verify design's functionality but it includes standard cell/gate propagation delay into consideration in the verification process. And delays will change according to library used for synthesis.
 * While **RTL simulation** process doesn't include standard cell/gate propagation delay into consideration while verify design's functionality.
 * GLS used to verify dynamic circuit behaviour which can't be verified accurately by static methods.
 
+  </details>
+
+<details open><summary> GLS using Iverilog Flow </summary>
+  
 ## **GLS using Iverilog Flow:**
 ![GLS using Iverilog Flow](https://user-images.githubusercontent.com/62828746/206912462-bf416918-dbad-49f7-b07b-232ffbe067a4.jpg)
 * It's similar with the simulation flow that using RTL code as DUT(design under test), just that now using **netlist as DUT**.
 * Plus we have **gate-level verilog model** as inputs to simulator to define standard cell inside netlist to the tool.
 
+  </details>
+
+<details open><summary> RTL Simulation vs Gate-level Simulation(GLS) </summary>
+  
 ## **RTL Simulation vs Gate-level Simulation(GLS)**
 Key   | RTL Simulation | Gate-level Simulation(GLS)
 ---| --------------------  | -------------------- 
@@ -1071,6 +1081,10 @@ Key   | RTL Simulation | Gate-level Simulation(GLS)
 **Process** | Pre-synthesis | Post-synthesis
 **Process Inputs** | RTL code (with functionality without timing information) | Compiled netlist (with/without timing information)
 **Process Speed** | Fast (more simple since state of DUT updated once per clock cycle) | Very slow (more complex and event to calculate due to actual timing delays from layout)
+
+  </details>
+  
+<details open><summary> Gate Level Verilog Model </summary>
 
 ## **Gate Level Verilog Model:**
 * **Gate-level modeling** involves gates and has a one to one relationship between a hardware schematic and the Verilog code.
@@ -1081,6 +1095,10 @@ Key   | RTL Simulation | Gate-level Simulation(GLS)
 
 ![Gate Level Verilog Model](https://user-images.githubusercontent.com/62828746/206912030-dc67e1f1-6d2b-4876-b097-8b16eb2f2c93.jpg)
 
+  </details>
+
+<details open><summary> Sensitivity List </summary>
+  
 ## **Sensitivity List**
 * Simulators are event based. This means that simulators operate by taking events one at a time and propagating them through design until reached steady condition.
 
@@ -1097,7 +1115,11 @@ Key   | RTL Simulation | Gate-level Simulation(GLS)
   * May warn for an incomplete sensitivity list.
 * Missing items in sensitivity list cause or hide a design flaw and cause **synthesis-simulation mismatch**.
  
+  </details>
 
+ 
+<details open><summary> Blocking and Non-Blocking Statements in Verilog </summary>
+  
  ## **Blocking and Non-Blocking Statements in Verilog:**
 
 * **Blocking (=)** and **Non-blocking (<=)** assignments are provided to control the execution order within an always block.
@@ -1110,8 +1132,12 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
  
 ![BlockingAndNonBlockingStatementsInVerilog](https://user-images.githubusercontent.com/62828746/207052068-978ac909-5e02-42f7-8531-33c1cc1e7de7.jpg)
 
- 
+  </details>
+  
 ## Lab Topic - SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch
+
+<details open><summary> SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1 </summary>
+
 ## Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
 
 #### Steps:
@@ -1144,7 +1170,11 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 *Resulted circuit is as expected, infered with two cross one mux standard cell.*
 ![SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1_3](https://user-images.githubusercontent.com/62828746/207109719-7a84573f-9f2a-4ec7-8ccd-33ba2299f9d0.jpg)
 *Resulted waveform as expected, GlS output follow mux behaviour.*
-
+  
+  </details>
+  
+<details open><summary> SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2 </summary>
+  
 ## Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
 
 #### Steps:
@@ -1177,6 +1207,10 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 ![SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2_3](https://user-images.githubusercontent.com/62828746/207128224-7dd4bc3d-f108-4268-b54a-c2a28fb1fd2e.jpg)
 *Comparison of RTL simulation and GLS waveform.*
 
+  </details>
+  
+<details open><summary> SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1 </summary>
+  
 ## Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
 
 #### Steps:
@@ -1206,6 +1240,10 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 ![SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1_1](https://user-images.githubusercontent.com/62828746/207128420-a6e8c67e-d94a-4c7e-af2f-c52b385afc01.jpg)
 *Resulted RTL simulation waveform shows that output depends on previous a value.*
 
+  </details>
+
+<details open><summary> SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2 </summary>
+
 ## Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
 
 #### Steps:
@@ -1231,7 +1269,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 ![SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2_2](https://user-images.githubusercontent.com/62828746/207128431-44c8e7b2-01d9-4fdd-95ab-ab53476a7589.jpg)
 *Comparison of RTL simulation and GLS waveform.*
 
-
+  </details>
 
 
 
