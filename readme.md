@@ -84,7 +84,7 @@
 - **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-5)**
   <details><summary> Theory </summary>
     
-    [Theory - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---combinational-and-sequential-optmizations)
+    [Theory - DFT (Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dft-design-for-testability)
     
   </details>
  
