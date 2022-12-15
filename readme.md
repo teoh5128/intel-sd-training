@@ -1369,7 +1369,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 
 ## **Scan based technique/ Scan-chains**
 ![Scan-chains](https://user-images.githubusercontent.com/62828746/207972544-9efebac7-6830-4e2f-b73c-9e1586507d2e.jpg)
-
+*[Reference:Overview and Dynamics of Scan Chain Testing](https://anysilicon.com/overview-and-dynamics-of-scan-testing/)
 * Scan chains are the elements in scan-based designs that are used to shift-in and shift-out test data. 
 * Scan chains: scan flip-flops are connected together in form of a chain.
 * Scan flops: normal input (D) of the flip-flop are multiplexed with the scan input. Scan-enable signal is used to control which input will propagate to the output.
