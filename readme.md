@@ -1339,8 +1339,8 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 
 ## **When DFT is included**
 * DFT architecture is created at the beginning of design flow. Increase testability by adding extra blocks.
-* DFT insertion occurs at synthesis stage during ASIC design flow. -> Pre-fabrication
-* Dies are tested on wafer or re-tested with APTG patterns after passed wafer test. -> Post fabrication
+* DFT insertion occurs at synthesis stage during ASIC design flow. -> **Pre-fabrication**
+* Dies are tested on wafer or re-tested with APTG patterns after passed wafer test. -> **Post fabrication**
 
 ## **Controllability in term of DFT**
 * A point is said to be controllable if both ‘0’ and ‘1’ can be propagated through scan patterns.
