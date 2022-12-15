@@ -81,6 +81,13 @@
   </details>
  
  
+- **[ Day 5 - DFT]()**
+  <details><summary> Theory </summary>
+    
+    [Theory - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---combinational-and-sequential-optmizations)
+    
+  </details>
+ 
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
 
@@ -1285,6 +1292,164 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 *Comparison of RTL simulation and GLS waveform.*
 
   </details>
+
+
+## Day 5
+## Theory - DFT (Design for Testability)
+
+## **What is testability in VLSI means**
+* Testability is the property of a circuit that makes it easy to test. If a design is well-controllable and well-observable, then it is easily testable.
+* **Controllability** - ability to set a specific states or logic values (0 or 1) at each circuit nodes.
+* **Observability** - ability to obeserve the states or logic values at any circuit nodes.
+
+## **What is DFT (Design for Testability)**
+* DFT is an innovative design technique which facilitates a design to become testable after production.
+* DFT make testing a chip cost-effective by adding an extra logic/circuitry to the existing design.
+* These extra design improve the observability and controability of internal nodes to increase testability of all logic in the design.
+* Examples: addition of test points, parametric measurement devices, self-test diagnotics, test modes, and scan design.
+
+## **Examples of circuit modifications or additions to make chip testable:**
+
+Types | MBIST (Memory Built-In Self Test) | Scan Chains | Automates Test Pattern Generation (ATPG)
+--------------------  | -------------------- | --------------------  | --------------------  |
+Function | Running several algorithms and to verify memory functionality.It implements a finite state machine (FSM) to generate stimulus and analyze the response coming out of memories. | Inserted into designs to shift the test data into the chip and out of the chip. It was used by external automatic test equipment (ATE) to deliver test pattern data from its memory into the device. | It's the process of generating test patterns for a given fault model which will detect all possible fault conditions and find redundant circuit logic.   
+Block diagram |![MBIST (Memory Built-In Self Test)](https://user-images.githubusercontent.com/62828746/207897281-cac40dd0-13d8-41a2-9dbc-9b510e47279f.jpg) | ![Scan Chains](https://user-images.githubusercontent.com/62828746/207914806-93cae819-50c7-4395-9a62-b1b266a26377.jpg) | ![Combinational Logic Testing](https://user-images.githubusercontent.com/62828746/207914814-c15beeda-166f-41e1-9048-663974c1efe1.jpg)
+How it works | The MBIST controller provides control signals to the address and data generator. The memory, then, starts the BIST algorithms and provides the test output to the controller. The controller compares this output with the reference output and indicates if the MBIST has passed or failed.  | A multiplexer is added at the input of the flip-flop with one input of the multiplexer acting as the functional input D, while the other is Scan-In (SI). while scan-enable is used to control which input (D or SI) will propagate to the output. | To test an n input circuit is to generate all the possible 2N input signal combinations by means of say an N bit counter (controllability) and observe the outputs for checking (observability). But, is only practicable where N is relatively small.
+Pros | * Allows robust testing of memories * Reduce in test cost and time * Design memories can be tested in parallel | Ensures that each circuit nodes becomes controllable and observable | * High fault coverage * Moderate area * Design automation
+Cons | Increase in area |  * Extra I/O needed * Increse complexity and area  | * Large test data volume * Slow and long testing time
+Used to test design | Macros/memory blocks | Flops | Cmbinational cirruit
+
+## **Why do we need DFT**
+* **DFT** makes testing easy at the post-production process.
++ DFT accomplishes two significant goals in the chip manufacturing process:
+  * Control product quality by reject defective chips
+  * Monitor and improve manufacturing process by identifying the probable defect location when testing various level.
++ 3 main levels of testing aftr chip being fabricated:
+  * Chip-level, when chips are manufactured. Test overall product quality by ensure chip works smoothly.
+  * Board-level, when chips are integrated on the boards/package. Test chips operationa life with temperature test.
+  * System-level, when several boards are assembled together. To ensure that replaceable parts works smoothly.
+*  Detect fault at earlier stage is important cause when move to higher levels, more components are integrated and it makes the fault detection and localization much more difficult and expensive.
+
+**Pros** | **Cons**
+---  | ---
+Reduces tester complexity | Adds complication to the design flow.
+Reduces tester time | Increase power, area, timing and package pins.
+Reduces the chances of going into loss due to faulty devices | Design time increases
+
+## **When DFT is included**
+* DFT architecture is created at the beginning of design flow. Increase testability by adding extra blocks.
+* DFT insertion occurs at synthesis stage during ASIC design flow. -> Pre-fabrication
+* Dies are tested on wafer or re-tested with APTG patterns after passed wafer test. -> Post fabrication
+
+## **Controllability in term of DFT**
+* A point is said to be controllable if both ‘0’ and ‘1’ can be propagated through scan patterns.
+* **Multiplexer (MUX)** are added into design to enable data selection (0 or 1) at every node which toggled by pattern inputs.
+![Controllability](https://user-images.githubusercontent.com/62828746/207980453-957561a6-239d-4e00-a2e0-9869c81271e2.jpg)
+
+
+## **Observability in term of DFT**
+* A node is observable, when the value at the node can be shifted out through scan patterns and can be observed through scan out ports. 
+* Flip-flops are added into design to store data and enable changes in output corresponding to the toggling of a node obsevable at packaged pins.
+![Observability](https://user-images.githubusercontent.com/62828746/207980443-51eac9cb-5c90-46d5-a5f7-0379bb2f9c1c.jpg)
+
+
+## **DFT techniques are mainly classified into two types:**
++ **Ad-hoc techniques:** collection of techniques or set of rules in the chip design process learned from design experience to improve/accomplish design testability.
+  * Avoid combinational feedback.
+  * All flip flops must be initializable.
+  * Partition a large circuit into small blocks.
+  * Provide test control for the signals which are notcontrollable.
+  * While designing test logic we have to consider theATE requirements.
+
++ **Structured techniques:** extra logic and signals are added to the circuit to allow the test according to some predefined procedure.
+  * Scan: In the design all the flip flops are converted to scan flip flop.
+  * Boundary Scan
+  * Built-in self-test (MBist & LBist)
+
+## **Scan based technique/ Scan-chains**
+![Scan-chains](https://user-images.githubusercontent.com/62828746/207972544-9efebac7-6830-4e2f-b73c-9e1586507d2e.jpg)
+
+* Scan chains are the elements in scan-based designs that are used to shift-in and shift-out test data. 
+* Scan chains: scan flip-flops are connected together in form of a chain.
+* Scan flops: normal input (D) of the flip-flop are multiplexed with the scan input. Scan-enable signal is used to control which input will propagate to the output.
+* When scan_enable port = 0 : data at D pin of the flop will propagate to Q at the next active edge.
+* When scan_enable port = 1 : data present at scan-in input will propagate to Q at the next active edge.
++ Purpose of scan flops:
+  * To test stuck-at faults in manufactured devices.
+  * To test the paths in the manufactured devices for delay. (to test whether each path is working at functional frequency or not)
+
+![Waveform without fault](https://user-images.githubusercontent.com/62828746/207972548-b3ed8eff-8bc8-4279-86d9-a6a4cdba4c7e.jpg)
+
++ Scan chain operation involves three stages:
+  * Scan-in/Assert scan_enable: test patterns are loaded keeping the design in test timing mode.
+  * Scan-capture: design is kept in functional timing mode and test pattern response is captured.
+  * Scan-out/De-assert scan_enable: design is brought back in test timing mode and test pattern response is unloaded.
+
+## **Functionality of scan-chain**
+* Scan chain is slightly different for slow capture (**Stuck-At faults**) and at speed capture (**Path Delay or Transition faults**).
+* Scan chains is to make each node in the circuit controllable and observable through limited number of patterns by providing a bypass path to each flip-flop.
+
+**Scan-in**
+* 1.SE is kept high (asserted) enables the scan mode and scan flip flop take SI value as inputs.
+* 2.Test patterns will serially enter from the scan input port and enter first flip-flop of the scan chain.
+* 3.At each active clock edge, it will shift to the next stage of flip-flop (shift register behaviour).
+* 4.All scan chain elements will be loaded with the correct test patterns. 
+
+![Stuck-At faults](https://user-images.githubusercontent.com/62828746/207972546-4f2ef6a3-334b-40d4-a87b-1106c588e818.jpg)
+
+**Capture of stuck-at Testing**
+*done at a slower frequency hence one pulse of clock*
+* 1.SE is de-asserted, flip-flops works in normal functional timing mode and the test pattern response processed by the combinational logic is captured at the next stage of the flip-flop.
+* 2.Before arrival of next active clock edge, the test pattern response is processed by the combinational logic and becomes available at the D input of next flip-flop.
+* 3.At next positive clock edge, the processed test pattern response is captured by the next flip-flop and becomes available at the Q and SO pin.
+
+![Path Delay or Transition faults](https://user-images.githubusercontent.com/62828746/207972535-7f8d92b8-0439-4e33-872f-4044be503c83.jpg)
+
+**Captureof Speed-Transition/Path delay Testing**
+*Testing is done at functional speed therefore the design is put in the function timing mode at functional frequency.* 
+*This will require two or more functional clock pulses in the capture mode.*
+* 1.SE is de-asserted, flip-flops works in normal functional timing mode.
+* 2.Test pattern data is launched from D to Q pin of the flop at first capture pulse.
+* 3.Test pattern data is captured by the next flip flop at second capture pulse, reached Q pins and SO pin of the subsequent flip-flop in the scan chain.
+* 4. First clock pulse is launching the test pattern to the targeted combinational logic and second clock pulse ensures that combinational logic is getting at speed processing time.
+
+**Scan-out**
+* 1.SE is re-asserted in this mode, design is back to test timing mode.
+* 2.At posedge clock edge, the captured data (test pattern response processed by the combinational logic) is serially shifted out on the scan chain.
+* 3.Test pattern response captured at the SI pins of the flip-flops and was shifted serially out to the scan output port.
+* 4.Compare output value with expected result.
+
+## **Automated test equipment (ATE)**
+* Automated test equipment (ATE) is a testing apparatus designed to perform a single test or sequence of tests on one or multiple devices at a time.
+* The main goal of ATE is to ensure that an electronic device works as intended.
+* The raw data captured by the test instruments is monitored, analyzed, and stored using the master controller’s signal sources and test software. Output readings are used to determine whether changes to the device need to be made or it's ready to be go.
+* ATE frequently used by semiconductor manufacturers to test microprocessors, memory chips and analog integrated circuits.
+
+**Basic automate testing system**
+
+![Basic Automated Test System](https://user-images.githubusercontent.com/62828746/207969107-474e4002-e9ad-44b5-8d43-79cea19f357a.jpg)
+
+* **Test controller:** implements test coding which runs the test system. 
+* **Testing devices and testing instruments:** offer power and testing signals to the unit under testing and calculating the operation features of the module over the testing.
+* **Test fixtures:** interlinks to the automated testing network to the UUT or unit under test.
+* **Switching controller:** defines instructions from the test controller to manage the switching circuits that interlinks the testing device and test instrument with the certain testing points at the UUT.
+* **Switching circuitry:** interlinks the testing devices and testing modules to certain positions known as the testing point at the module over which the test is done.
+* **UUT:** can be one element, circuitry board or hole electronics packaging.
+
+**Basic ATE functionality**
+* 1. Scan-In Phase: control flip-flop operation in the serial shift state by scan enable signals
+* 2. Parallel Measure: scan enable is invalid, and circuit working is in normal condition. Send basic input signal (primary input) from the input port of circuit this moment, and do not produce clock pulse, thereby trigger output constant.
+* 3. Parallel Capture: circuit still is operated under the normal condition.ATE produces a clock pulse at this moment, and the virtual basic output signal of the D end of the trigger that previous step is produced captures the Q end of trigger.
+* 4. First Scan-Out Phase: scan enable signals is effective, and flip-flop operation is in serial output mode, but ATE does not produce clock pulse.
+* 5. Scan-Out Phase: circuit working is in serial output mode, after producing N clock, just obtain the total data of virtual basic output signal from SO port, squeeze into next test and excitation vector (test signal) from SI port simultaneously.
+
+*[Reference:Method for increasing tested failure coverage of circuit](https://patents.google.com/patent/CN1381878A/en)
+
+
+## **How DFT can be game changer for VLSI engineers**
+* VLSI chips are reducing size and thickness day to day. Reduced in chip size with large number of transistor inside cause chip density increased. High chance this will casue issues during chip design flow. 
+* DFT can help to check whether it's designed and working in expected way in early stage, which can help to reduce cost and time delay compared to finding bugs in post-fabrication stage.
+* Faulty chips can cause huge loss to company hence DFT is important for improving chips quality that are being sold in the market.
 
 
 
