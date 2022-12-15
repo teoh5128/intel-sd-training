@@ -1296,7 +1296,9 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
 ## Day 5
 ## Theory - DFT (Design for Testability)
+<details open> DFT (Design for Testability) </summary>
 
+  
 ## **What is testability in VLSI means**
 * Testability is the property of a circuit that makes it easy to test. If a design is well-controllable and well-observable, then it is easily testable.
 * **Controllability** - ability to set a specific states or logic values (0 or 1) at each circuit nodes.
@@ -1451,5 +1453,5 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 * DFT can help to check whether it's designed and working in expected way in early stage, which can help to reduce cost and time delay compared to finding bugs in post-fabrication stage.
 * Faulty chips can cause huge loss to company hence DFT is important for improving chips quality that are being sold in the market.
 
-
+  </details>
 
