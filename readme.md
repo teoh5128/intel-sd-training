@@ -14,7 +14,7 @@
 - **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
   <details><summary> Theory </summary>
   
-  [Theory - DFT (Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dft-design-for-testability)
+  [Theory - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#theory---introduction-to-verilog-rtl-design-and-synthesis)
   
   </details>
   <details><summary> Lab </summary>
