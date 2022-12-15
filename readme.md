@@ -81,7 +81,7 @@
   </details>
  
  
-- **[ Day 5 - DFT]()**
+- **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-5)**
   <details><summary> Theory </summary>
     
     [Theory - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---combinational-and-sequential-optmizations)
@@ -1296,9 +1296,8 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
 ## Day 5
 ## Theory - DFT (Design for Testability)
-<details open> DFT (Design for Testability) </summary>
+<details open><summary> DFT (Design for Testability) </summary>
 
-  
 ## **What is testability in VLSI means**
 * Testability is the property of a circuit that makes it easy to test. If a design is well-controllable and well-observable, then it is easily testable.
 * **Controllability** - ability to set a specific states or logic values (0 or 1) at each circuit nodes.
