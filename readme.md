@@ -1387,8 +1387,8 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
   * Scan-out/De-assert scan_enable: design is brought back in test timing mode and test pattern response is unloaded.
 
 ## **Functionality of scan-chain**
-* Scan chain is slightly different for slow capture (**Stuck-At faults**) and at speed capture (**Path Delay or Transition faults**).
 * Scan chains is to make each node in the circuit controllable and observable through limited number of patterns by providing a bypass path to each flip-flop.
+* Scan chain is slightly different for slow capture (**Stuck-At faults**) and at speed capture (**Path Delay or Transition faults**).
 
 **Scan-in**
 * 1.SE is kept high (asserted) enables the scan mode and scan flip flop take SI value as inputs.
