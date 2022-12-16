@@ -1412,7 +1412,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 * 1.SE is de-asserted, flip-flops works in normal functional timing mode.
 * 2.Test pattern data is launched from D to Q pin of the flop at first capture pulse.
 * 3.Test pattern data is captured by the next flip flop at second capture pulse, reached Q pins and SO pin of the subsequent flip-flop in the scan chain.
-* 4. First clock pulse is launching the test pattern to the targeted combinational logic and second clock pulse ensures that combinational logic is getting at speed processing time.
+* 4.First clock pulse is launching the test pattern to the targeted combinational logic and second clock pulse ensures that combinational logic is getting at speed processing time.
 
 **Scan-out**
 * 1.SE is re-asserted in this mode, design is back to test timing mode.
