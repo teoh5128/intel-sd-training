@@ -1632,7 +1632,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
 
-## Theory - DC_D1SK3_L1 - Lecture3 - TCL quick refresher
+## Theory - TCL quick refresher
 
 <details open><summary> Basic TCL Command Used in DC </summary>
 
