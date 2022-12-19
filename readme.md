@@ -82,11 +82,10 @@
  
  
 - **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-6)**
+  
   <details><summary> Theory </summary>
     
-  * [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-logic-synthesis)
-  * [Theory - Introduction to Design Compiler (DC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-design-compiler-dc)
-  * [Theory - TCL quick refresher](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---tcl-quick-refresher)
+  [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-logic-synthesis)
     
   </details>
  
@@ -94,7 +93,9 @@
   + **[ Day 6 - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
   <details><summary> Theory </summary>
     
-   []()
+  * [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-logic-synthesis)
+  * [Theory - Introduction to Design Compiler (DC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-design-compiler-dc)
+  * [Theory - TCL quick refresher](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---tcl-quick-refresher)
     
   </details>
   <details><summary> Lab </summary>
