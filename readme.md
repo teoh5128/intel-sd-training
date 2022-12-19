@@ -81,13 +81,32 @@
   </details>
  
  
-- **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-5)**
+- **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-6)**
   <details><summary> Theory </summary>
     
-    [Theory - DFT (Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dft-design-for-testability)
+  * [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-logic-synthesis)
+  * [Theory - Introduction to Design Compiler (DC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-design-compiler-dc)
+  * [Theory - TCL quick refresher](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---tcl-quick-refresher)
     
   </details>
  
+  
+  + **[ Day 6 - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
+  <details><summary> Theory </summary>
+    
+   []()
+    
+  </details>
+  <details><summary> Lab </summary>
+  
+  * [Lab - DC_D1SK2_L1 - lab1 - Invoking dc basic setup](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk2_l1---lab1---invoking-dc-basic-setup)
+  * [Lab - DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk2_l2---lab2---intro-to-ddc-gui-with-design_vision)
+  * [Lab - DC_D1SK2_L3 - lab3 - dc synopsys dc setup](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk2_l3---lab3---dc-synopsys-dc-setup)
+  * [Lab - DC_D1SK3_L2 - lab4 - tcl scripting](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk3_l2---lab4---tcl-scripting)
+    
+  </details>
+  
+  
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
 
