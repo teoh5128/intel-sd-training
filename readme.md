@@ -1296,7 +1296,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
 ## Day 5
 ## Theory - DFT (Design for Testability)
-<details open><summary> DFT (Design for Testability) </summary>
+<details><summary> DFT (Design for Testability) </summary>
 
 ## **What is testability in VLSI means**
 * Testability is the property of a circuit that makes it easy to test. If a design is well-controllable and well-observable, then it is easily testable.
@@ -1458,8 +1458,8 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 ## Day 6
 ## Theory - Introduction to Logic Synthesis
 
-<details><summary> Digital logic </summary>
- 
+<details open><summary> Digital logic </summary>
+  
 ## **Digital logic**
 * **Switching function:** voltage level in digital logic circuit are assumed to be switching from one value to another value instantaneously.
 * **Automation and decision making:** logic gate perform logic operation which conduct logic decisions and the output depends on preset conditions.
@@ -1467,7 +1467,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
  
   </details>
 
-<details><summary> What is logic synthesis </summary>
+<details open><summary> What is logic synthesis </summary>
  
 ## **What is logic synthesis**
 ![What is logic synthesis](https://user-images.githubusercontent.com/62828746/208393821-1aac68f0-79e0-4fff-adf4-bb8fb02ae5a2.jpg)
@@ -1479,7 +1479,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
  
   </details>
   
-<details><summary>Constraints (.sdc)</summary>
+<details open><summary>Constraints (.sdc)</summary>
  
 ## **Constraints (.sdc)**
 * Constraint is a set of rule that set limit on circuit parameters according to parameter priorities and requirements (in term of functional, timing, area and power). 
@@ -1487,7 +1487,8 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 
    </details>
 
-<details><summary> Standard cell library (.lib) </summary>
+<details open><summary> Standard cell library (.lib) </summary>
+  
 ## **Standard cell library (.lib)**
 * Designer need to set priority design constraints and synthesis tool will choose **combinational library cells from .lib** that met design's requirement. 
 * .lib consists of various basic gates with different flavours.
@@ -1495,7 +1496,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
    </details>
    
    
-<details><summary> Why we need different flavours of gate? </summary>
+<details open><summary> Why we need different flavours of gate? </summary>
  
 ### **Why we need different flavours of gate?**
 As per mentioned in previous session, flavours of gate will effect ciruit operation speed:
@@ -1509,7 +1510,7 @@ As per mentioned in previous session, flavours of gate will effect ciruit operat
  
    </details>
    
-<details><summary> Why we need slow cells? </summary>
+<details open><summary> Why we need slow cells? </summary>
  
 ### **Why we need slow cells?**
 
@@ -1523,7 +1524,7 @@ As per mentioned in previous session, flavours of gate will effect ciruit operat
 
    </details>
    
-<details><summary> Trade Off of Fast Cell and Slow Cell </summary>
+<details open><summary> Trade Off of Fast Cell and Slow Cell </summary>
  
 ## **Trade Off of Fast Cell and Slow Cell**
 **Key**              | **Fast Cell**                                   | **Slow Cell**
@@ -1537,7 +1538,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
 
-<details><summary> Comparison of implementation </summary>
+<details open><summary> Comparison of implementation </summary>
  
 ## **Comparison of implementation**
 
@@ -1546,14 +1547,14 @@ Used for | High frequency circuit | Meet hold time
 * Different logic circuit implementation results in different area and delay value.
 * There can have various type of combinational logic gates to implement Boolean function.
 * Based on the 3 type of implementation above, type 3 which use lower area and delay might be the best choice.
-* But if logic is present in hold sensitive path, an additional delay buffers are required to meet hold. These will result in additional area.
+* But if logic is present in **hold sensitive path**, an **additional delay buffers** are required to meet hold. These will result in additional area.
 
 
 * **In shorts, different cell flavour and logic implementation are required to meet different design specification.**
 
      </details>
    
-<details><summary> Goals of synthesis </summary>
+<details open><summary> Goals of synthesis </summary>
  
 ## **Goals of synthesis**
 + To get a Gate-level netlist which is:
@@ -1565,7 +1566,7 @@ Used for | High frequency circuit | Meet hold time
      
 ## Theory - Introduction to Design Compiler (DC)
 
-<details><summary> Design Compiler (DC) </summary>
+<details open><summary> Design Compiler (DC) </summary>
  
 ## **Design Compiler (DC)**
 ![Design Compiler (DC)](https://user-images.githubusercontent.com/62828746/208424612-dab6abb8-488c-42b3-a47e-7e84db1b3ac3.jpg)
@@ -1580,7 +1581,7 @@ Used for | High frequency circuit | Meet hold time
  
      </details>
      
-<details><summary> Common terminologies associated with DC </summary>
+<details open><summary> Common terminologies associated with DC </summary>
  
 ## **Common terminologies associated with DC:**
 + **SDC (Synopsys Design Constraints)**
@@ -1607,7 +1608,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
     
-<details><summary> Implementation Flow of ASIC (Application Specific Integrated Circuit) </summary>
+<details open><summary> Implementation Flow of ASIC (Application Specific Integrated Circuit) </summary>
  
 ## **Implementation Flow of ASIC (Application Specific Integrated Circuit)**
 ![Implementation Flow of ASIC](https://user-images.githubusercontent.com/62828746/208424595-112999c9-f5f9-4092-a276-556a4ec89aa8.jpg)
@@ -1620,11 +1621,11 @@ Used for | High frequency circuit | Meet hold time
  
   </details>
 
-<details><summary> DC Synthesis Flow </summary>
+<details open><summary> DC Synthesis Flow </summary>
  
 ## **DC Synthesis Flow**
 ![DC Synthesis Flow](https://user-images.githubusercontent.com/62828746/208424605-590f8d17-f5e9-4b98-9db3-3ed2caab180e.jpg)
-* Synthesis is a process of converting RTL into a technology specific Gate level netlist which includes nets, sequential cells, combinational cells and their connectivity.
+* Synthesis is a **process of converting RTL into a technology specific Gate level netlist** which includes nets, sequential cells, combinational cells and their connectivity.
 + There are 2 types of synthesis:
   * **Logical synthesis:** convert RDT to Gate level netlist. Includes gate mapping and optimization (timing/area/power) steps.
   * **Physical synthesis:** transform Gate level netlist to a layout that can be implemented on silicon. Includes floorplanning, placement, routing, clock tree synthesis and multiple different steps of local and global optimizations.
@@ -1633,7 +1634,7 @@ Used for | High frequency circuit | Meet hold time
 
 ## Theory - DC_D1SK3_L1 - Lecture3 - TCL quick refresher
 
-<details><summary> Basic TCL Command Used in DC </summary>
+<details open><summary> Basic TCL Command Used in DC </summary>
 
 ## **Basic TCL Command Used in DC**
 **TCL command**      | **Function**                                   | **Example**
@@ -1733,7 +1734,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 ![DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision_2](https://user-images.githubusercontent.com/62828746/208464662-900e1049-c0b1-4d6f-beba-93d7f801a234.jpg)
 *Schematic view of design lab1_flop_with_en.v*
 ![DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision_3](https://user-images.githubusercontent.com/62828746/208464665-df404f0b-4db1-4300-9ba5-4d265cba0e70.jpg)
-*Resulted schematic view is as expected.
+*Resulted schematic view is as expected.*
  
    </details>
    
