@@ -1454,3 +1454,338 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 
   </details>
 
+  
+## Day 6
+## Theory - Introduction to Logic Synthesis
+
+<details><summary> Digital logic </summary>
+ 
+## **Digital logic**
+* **Switching function:** voltage level in digital logic circuit are assumed to be switching from one value to another value instantaneously.
+* **Automation and decision making:** logic gate perform logic operation which conduct logic decisions and the output depends on preset conditions.
+* Behavioral model of the design are written in HDL (VHDL and Verilog).
+ 
+  </details>
+
+<details><summary> What is logic synthesis </summary>
+ 
+## **What is logic synthesis**
+![What is logic synthesis](https://user-images.githubusercontent.com/62828746/208393821-1aac68f0-79e0-4fff-adf4-bb8fb02ae5a2.jpg)
+
+* Synthesis is a process of converting RTL into gate level translation
+* Logic synthesis is combining primitive logic functions to form a design netlist that meets functional and design goals.
+* Basic steps (Translation > Logic optimization > Gate level mapping)
+* Synthesis output: Gate-level netlist
+ 
+  </details>
+  
+<details><summary>Constraints (.sdc)</summary>
+ 
+## **Constraints (.sdc)**
+* Constraint is a set of rule that set limit on circuit parameters according to parameter priorities and requirements (in term of functional, timing, area and power). 
+* Optmization steps in synthesis is constraint driven. 
+
+   </details>
+
+<details><summary> Standard cell library (.lib) </summary>
+## **Standard cell library (.lib)**
+* Designer need to set priority design constraints and synthesis tool will choose **combinational library cells from .lib** that met design's requirement. 
+* .lib consists of various basic gates with different flavours.
+ 
+   </details>
+   
+   
+<details><summary> Why we need different flavours of gate? </summary>
+ 
+### **Why we need different flavours of gate?**
+As per mentioned in previous session, flavours of gate will effect ciruit operation speed:
+[How Flavours of Gate Effect Ciruit Operation Speed](https://github.com/teoh5128/intel-sd-training#how-flavours-of-gate-effect-ciruit-operation-speed)
+
+![Why we need different flavours of gate](https://user-images.githubusercontent.com/62828746/208393825-2536b926-9624-42dc-bdab-5c4e31c8e7c5.jpg)
+
+* Comninational delay (TCOMBI) in logic path determines speed of operation of digtial logic circuit (FCLK).
+* Different flavours of gates in .lib help synthesis tool to choose combinational cells that mets delay requirement (TCOMBI).
+* Not only fast cells we also need slow cells.
+ 
+   </details>
+   
+<details><summary> Why we need slow cells? </summary>
+ 
+### **Why we need slow cells?**
+
+![Why we need slow cells](https://user-images.githubusercontent.com/62828746/208393829-d7ad1eec-ac76-4a27-911d-0d24483c3fbe.jpg)
+
+* **Setup time:** amount of time the data at the synchronous input (D) must be stable before the active edge of clock
+* **Hold time:** amount of time the data at the synchronous input (D) must be stable after the active edge of clock.
+* **Hold time violation:** ouput data from previous cycle (DFFA) reach next flip flop input too early causing new data might not correctly stored in flip-flop (DFFB).
+* To ensure there's no **hold issues**, we need cells that work slowly.
+* This is why we need cells in different flavours, fast cell to meet performance and slow cell to meet hold.
+
+   </details>
+   
+<details><summary> Trade Off of Fast Cell and Slow Cell </summary>
+ 
+## **Trade Off of Fast Cell and Slow Cell**
+**Key**              | **Fast Cell**                                   | **Slow Cell**
+------------------   | ---------------------------------------------   | --------------------------------------------- 
+Capacitance | Faster charge/discharge | Slower charge/discharge
+Transistor | Wider, capable sourcing more current | narrow, not capable sourcing more current
+Delay | Lower | Higher
+Area used | Higher | Lesser
+Power used | Higher | Lesser
+Used for | High frequency circuit | Meet hold time
+
+  </details>
+
+<details><summary> Comparison of implementation </summary>
+ 
+## **Comparison of implementation**
+
+![Comparison of implementation](https://user-images.githubusercontent.com/62828746/208427485-dd5a074e-8152-4885-a529-bb2e8987200a.jpg)
+
+* Different logic circuit implementation results in different area and delay value.
+* There can have various type of combinational logic gates to implement Boolean function.
+* Based on the 3 type of implementation above, type 3 which use lower area and delay might be the best choice.
+* But if logic is present in hold sensitive path, an additional delay buffers are required to meet hold. These will result in additional area.
+
+
+* **In shorts, different cell flavour and logic implementation are required to meet different design specification.**
+
+     </details>
+   
+<details><summary> Goals of synthesis </summary>
+ 
+## **Goals of synthesis**
++ To get a Gate-level netlist which is:
+  * **Logically correct** - Logic equivalence between RTL and netlist, logic optimization
+  * **Electrically correct** - Inserting DFT logic
+  * **Met timing** - Inserting clock gates
+ 
+     </details>
+     
+## Theory - Introduction to Design Compiler (DC)
+
+<details><summary> Design Compiler (DC) </summary>
+ 
+## **Design Compiler (DC)**
+![Design Compiler (DC)](https://user-images.githubusercontent.com/62828746/208424612-dab6abb8-488c-42b3-a47e-7e84db1b3ac3.jpg)
+
+* DC is the core synthesis engine of Synopsys synthesis product family.
+* Used for logic synthesis which convert design description (written in Verilog or VHDL) into optimized gate-level netlist mapped to specific technology library.
++ 4 basic steps for synthesizing a design: 
+  * Analyze & Elaborate
+  * Apply Constraints
+  * Optimization & Compilation
+  * Inspection of Results
+ 
+     </details>
+     
+<details><summary> Common terminologies associated with DC </summary>
+ 
+## **Common terminologies associated with DC:**
++ **SDC (Synopsys Design Constraints)**
+  * Industry standard and suppoted by different EDA (Electronic Design Automation) tools implementation tools.
+  * From Synopsys but can be understood by other EDA tools such as Cadence and Mentor Graphic.
+  * As guidance for Synopsys tool to pick what flavours of cell and optimization type to achieve best implementation result.
+  * Design intent in terms of timing, area and power constraints.
+  * SDC is based on TCL. (Tool Command Language)
+
++ **.LIB**
+  * Design library which contains collection of standard cells in various flavour. 
+  * But cannot understand by DC, need to be converted to .db.
+
++ **.DB**
+  * Same as .lib but in different format.
+  * Can be understand by DC.
+
++ **DDC**
+  * Synopsys proprietary format for storing design information.
+  * It's a binary file which contains both verilog gate level description and design constrains.
+  * DC can write out and read in DDC.
+
++ **Design**: RTL files which contains behavioral model of design.
+
+  </details>
+    
+<details><summary> Implementation Flow of ASIC (Application Specific Integrated Circuit) </summary>
+ 
+## **Implementation Flow of ASIC (Application Specific Integrated Circuit)**
+![Implementation Flow of ASIC](https://user-images.githubusercontent.com/62828746/208424595-112999c9-f5f9-4092-a276-556a4ec89aa8.jpg)
+* ASIC design flow adopted by engineers for efficient structured ASIC chip architecture and focus on its design functionalities.
+* It's a steps in converting RTL to the Physical Database (GDS).
+* Synthesized netlist, design constraints and standard cell library are taken as inputs and converted to a layout (gds file).
++ Difference of ASIC and SoC (System On Chip):
+  * ASIC - chips basically hardwired to do a specific task. Not applicable for general-purpose task.
+  * Soc - collection of different type of processor components (ex: CPU/Modems and memory units).
+ 
+  </details>
+
+<details><summary> DC Synthesis Flow </summary>
+ 
+## **DC Synthesis Flow**
+![DC Synthesis Flow](https://user-images.githubusercontent.com/62828746/208424605-590f8d17-f5e9-4b98-9db3-3ed2caab180e.jpg)
+* Synthesis is a process of converting RTL into a technology specific Gate level netlist which includes nets, sequential cells, combinational cells and their connectivity.
++ There are 2 types of synthesis:
+  * **Logical synthesis:** convert RDT to Gate level netlist. Includes gate mapping and optimization (timing/area/power) steps.
+  * **Physical synthesis:** transform Gate level netlist to a layout that can be implemented on silicon. Includes floorplanning, placement, routing, clock tree synthesis and multiple different steps of local and global optimizations.
+
+  </details>
+
+## Theory - DC_D1SK3_L1 - Lecture3 - TCL quick refresher
+
+<details><summary> Basic TCL Command Used in DC </summary>
+
+## **Basic TCL Command Used in DC**
+**TCL command**      | **Function**                                   | **Example**
+------------------   | ---------------------------------------------   | --------------------------------------------- 
+set | to create and store information in variabels | *set a 5* -> assigned a = 5  <br />  *set a [expr $a + $b]* -> assign a = a + b  <br /> #square bracket used for nesting command
+if loop | If Boolean expression evaluates true, then if block of code will be executed, otherwise else block of code will be executed. | Syntax and example code of an 'if...else' statement <br /> ![if_loop](https://user-images.githubusercontent.com/62828746/208475719-a58e6e77-2bb6-42a8-b852-d0292f0c44b4.jpg)
+while loop | It evaluates test as an expression. If test is true, the code in body is executed. After the code in body has been executed, testis evaluated again. |  Syntax and example code of an 'while' statement <br /> ![while_loop](https://user-images.githubusercontent.com/62828746/208477034-f76b3762-6afe-4d0f-b74d-10383710bb0e.jpg)
+for loop | A repetition control structure that allows code written to be executed for a specific number of times. |  Syntax and example code of an 'for' statement <br /> ![for_loop](https://user-images.githubusercontent.com/62828746/208478176-f27a59ad-a641-476d-8801-7ab3058f0e22.jpg)
+foreach | Implements a loop where the loop variable(s) take on values from one or more lists. | Syntax and example code of an 'foreach' statement <br /> ![foreach_loop](https://user-images.githubusercontent.com/62828746/208479912-f4dfe426-5f30-4813-a871-05bdd0889f05.jpg)
+foreach_in_collection | Similar to the foreach, just it was used to iterate through all elements in a collection instead of lists | Syntax and example code of an 'foreach_in_collections' statement <br /> ![foreach_in_collection](https://user-images.githubusercontent.com/62828746/208481531-8230cf9d-8fe9-49f6-ae6c-319014223ac2.jpg)
+
+  </details>
+        
+## Lab Topic - Introduction to Logic Synthesis
+
+<details open><summary> DC_D1SK2_L1 - lab1 - Invoking dc basic setup </summary>
+
+### Lab - DC_D1SK2_L1 - lab1 - Invoking dc basic setup
+#### Steps:
+> 1. Go to home directory, create a folder for sd_training.
+>> cd /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/
+>> mkdir sd_training
+> 2. Clone directory "sky130RTLDesignAndSynthesisWorkshop" from Kunal's github.
+>> *git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git*
+> 3. Explore copied directory and confirm there's all the required folders and files.
+>> *cd sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP*
+> 4. Goto lib/ and make sure "sky130_fd_sc_hd__tt_025C_1v80.db" lib is inside.
+>> *cd lib/*
+> 5. Goto verilog_files which stored all the verilog and testbench fill that will be used in subsequent labs.
+>> *cd verilog_files/*
+
+ #### Result:
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_0](https://user-images.githubusercontent.com/62828746/208451379-0fcfde28-271c-4278-a89a-d18c5ab68f3b.jpg)
+ 
+ #### Steps:
+> 1. Open library file and review what contains in .lib file. [*DO NOT EDIT .LIB FILE, ONLY READ]
+>> *vim /lib/sky130_fd_sc_hd__tt_025C_1v80.lib*
+> 2. Tips to switch off syntax for more pleasant review experience. 
+>> *:syn off*
+> 3. Look into the information contains in .lib, such as library name, power, voltage and temperature of cell.
+ 
+ #### Result:
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_1](https://user-images.githubusercontent.com/62828746/208451395-8f487a2b-646c-47eb-ae52-3665aa99667e.jpg)
+
+ 
+ #### Steps:
+> 1. Invoke dc 
+>> csh -> to enable c shell
+>> dc_shell -> invoke dc compiler
+> 2. Read verilog file using command.
+>> *read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v*
+> 3. Write verilog 
+>> *write -f verilog -out lab1_net.v*
+> 4. Read db and point to to correct path so that fix can't link library issues.
+>> *read_db DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db*
+>> *set target_library /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db*
+>> *set link_library {* /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db}*
+>> *link*
+> 5. Compile the design
+>> *compile*
+> 6. Now, write verilog again which should be using cell inside sky130_fd_sc_hd__tt_025C_1v80.db.
+>> *write -f verilog -out lab1_net_with_sky130.v*
+> 7. Write in ddc format
+>> *write -f ddc -out lab1.ddc*
+
+#### Result:
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_2](https://user-images.githubusercontent.com/62828746/208451398-4d509a34-d1dd-4996-a25a-6c702838f490.jpg)
+*Invoke dc shell and read_verilog*
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_3](https://user-images.githubusercontent.com/62828746/208451403-93f3248c-045f-435d-b84d-0b992d124cd5.jpg)
+*Read verilog file lab1_flop_with_en.v*
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_4](https://user-images.githubusercontent.com/62828746/208451406-3d69a653-ae30-4c2d-8db0-5dd44c35e05f.jpg)
+*Review written verilog file which used GTECH library.*
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_5](https://user-images.githubusercontent.com/62828746/208451413-7f58fe6b-2aa3-4e6c-a1bf-665143e05b28.jpg)
+*Read db and point to to correct path*
+![DC_D1SK2_L1 - lab1 - Invoking dc basic setup_6](https://user-images.githubusercontent.com/62828746/208451416-36ab88a9-476e-4ae2-8d3d-854264d63fce.jpg)
+*Review written verilog file which used correct library path sky130_fd_sc_hd__tt_025C_1v80.db*
+ 
+   </details>
+   
+<details open><summary> DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision </summary>
+
+### Lab - DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision
+
+#### Steps:
+> 1. Launch design vision
+>> *csh*
+>> *design_vision*
+> 2. In invoked design vision gui, use command to read ddc file.
+>> *read_ddc lab1.ddc*
+> 3. In logical hierarchy bar, right click and choose schematic view, double click the schematic moduel to see detail connection.
+
+#### Result:
+![DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision_0](https://user-images.githubusercontent.com/62828746/208464654-bb84b2d8-d431-444e-b9fe-77b66e9eff7b.jpg)
+*In invoked design vision gui, use command to read ddc file.*
+![DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision_1](https://user-images.githubusercontent.com/62828746/208464660-e81cc44b-4c9b-4903-95c2-6a88f668a44a.jpg)
+*Comparison of read_verilog and read_ddc in design vison gui.*
+![DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision_2](https://user-images.githubusercontent.com/62828746/208464662-900e1049-c0b1-4d6f-beba-93d7f801a234.jpg)
+*Schematic view of design lab1_flop_with_en.v*
+![DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision_3](https://user-images.githubusercontent.com/62828746/208464665-df404f0b-4db1-4300-9ba5-4d265cba0e70.jpg)
+*Resulted schematic view is as expected.
+ 
+   </details>
+   
+   
+   
+<details open><summary> DC_D1SK2_L3 - lab3 - dc synopsys dc setup </summary>
+
+### Lab - DC_D1SK2_L3 - lab3 - dc synopsys dc setup
+#### Steps:
+> 1. Invoke dc 
+>> *csh* 
+>> *dc_shell* 
+> 2. To avoid tool using dummy library as default, set target library and link library everytime invoke dc.
+>> *set target_library /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db*
+>> *set link_library {* /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db}*
+> 3. To avoid set multiple db files for design (which is troublesome and error prone) each time invoke dc, use command to replace installed default synopsys dc setup with home directory's synopsys dc setup. Then, all repetitive task (mainly target library and link library) which is needed for tool setup can be pointer in this file.
+>> *cd <home directory>*
+>> *gvim .synopsys_dc.setup*
+> 4. Edit .synopsys_dc.setup file
+>> set target_library /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db*
+>> set link_library {* $target_library}
+>> :qa! -> save file
+> 5. Invoke dc shell again, will see target and link library auto set to sky130_fd_sc_hd__tt_025C_1v80.db.
+>> csh
+>> dc_shell
+ 
+#### Result:
+![DC_D1SK2_L3 - lab3 - dc synopsys dc setup_0](https://user-images.githubusercontent.com/62828746/208471728-ca45600d-2560-4ae8-8974-5e511612d00f.jpg)
+*Invoke dc shell and manually set library path*
+![DC_D1SK2_L3 - lab3 - dc synopsys dc setup_1](https://user-images.githubusercontent.com/62828746/208471736-f8ec2aa1-93a2-41e0-bbb7-4f2ef10daea5.jpg)
+*Invoke dc shell after replace installed default synopsys dc setup with edited home directory's synopsys dc setup*
+
+ </details>
+
+<details open><summary> DC_D1SK3_L2 - lab4 - tcl scripting </summary>
+ 
+### Lab - DC_D1SK3_L2 - lab4 - tcl scripting
+ 
+#### Result:
+![DC_D1SK3_L2 - lab4 - tcl scripting_0](https://user-images.githubusercontent.com/62828746/208494512-805be48a-d90b-4702-90f5-3b76c3842b0c.jpg)
+ *Example of for loop and mistake in syntax.*
+![DC_D1SK3_L2 - lab4 - tcl scripting_1](https://user-images.githubusercontent.com/62828746/208494518-bf5a0e2e-9380-4b3c-8e00-3969ae81855b.jpg)
+ *Example of while loop and mistake in syntax.*
+![DC_D1SK3_L2 - lab4 - tcl scripting_2](https://user-images.githubusercontent.com/62828746/208494522-21be38eb-6c4d-4e9b-87f6-bb1ee9cd6032.jpg)
+ *Example of foreach loop and mistake in syntax.*
+![DC_D1SK3_L2 - lab4 - tcl scripting_3](https://user-images.githubusercontent.com/62828746/208494525-aa6172c7-98f8-4c24-bb02-125a02aa2c2a.jpg)
+ *Example of foreach_in_collection loop and mistake in syntax.*
+![DC_D1SK3_L2 - lab4 - tcl scripting_4](https://user-images.githubusercontent.com/62828746/208494529-02a7836a-de9e-423a-b057-7837a821ec54.jpg)
+ *Example of exprresion syntax.*
+![DC_D1SK3_L2 - lab4 - tcl scripting_5](https://user-images.githubusercontent.com/62828746/208494532-b8add567-b350-4e20-a7cb-a4dfda8a2a9f.jpg)
+ *Example of print list use and no use foreach loop.*
+
+ </details>
+
+
