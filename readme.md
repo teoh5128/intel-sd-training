@@ -90,7 +90,7 @@
   </details>
  
   
-+ **[ Day 6 - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
++ **[ Day 6 - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-6))**
   <details><summary> Theory </summary>
     
   * [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-logic-synthesis)
