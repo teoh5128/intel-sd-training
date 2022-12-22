@@ -1810,3 +1810,205 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  </details>
 
 
+ 
+  
+## Day 7 Basics of STA
+## Theory - Introduction to STA
+
+
+<details open><summary> Introduction to STA </summary>
+ 
+## **Introduction to STA**
+* **What is STA?:**
+STA will adding net delays and cell delays to obtain path delays. Then, STA tool will analyze all paths from each start point to each end point, compare it against timing constraints set for the path and make sure it met the timing spec of design.
+ 
++ **Why we need STA?:**
+  * STA helps to calculate path delay for optimization tool and help the tool to chose most optimcal cell from .lib to create a circuit that met timing constraints. 
+  * STA helps to verify circuit working at specified frequency.
+
+* **When will STA included in design flow?**
+ STA is covered during Synthesis stage in ASIC design flow. To check whether design spec meet timing requirement without simulation.
+
+![Delay](https://user-images.githubusercontent.com/62828746/209027821-346ad7d6-004d-44c4-92bc-74b95fc2fb0e.jpg)
+ 
++ Delay of a cell will be a function of **Input Transition** (Inflow)
+  * Delay is function of current
+  * Fast current/fast input: less delay/fast rise
+
++ Delay of a cell will be a function of output load 
+  * Delay is function of load capacitance
+  * Larger load: higher delay/slower transition time
+ 
+ 
+![Timing arc](https://user-images.githubusercontent.com/62828746/209027829-dcb6dcd7-06eb-42ee-8c8a-05bedb9066f6.jpg)
+
+* Timing arc: represents the timing relationship between 2 pins of any cell or block or any boundaries. And it defines the propogation of signal through logic gates.
+* Basically it has a start point and end point.
++ Delay for sequential cell:
+  * Delay from Clock to Q for D Flip Flop
+  * Delay from Clock to Q, Delay from D to Q for D Latch
+  * Setup and Hold time delay
+ 
+* D to Q delay only happened for D latch.
+* D latch sampling point start at where the D latch become opaque.
+
+ 
+   </details>
+ 
+## Theory - What are constraints?
+<details open><summary> What are constraints </summary>
+
+![timing path](https://user-images.githubusercontent.com/62828746/209027830-ee44f46c-5e6a-4809-900b-2a05dc6af6ff.jpg)
+
+* **Critical path:** Path that deciding or limiting clock frequency
+* Timing path 1 and 2 has different Tcombi delay, where timing path 1 that has higher delay become the critical path.
+* Set a clock period value and synthesis will choose cells that meets the delay (Tcombi delay) -> constraint to design
+
+ 
+![Constraints summary](https://user-images.githubusercontent.com/62828746/209027816-7b3625cb-922a-44fb-8c2c-1d24d6dd4d40.jpg)
+
++ Timing path always start at one start point and end at one of the end points
+  * CLK to D - start:clock pins of register, end:D pins of DFF/D-Latch
+  * Clk to Output - start:clock pins of register, end:output port
+  * Input to D - start:input port, end:D pins of DFF/D-Latch
+  * Input to Output - start:input port, end:output port
+* inA/InB/OutY: interface at the boundary of whole chip (module)
++ Type of timing paths:
+  * Reg2Reg: constrained by clock (eg: CLK to D)
+  * Reg2Out: constrained by output external delay and clock perios ( IO path, eg: Clk to Output)
+  * In2Reg:  constrained by internal external delay and clock perios ( IO path, eg: Input to D)
+* IO Delay Modelling: Delay modelling that referred IO timing path and IO budgeting is based on the interaction with other modules outside the module bundary.
+
+ 
+   </details>
+ 
+## Theory - Inp Trans Output Load
+<details open><summary> Inp Trans Output Load </summary>
+
+![Model transition delay](https://user-images.githubusercontent.com/62828746/209027827-0052c41e-f37b-4453-913e-3d416a4723a6.jpg)
+
+* For ideal case, transition delay is not counted in and this might cause input logic delay will increased (due to add in trans delay).
+* This will cause setup time for next capturing flip flop violated.
+* Hence, we need to model input transition delay to avoid setup violation for next capturing DFF.
+* Specification of design will tell the tools how much should the delay (transition and load) be modelled, depends on the distance with other module.
+* It should be optimally and correctly modelled cause over modelling of delay will give negative returns which is not looking forward to.
+
+![Model output load delay](https://user-images.githubusercontent.com/62828746/209027824-007ca258-ef77-4ff5-a279-49c91e1beaac.jpg)
+
+* For ideal case, ouput load delay is not counted in and this might cause output logic delay will increased (due to add in output load delay).
+* This will cause setup time for next capturing flip flop violated.
+* Hence, we also need to model output load delay to avoid setup violation for next capturing DFF.
+* Always remember: **delay of cell is the function of Input Transition and Output Load.**
+ 
+   </details>
+
+
+
+## Lab Topic - Basics of STA
+
+<details open><summary> DC_D2SK2_L1 - Lab5 - Timing dot Libs </summary>
+
+### Lab - DC_D2SK2_L1 - Lab5 - Timing dot Libs
+#### Steps:
+> 1.Open .lib file and review the information.
+>> *gvim sky130_fd_sc_hd__tt_025C_1v80.lib*
+
+ #### Result:
+![DC_D2SK2_L1 - Lab5 - Timing dot Libs_0](https://user-images.githubusercontent.com/62828746/209026589-fb54710e-dd1f-44ad-b153-4f120f6920f4.jpg) 
+
+ *Review delay model and default maximum transition inside .lib*
+ 
+![DC_D2SK2_L1 - Lab5 - Timing dot Libs_1](https://user-images.githubusercontent.com/62828746/209026593-a557f509-bdd4-48d1-a584-521292fa4b67.jpg) 
+
+ *More input driver, area higher, transistor wider and delay lower.*
+ 
+![DC_D2SK2_L1 - Lab5 - Timing dot Libs_2](https://user-images.githubusercontent.com/62828746/209026595-1c81d70b-fce3-485e-b2b3-9d9d664b01b5.jpg) 
+
+*Review other cell pin's attribute inside .lib*
+ 
+![DC_D2SK2_L1 - Lab5 - Timing dot Libs_3](https://user-images.githubusercontent.com/62828746/209026597-59260329-4fdc-4e90-b2ea-ef3214f00597.jpg) 
+ 
+*Effect of area of cell and load capacitance to delay of cell*
+ 
+![DC_D2SK2_L1 - Lab5 - Timing dot Libs_4](https://user-images.githubusercontent.com/62828746/209026598-d5e51bbd-014d-4782-811e-ee7103bc4004.jpg) 
+ 
+*Tools use unateness to propogate the transition of cell.*
+ 
+![DC_D2SK2_L1 - Lab5 - Timing dot Libs_5](https://user-images.githubusercontent.com/62828746/209026600-d2d63b73-669c-41e6-81bc-3e1692a3cd73.jpg) 
+ 
+*Example of Unatness for various cells*
+ 
+   </details>
+   
+   
+
+<details open><summary> DC_D2SK2_L2 - Lab6 - Exploring dotLib </summary>
+ 
+### Lab - DC_D2SK2_L2 - Lab6 - Exploring dotLib
+#### Steps:
+> 1.Open .lib file and review the information.
+>> *gvim sky130_fd_sc_hd__tt_025C_1v80.lib*
+> 2. Load dc shell to get sequential library cell name
+>> csh
+>> dc_shell
+>> *get_lib_cells */* -filter "is_sequential==true"*
+ 
+#### Result:
+![DC_D2SK2_L2 - Lab6 - Exploring dotLib_0](https://user-images.githubusercontent.com/62828746/209026602-f8741a38-64ad-4c97-84ae-20d816d45974.jpg)
+
+ *Attribute/constraints set for DFF*
+ 
+![DC_D2SK2_L2 - Lab6 - Exploring dotLib_1](https://user-images.githubusercontent.com/62828746/209026604-efd93363-6678-406c-86b0-bee20044c543.jpg)
+
+ *Timing type for posedge DFF (dlrtp) and negedge DFF (dlrtn)*
+ 
+   </details>
+   
+   
+<details open><summary> DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2 </summary>
+ 
+### Lab - DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2
+ 
+#### Steps:
+>1.List what library has linked
+>> *list_lib*
+>2.Sort out all "AND" cell name inside library
+ 
+`foreach_in_collection my_lib_cell [get_lib_cells */*and*] {                                                                        
+set my_lib_cell_name [get_object_name $my_lib_cell];
+echo $my_lib_cell_name;
+}
+`
+>3.Sort out all "AND" cell name that are inside library with pin direction
+ 
+`foreach_in_collection my_pins [get_lib_pins sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/*] {
+set my_pin_name [get_object_name $my_pins];
+set pin_dir [get_lib_attribute $my_pin_name direction];
+echo $my_pin_name $pin_dir;
+}
+`
+
+#### Result:
+![DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2_0](https://user-images.githubusercontent.com/62828746/209026606-00b28107-5aae-40ba-b0a2-ea81a6ba4883.jpg)
+
+ *List out all the “AND” cell’s name inside library*
+ 
+![DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2_1](https://user-images.githubusercontent.com/62828746/209026607-76ce8db8-2770-47e4-8f04-4f6ee84edbc8.jpg)
+
+ *Sort out all "AND" cell name that are inside library*
+ 
+![DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2_2](https://user-images.githubusercontent.com/62828746/209026612-5e68d495-41cf-4183-8c16-421c1909deb2.jpg)
+
+ *Sort out all "AND" cell name that are inside library with pin direction*
+ 
+![DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2_3](https://user-images.githubusercontent.com/62828746/209026614-a9864a77-7d05-4c99-9880-f6bc6e21b458.jpg)
+
+ *Script to sort out pin’s name, direction and function*
+ 
+![DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2_4](https://user-images.githubusercontent.com/62828746/209026618-85317b19-28d2-4a6d-b89a-021b07bc06c8.jpg)
+
+ *Command that able to quickly explore attribute of cell’s pins*
+ 
+   </details>
+ 
+ 
