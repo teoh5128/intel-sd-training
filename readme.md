@@ -1517,7 +1517,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
  
   </details>
   
-<details open><summary>Constraints (.sdc)</summary>
+<details><summary>Constraints (.sdc)</summary>
  
 ## **Constraints (.sdc)**
 * Constraint is a set of rule that set limit on circuit parameters according to parameter priorities and requirements (in term of functional, timing, area and power). 
@@ -1525,7 +1525,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 
    </details>
 
-<details open><summary> Standard cell library (.lib) </summary>
+<details><summary> Standard cell library (.lib) </summary>
   
 ## **Standard cell library (.lib)**
 * Designer need to set priority design constraints and synthesis tool will choose **combinational library cells from .lib** that met design's requirement. 
@@ -1534,7 +1534,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
    </details>
    
    
-<details open><summary> Why we need different flavours of gate? </summary>
+<details><summary> Why we need different flavours of gate? </summary>
  
 ### **Why we need different flavours of gate?**
 As per mentioned in previous session, flavours of gate will effect ciruit operation speed:
@@ -1548,7 +1548,7 @@ As per mentioned in previous session, flavours of gate will effect ciruit operat
  
    </details>
    
-<details open><summary> Why we need slow cells? </summary>
+<details><summary> Why we need slow cells? </summary>
  
 ### **Why we need slow cells?**
 
@@ -1562,7 +1562,7 @@ As per mentioned in previous session, flavours of gate will effect ciruit operat
 
    </details>
    
-<details open><summary> Trade Off of Fast Cell and Slow Cell </summary>
+<details><summary> Trade Off of Fast Cell and Slow Cell </summary>
  
 ## **Trade Off of Fast Cell and Slow Cell**
 **Key**              | **Fast Cell**                                   | **Slow Cell**
@@ -1576,7 +1576,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
 
-<details open><summary> Comparison of implementation </summary>
+<details><summary> Comparison of implementation </summary>
  
 ## **Comparison of implementation**
 
@@ -1592,7 +1592,7 @@ Used for | High frequency circuit | Meet hold time
 
      </details>
    
-<details open><summary> Goals of synthesis </summary>
+<details><summary> Goals of synthesis </summary>
  
 ## **Goals of synthesis**
 + To get a Gate-level netlist which is:
@@ -1604,7 +1604,7 @@ Used for | High frequency circuit | Meet hold time
      
 ## Theory - Introduction to Design Compiler (DC)
 
-<details open><summary> Design Compiler (DC) </summary>
+<details><summary> Design Compiler (DC) </summary>
  
 ## **Design Compiler (DC)**
 ![Design Compiler (DC)](https://user-images.githubusercontent.com/62828746/208424612-dab6abb8-488c-42b3-a47e-7e84db1b3ac3.jpg)
@@ -1619,7 +1619,7 @@ Used for | High frequency circuit | Meet hold time
  
      </details>
      
-<details open><summary> Common terminologies associated with DC </summary>
+<details><summary> Common terminologies associated with DC </summary>
  
 ## **Common terminologies associated with DC:**
 + **SDC (Synopsys Design Constraints)**
@@ -1646,7 +1646,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
     
-<details open><summary> Implementation Flow of ASIC (Application Specific Integrated Circuit) </summary>
+<details><summary> Implementation Flow of ASIC (Application Specific Integrated Circuit) </summary>
  
 ## **Implementation Flow of ASIC (Application Specific Integrated Circuit)**
 ![Implementation Flow of ASIC](https://user-images.githubusercontent.com/62828746/208424595-112999c9-f5f9-4092-a276-556a4ec89aa8.jpg)
@@ -1659,7 +1659,7 @@ Used for | High frequency circuit | Meet hold time
  
   </details>
 
-<details open><summary> DC Synthesis Flow </summary>
+<details><summary> DC Synthesis Flow </summary>
  
 ## **DC Synthesis Flow**
 ![DC Synthesis Flow](https://user-images.githubusercontent.com/62828746/208424605-590f8d17-f5e9-4b98-9db3-3ed2caab180e.jpg)
@@ -1672,7 +1672,7 @@ Used for | High frequency circuit | Meet hold time
 
 ## Theory - TCL quick refresher
 
-<details open><summary> Basic TCL Command Used in DC </summary>
+<details><summary> Basic TCL Command Used in DC </summary>
 
 ## **Basic TCL Command Used in DC**
 **TCL command**      | **Function**                                   | **Example**
