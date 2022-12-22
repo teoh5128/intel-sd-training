@@ -1812,7 +1812,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
  
   
-## Day 7 Basics of STA
+## Day 7 
 ## Theory - Introduction to STA
 
 
