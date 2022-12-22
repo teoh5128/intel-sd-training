@@ -108,6 +108,24 @@
   </details>
   
   
++ **[ Day 7 - Basic of STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-7)**
+  <details><summary> Theory </summary>
+    
+  * [Theory - Introduction to STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#introduction-to-sta)
+  * [Theory - Theory - What are constraints?](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---what-are-constraints)
+  * [Theory - Theory - Inp Trans Output Load](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---inp-trans-output-load)
+    
+  </details>
+  <details><summary> Lab </summary>
+  
+  * [Lab - DC_D2SK2_L1 - Lab5 - Timing dot Libs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d2sk2_l1---lab5---timing-dot-libs)
+  * [Lab -DC_D2SK2_L2 - Lab6 - Exploring dotLib](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d2sk2_l2---lab6---exploring-dotlib)
+  * [Lab - DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d2sk2_l3---lab7---exploring---dotlib-part2)
+ 
+    
+  </details>
+  
+  
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
 
