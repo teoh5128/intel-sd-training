@@ -1820,14 +1820,14 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
 ## **Introduction to STA**
 * **What is STA?:**
-STA will adding net delays and cell delays to obtain path delays. Then, STA tool will analyze all paths from each start point to each end point, compare it against timing constraints set for the path and make sure it met the timing spec of design.
+<br /> STA will adding net delays and cell delays to obtain path delays. Then, STA tool will analyze all paths from each start point to each end point, compare it against timing constraints set for the path and make sure it met the timing spec of design.
  
 + **Why we need STA?:**
   * STA helps to calculate path delay for optimization tool and help the tool to chose most optimcal cell from .lib to create a circuit that met timing constraints. 
   * STA helps to verify circuit working at specified frequency.
 
 * **When will STA included in design flow?**
- STA is covered during Synthesis stage in ASIC design flow. To check whether design spec meet timing requirement without simulation.
+ <br /> STA is covered during Synthesis stage in ASIC design flow. To check whether design spec meet timing requirement without simulation.
 
 ![Delay](https://user-images.githubusercontent.com/62828746/209027821-346ad7d6-004d-44c4-92bc-74b95fc2fb0e.jpg)
  
