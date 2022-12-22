@@ -112,8 +112,8 @@
   <details><summary> Theory </summary>
     
   * [Theory - Introduction to STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#introduction-to-sta)
-  * [Theory - Theory - What are constraints?](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---what-are-constraints)
-  * [Theory - Theory - Inp Trans Output Load](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---inp-trans-output-load)
+  * [Theory - What are constraints?](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---what-are-constraints)
+  * [Theory - Inp Trans Output Load](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---inp-trans-output-load)
     
   </details>
   <details><summary> Lab </summary>
