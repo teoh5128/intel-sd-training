@@ -1496,7 +1496,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 ## Day 6
 ## Theory - Introduction to Logic Synthesis
 
-<details open><summary> Digital logic </summary>
+<details><summary> Digital logic </summary>
   
 ## **Digital logic**
 * **Switching function:** voltage level in digital logic circuit are assumed to be switching from one value to another value instantaneously.
@@ -1505,7 +1505,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
  
   </details>
 
-<details open><summary> What is logic synthesis </summary>
+<details><summary> What is logic synthesis </summary>
  
 ## **What is logic synthesis**
 ![What is logic synthesis](https://user-images.githubusercontent.com/62828746/208393821-1aac68f0-79e0-4fff-adf4-bb8fb02ae5a2.jpg)
