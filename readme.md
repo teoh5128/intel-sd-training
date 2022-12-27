@@ -2393,9 +2393,9 @@ echo $my_cell_name $rname;
    </details>
 
 
-<details open><summary> DC_D3SK3_L2 - lab13 - generated_clocks </summary>
+<details open><summary> DC_D3SK4_L2 - lab15 - part1 Set_Max_delay </summary>
 
-### Lab - DC_D3SK3_L2 - lab13 - generated_clocks
+### Lab - DC_D3SK4_L2 - lab15 - part1 Set_Max_delay
 
 #### Steps:
 > 1. Read lab14 circuit verilog file and use back constraints srcipt in previous lab session.
