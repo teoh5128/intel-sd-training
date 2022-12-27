@@ -126,7 +126,7 @@
   </details>
  
   
-  + **[ Day 8 - Advanced sdc constraints](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-8)**
++ **[ Day 8 - Advanced sdc constraints](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-8)**
   <details><summary> Theory </summary>
     
   * [Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sdc-part1-clock---clock-tree-modelling---uncertainty)
