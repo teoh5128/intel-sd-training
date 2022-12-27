@@ -2030,3 +2030,372 @@ echo $my_pin_name $pin_dir;
    </details>
  
  
+  
+  
+  ## Day 8 (Advanced SDC Constraints)
+## Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
+
+<details open><summary> Clock Tree Modelling - Uncertainty </summary>
+
+## **Introduction to CTS (Clock Tree Synthesis)**
+
+![Introduction to CTS (Clock Tree Synthesis)](https://user-images.githubusercontent.com/62828746/209437450-4a772d0f-d288-4d47-848b-91d4edc70d95.jpg)
+![Introduction to CTS (Clock Tree Synthesis)_1](https://user-images.githubusercontent.com/62828746/209437452-2b66e043-ecb9-4fcc-8cdb-309e0cf5820f.jpg)
+
+* CTS: Process of distributing clock equally among all sequential circuit in design and is used to balance clock skew and reduce insertion latency.
+* Puspose of CTS: To achieve zero/minimum skew or balanced skew by inserting buffers along the clock routes.
+* CTS start point: Clock source
+* CTS end point: Clock pins of sequential cells.
+* In reality, pratical circuit has delay in clock and need CTS try to reduce/remove the delay and balance the clock in sequential circuit.
+
+## **Clock Generation and Jitter**
+![Clock Generation and Jitter](https://user-images.githubusercontent.com/62828746/209437453-54602b28-fdc2-425c-ab36-0ccf12fc86b7.jpg)
+* Clock generator: Oscillator, PLL or External Clock Source
+* All of the above clock sources have inherent variations in clock period due to stochastic effects.
+* Due to stochastic effects, edegs attive within a window and location of edges varies from cycle within this window.
+* Clock jitter - Typically caused by clock generator circuitry, noise, power supply variations, interference from nearby circuitry.
+
+ ## **Clock Skew**
+![Clock Skew](https://user-images.githubusercontent.com/62828746/209437448-90c4f261-17eb-45da-8809-2d3f06ae7466.jpg)
+ 
+* Clock distribution: inclde network of wire or inverter. In pracrical, RC delay of wire resistance and gate load is very long.
+* Variations in this delay cause clock to get to different elements at different times. This is called clock skew.
+* Clock skew between two flip-flops represents the difference in arrival times of clock signal at the respective clock pins.
+ 
+
+## **Clock Modelling**
+![Clock Modelling](https://user-images.githubusercontent.com/62828746/209437454-1f7c41f1-ab1b-489d-8586-3f6723b63074.jpg)
+
++ Model clock for following:
+  * Period
+  * Source Latency: Time taken by clock source to generate clock.
+  * Clock Network Latency: Time taken by clock distribution network.
+  * Clock Skew: Clock path delay mismatches which cause differences in arrival of clock. CTS only will balance/minimize the clock and can't make clock to zero.
+  * Jitter: Stochastic variation in the arrival of clock edge. Two type: Duty cycle jitter and period jitter.
+ 
++ Clock Uncertainty: Clock Skew and Jitter.
++ Post CTS, clock network is real and hence this modelled clock skew and clock network latency must be removed and actual clock delay should be calculated by the tool. 
+
+ **Stage**      | **Clock Uncertainty**   |  **Timing Path** | **Explanation**
+------------------   | ------------------  | ------------------ | ---------------------
+Pre-CTS (Synthesis) | Clock Skew and Jitter | Ideal | Clock Skew: Delay imbalance between clock network. <br /> Jitter: Random variation in clock edge of clock source.
+Post-CTS | Only Jitter | Practical clock tree is built, no more ideal clock. | Jitter: Random variation in clock edge of clock source.
+ 
+   </details>
+
+
+
+## Theory - DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays
+
+<details open><summary> DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays </summary>
+
+**TCL command**      | **Function**                                   | **Example**
+------------------   | ---------------------------------------------   | --------------------------------------------- 
+get_ports | Creates a collection of ports from the current design. Can assign these ports to a variable or pass them into another command | get_ports clk -> query port in design <br /> get_ports *clk* -> get collection of ports with name contains clk  <br /> get_ports * -> get all ports in design  <br /> get_ports * -filter "direction == in" -> list all input port 
+get_clocks | Creates a collection of clocks from the current design. Can assign these clocks to a variable or pass them into another command. | get_clocks * -> get all clocks in design  <br />  get_clocks *clk* -> get collection of clock with name contains clk <br /> get_clocks* -filter "period > 10" -> list all clock with period more than 10ns <br /> get_attribute [get_clocks my_clk] is_generated -> get attribute (period/generated/shape) of the clock
+get_cells | Creates a collection of cells from the current design relative to the current instance. Can assign these cells to a variable or pass them into another command. | get_cells * -hier -> List all cells across all hierachies in the design. (Physical and hierachical)
+create_clock | Creates a clock object and defines its waveform in the current design | create_clock -name MY_CLK -per 5 [get_ports CLK] <br /> *clock must be created on clk source (PLL, oscilator) or primary IO pins (for external clock) <br />  create_clock -name MY_CLK -per 10 [get_ports CLK] -> 50% DC clock starting phase is HIGH <br />  create_clock -name MY_CLK -per 10 [get_ports CLK] -wave {5 10} -> 50% DC clock starting phase is LOW <br />  create_clock -name MY_CLK -per 10 [get_ports CLK] -wave {2.5 7.5} -> 50% DC clock starting phase is HIGH, but starting edge is not 0.
+set_clock_latency | Specifies clock network latency. | set_clock_latency 3 MY_CLK -> set clk latency that modelling clk delay in network 
+set_clock_uncertainty | Specifies uncertainty (skew) of clock networks. | set_clock_uncertainty 0.5 MY_CLK -> set uncertainty for network (skew + jitter)
+set_input_delay | Sets input delay on pins or input ports relative to a clock signal. | set_input_delay -max 3 -min 0.5 [get_clocks MY_CLK][get_ports IN_*] -> signal delay must come most early in 0.5ns and most late in 3ns. All input signal are coming with respect to clock MY_CLK which created on port CLK.
+set_input_transition | Sets the max_transition_rise, max_transition_fall, min_transition_rise, or min_transition_fall attributes to the specified transition values on the specified input and inout ports. | set_input_transition -max 1.5 -min 0.75 [get_ports IN_*] -> max and min transition of clk. 
+ 
+
+   </details>
+
+
+## Theory - DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk
+
+<details open><summary> DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk </summary>
+![DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk](https://user-images.githubusercontent.com/62828746/209567323-21f89200-7286-4711-9e55-23f296e7dce4.jpg)
+ 
+* Clock period at input port are different with output port due to propogation delay (network latency, uncertainty and etc)
+* Hence, we need to create generated clock that used for capturing data at output ports which defined with respect to clock source (master clock).
+ 
+![DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk_1](https://user-images.githubusercontent.com/62828746/209568711-d3d7fe3b-c0d5-419f-9a94-dd7d960fd246.jpg)
+ 
++ Clock divider
+  * Clock dividers are ubiquitous circuit that takes an input signal of a frequency fin and generates an output signal of a frequency fout, where fout = fin / n and ''n'' is an integer. 
+  * Purpose: to divide a clock by even, odd or fractional numbers away from using external PLL circuits.
+ 
+ 
+   </details>
+
+
+## Lab Topic - Advanced constraints
+
+<details open><summary> DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets </summary>
+
+### Lab - DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets
+#### Steps:
+> 1. Invoke dc 
+>> csh -> to enable c shell
+>> dc_shell -> invoke dc compiler
+> 2. Read verilog file using command.
+>> *read_verilog lab8_circuit.v*
+>> *link*
+> 3. Compile the design
+>> *compile_ultra*
+> 4. use command to select ports in the design.
+>> *get_ports*
+
+ `foreach_in_collection my_port [get_ports *] {
+set my_port_name [get_object_name $my_port];
+echo $my_port_name;
+}
+`
+> 5. To know direction of the ports
+>> *get_attribute [get_ports rst] direction*
+
+ `foreach_in_collection my_port [get_ports *] {
+set my_port_name [get_object_name $my_port];
+set dir [get_attribute [get_ports $my_port_name] direction];
+echo $my_port_name $dir;
+}
+`
+> 5. To cells name and their type
+>> *get_cells **
+>> *get_attribute [get_cells U9] is_hierarchical*
+>> *get_attribute [get_cells U12] is_hierarchical*
+>> *get_attribute [get_cells REGA_reg] is_hierarchical*
+>> *get_cells -hier -filter  "is_hierarchical == false"*
+>> *get_cells -hier -filter  "is_hierarchical == true"* 
+
+> 6. To get cell name in library
+>> *get_attribute [get_cells REGA_reg] ref_name*
+
+ `foreach_in_collection my_cell [get_cells * -hier] {
+set my_cell_name [get_object_name $my_cell];
+set rname [get_attribute [get_cells $my_cell_name] ref_name];
+echo $my_cell_name $rname;
+} 
+`
+> 7. Write in ddc format
+>> *write -f ddc -out lab8_circuit.ddc*
+> 8. Launch design vision, gui form of dc to see design implementation.
+>> *read_ddc lab8_circuit.ddc*
+ 
+#### Result:
+![DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets_0](https://user-images.githubusercontent.com/62828746/209444103-b68e976e-ad9b-484d-813f-0f329ef63c84.jpg)
+![DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets_1](https://user-images.githubusercontent.com/62828746/209444105-1a85dff0-7516-487c-9cd2-2cf48ec3181e.jpg)
+![DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets_2](https://user-images.githubusercontent.com/62828746/209444106-912ab377-b622-474b-84fc-a58e1eada6ed.jpg)
+![DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets_3](https://user-images.githubusercontent.com/62828746/209444107-6534a682-b45c-4e31-a860-846ea1bf798b.jpg)
+![DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets_4](https://user-images.githubusercontent.com/62828746/209444110-f0e554e4-933c-4a17-bae4-6cb7d06ccf7a.jpg)
+![DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets_5](https://user-images.githubusercontent.com/62828746/209444111-8fc5924a-fb16-43ee-97b6-a9598174bfe2.jpg)
+
+   </details>
+   
+
+
+<details open><summary> DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks </summary>
+
+### Lab - DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks
+
+#### Steps:
+ 
+> 1. use command to get pins in the design.
+>> *get_pins*
+ 
+`  foreach_in_collection my_pin [get_pins *] {     
+ set pin_name [get_object_name $my_pin];                                                                                                      
+ echo $pin_name;                                                                                                                               
+ }
+` 
+> 2. use command to get pins direction in the design.
+>> *get_attribute [get_pins REGA_reg/RESET_B] direction*
+ 
+`  foreach_in_collection my_pin [get_pins *] {                                                                                                 
+ set pin_name [get_object_name $my_pin];                                                                                                       
+ set dir [get_attr [get_pins $pin_name ] direction];                                                                                          
+ echo $pin_name $dir;                                                                                                                          
+ }  
+`
+#### Result:
+![DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks_0](https://user-images.githubusercontent.com/62828746/209445351-2f49ef3b-fbcb-4452-9024-1bf09ac360ef.jpg)
+![DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks_1](https://user-images.githubusercontent.com/62828746/209445354-cd0ccc9f-93d8-4853-831f-e21713afb55d.jpg)
+![DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks_2](https://user-images.githubusercontent.com/62828746/209445356-1e647c08-f623-4ac8-a8db-2ab329916c0c.jpg)
+ 
+   </details>
+
+
+
+<details open><summary> DC_D3SK2_L3 - lab10 - create_clock waveform </summary>
+
+### Lab - DC_D3SK2_L3 - lab10 - create_clock waveform
+
+#### Steps:
+> 1. Report name of top module
+>> *current_design*
+> 2. create clock of period of 10ns for port CLK in design
+>> *create_clock -name MYCLK per 10 [get_ports clk]*
+>> *get_clocks **
+>> *get_attr [get_clocks MYCLK] period*
+>> *report_clocks **
+> 3. create clock of period of 10ns, set rise/fall edge and set duty cycle clock.
+>> *create_clock -name MYCLK -per 10 [get_ports clk] -wave {5 10}*
+>> *create_clock -name MYCLK -per 10 [get_ports clk] -wave {0 2.5}*
+
+
+#### Result:
+![DC_D3SK2_L3 - lab10 - create_clock waveform_0](https://user-images.githubusercontent.com/62828746/209446676-fd9c9249-0158-477e-a4ea-2db2893228f2.jpg)
+![DC_D3SK2_L3 - lab10 - create_clock waveform_1](https://user-images.githubusercontent.com/62828746/209446678-9083d6ac-35c2-477c-8a24-b12edc6e5ec6.jpg)
+![DC_D3SK2_L3 - lab10 - create_clock waveform_2](https://user-images.githubusercontent.com/62828746/209446680-e8b0039a-b367-478e-82b0-23157fe98352.jpg)
+![DC_D3SK2_L3 - lab10 - create_clock waveform_3](https://user-images.githubusercontent.com/62828746/209446682-473aedaa-f8a6-4288-9c46-8b1be2dbb1c6.jpg)
+![DC_D3SK2_L3 - lab10 - create_clock waveform_4](https://user-images.githubusercontent.com/62828746/209446683-f0ee0bb8-f082-4cb0-a6c2-4c84d3d2226f.jpg)
+ 
+   </details>
+
+
+<details open><summary> DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing </summary>
+
+### Lab - DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing
+
+#### Steps:
+> 1. Modelling source latency for clock in design.
+>> *set_clock_latency -source 1 [get_clocks MYCLK]*
+> 2. Modelling network latency for clock in design. 
+>> *set_clock_latency 1 [get_clocks MYCLK]**
+> 3. Report timing path and see how clock latency and uncertainty effect timing path.
+>> *set_clock_latency -source 2 [get_clocks MYCLK]*
+>> *set_clock_latency 1 [get_clocks MYCLK]*
+>> *set_clock_uncertainty -setup 0.5 [get_clocks MYCLK]*
+>> *set_clock_uncertainty -hold 0.1 [get_clocks MYCLK]*
+> 4. Report timing path for hold check and setup check.
+>> *report_timing -to REGC_reg/D -delay min*
+>> *report_timing -to REGC_reg/D -delay max*
+ 
+#### Result:
+![DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing_0](https://user-images.githubusercontent.com/62828746/209448152-68f099b8-af08-40b6-9a98-5debf572b4f9.jpg)
+![DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing_1](https://user-images.githubusercontent.com/62828746/209448154-181f3552-4659-45c1-9d58-95849cf928fa.jpg)
+![DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing_2](https://user-images.githubusercontent.com/62828746/209448155-5a47888e-57fb-4224-8efd-f4b359e32c92.jpg)
+![DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing_3](https://user-images.githubusercontent.com/62828746/209448157-954dc698-e186-4e3d-8859-f3ebb8a9b119.jpg)
+![DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing_4](https://user-images.githubusercontent.com/62828746/209448160-4dd11aca-5819-47a5-99e3-a981d690b6b3.jpg)
+ 
+ 
+   </details>
+   
+
+<details open><summary> DC_D3SK2_L5 - Lab12- IO Delays </summary>
+
+### Lab - DC_D3SK2_L5 - Lab12- IO Delays
+
+#### Steps:
+> 1. Review input timing path and output timing path
+>> *get_ports **
+>> *report_timing -from IN_A*
+>> *report_timing -to OUT_Y*
+> 2. To review detail of all ports
+>> *report_port -verbose*
+> 3. Modelling the inputs of port
+>> *set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_A]*
+>> *set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_B]*
+>> *report_timing -from IN_A -trans -net -cap*
+>> *report_timing -from IN_A -trans -net -cap -nosplit -delay_type min*
+> 3. Modelling the transition delay for path
+>> *report_timing -from IN_A -trans -cap -nosplit > a*
+>> *set_input_transition -max 0.3 [get_ports IN_A]*
+>> *set_input_transition -max 0.3 [get_ports IN_B]* 
+>> *set_input_transition -min 0.1 [get_ports IN_A]* 
+>> *set_input_transition -min 0.1 [get_ports IN_B]*
+>> *report_timing -from IN_A -trans -cap -nosplit > a_trans*
+> 4. Modelling the output delay for path
+>> *set_output_delay -max 1 -clock [get_clocks MYCLK] [get_ports OUT_Y]*
+>> *set_output_delay -max 5 -clock [get_clocks MYCLK] [get_ports OUT_Y]*
+>> *set_output_delay -min 1 -clock [get_clocks MYCLK] [get_ports OUT_Y]* 
+>> *report_timing -to OUT_Y -cap -trans -nosplit > out_Y*
+> 5. Modelling the output load for path 
+>> *set_load -max 0.4 [get_ports OUT_Y]*
+>> *report_timing -to OUT_Y -cap -trans -nosplit > out_load*
+
+ 
+#### Result:
+![DC_D3SK2_L5 - Lab12- IO Delays_0](https://user-images.githubusercontent.com/62828746/209539301-3eb6b499-8473-4826-b4f3-95b5f6107d03.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_1](https://user-images.githubusercontent.com/62828746/209539280-d926453b-6cde-4c3b-95f1-4c83a6db9917.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_2](https://user-images.githubusercontent.com/62828746/209539285-f7d295ca-685f-44b0-b63a-e3ec1483f39f.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_3](https://user-images.githubusercontent.com/62828746/209539287-60d3cc14-2544-4491-bcb7-66fb4db989cf.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_4](https://user-images.githubusercontent.com/62828746/209539292-f2075d46-439b-4093-bbd2-89d5a93e47bf.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_5](https://user-images.githubusercontent.com/62828746/209539293-44c61261-8167-4ce7-9062-29a2e9325cd9.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_6](https://user-images.githubusercontent.com/62828746/209539296-9a3dd47e-081c-4dd5-879c-3fa4cc903058.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_7](https://user-images.githubusercontent.com/62828746/209539299-4c909a9b-fa06-48d7-8647-738370a9678e.jpg)
+![DC_D3SK2_L5 - Lab12- IO Delays_8](https://user-images.githubusercontent.com/62828746/209539300-c56d4bdf-9b9d-4a9a-8535-00414b17c0fc.jpg)
+
+ 
+   </details>
+
+
+<details open><summary> DC_D3SK3_L2 - lab13 - generated_clocks </summary>
+
+### Lab - DC_D3SK3_L2 - lab13 - generated_clocks
+
+#### Steps:
+> 1. Create generated clock
+>> *create_generated_clock -name MYGEN_CLK -master MYCLK -source [get_ports clk] -div 1 [get_ports out_clk]*
+> 2. To make timing path capture data at generated clock (MYGEN_CLK) instead of master clock (MYCLK).
+>> *set_output_delay -max 5 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]*
+>> *set_output_delay -max 5 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]*
+>> *report_timing -to OUT_Y*
+> 3. Reset design and read another design (lab8_circuit_modified), write a tcl with design constraints and source it.
+>> *reset_design*
+>> *sh gvim lab8_cons.tcl &*
+>> *read_verilog lab8_circuit_modified.v*
+>> *link*
+>> *report_clocks*
+>> *report_ports -verbose*
+
+
+#### Result:
+![DC_D3SK3_L2 - lab13 - generated_clocks_0](https://user-images.githubusercontent.com/62828746/209567295-489f7790-7fc9-4c20-9f2b-c65f297deddc.jpg)
+![DC_D3SK3_L2 - lab13 - generated_clocks_1](https://user-images.githubusercontent.com/62828746/209567297-0ff7f46b-ee9d-411f-b7a2-464b303ab8d9.jpg)
+![DC_D3SK3_L2 - lab13 - generated_clocks_2](https://user-images.githubusercontent.com/62828746/209567299-55fd671c-3103-4329-a564-f5b054c9d156.jpg)
+![DC_D3SK3_L2 - lab13 - generated_clocks_4](https://user-images.githubusercontent.com/62828746/209567301-64967c1a-20cc-4709-9663-179b39f7fcd3.jpg)
+ 
+ 
+ 
+ 
+   </details>
+
+
+<details open><summary> DC_D3SK3_L2 - lab13 - generated_clocks </summary>
+
+### Lab - DC_D3SK3_L2 - lab13 - generated_clocks
+
+#### Steps:
+> 1. Read lab14 circuit verilog file and use back constraints srcipt in previous lab session.
+>> *read_verilog lab14_circuit.v *
+>> *link*
+>> *compile_ultra*
+>> *report_timing* 
+>> *source lab8_cons.tcl*
+> 2. Modelling constraints for 3 new port (IN_C, IN_D and OUT_Z)
+>> *all_registers -clock MYCLK* 
+>> *all_registers -clock MYGEN_DIV_CLK* 
+>> *all_inputs*
+>> *all_outputs*
+>> *report_timing -to OUT_Z*
+>> *set_max_delay 0.1 -from [all_inputs] -to [get_ports OUT_Z]*
+>> *compile_ultra*
+>> *report_timing -to OUT_Z -sig 4* 
+> 3. to see fanout of registers (endpoint) and can review how timing path start and ends.
+>> *report_timing -from -IN_B -to OUT_Z* 
+>> *report_timing -from IN_B -to OUT_Z* 
+>> *report_timing -from IN_B -to OUT_Y* 
+> 4. write ddc and review schematic
+>> *reset_design*  
+>> *read_ddc lab14.ddc*  
+>> *design_vision*  
+>> *read_ddc lab14.ddc*  
+ 
+#### Result:
+ 
+![DC_D3SK4_L2 - lab15 - part1 Set_Max_delay_0](https://user-images.githubusercontent.com/62828746/209601680-5d50fc9b-74cd-4249-bf26-84207ef99150.jpg)
+![DC_D3SK4_L2 - lab15 - part1 Set_Max_delay_1](https://user-images.githubusercontent.com/62828746/209601669-65720d1a-585a-4df4-9134-9c4e3a66cde7.jpg)
+![DC_D3SK4_L2 - lab15 - part1 Set_Max_delay_2](https://user-images.githubusercontent.com/62828746/209601670-3df745c0-77c0-431c-a0ea-954a1ab3105c.jpg)
+![DC_D3SK4_L2 - lab15 - part1 Set_Max_delay_3](https://user-images.githubusercontent.com/62828746/209601674-efd6ba5d-1bfc-4615-9bcb-546fb8f7c564.jpg)
+![DC_D3SK4_L2 - lab15 - part1 Set_Max_delay_4](https://user-images.githubusercontent.com/62828746/209601676-fc993850-c3ff-4284-b8d4-be1b44b102cc.jpg)
+![DC_D3SK4_L2 - lab15 - part1 Set_Max_delay_5](https://user-images.githubusercontent.com/62828746/209601678-28e8fb0e-2854-47bc-9148-be56f5f7bbe7.jpg)
+ 
+ 
+   </details>
+   
+   
+
