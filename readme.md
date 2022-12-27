@@ -136,15 +136,13 @@
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets]()
-  * [Lab - DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks]()
-  * [Lab - DC_D3SK2_L3 - lab10 - create_clock waveform]()
-  * [Lab - DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing]()
-  * [Lab - DC_D3SK2_L5 - Lab12- IO Delays]()    
-  * [Lab - DC_D3SK3_L2 - lab13 - generated_clocks]()   
-  * [Lab - ]()       
-  * [Lab - ]()       
-    
+  * [Lab - DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l1---lab8---loading-design-get_cells-get_ports-get_nets)
+  * [Lab - DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l2---lab9-get_pins-get_clocks-querying_clocks)
+  * [Lab - DC_D3SK2_L3 - lab10 - create_clock waveform](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l3---lab10---create_clock-waveform)
+  * [Lab - DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l4---lab11--clock-network-modelling---uncertainty-report_timing)
+  * [Lab - DC_D3SK2_L5 - Lab12- IO Delays](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l5---lab12--io-delays)    
+  * [Lab - DC_D3SK3_L2 - lab13 - generated_clocks](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk3_l2---lab13---generated_clocks)   
+  * [Lab - DC_D3SK4_L2 - lab15 - part1 Set_Max_delay](https://github.com/teoh5128/intel-sd-training#lab---dc_d3sk4_l2---lab15---part1-set_max_delay)             
     
   </details>
   
