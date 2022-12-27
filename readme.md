@@ -2397,7 +2397,7 @@ echo $my_cell_name $rname;
 
 #### Steps:
 > 1. Read lab14 circuit verilog file and use back constraints srcipt in previous lab session.
->> *read_verilog lab14_circuit.v *
+>> *read_verilog lab14_circuit.v*
 >> *link*
 >> *compile_ultra*
 >> *report_timing* 
