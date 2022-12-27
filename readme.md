@@ -124,6 +124,44 @@
  
     
   </details>
+ 
+  
+  + **[ Day 8 - Advanced sdc constraints](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-8)**
+  <details><summary> Theory </summary>
+    
+  * [Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sdc-part1-clock---clock-tree-modelling---uncertainty)
+  * [Theory - DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dc_d3sk1_l2---lecture8---sdc-part2-io-delays)
+  * [Theory - DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dc_d3sk3_l1---lecture9---sdc-part3-generated_clk)
+    
+  </details>
+  <details><summary> Lab </summary>
+  
+  * [Lab - DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets]()
+  * [Lab - DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks]()
+  * [Lab - DC_D3SK2_L3 - lab10 - create_clock waveform]()
+  * [Lab - DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing]()
+  * [Lab - DC_D3SK2_L5 - Lab12- IO Delays]()    
+  * [Lab - DC_D3SK3_L2 - lab13 - generated_clocks]()   
+  * [Lab - ]()       
+  * [Lab - ]()       
+    
+    
+  </details>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 ## Day 0
