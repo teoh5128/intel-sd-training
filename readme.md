@@ -2143,6 +2143,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
 ## Theory - DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk
 
 <details open><summary> DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk </summary>
+
 ![DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk](https://user-images.githubusercontent.com/62828746/209567323-21f89200-7286-4711-9e55-23f296e7dce4.jpg)
  
 * Clock period at input port are different with output port due to propogation delay (network latency, uncertainty and etc)
