@@ -143,6 +143,8 @@
   * [Lab - DC_D3SK2_L5 - Lab12- IO Delays](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l5---lab12--io-delays)    
   * [Lab - DC_D3SK3_L2 - lab13 - generated_clocks](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk3_l2---lab13---generated_clocks)   
   * [Lab - DC_D3SK4_L2 - lab15 - part1 Set_Max_delay](https://github.com/teoh5128/intel-sd-training#lab---dc_d3sk4_l2---lab15---part1-set_max_delay)             
+  * [Lab - DC_D3SK4_L3 - Lab15 - part2 - VCLK](https://github.com/teoh5128/intel-sd-training#lab---dc_d3sk4_l3---lab15---part2---vclk)      
+    
     
   </details>
   
