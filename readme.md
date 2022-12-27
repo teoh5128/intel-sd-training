@@ -2435,4 +2435,31 @@ echo $my_cell_name $rname;
    </details>
    
    
+ <details open><summary> DC_D3SK4_L3 - Lab15 - part2 - VCLK </summary>
 
+### Lab - DC_D3SK4_L3 - Lab15 - part2 - VCLK
+
+#### Steps:  
+> 1. Create virtual clock   
+>> *reset_design* 
+>> *read_verilog lab14_circuit.v*  
+>> *source lab8_con*  
+>> *compile_ultra*  
+>> *report_timing -to OUT_Z*  
+> 2. Modeling delay constraints for created virtual clock timing path
+>> *set_input_delay -max 5 [get_ports IN_C] -clock [get_clocks MYVCLK]*  
+>> *set_input_delay -max 5 [get_ports IN_D] -clock [get_clocks MYVCLK]*  
+>> *set_output_delay -max 5 [get_ports OUT_Z] -clock [get_clocks MYVCLK]*  
+>> *set_output_delay -max 4.9 [get_ports OUT_Z] -clock [get_clocks MYVCLK]* 
+>> *report_timing -to OUT_Z -sig 4* 
+>> *report_port -verbose* 
+
+#### Result:   
+   
+![DC_D3SK4_L3 - Lab15 - part2 - VCLK_0](https://user-images.githubusercontent.com/62828746/209607217-5df5a2e9-d1ac-4b63-8c31-3b46407cd9d9.jpg)
+![DC_D3SK4_L3 - Lab15 - part2 - VCLK_1](https://user-images.githubusercontent.com/62828746/209607221-548fca9c-aa9e-41aa-83f8-793c479e571c.jpg)
+![DC_D3SK4_L3 - Lab15 - part2 - VCLK_2](https://user-images.githubusercontent.com/62828746/209607222-3107179d-da8f-449a-9b01-b7006fd276bc.jpg)
+   
+   
+    </details>  
+   
