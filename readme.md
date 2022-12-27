@@ -2032,7 +2032,7 @@ echo $my_pin_name $pin_dir;
  
   
   
-  ## Day 8 (Advanced SDC Constraints)
+  ## Day 8
 ## Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
 
 <details open><summary> Clock Tree Modelling - Uncertainty </summary>
