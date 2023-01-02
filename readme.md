@@ -2465,3 +2465,411 @@ echo $my_cell_name $rname;
    
     </details>  
    
+
+  
+  
+  
+## Day 9 
+## Theory - DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt
+
+
+<details open><summary> DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt </summary>
+
+## **Optimization Goals**
++ Cost function based optimizations:
+  * Optmization till cost is met
+  * Over optimization of a goal might harm other 
+  * Goals for synthesis are contradictory and need to trade off others goal when optimize one of them.
+  * For example: Optimize timing will get faster cell, but due to increased size of transistor (increase current flow), power and area quality is lower.
+ 
+ **Goals for Synthesis**      | **Cost Function**   
+---------------------------   | ------------------  
+Meet Timing | IO Delay, Clock Period, Max-delay 
+Meet Area | Area goals
+Meet Power | Power goals
+ 
+## **Combinational Logic Optimisation**
+![DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt_0](https://user-images.githubusercontent.com/62828746/210125149-7d4c9812-131f-4344-a3b5-c4d4463a1b61.jpg)
+![DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt_1](https://user-images.githubusercontent.com/62828746/210125152-1ce27e20-a34c-47de-9b06-dcf428627b1b.jpg)
+![DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt_2](https://user-images.githubusercontent.com/62828746/210125153-754c5be7-a85f-42d1-a873-6f4086b519fd.jpg)
+![DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt_3](https://user-images.githubusercontent.com/62828746/210125155-9dfc27bb-1bb3-4fb4-82fc-12ed3ee96b58.jpg)
+![DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt_4](https://user-images.githubusercontent.com/62828746/210125156-c7d95b20-a954-441f-9125-761319bbe596.jpg)
+ 
+   </details>
+
+
+## Theory - DC_D4SK1_L2 - Lecture12 Sequential Optimizations
+
+<details open><summary> DC_D4SK1_L2 - Lecture12 Sequential Optimizations </summary>
+  
+## **Sequential Logic Optimisation** 
+![DC_D4SK1_L2 - Lecture12 Sequential Optimizations_0](https://user-images.githubusercontent.com/62828746/210125158-2cc5fc40-1bf4-42bf-ac86-4e476d944e5a.jpg)
+![DC_D4SK1_L2 - Lecture12 Sequential Optimizations_1](https://user-images.githubusercontent.com/62828746/210125160-68faf4df-262c-4819-9a45-d280708dd070.jpg)
+![DC_D4SK1_L2 - Lecture12 Sequential Optimizations_2](https://user-images.githubusercontent.com/62828746/210125163-50b56a8b-6555-41ec-874b-dbbce0f352b5.jpg)
+![DC_D4SK1_L2 - Lecture12 Sequential Optimizations_3](https://user-images.githubusercontent.com/62828746/210125164-b2f0ca73-8277-4ecb-ba59-bdbefa2ad597.jpg)
+![DC_D4SK1_L2 - Lecture12 Sequential Optimizations_4](https://user-images.githubusercontent.com/62828746/210125166-064ca50f-3a44-47d1-91e9-758a7d429fc4.jpg) 
+ 
+## **Controlling Sequential Optimization in DC**
++ Apply constant propagation optimization to circuit:
+  * compile_seqmap_propagate_constants <true/false>
++ Apply unloaded output optimization to circuit:
+  * compile_delete_unloaded_sequential_cells <true/false>
++ Advanced optimization:
+* compile_register_replication <true/false>
+ 
+   </details>
+
+
+## Theory - DC_D4SK3_L1 - Lecture13 special optimizations
+
+
+<details open><summary> DC_D4SK3_L1 - Lecture13 special optimizations </summary>
+
+## **Retiming Optimization**
+ 
+![DC_D4SK3_L1 - Lecture13 special optimizations_0](https://user-images.githubusercontent.com/62828746/210257175-a9128195-d448-4a45-87e2-54d6f47e9013.jpg)
+ 
+* Retiming is to optimize algorithm and improve the performance of circuit. 
+* Retiming will divide and move registers that has negative slack to the side with positive slack. This will balance the slack on both sides of sequential element.
+* Intermediate value: uncertain value that might an issues when debug and analyze circuit compared to rtl.
+ 
+## **Boundary Optimization**
+
+![DC_D4SK3_L1 - Lecture13 special optimizations_1](https://user-images.githubusercontent.com/62828746/210257181-ab343854-2db2-46d2-8320-f2772990b04b.jpg)
+ 
+* Boundary Optimization - Disorbing boundary of the module and combine register of both module into one.
+* Funcational DV (Design Verification) might have issues when debug and analyze circuit compared to rtl.
+ 
+## **Multi-cycle Path**
+
+![DC_D4SK3_L1 - Lecture13 special optimizations_2](https://user-images.githubusercontent.com/62828746/210257183-689fe70a-685b-4847-8da4-fc567bb10337.jpg)
+ 
+* Input A and B will load data first and waiting for sel to select data.
+* Sel will be one cycle delay of enable due to delay in flop.
+* Both path are in used and can't optmized A timing and B timing path into a single path.
+
+ 
+## **False Path**
+ 
+![DC_D4SK3_L1 - Lecture13 special optimizations_3](https://user-images.githubusercontent.com/62828746/210257187-c17e9a6b-7cd0-442a-a6eb-1d2e530ce9fe.jpg)
+ 
+* Set false path when clock 1 and clock 2 path has no relation.
+* FN_sel is a constant signal during operation.
+* Between transferring data within FN_sel to OUT_DATA there are lots of idle timing cycle.
+* Hence, it's not valid timing path and can be set as false path.
+ 
+## **External Load and Internal Load** 
+ 
+![DC_D4SK3_L1 - Lecture13 special optimizations_4](https://user-images.githubusercontent.com/62828746/210257192-a934630a-97ec-48fa-9972-3e2a6e226791.jpg)
+ 
+* Extra extra load (Load 2) will cause increase in capacitance and delay in Output Logic.
+* Internal timing path is effected and failed.
+* Putting an isolated ports which is a buffer, and set it to ouput Y.
+* Like this extra load will not be seen by internal path. And will avoid internal timing path violation.
+ 
+   </details> 
+ 
+
+
+
+
+
+ 
+ 
+ 
+## Lab Topic - DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations
+
+<details open><summary> DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations </summary>
+
+### Lab - DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations
+ 
+#### Steps:
+> 1. Read verilog opt_check file using command
+>> *read_verilog opt_check.v*
+>> *report_timing*
+>> *link*
+>> *compile_ultra*
+>> *report_timing -to y2*
+>> *report_timing -to y1*
+>> *write -f ddc -out opt_check_ddc.v*
+> 2. Load design vison and read ddc file
+>> *sh*
+>> *design_vision*
+>> *read_ddc opt_check.ddc*
+> 3. Read verilog opt_check2 file using command
+>> *read_verilog opt_check2.v*
+>> *link*
+>> *compile_ultra*
+ > 4. Read verilog opt_check3 file using command
+>> *read_verilog opt_check3.v*
+>> *link*
+>> *compile_ultra*
+> 5. Read verilog opt_check4 file using command
+>> *read_verilog opt_check4.v*
+>> *link*
+>> *compile_ultra*
+ 
+
+#### Result:
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_0](https://user-images.githubusercontent.com/62828746/210209779-2aa6b522-24f7-4888-a8e2-1bf9cdc0c0ef.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_1](https://user-images.githubusercontent.com/62828746/210209781-daa91ec5-f6bb-4d29-89e9-c199d2fb6697.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_2](https://user-images.githubusercontent.com/62828746/210209786-9de2f14b-9a9b-42ee-88fb-2e640f205274.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_3](https://user-images.githubusercontent.com/62828746/210209698-3b0b4a34-ceb3-4df5-8cb4-27d85ac16086.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_4](https://user-images.githubusercontent.com/62828746/210209704-04bd2553-2908-44f2-bbfe-8c323f5b035c.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_5](https://user-images.githubusercontent.com/62828746/210209706-87ccbc5c-41f7-4953-9d18-67591f270738.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_6](https://user-images.githubusercontent.com/62828746/210209707-176df687-c4c3-45aa-b79a-68df563602a6.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_7](https://user-images.githubusercontent.com/62828746/210209711-bbcc599a-efef-4e79-b3d8-ee70090d7e24.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_8](https://user-images.githubusercontent.com/62828746/210209714-dc86303c-c713-4af9-b23b-fd0cdbf38e9e.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_9](https://user-images.githubusercontent.com/62828746/210209719-de005e3e-996c-4bae-a261-62ec565537bf.jpg)
+![DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations_10](https://user-images.githubusercontent.com/62828746/210209733-e653a12d-6eb5-479c-a305-8e64cfb02207.jpg)
+
+ 
+   </details>
+
+
+
+
+
+## Lab Topic - DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations
+
+<details open><summary> DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations </summary>
+
+### Lab - DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations
+
+#### Steps:
+> 1. Read verilog resource_sharing_mult_chec file using command
+>> *sh gvim resource_sharing_mult_check.v*
+>> *read_verilog resource_sharing_mult_check.v*
+>> *link*
+>> *compile_ultra*
+>> *report_area*
+> 2. Set delay to circuit and see timing before and after compile ultra
+>> *set_max_delay -from [all_inputs] -to [all_outputs] 2.5* 
+>> *report_timing* 
+>> *compile_ultra*
+>> *report_timing* 
+> 3. Set delay to sel in circuit and see timing before and after compile ultra   
+>> *set_max_delay -from sel -to [all_outputs] 0.1* 
+>> *report_timing* 
+>> *compile_ultra* 
+>> *report_timing* 
+> 4. set constraints to area and run optimization again
+>> *set_max_area 800* 
+>> *compile_ultra* 
+>> *report_timing*
+
+#### Result:
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_0](https://user-images.githubusercontent.com/62828746/210209739-a2839999-5013-4482-b8dd-e8fc21b47043.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_1](https://user-images.githubusercontent.com/62828746/210209748-726788fd-d024-4e4b-8766-c82c162db2d0.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_2](https://user-images.githubusercontent.com/62828746/210209750-9970a294-34e0-49d4-b034-74c85a141df6.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_3](https://user-images.githubusercontent.com/62828746/210209752-eb3c1496-2539-4631-9fc2-1d8173e2ae91.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_4](https://user-images.githubusercontent.com/62828746/210209766-d21fb158-29ac-421c-a7d5-ceec0b147f0d.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_5](https://user-images.githubusercontent.com/62828746/210209771-8aacc393-89db-4339-b59b-26f7a7c6cf13.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_6](https://user-images.githubusercontent.com/62828746/210209772-3840b058-590c-47fc-8fbd-3cf894205d95.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_7](https://user-images.githubusercontent.com/62828746/210209775-b5baa2e6-90ab-4020-b938-5faa864eaa47.jpg)
+![DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations_8](https://user-images.githubusercontent.com/62828746/210209776-41b3fdd3-70ce-43d0-a5a3-9c19a2e03ef2.jpg)
+
+   </details>
+ 
+ 
+
+## Lab Topic - DC_D4SK2_L3 - lab17 - seq optimizations
+
+<details open><summary> DC_D4SK2_L3 - lab17 - seq optimizations </summary>
+
+### Lab - DC_D4SK2_L3 - lab17 - seq optimizations
+
+#### Steps:
+> Sequential optimization file review and read verilog file
+>> *read_verilog dff_const1.v*
+>> *link*
+>> *compile_ultra*
+> 2. echo cell name and reference name
+/ foreach_in_collection my_cells [get_cells *] {
+set cell_name [get_object_name $my_cells];
+set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
+}
+/
+> 3. LOad design vision gui and read dff_const1.v
+>> *csh* 
+>> *design_vision*
+>> *read_verilog dff_const1.v*  
+>> *link*
+>> *compile_ultra*
+> 4.  LOad design vision gui and read dff_const2.v
+>> *read_verilog dff_const2.v*  
+>> *link*
+>> *compile_ultra*
+> 5. Load design vision gui and read dff_const3.v
+>> *read_verilog dff_const3.v*  
+>> *link*
+>> *compile_ultra*
+> 6. Try to turn-off the constant propagation optimization of dff_const2.v design
+>> *set compile_seqmap_propagate_constants false*
+>> *link*
+>> *compile_ultra*  
+> 7. Run simulation by apply RTL Design (dff_const3.v) and testbench (dff_const3.v) as inputs.
+>> */p/hdk/pu_tu/prd/sams/mig76_wlw/setup/enter_p31 -cfg ip76p31r08hp7rev03 -ov ./*
+>> *vcs dff_const3.v tb_dff_const3.v*
+>> *./simv*
+>> *dve -full64 &*
+> 8. Try to turn-off the constant propagation optimization of dff_const4.v design
+>> *read_verilog dff_const4.v*  
+>> *link*
+>> *compile*
+>> *set compile_seqmap_propagate_constants true*  
+>> *compile*
+> 9.  Load design vision gui and read dff_const5.v
+>> *read_verilog dff_const5.v*  
+>> *link*
+>> *compile_ultra*
+> 10. Run simulation by apply RTL Design (dff_const5.v) and testbench (dff_const5.v) as inputs.
+>> *vcs dff_const3.v tb_dff_const3.v*
+>> *./simv*
+>> *dve -full64 &*
+ 
+ 
+#### Result:
+
+![DC_D4SK2_L3 - lab17 - seq optimizations_0](https://user-images.githubusercontent.com/62828746/210243639-d680662b-d3a5-4483-9b22-748f59a536c8.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_1](https://user-images.githubusercontent.com/62828746/210243648-564dd79e-890b-43f8-b1df-ea5a68e5ebbc.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_2](https://user-images.githubusercontent.com/62828746/210243651-93c88160-f145-44f8-a41e-1f4465643f03.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_3](https://user-images.githubusercontent.com/62828746/210243653-657e5581-b27e-4038-b50f-2541e343bfb3.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_4](https://user-images.githubusercontent.com/62828746/210243656-b1d84e97-bc6b-4367-ac71-e34aab25ef76.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_5](https://user-images.githubusercontent.com/62828746/210243658-26549747-e6b1-4fdc-8328-cb07a815c34f.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_6](https://user-images.githubusercontent.com/62828746/210243661-9f3b519a-17bf-477f-858e-69a0dede8106.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_7](https://user-images.githubusercontent.com/62828746/210243665-0cff3ebb-c0c1-490b-afd2-ed450241cf43.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_8](https://user-images.githubusercontent.com/62828746/210243671-83683976-3081-483d-9441-c864c10d5c04.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_9](https://user-images.githubusercontent.com/62828746/210243677-b2792c57-1b0c-4ed0-9625-2c5892465c1a.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_10](https://user-images.githubusercontent.com/62828746/210243680-cd30f1bb-0d0f-4408-ba96-f8de27b8dab3.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_11](https://user-images.githubusercontent.com/62828746/210243682-ebac65d8-28ab-4263-8ff9-9e8e8b33293d.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_12](https://user-images.githubusercontent.com/62828746/210243691-65e78a7c-1343-4496-b9d1-c20b1ba9d8bc.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_13](https://user-images.githubusercontent.com/62828746/210243752-43142321-24af-41bf-82d2-c96d13ba9b33.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_14](https://user-images.githubusercontent.com/62828746/210243757-70487f3d-f843-4265-9a6c-479bbd0a5b1a.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_15](https://user-images.githubusercontent.com/62828746/210243762-ef25eecf-2fef-459b-b563-e7e9f896eef6.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_16](https://user-images.githubusercontent.com/62828746/210243767-0cfa2326-c280-487f-9a1e-b0cfde0789b2.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_17](https://user-images.githubusercontent.com/62828746/210243775-8a1e36d7-da49-4a72-8cbc-2f6893294175.jpg)
+![DC_D4SK2_L3 - lab17 - seq optimizations_18](https://user-images.githubusercontent.com/62828746/210243791-842fad99-b91f-49fa-9207-385e46f668d9.jpg)
+
+
+   </details>
+ 
+
+## Lab Topic - DC_D4SK4_L1 - Lab18 - Boundary Optimization
+
+<details open><summary> DC_D4SK4_L1 - Lab18 - Boundary Optimization </summary>
+
+### Lab - DC_D4SK4_L1 - Lab18 - Boundary Optimization
+
+#### Steps:
+> 1.  Load design vision gui and check_boundary.v
+>> *read_verilog check_boundary.v*  
+>> *link*
+>> *compile_ultra*
+>> *write -f ddc -out boundary.ddc*
+>> *get_cells*
+>> *read_ddc boundary.ddc*
+> 2. Set boundary optimization to false and compare to after optimized.
+>> *get_cells*
+>> *get_pins u_im/**
+>> *set_boundary_optimization u_im false*
+>> *link*
+>> *compile_ultra*
+
+#### Result:
+![DC_D4SK4_L1 - Lab18 - Boundary Optimization_0](https://user-images.githubusercontent.com/62828746/210260992-0d1364a0-7f6e-4bb8-9855-366a1c8ef846.jpg)
+![DC_D4SK4_L1 - Lab18 - Boundary Optimization_1](https://user-images.githubusercontent.com/62828746/210260995-05333d9a-c904-4ffa-8dc9-ce6a5ec5098f.jpg)
+![DC_D4SK4_L1 - Lab18 - Boundary Optimization_2](https://user-images.githubusercontent.com/62828746/210260998-691c4da3-5075-4605-8bac-6ce9a717ce93.jpg)
+![DC_D4SK4_L1 - Lab18 - Boundary Optimization_3](https://user-images.githubusercontent.com/62828746/210261000-84efaad2-aa50-4ac9-b174-f392768a3cc1.jpg)
+
+   </details>
+
+
+ 
+## Lab Topic - DC_D4SK4_L2 - Lab19 - Register Retiming
+
+<details open><summary> DC_D4SK4_L2 - Lab19 - Register Retiming </summary>
+
+### Lab - DC_D4SK4_L2 - Lab19 - Register Retiming
+
+#### Steps:
+> 1. Load design vision gui and check_reg_retime.v
+>> *read_verilog check_reg_retime.v*  
+>> *link*
+>> *compile*
+>> *report_timing*
+> 2. Source constraints and try to fix slack by optimizing with retiming.
+>> *source reg_retime_cons.tcl*
+>> *report_timing*
+>> *compile_ultra -retime*
+ 
+ 
+#### Result: 
+![DC_D4SK4_L2 - Lab19 - Register Retiming_0](https://user-images.githubusercontent.com/62828746/210263587-0c9daf54-28b5-4178-835b-2074898e9a2f.jpg)
+![DC_D4SK4_L2 - Lab19 - Register Retiming_1](https://user-images.githubusercontent.com/62828746/210263590-42e27fc1-1853-4509-a1bc-80265230ec37.jpg)
+![DC_D4SK4_L2 - Lab19 - Register Retiming_2](https://user-images.githubusercontent.com/62828746/210263595-f8d2bb42-1593-4395-ba77-52c999916732.jpg)
+![DC_D4SK4_L2 - Lab19 - Register Retiming_3](https://user-images.githubusercontent.com/62828746/210263597-a95da766-5921-4d0a-9e46-8df13bb82458.jpg)
+![DC_D4SK4_L2 - Lab19 - Register Retiming_4](https://user-images.githubusercontent.com/62828746/210263598-01c360e3-8c95-45d8-a2fc-f18f30bbe185.jpg)
+ 
+ 
+   </details> 
+ 
+ 
+## Lab Topic - DC_D4SK4_L3 - Lab20 - Isolating output ports
+
+<details open><summary> DC_D4SK4_L3 - Lab20 - Isolating output ports </summary>
+
+### Lab - DC_D4SK4_L3 - Lab20 - Isolating output ports
+
+#### Steps:
+> 1.  Load design vision gui and check_boundary.v
+>> *read_verilog check_boundary.v*  
+>> *link*
+>> *compile_ultra* 
+> 2.  Set isolate ports (buffer) to prevent internal timing path failed due to external load.
+>> *set_isolate_ports -type buffer [all_outputs]* 
+>> *compile_ultra* 
+ 
+#### Result:
+![DC_D4SK4_L3 - Lab20 - Isolating output ports_0](https://user-images.githubusercontent.com/62828746/210266473-3144c0a6-c63d-4438-a649-38d1bb796f6b.jpg)
+![DC_D4SK4_L3 - Lab20 - Isolating output ports_1](https://user-images.githubusercontent.com/62828746/210266477-09a0ccd1-278f-4d72-bc86-055acfcabb90.jpg)
+![DC_D4SK4_L3 - Lab20 - Isolating output ports_2](https://user-images.githubusercontent.com/62828746/210266479-a98f3664-1ece-4b69-914d-817501a1e343.jpg)
+![DC_D4SK4_L3 - Lab20 - Isolating output ports_3](https://user-images.githubusercontent.com/62828746/210266482-f4aa46db-5320-4274-9b56-6c314097aa12.jpg)
+![DC_D4SK4_L3 - Lab20 - Isolating output ports_4](https://user-images.githubusercontent.com/62828746/210266484-584947d8-0141-4d8c-9220-9d5a063f6725.jpg) 
+ 
+   </details> 
+ 
+
+ 
+## Lab Topic - DC_D4SK4_L4 - Lab21 - MultiCycle path
+
+<details open><summary> DC_D4SK4_L4 - Lab21 - MultiCycle path </summary>
+
+### Lab - DC_D4SK4_L4 - Lab21 - MultiCycle path
+
+#### Steps:
+> 1.  Load design vision gui and mcp_check.v
+>> *read_verilog mcp_check.v*  
+>> *link*
+>> *compile_ultra*  
+> 2. write constraints to multicycle path.
+>> *source mcp_check_cons.tcl*
+>> *set multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]* 
+>> *report_timing -to prod_reg[*]/D*
+>> *report_timing -from [all_inputs] -to prod_reg[*]/D*  
+>> *set_multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*
+>> *set_isolate_ports -type buffer [all_outputs]*
+>> *compile_ultra*
+>> *report_timing -inp -cap -trans -sig 4 -nosplit*
+ 
+#### Result:
+![DC_D4SK4_L4 - Lab21 - MultiCycle path_0](https://user-images.githubusercontent.com/62828746/210269360-06fa73b8-e6a8-4f9a-bef2-e8bfec8c2c72.jpg)
+![DC_D4SK4_L4 - Lab21 - MultiCycle path_2](https://user-images.githubusercontent.com/62828746/210269365-e64f4c48-ad93-476d-868a-2f293f8b92c8.jpg)
+![DC_D4SK4_L4 - Lab21 - MultiCycle path_3](https://user-images.githubusercontent.com/62828746/210269368-77fe6a76-d199-45b7-9d15-054b1228bb40.jpg)
+![DC_D4SK4_L4 - Lab21 - MultiCycle path_4](https://user-images.githubusercontent.com/62828746/210269369-a72c2edf-efac-4cfd-bcf8-46198abebc37.jpg)
+![DC_D4SK4_L4 - Lab21 - MultiCycle path_5](https://user-images.githubusercontent.com/62828746/210269371-e6c2b980-92ea-4c54-ac14-3f3afc27db31.jpg) 
+ 
+   </details>  
+ 
+   
+  
