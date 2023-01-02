@@ -149,7 +149,26 @@
   </details>
   
   
++ **[ Day 9 - Optimization in synthesis](https://github.com/teoh5128/intel-sd-training#day-9)**
+  <details><summary> Theory </summary>
+   
   
+  * [Theory - DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt](https://github.com/teoh5128/intel-sd-training#theory---dc_d4sk1_l1---lecture11---optimizations-combinational-opt)
+  * [Theory - DC_D4SK1_L2 - Lecture12 Sequential Optimizations](https://github.com/teoh5128/intel-sd-training#theory---dc_d4sk1_l2---lecture12-sequential-optimizations)
+  * [Theory - DC_D4SK3_L1 - Lecture13 special optimizations](https://github.com/teoh5128/intel-sd-training#theory---dc_d4sk3_l1---lecture13-special-optimizations)
+    
+  </details>
+  <details><summary> Lab </summary>
+  
+  * [Lab Topic - DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk2_l1---lab16---part1-combinational_optimizations)
+  * [Lab Topic - DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk2_l2---lab16---part2-resource-sharing-optimizations)   
+  * [Lab Topic - DC_D4SK2_L3 - lab17 - seq optimizations](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk2_l3---lab17---seq-optimizations)
+  * [Lab Topic - DC_D4SK4_L1 - Lab18 - Boundary Optimization](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l1---lab18---boundary-optimization)   
+  * [Lab Topic - DC_D4SK4_L2 - Lab19 - Register Retiming](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l2---lab19---register-retiming)
+  * [Lab Topic - DC_D4SK4_L3 - Lab20 - Isolating output ports](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l3---lab20---isolating-output-ports)           
+  * [Lab Topic - DC_D4SK4_L4 - Lab21 - MultiCycle path](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l4---lab21---multicycle-path)      
+  
+  </details>  
   
   
   
