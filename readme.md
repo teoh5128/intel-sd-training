@@ -171,7 +171,7 @@
   </details>  
   
   
-  + **[ Day 10 -QOR](https://github.com/teoh5128/intel-sd-training#day-10)**
++ **[ Day 10 -QOR](https://github.com/teoh5128/intel-sd-training#day-10)**
   <details><summary> Theory </summary>
    
   
