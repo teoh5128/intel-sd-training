@@ -171,7 +171,19 @@
   </details>  
   
   
+  + **[ Day 10 -QOR](https://github.com/teoh5128/intel-sd-training#day-10)**
+  <details><summary> Theory </summary>
+   
   
+  * [Theory - DC_D5SK1_L1 - Lecture Report timing](https://github.com/teoh5128/intel-sd-training#theory---dc_d5sk1_l1---lecture-report-timing)
+ 
+  </details>
+  <details><summary> Lab </summary>
+  
+  * [Lab Topic - DC_D5SK1_L2 - Lab Report timing](https://github.com/teoh5128/intel-sd-training#lab-topic----dc_d5sk1_l2---lab-report-timing)
+  * [Lab Topic - DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN](https://github.com/teoh5128/intel-sd-training#lab-topic----dc_d5sk1_l3---lab-check_timing-check_design-set_max_capacitance-hfn)
+  
+  </details>  
   
   
   
