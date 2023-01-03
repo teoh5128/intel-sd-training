@@ -2930,7 +2930,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
 
 ## **Summary of Synthesis.tcl**
 ![synthesis tcl](https://user-images.githubusercontent.com/62828746/210385075-4b785c6d-b307-4f24-9408-953d98e00f60.jpg)
--2613d223-a42e-4ebb-afde-a5911c7a1189.jpg)
+
  
 ## **Summary of Flow**
 ![flow summary](https://user-images.githubusercontent.com/62828746/210385071-37351c20-bf8d-4a93-9c81-9e05bd2c5ea6.jpg)
