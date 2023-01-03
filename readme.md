@@ -2918,7 +2918,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
 ![DC_D5SK1_L2 - Lab Report timing_1](https://user-images.githubusercontent.com/62828746/210286624-59f3686e-04d1-45ef-bfb3-641b01137772.jpg)
  
-
+   </details> 
  
  
 ## Lab Topic -  DC_D5SK1_L2 - Lab Report timing
