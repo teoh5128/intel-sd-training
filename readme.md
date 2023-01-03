@@ -2926,7 +2926,8 @@ check_timing | Warns about possible timing problems in the current design. | ![C
 report_constraints | Displays constraint-related information about a design. | ![Report_constraints](https://user-images.githubusercontent.com/62828746/210331810-56476c5b-d257-492e-8546-a942e17b31dd.jpg)
 report_constraint -all_violators | List out all violating constraints | ![Report_constraints –all_violators and set_max_cap](https://user-images.githubusercontent.com/62828746/210331807-5960a661-338b-424c-aaf7-568fa05d4c51.jpg)
 set_max_capacitance | Sets the max_capacitance attribute to a specified value on the specified ports and designs. Mainly for breaking/buffering the High Fanout Net (HFN) | ![set_max_cap](https://user-images.githubusercontent.com/62828746/210331814-69b39b1e-d58b-4d3e-84e3-0cb8a770fe07.jpg)  
-  
+set_max_transition |  Sets the max_transition attribute to a specified value on specified ports or designs. Set max trans and max cap properly to ensure HFN will be taken care. | ![set_max_trans](https://user-images.githubusercontent.com/62828746/210374748-1ad6a6ef-c271-46b2-b2e2-961817f45b53.jpg)
+
   
   
    </details> 
@@ -3013,6 +3014,14 @@ set_max_capacitance | Sets the max_capacitance attribute to a specified value on
 >> *report_timing -from en -inp -nets -cap -sig 4*</br>
 >> *write -f ddc -out en_128.ddc*</br> 
 
+> 3. Set maximum transition constraints to circuit and to fix HFN and delay that cause transition violation.
+>> *report_timing -from en -inp -nets -cap -sig*
+>> *set_max_transition 0.150 [current_design]*
+>> *report_constraints*
+>> *report_constraints -all_violators*
+>> *compile_ultra*
+>> *report_timing -nets -cap -nets -inp -sig 4 -nosplit*
+
 #### Result: 
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_0](https://user-images.githubusercontent.com/62828746/210289570-1cb6d4dd-fac3-4263-959f-ccb66f124d44.jpg)
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_1](https://user-images.githubusercontent.com/62828746/210289574-ba92563d-33c2-4983-8cc9-147908fc6c2d.jpg)
@@ -3026,6 +3035,8 @@ set_max_capacitance | Sets the max_capacitance attribute to a specified value on
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_9](https://user-images.githubusercontent.com/62828746/210289588-319d2a2d-80c7-49c3-ab66-26dec25cfea9.jpg)
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_10](https://user-images.githubusercontent.com/62828746/210289590-008f5774-27f4-4d21-b542-a3c693137810.jpg)
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_11](https://user-images.githubusercontent.com/62828746/210289594-d4a97da6-a8c1-44c0-8326-938c47779eec.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_12](https://user-images.githubusercontent.com/62828746/210375783-ee248579-f238-4cba-848e-ae3a88f26ac6.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_13](https://user-images.githubusercontent.com/62828746/210375787-2613d223-a42e-4ebb-afde-a5911c7a1189.jpg)
 
  
  
