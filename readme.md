@@ -2891,4 +2891,120 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
    </details>  
  
    
-  
+## Day 10 
+## Theory - DC_D5SK1_L1 - Lecture Report timing
+
+
+<details open><summary> DC_D5SK1_L1 - Lecture Report timing </summary>
+
+## **Propagation Delay**
+![DC_D5SK1_L2 - Lab Report timing_0](https://user-images.githubusercontent.com/62828746/210286621-632d6186-b9e4-4b0b-bc8f-9da8b801b909.jpg)
+
+* Propagation delay is the time required for the input to be propagated to the output.
+* Propogation delay of rise and fall are difference 
+ 
+![DC_D5SK1_L2 - Lab Report timing_1](https://user-images.githubusercontent.com/62828746/210286624-59f3686e-04d1-45ef-bfb3-641b01137772.jpg)
+ 
+
+ 
+ 
+## Lab Topic -  DC_D5SK1_L2 - Lab Report timing
+
+<details open><summary>  DC_D5SK1_L2 - Lab Report timing </summary>
+
+### Lab -  DC_D5SK1_L2 - Lab Report timing
+ 
+#### Steps:
+> 1. Read verilog lab8_circuit_modified.v, set constraints to circuit and review timing path report.
+>> *read_verilog lab8_circuit_modified.v*
+>> *sh gvim lab8_cons_modified.tcl*
+>> *link*
+>> *source lab8_cons_modified.tcl*
+>> *compile_ultra*
+>> *report_timing -trans -nets -input -cap -nosplit -sig 4*
+>> *report_timing -trans -nets -input -cap -nosplit -sig 4 -from IN_A*
+>> *report_timing -rise_from IN_A  -trans -nets -input -cap -nosplit -sig 4*
+>> *report_timing -rise_from IN_A  -trans -nets -input -cap -nosplit -sig 4 -to REGA_reg/D*
+>> *report_timing -delay min -from IN_A*
+>> *report_timing -thr U15/Y*
+>> *report_timing -thr U15/Y -delay min*
+
+
+#### Result:
+![DC_D5SK1_L2 - Lab Report timing_0](https://user-images.githubusercontent.com/62828746/210286663-d25b9913-1f2a-4b2c-8b1f-5613123ad36c.jpg)
+![DC_D5SK1_L2 - Lab Report timing_1](https://user-images.githubusercontent.com/62828746/210286665-8b5d71be-f57a-417a-a5d2-2dfefa0f265a.jpg)
+![DC_D5SK1_L2 - Lab Report timing_2](https://user-images.githubusercontent.com/62828746/210286667-abc58b9c-9730-4d80-aa39-99c63d67d798.jpg)
+![DC_D5SK1_L2 - Lab Report timing_3](https://user-images.githubusercontent.com/62828746/210286668-5672ae85-94bd-4438-9556-6112975a0d74.jpg)
+![DC_D5SK1_L2 - Lab Report timing_4](https://user-images.githubusercontent.com/62828746/210286670-fe6e560b-46b7-4d99-84bc-e430b2003b2f.jpg)
+![DC_D5SK1_L2 - Lab Report timing_5](https://user-images.githubusercontent.com/62828746/210286672-8ed0cfad-c7ea-4368-8f99-a8c40bf15a10.jpg)
+ 
+   </details> 
+ 
+ 
+ 
+## Lab Topic -  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN
+
+<details open><summary>  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN </summary>
+
+### Lab -  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN
+ 
+#### Steps:
+> 1. Read verilog lab8_circuit_modified.v, set constraints to circuit and review timing path report.
+>> *read_verilog lab8_circuit_modified.v*
+>> *link*
+>> *check_design*
+>> *compile_ultra*
+>> *check_timing*
+>> *report_constraints*
+>> *report_timing*
+> 2. Read verilog mux_generate.v, set constraints to circuit and review timing path report.
+>> *sh gvim mux_generate.v &*
+>> *read_verilog mux_generate_128_1.v*
+>> *read_verilog mux_generate_128_1.v*
+>> *check_design*
+>> *link*
+>> *compile_ultra*
+>> *write -f verilog -out mux_generate_128_1_net.v*
+>> *sh gvim mux_generate_128_1_net.v &*
+>> *get_cells * -hier -filter "is_sequential == true"*
+>> *get_cells * -hier -filter "is_sequential == false"*
+>> *report_timing -net -cap*
+>> *check_timing*
+>> *set_max_delay -from [all_inputs] -to [all_outputs] 3.5*
+>> *report_timing*
+>> *set_max_capacitance 0.025 [current_design]*
+>> *report_constraint -all_violators*
+>> *compile_ultra*
+>> *check_timing* 
+>> *report_timing -net -cap -sig 4*
+> 3. Read verilog en_128.v, set constraints to circuit and review timing path report.
+>> *sh gvim en_128.v*
+>> *read_verilog en_128.v* 
+>> *link*
+>> *compile_ultra* 
+>> *report_timing -from en -inp -nets -cap*
+>> *set_max_capacitance 0.03 [current_design]* 
+>> *report_constraints*
+>> *compile_ultra* 
+>> *report_timing -from en -inp -nets -cap -sig 4*
+>> *write -f ddc -out en_128.ddc* 
+
+#### Result: 
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_0](https://user-images.githubusercontent.com/62828746/210289570-1cb6d4dd-fac3-4263-959f-ccb66f124d44.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_1](https://user-images.githubusercontent.com/62828746/210289574-ba92563d-33c2-4983-8cc9-147908fc6c2d.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_2](https://user-images.githubusercontent.com/62828746/210289575-cd5bf395-8e6e-42d1-823b-feecf91fd8dd.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_3](https://user-images.githubusercontent.com/62828746/210289577-1025f2a2-cc64-4cfc-b86c-79fdab19de66.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_4](https://user-images.githubusercontent.com/62828746/210289579-d181e26c-c029-420f-89aa-2330ec6ccaaf.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_5](https://user-images.githubusercontent.com/62828746/210289580-f888d41b-0a1f-4470-adbf-76b3c71542f6.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_6](https://user-images.githubusercontent.com/62828746/210289583-26c4d407-3751-49ed-984c-72fbb43ded05.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_7](https://user-images.githubusercontent.com/62828746/210289584-2f9f6af4-b14a-41df-b22a-f51bc5bfb0dc.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_8](https://user-images.githubusercontent.com/62828746/210289585-92586c2a-282f-412c-90a9-a5bd069145f5.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_9](https://user-images.githubusercontent.com/62828746/210289588-319d2a2d-80c7-49c3-ab66-26dec25cfea9.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_10](https://user-images.githubusercontent.com/62828746/210289590-008f5774-27f4-4d21-b542-a3c693137810.jpg)
+![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_11](https://user-images.githubusercontent.com/62828746/210289594-d4a97da6-a8c1-44c0-8326-938c47779eec.jpg)
+
+ 
+ 
+   </details> 
+ 
+   
