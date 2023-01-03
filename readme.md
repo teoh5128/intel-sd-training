@@ -2883,11 +2883,12 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 >> *read_verilog mcp_check.v*  
 >> *link*
 >> *compile_ultra*
+
 > 2. write constraints to multicycle path.
 >> *source mcp_check_cons.tcl*
->> *set multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]* 
+>> *set multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*
 >> *report_timing -to prod_reg[*]/D*
->> *report_timing -from [all_inputs] -to prod_reg[*]/D*  
+>> *report_timing -from [all_inputs] -to prod_reg[*]/D*
 >> *set_multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*
 >> *set_isolate_ports -type buffer [all_outputs]*
 >> *compile_ultra*
