@@ -2882,7 +2882,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 > 1.  Load design vision gui and mcp_check.v
 >> *read_verilog mcp_check.v*  
 >> *link*
->> *compile_ultra*  
+>> *compile_ultra*
 > 2. write constraints to multicycle path.
 >> *source mcp_check_cons.tcl*
 >> *set multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]* 
