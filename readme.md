@@ -2929,18 +2929,18 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
 #### Steps:
 > 1. Read verilog lab8_circuit_modified.v, set constraints to circuit and review timing path report.
->> *read_verilog lab8_circuit_modified.v*
->> *sh gvim lab8_cons_modified.tcl*
->> *link*
->> *source lab8_cons_modified.tcl*
->> *compile_ultra*
->> *report_timing -trans -nets -input -cap -nosplit -sig 4*
->> *report_timing -trans -nets -input -cap -nosplit -sig 4 -from IN_A*
->> *report_timing -rise_from IN_A  -trans -nets -input -cap -nosplit -sig 4*
->> *report_timing -rise_from IN_A  -trans -nets -input -cap -nosplit -sig 4 -to REGA_reg/D*
->> *report_timing -delay min -from IN_A*
->> *report_timing -thr U15/Y*
->> *report_timing -thr U15/Y -delay min*
+>> *read_verilog lab8_circuit_modified.v*</br>
+>> *sh gvim lab8_cons_modified.tcl*</br>
+>> *link*</br>
+>> *source lab8_cons_modified.tcl*</br>
+>> *compile_ultra*</br>
+>> *report_timing -trans -nets -input -cap -nosplit -sig 4*</br>
+>> *report_timing -trans -nets -input -cap -nosplit -sig 4 -from IN_A*</br>
+>> *report_timing -rise_from IN_A  -trans -nets -input -cap -nosplit -sig 4*</br>
+>> *report_timing -rise_from IN_A  -trans -nets -input -cap -nosplit -sig 4 -to REGA_reg/D*</br>
+>> *report_timing -delay min -from IN_A*</br>
+>> *report_timing -thr U15/Y*</br>
+>> *report_timing -thr U15/Y -delay min*</br>
 
 
 #### Result:
@@ -2963,44 +2963,44 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
 #### Steps:
 > 1. Read verilog lab8_circuit_modified.v, set constraints to circuit and review timing path report.
->> *read_verilog lab8_circuit_modified.v*
->> *link*
->> *check_design*
->> *compile_ultra*
->> *check_timing*
->> *report_constraints*
->> *report_timing*
+>> *read_verilog lab8_circuit_modified.v*</br>
+>> *link*</br>
+>> *check_design*</br>
+>> *compile_ultra*</br>
+>> *check_timing*</br>
+>> *report_constraints*</br>
+>> *report_timing*</br>
 > 2. Read verilog mux_generate.v, set constraints to circuit and review timing path report.
->> *sh gvim mux_generate.v &*
->> *read_verilog mux_generate_128_1.v*
->> *read_verilog mux_generate_128_1.v*
->> *check_design*
->> *link*
->> *compile_ultra*
->> *write -f verilog -out mux_generate_128_1_net.v*
->> *sh gvim mux_generate_128_1_net.v &*
->> *get_cells * -hier -filter "is_sequential == true"*
->> *get_cells * -hier -filter "is_sequential == false"*
->> *report_timing -net -cap*
->> *check_timing*
->> *set_max_delay -from [all_inputs] -to [all_outputs] 3.5*
->> *report_timing*
->> *set_max_capacitance 0.025 [current_design]*
->> *report_constraint -all_violators*
->> *compile_ultra*
->> *check_timing* 
->> *report_timing -net -cap -sig 4*
+>> *sh gvim mux_generate.v &*</br>
+>> *read_verilog mux_generate_128_1.v*</br>
+>> *read_verilog mux_generate_128_1.v*</br>
+>> *check_design*</br>
+>> *link*</br>
+>> *compile_ultra*</br>
+>> *write -f verilog -out mux_generate_128_1_net.v*</br>
+>> *sh gvim mux_generate_128_1_net.v &*</br>
+>> *get_cells * -hier -filter "is_sequential == true"*</br>
+>> *get_cells * -hier -filter "is_sequential == false"*</br>
+>> *report_timing -net -cap*</br>
+>> *check_timing*</br>
+>> *set_max_delay -from [all_inputs] -to [all_outputs] 3.5*</br>
+>> *report_timing*</br>
+>> *set_max_capacitance 0.025 [current_design]*</br>
+>> *report_constraint -all_violators*</br>
+>> *compile_ultra*</br>
+>> *check_timing*</br>
+>> *report_timing -net -cap -sig 4*</br>
 > 3. Read verilog en_128.v, set constraints to circuit and review timing path report.
->> *sh gvim en_128.v*
->> *read_verilog en_128.v* 
->> *link*
->> *compile_ultra* 
->> *report_timing -from en -inp -nets -cap*
->> *set_max_capacitance 0.03 [current_design]* 
->> *report_constraints*
->> *compile_ultra* 
->> *report_timing -from en -inp -nets -cap -sig 4*
->> *write -f ddc -out en_128.ddc* 
+>> *sh gvim en_128.v*</br>
+>> *read_verilog en_128.v*</br>
+>> *link*</br>
+>> *compile_ultra*</br>
+>> *report_timing -from en -inp -nets -cap*</br>
+>> *set_max_capacitance 0.03 [current_design]*</br> 
+>> *report_constraints*</br>
+>> *compile_ultra*</br> 
+>> *report_timing -from en -inp -nets -cap -sig 4*</br>
+>> *write -f ddc -out en_128.ddc*</br> 
 
 #### Result: 
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_0](https://user-images.githubusercontent.com/62828746/210289570-1cb6d4dd-fac3-4263-959f-ccb66f124d44.jpg)
