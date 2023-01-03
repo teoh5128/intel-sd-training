@@ -2825,7 +2825,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 
 #### Steps:
 > 1. Load design vision gui and check_reg_retime.v
->> *read_verilog check_reg_retime.v*  
+>> *read_verilog check_reg_retime.v*
 >> *link*
 >> *compile*
 >> *report_timing*
