@@ -2928,7 +2928,13 @@ report_constraint -all_violators | List out all violating constraints | ![Report
 set_max_capacitance | Sets the max_capacitance attribute to a specified value on the specified ports and designs. Mainly for breaking/buffering the High Fanout Net (HFN) | ![set_max_cap](https://user-images.githubusercontent.com/62828746/210331814-69b39b1e-d58b-4d3e-84e3-0cb8a770fe07.jpg)  
 set_max_transition |  Sets the max_transition attribute to a specified value on specified ports or designs. Set max trans and max cap properly to ensure HFN will be taken care. | ![set_max_trans](https://user-images.githubusercontent.com/62828746/210374748-1ad6a6ef-c271-46b2-b2e2-961817f45b53.jpg)
 
-  
+## **Summary of Synthesis.tcl**
+![synthesis tcl](https://user-images.githubusercontent.com/62828746/210385075-4b785c6d-b307-4f24-9408-953d98e00f60.jpg)
+-2613d223-a42e-4ebb-afde-a5911c7a1189.jpg)
+ 
+## **Summary of Flow**
+![flow summary](https://user-images.githubusercontent.com/62828746/210385071-37351c20-bf8d-4a93-9c81-9e05bd2c5ea6.jpg)
+   
   
    </details> 
  
