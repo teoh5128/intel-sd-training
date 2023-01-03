@@ -3021,12 +3021,12 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
 >> *write -f ddc -out en_128.ddc*</br> 
 
 > 3. Set maximum transition constraints to circuit and to fix HFN and delay that cause transition violation.
->> *report_timing -from en -inp -nets -cap -sig*
->> *set_max_transition 0.150 [current_design]*
->> *report_constraints*
->> *report_constraints -all_violators*
->> *compile_ultra*
->> *report_timing -nets -cap -nets -inp -sig 4 -nosplit*
+>> *report_timing -from en -inp -nets -cap -sig*</br>
+>> *set_max_transition 0.150 [current_design]*</br>
+>> *report_constraints*</br>
+>> *report_constraints -all_violators*</br>
+>> *compile_ultra*</br>
+>> *report_timing -nets -cap -nets -inp -sig 4 -nosplit*</br>
 
 #### Result: 
 ![DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN_0](https://user-images.githubusercontent.com/62828746/210289570-1cb6d4dd-fac3-4263-959f-ccb66f124d44.jpg)
