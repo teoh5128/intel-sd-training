@@ -2886,13 +2886,13 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 
 > 2. write constraints to multicycle path.
 >> *source mcp_check_cons.tcl* </br>
->> *set multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*
->> *report_timing -to prod_reg[*]/D*
->> *report_timing -from [all_inputs] -to prod_reg[*]/D*
->> *set_multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*
->> *set_isolate_ports -type buffer [all_outputs]*
->> *compile_ultra*
->> *report_timing -inp -cap -trans -sig 4 -nosplit*
+>> *set multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*</br>
+>> *report_timing -to prod_reg[*]/D*</br>
+>> *report_timing -from [all_inputs] -to prod_reg[*]/D*</br>
+>> *set_multicycle_path -setup 2 -to prod_reg[*]/D -from [all_inputs]*</br>
+>> *set_isolate_ports -type buffer [all_outputs]*</br>
+>> *compile_ultra*</br>
+>> *report_timing -inp -cap -trans -sig 4 -nosplit*</br>
  
 #### Result:
 ![DC_D4SK4_L4 - Lab21 - MultiCycle path_0](https://user-images.githubusercontent.com/62828746/210269360-06fa73b8-e6a8-4f9a-bef2-e8bfec8c2c72.jpg)
