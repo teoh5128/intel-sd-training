@@ -2917,7 +2917,18 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 * Propogation delay of rise and fall are difference 
  
 ![DC_D5SK1_L2 - Lab Report timing_1](https://user-images.githubusercontent.com/62828746/210286624-59f3686e-04d1-45ef-bfb3-641b01137772.jpg)
- 
+
+## **Summary of Command Used to Verify/Confirm Design Constraints**
+ **Command**      | **Function**      | **Example**
+---------------   | ---------------   | --------------- 
+check_design | Checks the current design for consistency | ![check_design](https://user-images.githubusercontent.com/62828746/210331816-b8b6fd8a-b755-47e1-b013-931e5be0183a.jpg)
+check_timing | Warns about possible timing problems in the current design. | ![Check_timing](https://user-images.githubusercontent.com/62828746/210331802-6241e61e-d54e-4e4b-b8b1-94f9359db772.jpg)
+report_constraints | Displays constraint-related information about a design. | ![Report_constraints](https://user-images.githubusercontent.com/62828746/210331810-56476c5b-d257-492e-8546-a942e17b31dd.jpg)
+report_constraint -all_violators | List out all violating constraints | ![Report_constraints –all_violators and set_max_cap](https://user-images.githubusercontent.com/62828746/210331807-5960a661-338b-424c-aaf7-568fa05d4c51.jpg)
+set_max_capacitance | Sets the max_capacitance attribute to a specified value on the specified ports and designs. Mainly for breaking/buffering the High Fanout Net (HFN) | ![set_max_cap](https://user-images.githubusercontent.com/62828746/210331814-69b39b1e-d58b-4d3e-84e3-0cb8a770fe07.jpg)  
+  
+  
+  
    </details> 
  
  
