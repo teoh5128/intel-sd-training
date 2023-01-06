@@ -186,7 +186,15 @@
   </details>  
   
   
++ **[ Day 11 -Introduction to Baby SoC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-11)**
+  <details><summary> Theory </summary>
+   
   
+  * [Theory - Introduction to Baby SoC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-baby-soc)
+ 
+  </details>
+  
+ 
   
   
   
