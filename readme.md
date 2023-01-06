@@ -3080,7 +3080,7 @@ Intermodule Communication | Connect, control, direct and interface between funct
 * In older day CPU are the primary processor and the most significant part inside the computing system.
 * Nowadays, SoC integrate the power of CPU with others components while CPU is only part of the structure that eventually became an add-ups for SoC.
  
-## **TypesofSoC**
+## **Types of SoC**
 Qualcomm’s Snapdragon processors are one of the the most ubiquitous SoCs in the Android smartphone space. 
 ![snapdragon_s600](https://user-images.githubusercontent.com/62828746/210879205-12bd3c03-64e3-4356-8b4d-9ae6dc5ca98e.png)
 *Source:[Qualcomm Snapdragon 600 APQ8064T](https://www.notebookcheck.net/Qualcomm-Snapdragon-600-SoC.90004.0.html)*
