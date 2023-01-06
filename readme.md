@@ -3049,3 +3049,84 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
    </details> 
  
    
+## Day 11 
+## Theory - Introduction to Baby SoC
+
+<details open><summary> Baby SoC </summary>
+
+## **What is SoC (System on Chip)**
+* SoC is a single die chip that has some different IP cores on it.
+* Based on requirement, it may integrated components that contain analog or digital processing system, mixed signal or a floating point unit that all lying on a single chip substrate. 
+* Soc is widely used in electronics industry due to its low power consumption, small die area and also having embedded system with equivalent functionality.
+ 
+## **SoC Structure**
+![SoC block diagram example](https://user-images.githubusercontent.com/62828746/210885173-a92b7101-89a0-4e5f-82a1-782d4b8ccaad.png)
+
+**SoC consists of:**
+**Elements**      | **Function**      | **Example**
+---------------   | ---------------   | --------------- 
+Hardware Functional Unit | Consists of microprocessors responsible for memory, running code, and digital signal processors | Processor Cores, Memory, Interfaces, Digital Signal Processor (DSP)
+Intermodule Communication | Connect, control, direct and interface between functional modules | Bus-BasedCommunication, Networkonachip
+ 
+**SoC vs CPU**
+* In older day CPU are the primary processor and the most significant part inside the computing system.
+* Nowadays, SoC integrate the power of CPU with others components while CPU is only part of the structure that eventually became an add-ups for SoC.
+ 
+## **TypesofSoC**
+Qualcomm’s Snapdragon processors are one of the the most ubiquitous SoCs in the Android smartphone space. 
+![snapdragon_s600](https://user-images.githubusercontent.com/62828746/210879205-12bd3c03-64e3-4356-8b4d-9ae6dc5ca98e.png)
+*Source:[Qualcomm Snapdragon 600 APQ8064T](https://www.notebookcheck.net/Qualcomm-Snapdragon-600-SoC.90004.0.html)*
+ 
+* **Qualcomm Snapdragon 600 APQ8064T** is a high-end SoC for mostly Android based smartphones and tablets that was announced at the beginning of 2013. 
+
+![snapdragon gen8](https://user-images.githubusercontent.com/62828746/210879212-f05cb47a-ae97-477e-8760-65320a44ea8a.png)
+*Source:[Qualcomm Unveils Snapdragon 8 Gen 2 Mobile Platform With Faster, More Intelligent Everything](https://hothardware.com/news/qualcomm-unveils-the-snapdragon-8-gen-2-with-faster-everything)*
+ 
+* **Qualcomm Snapdragon 8 Gen 2 Mobile Platform** is a high-end SoC for smartphones that was introduced in late 2022 and manufactured in 4 nm at TSMC (N4P).
+* Compared to Snapdragon 600 which has 28nm manufacturing technology, it was manufactured in only 4nm which is way smaller.
++ New improvement in tech:
+  *  Adreno 740 GPU: support Hardware Raytracing and tops even the iGPU in the Apple A16.
+  *  FastConnect 7800 modem: support Wi-Fi 7 and Bluetooth 5.3
+ 
+## **Introduction to VSDBabySoC**
+ ![vsdbabysoc_block_diagram](https://user-images.githubusercontent.com/62828746/210886623-b846ba0d-bc77-442e-8c69-c2083579a769.png)
+*Source[VSDBabySoC Block Diagram](https://github.com/manili/VSDBabySoC#problem-statement)
+ 
+* **VSDBabySoC** is a small yet powerful RISCV-based SoC. 
+* The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. 
++ Three open-source IP cores:
+  * RVMYTH microprocessor
+  * 8x-PLL to generate a stable clock
+  * 10-bit DAC to communicate with other analog devices
+
+## **What is RVMYTH**
+* **RVMYTH core:** a simple RISCV-based CPU, introduced in a workshop by RedwoodEDA and VSD. 
+* **RISC-V ("risk five"):** is an open standard instruction set architecture (ISA) based on Reduced Instruction Set Computer (RISC) principles. 
+ 
+## **What is PLL**
+![PLL](https://user-images.githubusercontent.com/62828746/210892591-b59a049f-a23b-491c-8bf2-8d1518f487ba.jpg)
+* **PLL (phase-locked loop):** a control system that generates an output signal whose phase is related to the phase of an input signal. 
+* PLLs are widely used for synchronization purposes, including clock generation and distribution.
+* **Phase detector:** compares the input frequency (Fref) with the feedback frequency and generate output signal (dc voltage) which is a function of the difference between the phases of the two input signals. 
+* **Low pass filter:** Remove high frequency noise from the dc voltage. (generated bt phase detector)
+* **Voltage Controlled Oscillator (VCO):** is the circuit block that generates the radio frequency signal that is normally considered as the output of the loop. 
+ 
+## **What is DAC**
+![dac](https://user-images.githubusercontent.com/62828746/210892588-10d1f028-9e0a-4fd4-b28e-43823df76b9d.jpg)
+* **DAC (Digital-to-analog converter): a system that converts a digital signal into an analog signal. 
+* DACs are widely used in modern communication systems enabling the generation of digitally-defined transmission signals. 
+* As a result, high-speed DACs are used for mobile communications and ultra-high-speed DACs are employed in optical communications systems.
+ 
+## **Introduction to VSDBabySoC Modelling**
+ 
+**Summary steps of VSDBabySoC Modelling:**
+![VSDBabySoC Modeling](https://user-images.githubusercontent.com/62828746/210895183-df0d71f9-cdc5-43c0-8125-c8e2ef53cfd5.png)
+ 
+* VSDBabySoC will be modelled and simulated the using **iverilog**.
++ To model VSDBabySoC, need to have:
+  * 3 main elements (IP cores) 
+  * a wrapper as an SoC
+  * testbench module
+ 
+ 
+   </details> 
