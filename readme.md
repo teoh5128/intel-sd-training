@@ -208,7 +208,7 @@
     
   </details>  
   
-  <details><summary> Theory </summary>
+  <details><summary>  Lab  </summary>
   
     * [Lab Topic - RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-modelling)
     * [Lab Topic - DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----dac-modelling)
