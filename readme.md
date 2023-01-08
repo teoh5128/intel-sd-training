@@ -208,16 +208,16 @@
     
   </details>  
   
- <details><summary> Lab </summary>
+  <details><summary> Theory </summary>
   
-  * [Lab Topic - RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-modelling)
-  * [Lab Topic - DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----dac-modelling)
-  * [Lab Topic - PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pll-modelling)
-  * [Lab Topic - RVMYTH_PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_pll-modelling) 
-  * [Lab Topic - RVMYTH_DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_dac-modelling) 
-  * [Lab Topic - VSDBabySoC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----vsdbabysoc-modelling) 
-  * [Lab Topic - Differences in Interactive Mode](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----differences-in-interactive-mode)
-  * [Lab Topic - 4-bit Adder by using Full Adder](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----4-bit-adder-by-using-full-adder) 
+    * [Lab Topic - RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-modelling)
+    * [Lab Topic - DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----dac-modelling)
+    * [Lab Topic - PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pll-modelling)
+    * [Lab Topic - RVMYTH_PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_pll-modelling) 
+    * [Lab Topic - RVMYTH_DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_dac-modelling) 
+    * [Lab Topic - VSDBabySoC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----vsdbabysoc-modelling) 
+    * [Lab Topic - Differences in Interactive Mode](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----differences-in-interactive-mode)
+    * [Lab Topic - 4-bit Adder by using Full Adder](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----4-bit-adder-by-using-full-adder) 
    
   </details>    
   
