@@ -195,9 +195,31 @@
   </details>
   
  
++ **[ Day 12 - BabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-12)**
+  <details><summary> Theory </summary>
+   
   
+  + [Theory - BabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---babysoc-modelling)
+    * [What is Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#what-is-modelling)
+    * [RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#rvmyth-modelling)
+    * [PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pll-modelling)
+    * [DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#dac-modelling)
+    * [Simulating using VCS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#simulating-using-vcs)
+    
+  </details>  
   
+ <details><summary> Lab </summary>
   
+  * [Lab Topic - RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-modelling)
+  * [Lab Topic - DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----dac-modelling)
+  * [Lab Topic - PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pll-modelling)
+  * [Lab Topic - RVMYTH_PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_pll-modelling) 
+  * [Lab Topic - RVMYTH_DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_dac-modelling) 
+  * [Lab Topic - VSDBabySoC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----vsdbabysoc-modelling) 
+  * [Lab Topic - Differences in Interactive Mode](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----differences-in-interactive-mode)
+  * [Lab Topic - 4-bit Adder by using Full Adder](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----4-bit-adder-by-using-full-adder) 
+   
+  </details>    
   
   
   
