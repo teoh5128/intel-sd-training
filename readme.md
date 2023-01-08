@@ -3138,3 +3138,314 @@ Qualcomm’s Snapdragon processors are one of the the most ubiquitous SoCs in th
  
  
    </details> 
+
+
+
+## Day 12
+## Theory - BabySoC Modelling
+
+<details open><summary> BabySoC Modelling </summary>
+
+## **What is Modelling**
+
+* HDL (Hardware Description Language) are used to describe the model of a digital hardware. 
+* The model of a digital hardware gives the external view and one or more internal views.
+* Internal View: Gives the functionality of the structure.
+* External view: Gives the interface of the device.
+* Modeling and simulation is the use of a physical or logical representation of a given system to generate data and help determine decisions or make predictions about the system.
+* The fundamental goal in modeling : to obtain the functional relationship among the terminal electrical variables of the device that is to be modeled.
+ 
+**Modeling Styles**      | **Function**      
+---------------------    | ---------------
+Gate-Level | Used to model combinatorial circuits 
+Data Flow | Used to model combinatorial circuits 
+Behavioral | Used for both combinatorial and sequential circuits.
+
+ 
+## **RVMYTH modelling**
+* RVMYTH core: a simple RISCV-based CPU, introduced in a workshop by RedwoodEDA and VSD.
+* Basic RISC-V CPU micro-architecture is designed with 3 stages fetch, decode and execute based on RISC-V ISA.
++ Fetch: 
+  * During Fetch Stage, processor fetches the instruction from the IM pointed by address given by PC..
+  * Program Counter (PC): Holds the address of next Instruction
+  * Instruction Memory (IM): Holds the set of instructions to be executed
++ Decode:
+  * During Decode Stage, processor decodes the instruction based on instruction format and type of instruction.
+  * Instruction Format includes Opcode, immediate value, source address, destination address. 
+  * 6-types of instruction: </br>
+    R-type - Register </br>
+    I-type - Immediate </br>
+    S-type - Store </br>
+    B-type - Branch (Conditional Jump) </br>
+    U-type - Upper Immediate </br>
+    J-type - Jump (Unconditional Jump) </br>
++ Register File Read and Write:
+  * Register file is 2 read, 1 write means 2 read and 1 write operation can happen simultanously.
+  * Inputs: </br>
+    Read_Enable - Enable signal to perform read operation </br>
+    Read_Address1 - Address1 from where data has to be read </br>
+    Read_Address2 - Address2 from where data has to be read </br>
+    Write_Enable - Enable signal to perform write operation </br>
+    Write_Address - Address where data has to be written </br>
+    Write_Data - Data to be written at Write_Address </br>
+   * Outputs: </br>
+    Read_Data1 - Data from Read_Address1 </br>
+    Read_Data2 - Data from Read_Address2 </br>
++ Execute:   
+  * During the Execute Stage, both the operands perform the operation based on Opcode.
++ Control Logic:
+  * During Decode Stage, branch target address is calculated and fed into PC mux. 
+  * Before Execute Stage, once the operands are ready branch condition is checked.
+ 
+## **PLL modelling**
+![PLL](https://user-images.githubusercontent.com/62828746/210899176-c5868e2c-2f43-424e-8c56-fc2cdaabd45e.jpg)
+ 
+* Phase-locked loop (PLL) is an electronic circuit with a voltage or voltage-driven oscillator that constantly adjusts to match the frequency of an input signal.
++ Design trade-off of PLL: frequency bandwidth response will defines the jitter response.
+  * Lower frequency bandwidth = lower sensitivity to jitter in the reference clock input.
+  * Lower frequency bandwidth = lower the sensitivity to VCO jitter.
+ 
+**How is clock generated?**
+* By using Quartz crystal oscillator.
++ While to generate high-frequency clocks on-chip, using one of two main circuit:
+  * Phase-Locked Loop (PLL)
+  * Delay-Locked Loop (DLL)
+* Clock might have clock jitter or delay due to long wire. 
+* Hence, concept of ppm(clock accuracy) comes in, when ever quartz is acquired, it comes with a zero or small ppm error.
+
+**PPM error**
+![Ppm calculation](https://user-images.githubusercontent.com/62828746/210901686-6030849d-d5c0-41d1-b636-777cb1ab0177.jpg)
+ * PPM (Parts per million): a measurement used today by many customers to measure quality performance.
+ * One PPM means one (defect or event) in a million or 1/1,000,000
+ 
+ 
+ ## **DAC modelling**
+ 
+![dac](https://user-images.githubusercontent.com/62828746/210899171-0b42fd14-7750-4046-9f18-86b12e6883d5.jpg)
+![repo dac](https://user-images.githubusercontent.com/62828746/211184883-1c014b4f-e9a1-46e4-8453-8f0f1425f388.png)
+*Source:[SoC design using RISC-V based core and 10-bit DAC Sky130 IP](https://github.com/vsdip/rvmyth_avsddac_interface)
+* Above is the example of integration of (RISC-V) with digital to analog converter (DAC) and perform PNR using end-to-end open-source EDA tools. 
+* First, we will need to generate a verilog module for DAC and obtain the analog output reciprocation for some arbitrary digital inputs to test it. 
+* Later we will give the digital output of rvmyth to the 10-bit DAC by creating an interface between the two analog and digital blocks.
+ 
+## **Simulating using VCS**
+
+* We using VCS to simulate three cores inside VSDBabySoC after modelling them usign Verilog.
+* **VCS**: is a high-performance, high-capacity Verilog simulator that incorporates advanced, high-level abstraction verification technologies into a single open native platform. 
+ 
+![vcs steps](https://user-images.githubusercontent.com/62828746/211151899-f226cb76-9d5e-40df-b94e-c4913e22b319.jpg)
+* **Modelling** - Using HDL to design a block's verilog file which met it's functionality and a testbench to check its functionality.
+* **Compilation** - VCS builds the instance hierarchy and generates a binary executable simv. This binary executable is later used for simulation.
+* **Simulation**  - During compilation, VCS generates a binary executable, simv. You can use simv to run the simulation.
++ There are 2 types mainly - 
+  * Interactive mode: debug the design but compilation will not be optimized.
+  * Batch mode:
+
+ 
+**Run type**      | **Option and function**
+----------------  | -----------------------  
+VCS | -debug : Enables DVE and UCLI debugging. </br> -debug_all : Enables DVE and UCLI debugging inluding line stepping. </br> -h or -help : Lists descriptions of the most commonly used VCS compile and runtime options. </br> -sverilog : Enables the etensions to the Verilog language in the Accellera SystemVerilog specification. </br> +debug_all : Enables you to use the OpenVera testbench GUI. </br> -full64 : Enables compilation and simulation in 64 bit mode, see “Optimizations To Reduce Memory Consumption” </br> +race : Specifies that during simulation VCS generate a report of all the race conditions in the design and write this report in the race.out file.
+DVE | -gui : Invokes DVE at runtime.  </br> -ucli : Invokes the UCLI debugger command line if issued at runtime. </br>  -i inputFilename : Reads interactive commands from a file, then switches to reading from standard command line input. </br> -k keyFilename : Writes interactive commands entered to keyFilename, which can be used by a later simv as -i inputFilename </br> -l logFilename : Captures simulation output, such as user input commands and responses to UCLI commands.
+
+ 
+## **Tips for modelling a design**
+**Techniques**      | **Description**      | **Example**
+-----------   | --------------  | ------------- 
+Avoid race Conditions | A race condition is defined as a coding style for which there is more than one correct result. </br> Can be detected using race detection tool | two parallel blocks have no guaranteed ordering, so it is ambiguous whether the $display statement will be executed </br> ![race condition](https://user-images.githubusercontent.com/62828746/211152680-92ec5d55-a6b5-40c9-a865-66fd063164dc.jpg)
+Use a optimized Testbench for debugging your design | Using optimized testbenches by executing/enabling debugging features that are selective. | Use ‘ifdef, ‘else, and ‘endif compiler directives in your testbench to specify compiling certain system tasks for debugging features when the +define compile-time option is on the command line </br> ![Optimizing Testbenches ](https://user-images.githubusercontent.com/62828746/211153368-674e1eaa-5fd6-42af-b0bb-8b91d65df8a3.jpg)
+Creating models that simulate faster | Use higher level abstraction when modelling design.Behavioral and RTL models simulate much faster that gate and switch level models. This rule of thumb applies to all Verilog simulators and even all logic simulator. | ![Creating Models That Simulate Faster](https://user-images.githubusercontent.com/62828746/211153932-d0437814-a40b-4ae3-83ea-471dc6d6f0f2.jpg)
+Case statement behaviour | In VCS,  z does not stand for don’t care in a case statement, like it does in a casez or casex statement. In a case statement z stands for the usual high impedance and therefore so will ? | </br> 
+ 
+
+   </details> 
+ 
+ 
+## Lab Topic -  RVMYTH modelling
+<details open><summary>  RVMYTH modelling  </summary>
+ 
+### Lab -  RVMYTH modelling 
+ 
+#### Steps:
+> 1. Copy required file (verilog and testbench), compile and simulate code and generate vcd file.
+>> *git clone https://github.com/kunalg123/rvmyth/*
+>> *cd rvmyth*
+>> *csh*
+>> *vcs mythcore_test.v tb_mythcore_test.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveforms. 
+
+#### Result:
+![RVMYTH modelling_0](https://user-images.githubusercontent.com/62828746/211184657-3cc47208-0998-4867-b961-6448d4c1d52e.png)
+![RVMYTH modelling_1](https://user-images.githubusercontent.com/62828746/211184658-b58a394d-9193-478e-b963-17e304f45b90.png)
+![RVMYTH modelling_2](https://user-images.githubusercontent.com/62828746/211184659-776d8aa7-954e-4faf-9d59-de4ad7f90c04.png)
+ 
+   </details> 
+
+
+
+
+## Lab Topic -  DAC modelling
+<details open><summary>  DAC modelling  </summary>
+ 
+### Lab -  DAC modelling 
+ 
+#### Steps:
+> 1. Compile and simulate code and generate vcd file.
+>> *cd rvmyth*
+>> *csh*
+>> *vcs avsddac.v  avsddac_tb_test.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveform.
+ 
+#### Result:
+![DAC modelling_0](https://user-images.githubusercontent.com/62828746/211184675-53671c65-7443-452d-8af9-47dcdf975e8d.png)
+![DAC modelling_1](https://user-images.githubusercontent.com/62828746/211184676-84ab17a5-668d-4523-a9ff-9db32e835f09.png)
+![DAC modelling_2](https://user-images.githubusercontent.com/62828746/211184677-0aa9f32f-549d-4122-acb2-bbefc59739f3.png)
+![DAC modelling_3](https://user-images.githubusercontent.com/62828746/211184678-4c8efc5e-a7aa-423d-8294-a40c9ce10029.png)
+![DAC modelling_4](https://user-images.githubusercontent.com/62828746/211184679-b35f7406-4a9f-4777-ba8c-ee11fd0579ca.png)
+![DAC modelling_5](https://user-images.githubusercontent.com/62828746/211184681-a39e5dd3-f40c-411e-baff-441a8e23cb2d.png)
+  
+   </details> 
+
+
+
+
+## Lab Topic -  PLL modelling
+<details open><summary>  PLL modelling  </summary>
+ 
+### Lab -  PLL modelling 
+ 
+#### Steps:
+> 1. Compile and simulate code and generate vcd file.
+>> *cd rvmyth*
+>> *csh*
+>> *vcs avsd_pll_1v8.v pll_tb.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveform
+ 
+#### Result:
+![PLL modelling_0](https://user-images.githubusercontent.com/62828746/211184683-d3c816e6-5790-4eab-9a92-34d5bd5b6c50.png)
+![pll](https://user-images.githubusercontent.com/62828746/211184765-7cfe7862-9909-4440-a253-b1c060f7be79.png)
+*Source:[RISC-V based SOC Design with PLL using Open-Source EDA Tools](https://github.com/vsdip/rvmyth_avsdpll_interface)*
+![PLL modelling_1](https://user-images.githubusercontent.com/62828746/211184685-41047239-da5e-444c-b201-27516f6400c4.png)
+![PLL modelling_2](https://user-images.githubusercontent.com/62828746/211184686-e62f8a28-60fd-49f9-ba1a-21bef2d83a26.png)
+ 
+   </details> 
+
+
+
+## Lab Topic -  RVMYTH_PLL modelling
+<details open><summary>  RVMYTH_PLL modelling  </summary>
+ 
+### Lab -  RVMYTH_PLL modelling 
+ 
+#### Steps:
+> 1. Compile and simulate code and generate vcd file.
+>> *cd rvmyth*
+>> *csh*
+>> *vcs rvmyth_pll.v rvmyth_pll_tb.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveform
+ 
+#### Result:
+![RVMYTH_PLL modelling_0](https://user-images.githubusercontent.com/62828746/211184664-ee0ba325-5abd-4e72-bfca-55cd271566c1.png)
+![RVMYTH_PLL modelling_1](https://user-images.githubusercontent.com/62828746/211184665-02277b90-9e6d-4b6f-942d-64e330576ef9.png)
+![RVMYTH_PLL modelling_2](https://user-images.githubusercontent.com/62828746/211184666-8e3a68fa-0a5f-4cb2-98e1-e283a310af97.png)
+ 
+   </details> 
+
+
+
+## Lab Topic -  RVMYTH_DAC modelling
+<details open><summary>  RVMYTH_DAC modelling  </summary>
+ 
+### Lab -  RVMYTH_DAC modelling 
+ 
+#### Steps:
+> 1. Compile and simulate code and generate vcd file.
+>> *cd rvmyth*
+>> *csh*
+>> *vcs -sverilog rvmyth_avsddac.v rvmyth_avsddac_TB.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveform
+ 
+#### Result:
+![RVMYTH_DAC modelling_0](https://user-images.githubusercontent.com/62828746/211184660-80db86ec-2bf4-410c-a11e-4eb0c9598d80.png)
+![RVMYTH_DAC modelling_1](https://user-images.githubusercontent.com/62828746/211184661-cfb45ccb-1fe3-4670-9411-1f3f38b52858.png)
+![RVMYTH_DAC modelling_2](https://user-images.githubusercontent.com/62828746/211184662-4fff5022-201c-4344-bcee-19ed135cf791.png)
+![RVMYTH_DAC modelling_3](https://user-images.githubusercontent.com/62828746/211184663-94415228-0b57-4097-804e-9ff44d87fa62.png)
+ 
+   </details> 
+
+
+
+## Lab Topic -  VSDBabySoC modelling
+<details open><summary>  VSDBabySoC modelling  </summary>
+ 
+### Lab -  VSDBabySoC modelling 
+ 
+#### Steps:
+> 1. Compile and simulate code and generate vcd file.
+>> *cd rvmyth*
+>> *csh*
+>> *vcs vsdbabysoc.v testbench.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveform
+ 
+#### Result:
+![VSDBabySoC modelling_0](https://user-images.githubusercontent.com/62828746/211184667-5dabfc70-7b1b-4ee5-8f2c-f295d0cd44ea.png)
+![VSDBabySoC modelling_1](https://user-images.githubusercontent.com/62828746/211184668-46449519-0720-41dc-9e1a-16d772e12d07.png)
+![VSDBabySoC modelling_2](https://user-images.githubusercontent.com/62828746/211184669-18202f1c-3416-468f-8eab-1aab3dc9548e.png)
+ 
+   </details> 
+
+
+## Lab Topic -  Differences in Interactive Mode
+<details open><summary>  Differences in Interactive Mode  </summary>
+ 
+### Lab -  Differences in Interactive Mode 
+ 
+**Option**      | **Description**    | **Example**
+--------------  | ------------------ | ------------------
+-debug  | Enables DVE and command line debugging option. This option does not enable line stepping | </br>
+-debug_all | Enables command line debugging option including line stepping | </br>
+-debug-pp | Creates a VPD file (when used with the VCS system task $vcdpluson) and enables DVE for post-processing a design. </br> Using -debug-pp can save compilation time by eliminating the overhead of compiling with -debug and -debug_all.
+-debug_access | Enables dumping to FSDB/VPD, and limited read/callback capability. | Use'-debug_access+class' for testbench debugging. </br> Use'-debug_access+designer' to enable debug capability commonly used by DUT designers. </br> Use'-debug_access+simctrl' to enable debug capability needed by UCLI to control the simulation. </br> Use'-debug_access+all' to enable all debug capability.
+-debug_region* |  Controls what regions in the design debug capability (specified by -debug_access*) gets added. | </br>
+-debug_report<+debug.report> | Generates a debug.report file containing a list of where all the  debug capability added to the design came from. | </br>
+
+
+## Lab Topic -  4-bit Adder by using Full Adder 
+<details open><summary>  4-bit Adder by using Full Adder   </summary>
+ 
+### Lab -  4-bit Adder by using Full Adder 
+ 
+#### Steps:
+> 1. Compile and simulate code and generate vcd file.
+>> *cd rvmyth*
+>> *csh*
+>> *vcs -sverilog full_adder.v full_adder_tb.v*
+>> *./simv*
+>> *dve -full64 &*
+> 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
+> 3. Add the required waveform
+ 
+#### Result:
+![4-bit Adder by using Full Adder_0](https://user-images.githubusercontent.com/62828746/211184674-aaa675ac-66e9-4ae2-98d5-d8ab827929ad.png)
+![4-bit Adder by using Full Adder](https://user-images.githubusercontent.com/62828746/211184671-217d95aa-3de0-4f81-af59-9605c92b7fd0.png)
+
+
+   </details> 
+   
