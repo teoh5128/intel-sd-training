@@ -3245,7 +3245,7 @@ Behavioral | Used for both combinatorial and sequential circuits.
  
 ![dac](https://user-images.githubusercontent.com/62828746/210899171-0b42fd14-7750-4046-9f18-86b12e6883d5.jpg)
 ![repo dac](https://user-images.githubusercontent.com/62828746/211184883-1c014b4f-e9a1-46e4-8453-8f0f1425f388.png)
-*Source:[SoC design using RISC-V based core and 10-bit DAC Sky130 IP](https://github.com/vsdip/rvmyth_avsddac_interface)
+*Source:[SoC design using RISC-V based core and 10-bit DAC Sky130 IP](https://github.com/vsdip/rvmyth_avsddac_interface)*
 * Above is the example of integration of (RISC-V) with digital to analog converter (DAC) and perform PNR using end-to-end open-source EDA tools. 
 * First, we will need to generate a verilog module for DAC and obtain the analog output reciprocation for some arbitrary digital inputs to test it. 
 * Later we will give the digital output of rvmyth to the 10-bit DAC by creating an interface between the two analog and digital blocks.
@@ -3260,8 +3260,8 @@ Behavioral | Used for both combinatorial and sequential circuits.
 * **Compilation** - VCS builds the instance hierarchy and generates a binary executable simv. This binary executable is later used for simulation.
 * **Simulation**  - During compilation, VCS generates a binary executable, simv. You can use simv to run the simulation.
 + There are 2 types mainly - 
-  * Interactive mode: debug the design but compilation will not be optimized.
-  * Batch mode:
+  * Interactive mode (debug the design but compilation will not be optimized.)
+  * Batch mode
 
  
 **Run type**      | **Option and function**
