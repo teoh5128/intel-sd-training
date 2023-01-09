@@ -221,8 +221,19 @@
    
   </details>    
   
++ **[ Day 13 -Post-synthesis simulation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-13)**
+  <details><summary> Theory </summary>
+   
   
+  * [Theory - Pre-synthesis VS Post-synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pre-synthesis-vs-post-synthesis)
+  * [Theory - The list of synthesizable and non-synthesizable Verilog constructs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#the-list-of-synthesizable-and-non-synthesizable-verilog-constructs)
+   
+  </details>  
   
+  <details><summary>  Lab  </summary>
+    
+    * [Lab Topic - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-avsddac-pre-synthesis-and-post-synthesis)
+    
   
   
 ## Day 0
