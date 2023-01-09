@@ -3532,12 +3532,10 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 > 2.Invoke dc
 >> csh -> to enable c shell dc_shell -> invoke dc compiler </br>
 >> dc_shell </br>
-> 3. Read verilog file using command.
->> read_verilog rvmyth_avsddac.v </br>
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
->> link </br>
->> write -f verilog -out rvmyth_avsddac_syn.v </br>
-> 4. Read rvmyth_avsddac verilog file using command.
+
+### <Pending.....tbc>
+
+> 3. Read rvmyth_avsddac verilog file using command.
 >> read_verilog rvmyth_avsddac.v </br>
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
@@ -3545,9 +3543,10 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> compile_ultra </br>
 >> check_timing </br>
 >> report_timing </br>
+>> check_area </br>
 >> write -f verilog -out rvmyth_avsddac_syn.v  </br>
   
-> 5. Read rvmyth_pll verilog file using command.
+> 4. Read rvmyth_pll verilog file using command.
 >> read_verilog rvmyth_pll.synth.v </br>
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
@@ -3555,14 +3554,13 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> compile_ultra </br>
 >> check_timing </br>
 >> report_timing </br>
+>> check_area </br>
 >> write -f verilog -out rvmyth_pll_syn.v  </br>
 
-> 6. Read rvmyth_pll verilog file using command.
+> 5. Read rvmyth_pll verilog file using command.
 >> read_verilog vsdbabysoc.v </br>
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
-
-### <Pending.....tbc>
   
 > Run simulation
 >> *csh* </br>
