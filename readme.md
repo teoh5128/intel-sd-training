@@ -3521,54 +3521,54 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
  
 #### Steps:
 > 1. Convert .lib to .dc
->> lc_shell
->> read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
->> write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output library.db
->> read_lib avsddac.lib
->> write_lib avsddac -format db -output avsddac.db
->> read_lib avsd_pll_1v8.lib
->> write_lib avsd_pll_1v8 -format db -output avsd_pll_1v8.db
->> quit
+>> lc_shell </br>
+>> read_lib sky130_fd_sc_hd__tt_025C_1v80.lib </br>
+>> write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output library.db </br>
+>> read_lib avsddac.lib </br>
+>> write_lib avsddac -format db -output avsddac.db </br>
+>> read_lib avsd_pll_1v8.lib </br>
+>> write_lib avsd_pll_1v8 -format db -output avsd_pll_1v8.db </br>
+>> quit </br>
 > 2.Invoke dc
->> csh -> to enable c shell dc_shell -> invoke dc compiler
->> dc_shell
+>> csh -> to enable c shell dc_shell -> invoke dc compiler </br>
+>> dc_shell </br>
 > 3. Read verilog file using command.
->> read_verilog rvmyth_avsddac.v
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl
->> link
->> write -f verilog -out rvmyth_avsddac_syn.v
+>> read_verilog rvmyth_avsddac.v </br>
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+>> link </br>
+>> write -f verilog -out rvmyth_avsddac_syn.v </br>
 > 4. Read rvmyth_avsddac verilog file using command.
->> read_verilog rvmyth_avsddac.v
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl
->> link
->> source cons_modified.tcl
->> compile_ultra
->> check_timing
->> report_timing
->> write -f verilog -out rvmyth_avsddac_syn.v 
+>> read_verilog rvmyth_avsddac.v </br>
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+>> link </br>
+>> source cons_modified.tcl </br>
+>> compile_ultra </br>
+>> check_timing </br>
+>> report_timing </br>
+>> write -f verilog -out rvmyth_avsddac_syn.v  </br>
   
 > 5. Read rvmyth_pll verilog file using command.
->> read_verilog rvmyth_pll.synth.v
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl
->> link
->> source cons_modified.tcl
->> compile_ultra
->> check_timing
->> report_timing
->> write -f verilog -out rvmyth_pll_syn.v 
+>> read_verilog rvmyth_pll.synth.v </br>
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+>> link </br>
+>> source cons_modified.tcl </br>
+>> compile_ultra </br>
+>> check_timing </br>
+>> report_timing </br>
+>> write -f verilog -out rvmyth_pll_syn.v  </br>
 
 > 6. Read rvmyth_pll verilog file using command.
->> read_verilog vsdbabysoc.v
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl
->> link
+>> read_verilog vsdbabysoc.v </br>
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+>> link </br>
 
 ### <Pending.....tbc>
   
 > Run simulation
->> *csh*
->> *vcs *
->> *./simv*
->> *dve -full64 &*
+>> *csh* </br>
+>> *vcs * </br>
+>> *./simv* </br>
+>> *dve -full64 &* </br>
 > 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
 > 3. Add the required waveforms. 
  
