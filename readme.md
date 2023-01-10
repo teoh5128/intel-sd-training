@@ -3595,7 +3595,15 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> report_clocks
 >> check_area </br>
 >> write -f verilog -out vsdbabysoc_net.v  </br>
-  
+
+
+> 6. Read vsdbabysoc verilog file using command.
+>> ~~read_verilog vsdbabysoc.v ~~
+>> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc </br>
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+
+vcs  gls.v sky130_fd_sc_hd.v primitives.v
+
 > Run simulation
 >> *csh* </br>
 >> *vcs * </br>
@@ -3604,7 +3612,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 > 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
 > 3. Add the required waveforms. 
  
-  
+
   
    </details> 
  
