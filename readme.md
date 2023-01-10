@@ -3533,34 +3533,68 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> csh -> to enable c shell dc_shell -> invoke dc compiler </br>
 >> dc_shell </br>
 
-### <Pending.....tbc>
+#### Result:
+![rvmyth_avsddac_0](https://user-images.githubusercontent.com/62828746/211375020-b780911d-fb9f-4df1-acc2-33dd63c832d7.png)
 
 > 3. Read rvmyth_avsddac verilog file using command.
->> read_verilog rvmyth_avsddac.v </br>
+>> ~~read_verilog rvmyth_avsddac.v~~
+>> read_file {rvmyth_avsddac.v avsddac.v mythcore_test.v clk_gate.v} -autoread -format verilog -top rvmyth_avsddac
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
->> source cons_modified.tcl </br>
->> compile_ultra </br>
+>> compile </br>
 >> check_timing </br>
 >> report_timing </br>
+>> report_constraint </br>
+>> report_constraint -all_violators </br>
+>> report_clocks </br>
 >> check_area </br>
->> write -f verilog -out rvmyth_avsddac_syn.v  </br>
-  
-> 4. Read rvmyth_pll verilog file using command.
->> read_verilog rvmyth_pll.synth.v </br>
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
->> link </br>
->> source cons_modified.tcl </br>
->> compile_ultra </br>
->> check_timing </br>
->> report_timing </br>
->> check_area </br>
->> write -f verilog -out rvmyth_pll_syn.v  </br>
+>> write -f verilog -out rvmyth_avsddac_net.v  </br>
 
-> 5. Read rvmyth_pll verilog file using command.
->> read_verilog vsdbabysoc.v </br>
+#### Result:
+![rvmyth_avsddac_1](https://user-images.githubusercontent.com/62828746/211375025-7bee4141-f04c-45b8-92e7-fe94a8e8cce4.png)
+![rvmyth_avsddac_2](https://user-images.githubusercontent.com/62828746/211375007-5c741e4c-0cb6-4ca8-bd58-56d53fbb4f8b.png)
+![rvmyth_avsddac_3](https://user-images.githubusercontent.com/62828746/211440286-e67b5300-4515-4b69-8c54-c8c12e6dc887.png)
+![rvmyth_avsddac_4](https://user-images.githubusercontent.com/62828746/211440290-ca40bfd7-04dc-4504-b7ca-913f7abb284d.png)
+![rvmyth_avsddac_5](https://user-images.githubusercontent.com/62828746/211440291-9e52236d-568d-4d48-8bb9-6d2963a8e7e4.png)
+![rvmyth_avsddac_6](https://user-images.githubusercontent.com/62828746/211440298-c09792cd-6e0e-4392-a3cd-f765e09956fd.png)
+![rvmyth_avsddac_7](https://user-images.githubusercontent.com/62828746/211440300-1bdbf376-13c1-4da9-aade-9eccc0ddfd40.png)
+![rvmyth_avsddac_8](https://user-images.githubusercontent.com/62828746/211440302-c7a2986a-a3df-43e6-aadc-f34df93a496e.png)
+
+
+> 4. Read rvmyth_pll verilog file using command.
+~~>> read_verilog rvmyth_pll.synth.v ~~
+>> read_file {avsd_pll_1v8.v mythcore_test.v clk_gate.v rvmyth_pll.v } -autoread -format verilog -top rvmyth_pll_interface
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
+>> compile </br>
+>> check_timing </br>
+>> report_timing </br>
+>> report_constraint </br>
+>> report_constraint -all_violators </br>
+>> report_clocks </br>
+>> check_area </br>
+>> write -f verilog -out rvmyth_pll_net.v  </br>
+
+#### Result:
+![rvmyth_pll_0](https://user-images.githubusercontent.com/62828746/211440305-9ef8d005-c035-47b4-a1b1-c2a5e203880a.png)
+![rvmyth_pll_1](https://user-images.githubusercontent.com/62828746/211440308-eaa32226-c7a6-46a2-b5c4-4ba3941d79c9.png)
+![rvmyth_pll_2](https://user-images.githubusercontent.com/62828746/211440309-be9a3efa-31ca-4df6-9da4-846d81f89fde.png)
+
+### <Pending.....tbc>
+
+> 5. Read vsdbabysoc verilog file using command.
+>> ~~read_verilog vsdbabysoc.v ~~
+>> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+>> link </br>
+>> compile </br>
+>> check_timing </br>
+>> report_timing </br>
+>> report_constraint
+>> report_constraint -all_violators
+>> report_clocks
+>> check_area </br>
+>> write -f verilog -out vsdbabysoc_net.v  </br>
   
 > Run simulation
 >> *csh* </br>
@@ -3570,14 +3604,6 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 > 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
 > 3. Add the required waveforms. 
  
-
- 
-#### Result:
-![rvmyth_avsddac_0](https://user-images.githubusercontent.com/62828746/211375020-b780911d-fb9f-4df1-acc2-33dd63c832d7.png)
-![rvmyth_avsddac_1](https://user-images.githubusercontent.com/62828746/211375025-7bee4141-f04c-45b8-92e7-fe94a8e8cce4.png)
-![rvmyth_avsddac_2](https://user-images.githubusercontent.com/62828746/211375007-5c741e4c-0cb6-4ca8-bd58-56d53fbb4f8b.png)
-![rvmyth_avsddac_3](https://user-images.githubusercontent.com/62828746/211375015-0be19487-2a32-4126-9185-3dd466f0d91e.png) 
-  
   
   
    </details> 
