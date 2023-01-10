@@ -3584,7 +3584,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 
 > 5. Read vsdbabysoc verilog file using command.
 >> ~~read_verilog vsdbabysoc.v ~~
->> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc
+>> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc </br>
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
 >> compile </br>
