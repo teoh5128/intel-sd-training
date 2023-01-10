@@ -3537,8 +3537,8 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 ![rvmyth_avsddac_0](https://user-images.githubusercontent.com/62828746/211375020-b780911d-fb9f-4df1-acc2-33dd63c832d7.png)
 
 > 3. Read rvmyth_avsddac verilog file using command.
->> ~~read_verilog rvmyth_avsddac.v~~
->> read_file {rvmyth_avsddac.v avsddac.v mythcore_test.v clk_gate.v} -autoread -format verilog -top rvmyth_avsddac
+>> ~~read_verilog rvmyth_avsddac.v~~ </br
+>> read_file {rvmyth_avsddac.v avsddac.v mythcore_test.v clk_gate.v} -autoread -format verilog -top rvmyth_avsddac </br
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
 >> compile </br>
@@ -3562,7 +3562,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 
 
 > 4. Read rvmyth_pll verilog file using command.
-~~>> read_verilog rvmyth_pll.synth.v ~~
+>> ~~read_verilog rvmyth_pll.v </br>~~  </br>
 >> read_file {avsd_pll_1v8.v mythcore_test.v clk_gate.v rvmyth_pll.v } -autoread -format verilog -top rvmyth_pll_interface
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
