@@ -3616,4 +3616,88 @@ vcs  gls.v sky130_fd_sc_hd.v primitives.v
   
    </details> 
  
+
+## Day 14
+## Theory - Synopsys DC and timing analysis
+
+<details open><summary> PVT </summary>
  
+## **PVT**
+* Cells behavior strongly depends on factors such as PVT, input signals and output load.
+* To make fabricated chips working in all possible condition, stimulate it at different corners of process, voltage and temperature.
+* While looking at best and worst PVT conditions allows us to predict lower and upper limitation of cell bahvior which are important to ensure the overall functionality of the design.
+* **Worst PVT**: Process - Worst | Voltage - Min | Temperature - Max
+* **Best PVT**: Process - Best | Voltage - Max | Temperature - Min
+* **Worst Cold PVT**: Process - Worst | Voltage - Min | Temperature - Min
+* **Best Hot PVT**: Process - Best | Voltage - Max | Temperature - Max
+ 
+P (Process)                                      | V (Voltage)                                    | T (Temperature)
+---------------------------------------------    | ---------------------------------------------  | --------------------------------------------- 
+Different task or die area (center/boundary) has different process variation during fabrication </br> <img width="300" src="(https://user-images.githubusercontent.com/62828746/211880506-dc9fd8fc-f2b1-4597-afa3-415c9acb8271.png)"> | IR drop or supply noise might cause voltage variation. Even supplied voltage might not be stable all the time </br> <img width="300" src=![voltage](https://user-images.githubusercontent.com/62828746/211880515-c1a072d8-a50c-41e8-8468-c87139d0ad64.png)> |  Density of transistor is inconsistent throughout the chip and resulting in power dissipation and temperature variation across the chip <img width="300" src= ![temperature](https://user-images.githubusercontent.com/62828746/211880510-4413e31f-e0c1-499c-b178-84a21ff54143.png)>
+
+  </details>
+
+<details open><summary> WNS,TNS,WHS and THS </summary>
+ 
+## **WNS,TNS,WHS and THS**
+ 
+* Negative values indicates how much the design is missing the timing requirements.
+* The values comes with reference to your design timing constraints.
+* We need to fix this violations by setting the timing constraints correctly before moving ahead with hardware testing.
+ 
+**Values**             | **Description**      
+------------------     | ------------------ 
+WNS | Worst Negative Slack
+TNS | Total Negative Slack = sum of the negative slack paths
+WHS | Worst Hold Slack
+THS | Total Hold Slack = sum of the negative hold slack paths
+ 
+
+   </details> 
+
+
+## Lab Topic -  PVT Table of Different Lib 
+<details open><summary>  PVT Table of Different Lib   </summary>
+ 
+### Lab -  PVT Table of Different Lib  
+ 
+#### Steps:
+> 1. Copy library file from git clone
+>> git clone https://github.com/Geetima2021/vsdpcvrd
+> 2. Convert .lib to .db using lc_shell
+>> read_lib sky130_fd_sc_hd__ff_100C_1v65.lib </br>
+>> write_lib sky130_fd_sc_hd__ff_100C_1v65 -format db -output library.db </br>
+> 3. Read vsdbabysoc file, set library in setup_lib.tcl and report_qor after compile design with each library.
+>> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc </br>
+>> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+>> link </br>
+>> compile </br>
+>> report_qor
+ 
+#### Result:
+
+**lib file**                  | **WNS** | **WHS** | **TNS** | **THS**    
+------------------------------| ------- | ------- | ------- | ------- 
+sky130_fd_sc_hd__ff_100C_1v65 | 0.29 | 0.15 | 111.75 | 25.01 
+sky130_fd_sc_hd__ff_100C_1v95 | 9.32 | 0.13 | 2713.92 | 17.65
+sky130_fd_sc_hd__ff_n40C_1v56 | 0.40 | 0.11 | 163.60 | 4.06
+sky130_fd_sc_hd__ff_n40C_1v65 | 0.25 | 0.14 | 87.22 | 22.32
+sky130_fd_sc_hd__ff_n40C_1v76 | 0.06 | 0.18 | 13.6 | 47.55  --> Best PVT: Fast process, Min temperature, Max voltage
+sky130_fd_sc_hd__ss_100C_1v40 | 5.22 | 0 | 2701.12 | 0
+sky130_fd_sc_hd__ss_100C_1v60 | 3.16 | 0 | 1626.25 | 0
+sky130_fd_sc_hd__ss_n40C_1v28 | 10.84 | 0 | 5837.22 | 0
+sky130_fd_sc_hd__ss_n40C_1v35 | 7.32 | 0 | 3884.71 | 0
+sky130_fd_sc_hd__ss_n40C_1v40 | 5.56 | 0 | 2968.22 | 0
+sky130_fd_sc_hd__ss_n40C_1v44 | 5.11 | 0 | 2602.91 | 0
+sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
+ 
+![pvt0](https://user-images.githubusercontent.com/62828746/211913254-61f8d932-3f13-4cec-bbc4-191f729bd9f7.png)
+![pvt1](https://user-images.githubusercontent.com/62828746/211913262-a37e95bc-75ea-49c3-86bb-fb6e287bf8fe.png)
+![pvt2](https://user-images.githubusercontent.com/62828746/211913270-e3a57851-9dbc-4d26-957c-2edbe7a2fc84.png)
+![pvt3](https://user-images.githubusercontent.com/62828746/211913275-39b917cd-cab7-4d76-9d33-34c19e1cdbef.png)
+![pvt4](https://user-images.githubusercontent.com/62828746/211913278-ecc8a93e-cb1a-4f16-b150-8fe6fc8d49b6.png)
+![pvt5](https://user-images.githubusercontent.com/62828746/211913280-1ddeb97e-296a-4358-a6a6-f038986678ad.png)
+ 
+ 
+   </details>  
+
