@@ -3666,7 +3666,9 @@ vcs  gls.v sky130_fd_sc_hd.v primitives.v
  
 P (Process)                                      | V (Voltage)                                    | T (Temperature)
 ---------------------------------------------    | ---------------------------------------------  | --------------------------------------------- 
-Different task or die area (center/boundary) has different process variation during fabrication </br> <img width="300" src="(https://user-images.githubusercontent.com/62828746/211880506-dc9fd8fc-f2b1-4597-afa3-415c9acb8271.png)"> | IR drop or supply noise might cause voltage variation. Even supplied voltage might not be stable all the time </br> <img width="300" src=![voltage](https://user-images.githubusercontent.com/62828746/211880515-c1a072d8-a50c-41e8-8468-c87139d0ad64.png)> |  Density of transistor is inconsistent throughout the chip and resulting in power dissipation and temperature variation across the chip <img width="300" src= ![temperature](https://user-images.githubusercontent.com/62828746/211880510-4413e31f-e0c1-499c-b178-84a21ff54143.png)>
+Different task or die area (center/boundary) has different process variation during fabrication </br> ![power](https://user-images.githubusercontent.com/62828746/211880506-dc9fd8fc-f2b1-4597-afa3-415c9acb8271.png) | IR drop or supply noise might cause voltage variation. Even supplied voltage might not be stable all the time </br> ![voltage](https://user-images.githubusercontent.com/62828746/211880515-c1a072d8-a50c-41e8-8468-c87139d0ad64.png) |  Density of transistor is inconsistent throughout the chip and resulting in power dissipation and temperature variation across the chip </br> ![temperature](https://user-images.githubusercontent.com/62828746/211880510-4413e31f-e0c1-499c-b178-84a21ff54143.png)
+
+
 
   </details>
 
