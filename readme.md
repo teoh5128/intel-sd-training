@@ -234,7 +234,20 @@
     
     * [Lab Topic - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-avsddac-pre-synthesis-and-post-synthesis)
     
++ **[ Day 14 -Synopsys DC and timing analysis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-14)**
+  <details><summary> Theory </summary>
+   
   
+  * [Theory - PVT](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pvt-1)
+  * [Theory - WNS,TNS,WHS and THS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#wnstnswhs-and-ths)
+   
+  </details>  
+  
+  <details><summary>  Lab  </summary>
+    
+    * [Lab Topic - PVT Table of Different Lib](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pvt-table-of-different-lib)
+    
+    
   
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
