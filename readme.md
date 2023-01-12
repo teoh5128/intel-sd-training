@@ -3618,7 +3618,7 @@ vcs  gls.v sky130_fd_sc_hd.v primitives.v
  
 
 ## Day 14
-## Theory - Synopsys DC and timing analysis
+## Theory -  Synopsys DC and timing analysis 
 
 <details open><summary> PVT </summary>
  
