@@ -3592,8 +3592,11 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 ![rvmyth_pll_0](https://user-images.githubusercontent.com/62828746/211440305-9ef8d005-c035-47b4-a1b1-c2a5e203880a.png)
 ![rvmyth_pll_1](https://user-images.githubusercontent.com/62828746/211440308-eaa32226-c7a6-46a2-b5c4-4ba3941d79c9.png)
 ![rvmyth_pll_2](https://user-images.githubusercontent.com/62828746/211440309-be9a3efa-31ca-4df6-9da4-846d81f89fde.png)
-
-### <Pending.....tbc>
+![rvmyth_pll_3](https://user-images.githubusercontent.com/62828746/211949063-0fcb7770-4ad9-48ac-ae7f-8721e46cc2bd.png)
+![rvmyth_pll_4](https://user-images.githubusercontent.com/62828746/211949069-cc557c14-d60e-41cc-8652-d20d3ee04b12.png)
+![rvmyth_pll_5](https://user-images.githubusercontent.com/62828746/211949071-61b34c15-871a-4280-9c9f-d9d3ec5eab4f.png)
+![rvmyth_pll_6](https://user-images.githubusercontent.com/62828746/211949074-99a9558d-9d13-473e-a77c-da854eae17a8.png)
+![rvmyth_pll_7](https://user-images.githubusercontent.com/62828746/211949075-d8d3427b-23d9-424d-8e7c-a6d9bb3f760e.png)
 
 > 5. Read vsdbabysoc verilog file using command.
 >> ~~read_verilog vsdbabysoc.v ~~
@@ -3601,23 +3604,39 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
 >> compile </br>
->> check_timing </br>
+>> check_design </br>
 >> report_timing </br>
->> report_constraint
->> report_constraint -all_violators
->> report_clocks
->> check_area </br>
+>> report_constraint </br>
+>> report_constraint -all_violators </br>
+>> report_clocks </br>
+>> report_area </br>
 >> write -f verilog -out vsdbabysoc_net.v  </br>
 
+#### Result:
 
-> 6. Read vsdbabysoc verilog file using command.
->> ~~read_verilog vsdbabysoc.v ~~
->> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc </br>
->> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
+> 6. Set constraint to vsdbabysoc and optmize it.
+>> write -f ddc -out vsdbabysoc_net.ddc
+> Launch design vision
+>> csh design_vision
+> In invoked design vision gui, use command to read ddc file.
+>> read_ddc vsdbabysoc_net.ddc
+> Review design schematic, create clock, set IO constraint and load.
+>> source vsdbabysoc_cons.tcl
+>> report_timing </br>
+>> report_constraint </br>
+>> report_constraint -all_violators </br>
+>> report_clocks </br>
+>> report_area </br>
+>> write -f verilog -out vsdbabysoc_net_cons.v  </br>
+
+#### Result:
+
+
+### <Pending tbc.....RTL vs GLS waveform comparison>
 
 vcs  gls.v sky130_fd_sc_hd.v primitives.v
 
-> Run simulation
+> 7. Run simulation
 >> *csh* </br>
 >> *vcs * </br>
 >> *./simv* </br>
@@ -3625,6 +3644,7 @@ vcs  gls.v sky130_fd_sc_hd.v primitives.v
 > 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
 > 3. Add the required waveforms. 
  
+
 
   
    </details> 
