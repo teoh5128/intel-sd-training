@@ -233,6 +233,13 @@
   <details><summary>  Lab  </summary>
     
     * [Lab Topic - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-avsddac-pre-synthesis-and-post-synthesis)
+    * [Convert .lib to .dc](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#steps-60)
+    * [rvmyth_avsddac synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-63)
+    * [rvmyth_pll synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-64)
+    * [vsdbabysoc synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-65)
+    * [Set constraints and optimize vsdbabysoc](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-66)
+    * [Compare Pre-synthesis and Post-synthesis simulation waveform](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-67)
+    
     
 + **[ Day 14 -Synopsys DC and timing analysis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-14)**
   <details><summary> Theory </summary>
