@@ -3614,7 +3614,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 ![rvmyth_pll_7](https://user-images.githubusercontent.com/62828746/211949075-d8d3427b-23d9-424d-8e7c-a6d9bb3f760e.png)
 
 > 5. Read vsdbabysoc verilog file using command.
->> ~~read_verilog vsdbabysoc.v ~~
+>> ~~read_verilog vsdbabysoc.v~~ </br>
 >> read_file { mythcore_test.v avsd_pll_1v8.v avsddac.v clk_gate.v vsdbabysoc.v} -autoread -format verilog -top vsdbabysoc </br>
 >> source /nfs/png/disks/png_mip_gen6p9ddr_0032/huifente/sd_training/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/setup_lib.tcl </br>
 >> link </br>
@@ -3628,11 +3628,17 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> write -f verilog -out vsdbabysoc_net.v  </br>
 
 #### Result:
+![vsdbabysoc_0](https://user-images.githubusercontent.com/62828746/211949076-ac0df80b-4cf8-4c8d-91ad-bb406bb5ac2b.png)
+![vsdbabysoc_1](https://user-images.githubusercontent.com/62828746/211949079-c76a9661-0980-437e-b3a4-b05e573d19b0.png)
+![vsdbabysoc_2](https://user-images.githubusercontent.com/62828746/211949081-07db8910-770a-44d0-9703-3e97f283126b.png)
+![vsdbabysoc_3](https://user-images.githubusercontent.com/62828746/211949083-7282013c-0c85-4614-a07f-afec8abb6ba6.png)
+![vsdbabysoc_4](https://user-images.githubusercontent.com/62828746/211949084-bbd7dac0-a2f7-4a0f-82ad-f0537b42dba3.png)
+![vsdbabysoc_5](https://user-images.githubusercontent.com/62828746/211949086-2e142785-20a5-492b-846e-b6e460838b77.png)
 
 > 6. Set constraint to vsdbabysoc and optmize it.
->> write -f ddc -out vsdbabysoc_net.ddc
+>> write -f ddc -out vsdbabysoc_net.ddc </br>
 > Launch design vision
->> csh design_vision
+>> csh design_vision </br>
 > In invoked design vision gui, use command to read ddc file.
 >> read_ddc vsdbabysoc_net.ddc
 > Review design schematic, create clock, set IO constraint and load.
@@ -3645,22 +3651,44 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> write -f verilog -out vsdbabysoc_net_cons.v  </br>
 
 #### Result:
+![vsdbabysoc_opt0](https://user-images.githubusercontent.com/62828746/211949087-a7607aab-494d-408b-886a-d4dbcbd3c576.png)
+![vsdbabysoc_opt1](https://user-images.githubusercontent.com/62828746/211949088-6083a3ea-7254-43ca-8f40-51ab5acf2df9.png)
+![vsdbabysoc_opt2](https://user-images.githubusercontent.com/62828746/211949089-dd0ac230-b82a-45d6-82f2-dcc016bc33d0.png)
+![vsdbabysoc_opt3](https://user-images.githubusercontent.com/62828746/211949090-1f38c3c0-c877-442b-8339-bfeca0cd6160.png)
+![vsdbabysoc_opt4](https://user-images.githubusercontent.com/62828746/211949091-affefa1b-65ae-46a3-86b5-6069559abbb7.png)
+![vsdbabysoc_opt5](https://user-images.githubusercontent.com/62828746/211949094-f38d5353-b624-41f9-9ada-3f3972d7a6e5.png)
+![vsdbabysoc_opt6](https://user-images.githubusercontent.com/62828746/211949097-2348dc8b-1b2b-4673-92de-e9942d3143ca.png)
+![vsdbabysoc_opt7](https://user-images.githubusercontent.com/62828746/211949100-19407e96-53ae-44d7-986f-067ca2e5e31c.png)
+![vsdbabysoc_opt8](https://user-images.githubusercontent.com/62828746/211949101-d9668c63-4440-4b09-b4c3-cbc9eda0559a.png)
+![vsdbabysoc_opt9](https://user-images.githubusercontent.com/62828746/211949104-6c7574eb-89ca-4ea1-9fc8-278df73356c0.png)
+![vsdbabysoc_opt10](https://user-images.githubusercontent.com/62828746/211949108-1f642f33-2445-4b5f-a6e3-0ba436465d17.png)
 
-
-### <Pending tbc.....RTL vs GLS waveform comparison>
-
-vcs  gls.v sky130_fd_sc_hd.v primitives.v
 
 > 7. Run simulation
 >> *csh* </br>
->> *vcs * </br>
+>> *vcs  gls.v sky130_fd_sc_hd.v primitives.v * </br>
 >> *./simv* </br>
 >> *dve -full64 &* </br>
 > 2. Go to file/File/Open Database” and select the “.vcd” file from the project folder
 > 3. Add the required waveforms. 
- 
+> 4. Add the required waveforms. 
+>> *iverilog -o gls.v sky130_fd_sc_hd.v primitives.v*
+>> *./a.out*
+>> *gtkwave gls.vcd*
+> 5.Back to vnc load pre-synthesis simulations waveform generated in previous lab.
 
-
+![Run simulation_0](https://user-images.githubusercontent.com/62828746/212596121-cb3b5544-0e58-4a0e-914b-511b01e434d1.png)
+![Run simulation_1](https://user-images.githubusercontent.com/62828746/212596125-af8b4fdc-dfc4-4647-9360-d204f2ddf744.png)
+![Run simulation_2](https://user-images.githubusercontent.com/62828746/212596126-25af1f32-284f-451d-913a-ad749d62c1b8.png)
+![Run simulation_3](https://user-images.githubusercontent.com/62828746/212596127-cebe939e-a33d-421b-acf8-8fac8b8cdbe7.png)
+![Run simulation_4](https://user-images.githubusercontent.com/62828746/212596128-c53c948b-8e7d-4a0e-b11e-3f2f6a67a524.png)
+![Run simulation_5](https://user-images.githubusercontent.com/62828746/212596130-d89a8698-85dc-41f4-a4c6-49b76947c1e3.png)
+![Run simulation_6](https://user-images.githubusercontent.com/62828746/212596132-ca9910d3-d0f7-4995-80b0-529c8df1ea1d.png)
+![Run simulation_7](https://user-images.githubusercontent.com/62828746/212596134-78508bef-3d8f-40b3-a72f-bc28c7115211.png)
+![Run simulation_8](https://user-images.githubusercontent.com/62828746/212596135-9f9c0bdc-c0c0-4dee-ac8a-7ee44da5a92a.png)
+![Run simulation_9](https://user-images.githubusercontent.com/62828746/212596136-f48dd3dc-516f-45f4-a12e-da7cf5bdc023.png)
+![Run simulation_10](https://user-images.githubusercontent.com/62828746/212596139-2214ed23-6c6c-45ad-b8d4-e0c1469d5250.png)
+![Run simulation_11](https://user-images.githubusercontent.com/62828746/212596141-e152c295-41fb-4f9b-be71-c3b4bb08eb54.png)
   
    </details> 
  
