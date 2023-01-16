@@ -3736,3 +3736,102 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
  
    </details>  
 
+## Day 15
+## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers
+
+<details open><summary> ## Theory - SKY130_D1_SK1 - How to talk to computers </summary>
+ 
+## **RISC-V Instruction Set**
+
+* **Instruction set: is a group of commands for a central processing unit (CPU) in machine language. It tells the CPU to perform tasks.**
++ Types of instruction sets:
+  * **Complex instruction set computer:** CISC processors have an additional microcode or microprogramming layer where instructions act as small programs.
+  * **Reduced instruction set computer:** RISC uses a smaller and more compact instruction set with a fixed instruction format. It is designed to process faster and more efficiently.
+  * **Enhancement instruction sets:** These instruction types are more familiar because they are often used in marketing CPUs. 
+
+* RISC-V is an open instruction set architecture (ISA). There are a number of companies manufacturing all variants of RISC-V cores in their microcontrollers, microprocessors, and SoCs. 
+ 
+* 1.RISC-V instruction set are translated into machine code.
+* 2.Use RTL to implement the RISC-V specification.
+* 3.Synthesis the RTL into gate-level netlist.
+* 4.Synthesized netlist was then used for physical implementation.
+
+ ## **RISC-V Instruction Set Example**
+ 
+   </details> 
+   
+## Theory - SKY130_D1_SK2 - SoC design and OpenLANE
+
+<details open><summary> ## Theory - SKY130_D1_SK2 - SoC design and OpenLANE </summary>
+    
+* OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. 
+
+* The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
+![SKY130_D1_SK2 - SoC design and OpenLANE_0](https://user-images.githubusercontent.com/62828746/212574758-0b929d29-090e-4d32-8a66-137f7e6c532c.png)
+
+
+**Simplified RTL2GDS Flow**
+![SKY130_D1_SK2 - SoC design and OpenLANE_1](https://user-images.githubusercontent.com/62828746/212574762-e069b4c4-4853-44af-b21c-6cabc01ac652.png)
+
++ When usign open source need to consider:
+  * Tools qualification
+  * Tools calibration
+  * Missing tools
+ 
+**OpenLane** 
+* Main goal: Produce clean (DRC and LVS clean) GDSII with no human intervention (no-human-in-the-loop)
+* Tuned for SkyWater 130nm Open PDK
+* Can be used to harden (generate GDSII from RTL) macro and chips.
+* Operation modes: autonomous or interactive.
+* Design space exploration: find the best set of flow configurations automatically 
+* Large number of design: 43 designs with their best configuration for now, will be added soon.
+
+
+![SKY130_D1_SK2 - SoC design and OpenLANE_2](https://user-images.githubusercontent.com/62828746/212574764-f2966929-7cb9-47a7-af30-89be1ac21d42.png)
+ 
+   </details>    
+   
+
+## Lab - SKY130_D1_SK3 - Get familiar to open-source EDA tools
+
+<details open><summary> SKY_L1 - OpenLANE Directory structure in detail </summary>
+
+## **SKY_L1 - OpenLANE Directory structure in detail**
+
+#### Result: 
+![OpenLANE Directory structure in detai_0](https://user-images.githubusercontent.com/62828746/212579482-3ca52333-4e9f-4b59-a130-ce0b14828215.png)
+
+## **SKY_L2 - Design Preparation Step**
+
+#### Result: 
+![Review files after design prep and run synthesis_0](https://user-images.githubusercontent.com/62828746/212579488-275b714d-6b6b-4d53-9e1b-33f40f4894dc.png)
+
+## **SKY_L3 - Review files after design prep and run synthesis**
+
+#### Result: 
+![Review files after design prep and run synthesis_1](https://user-images.githubusercontent.com/62828746/212579492-d03468e7-20a4-4dea-965b-472876a59dba.png)
+![Design Preparation Step_0](https://user-images.githubusercontent.com/62828746/212579494-74c04647-ba30-4609-95fb-31168254d046.png)
+![Design Preparation Step_1](https://user-images.githubusercontent.com/62828746/212579495-550debcd-83d3-44ca-b00a-3a62e8075870.png)
+![Design Preparation Step_2](https://user-images.githubusercontent.com/62828746/212579498-116902b7-02e7-40c9-8d6a-594b5e5b26e0.png)
+
+## **SKY_L3 - SKY_L4 - OpenLANE Project Git Link Description**
+
+#### Steps: 
+>> run_synthesis
+>> run_floorplan
+>> run_placement
+>> run_cts
+>> run_routing
+>> write_powered_verilog followed by set_netlist ::env(DESIGN_NAME).powered.v
+>> run_magic
+>> run_magic_spice_export
+>> run_magic_drc
+>> run_lvs
+>> run_antenna_check
+ 
+#### Result: 
+<Pending..tbc>
+ 
+   </details> 
+
+   
