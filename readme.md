@@ -3813,16 +3813,27 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 
 ## **SKY_L1 - OpenLANE Directory structure in detail**
 
+#### Steps:
+>> *cd /home/huifen.teoh/Desktop/work/tools/openlane_working_dir* </br> 
+>> *cd openlane* </br> 
+>> *cd pdks* </br> 
+  
 #### Result: 
 ![OpenLANE Directory structure in detai_0](https://user-images.githubusercontent.com/62828746/212579482-3ca52333-4e9f-4b59-a130-ce0b14828215.png)
 
 ## **SKY_L2 - Design Preparation Step**
 
+#### Steps:
+>> *make mount* -> to invoke OpenLANE </br> 
+>> *./flow.tcl -interactive* -> run OpenLANE in interactive mode </br> 
+>> *package require openlane 0.9* -> import required package </br> 
+>> *prep -design picorv32a* -> prepare deisgn, merge .lef with .tlef* </br> 
 #### Result: 
 ![Review files after design prep and run synthesis_0](https://user-images.githubusercontent.com/62828746/212579488-275b714d-6b6b-4d53-9e1b-33f40f4894dc.png)
 
 ## **SKY_L3 - Review files after design prep and run synthesis**
-
+>> *cd /home/huifen.teoh/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-01_00-57*
+>> *cd reports/synthesis*
 #### Result: 
 ![Review files after design prep and run synthesis_1](https://user-images.githubusercontent.com/62828746/212579492-d03468e7-20a4-4dea-965b-472876a59dba.png)
 ![Design Preparation Step_0](https://user-images.githubusercontent.com/62828746/212579494-74c04647-ba30-4609-95fb-31168254d046.png)
@@ -3840,7 +3851,10 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 ![fossil dial up](https://user-images.githubusercontent.com/62828746/212581235-c56ee297-d0e6-4c27-b89b-ad4405cc98e5.png)
  
 ## **SKY_L5 - Steps to characterize synthesis results**
-
+>> *run_synthesis*
+>> *cd /home/huifen.teoh/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-01_00-57/reports/synthesis* -> to view report after run synthesis
+>> *vim 1-yosys_4.stat.rpt* -> view static report
+>> *vim 2-openstat.timing.rpt* -> view timing report
 #### Result: 
 ![SKY_L5 - Steps to characterize synthesis results_0](https://user-images.githubusercontent.com/62828746/212584534-8e9b9579-5cdd-4594-8d3b-8ac23d333acc.png)
 ![SKY_L5 - Steps to characterize synthesis results_1](https://user-images.githubusercontent.com/62828746/212584535-d0d54584-1ca6-4a87-85b0-ba7f8e14bc1f.png)
