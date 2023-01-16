@@ -3820,32 +3820,26 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 #### Result: 
 ![Review files after design prep and run synthesis_0](https://user-images.githubusercontent.com/62828746/212579488-275b714d-6b6b-4d53-9e1b-33f40f4894dc.png)
 
-## **SKY_L3 - Review files after design prep and run synthesis**
+## **SKY_L4 - SKY_L4 - OpenLANE Project Git Link Description**
 
 #### Result: 
-![Review files after design prep and run synthesis_1](https://user-images.githubusercontent.com/62828746/212579492-d03468e7-20a4-4dea-965b-472876a59dba.png)
-![Design Preparation Step_0](https://user-images.githubusercontent.com/62828746/212579494-74c04647-ba30-4609-95fb-31168254d046.png)
-![Design Preparation Step_1](https://user-images.githubusercontent.com/62828746/212579495-550debcd-83d3-44ca-b00a-3a62e8075870.png)
-![Design Preparation Step_2](https://user-images.githubusercontent.com/62828746/212579498-116902b7-02e7-40c9-8d6a-594b5e5b26e0.png)
-
-## **SKY_L3 - SKY_L4 - OpenLANE Project Git Link Description**
-
-#### Steps: 
->> run_synthesis </br>
->> run_floorplan </br>
->> run_placement </br>
->> run_cts </br>
->> run_routing </br>
->> write_powered_verilog followed by set_netlist ::env(DESIGN_NAME).powered.v </br>
->> run_magic </br>
->> run_magic_spice_export </br>
->> run_magic_drc </br>
->> run_lvs </br>
->> run_antenna_check </br>
+Github reference for OpenLANE detail:(https://github.com/efabless/OpenLane) </br>
+Github reference for OpenLANE design stage detail:(https://github.com/efabless/OpenLane#openlane-design-stages) </br>
+Github reference for command used in interactive mode for each stage:(https://github.com/efabless/OpenLane/blob/master/docs/source/advanced_readme.md) </br>
+Yotube video can be refered for further information:(https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L) </br>
  
+![fossil dial up](https://user-images.githubusercontent.com/62828746/212581235-c56ee297-d0e6-4c27-b89b-ad4405cc98e5.png)
+ 
+## **SKY_L5 - Steps to characterize synthesis results**
+
 #### Result: 
-<Pending..tbc>
- 
+![SKY_L5 - Steps to characterize synthesis results_0](https://user-images.githubusercontent.com/62828746/212584534-8e9b9579-5cdd-4594-8d3b-8ac23d333acc.png)
+![SKY_L5 - Steps to characterize synthesis results_1](https://user-images.githubusercontent.com/62828746/212584535-d0d54584-1ca6-4a87-85b0-ba7f8e14bc1f.png)
+![SKY_L5 - Steps to characterize synthesis results_2](https://user-images.githubusercontent.com/62828746/212584538-b52f6174-3822-4178-a73a-bdedc561d4e9.png)
+![SKY_L5 - Steps to characterize synthesis results_3](https://user-images.githubusercontent.com/62828746/212584542-ceec1ab4-f2ee-4ef2-98f4-e1e8de55c90f.png)
+![SKY_L5 - Steps to characterize synthesis results_4](https://user-images.githubusercontent.com/62828746/212584547-6e3f2e14-5f2d-4f03-9053-1b75c9a1e92a.png)
+![SKY_L5 - Steps to characterize synthesis results_5](https://user-images.githubusercontent.com/62828746/212584549-6d6ba18b-174c-4eaa-ba6a-2c997f257915.png)
+
    </details> 
 
    
