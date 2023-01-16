@@ -3851,10 +3851,10 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 ![fossil dial up](https://user-images.githubusercontent.com/62828746/212581235-c56ee297-d0e6-4c27-b89b-ad4405cc98e5.png)
  
 ## **SKY_L5 - Steps to characterize synthesis results**
->> *run_synthesis*
->> *cd /home/huifen.teoh/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-01_00-57/reports/synthesis* -> to view report after run synthesis
->> *vim 1-yosys_4.stat.rpt* -> view static report
->> *vim 2-openstat.timing.rpt* -> view timing report
+>> *run_synthesis* </br>
+>> *cd /home/huifen.teoh/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-01_00-57/reports/synthesis* -> to view report after run synthesis </br>
+>> *vim 1-yosys_4.stat.rpt* -> view static report </br>
+>> *vim 2-openstat.timing.rpt* -> view timing report </br>
 #### Result: 
 ![SKY_L5 - Steps to characterize synthesis results_0](https://user-images.githubusercontent.com/62828746/212584534-8e9b9579-5cdd-4594-8d3b-8ac23d333acc.png)
 ![SKY_L5 - Steps to characterize synthesis results_1](https://user-images.githubusercontent.com/62828746/212584535-d0d54584-1ca6-4a87-85b0-ba7f8e14bc1f.png)
