@@ -3779,9 +3779,9 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 
 <details open><summary> ## Theory - SKY130_D1_SK2 - SoC design and OpenLANE </summary>
     
-* OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. 
+* OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization.  </br>
 
-* The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
+* The flow performs full ASIC implementation steps from RTL all the way down to GDSII. </br>
 ![SKY130_D1_SK2 - SoC design and OpenLANE_0](https://user-images.githubusercontent.com/62828746/212574758-0b929d29-090e-4d32-8a66-137f7e6c532c.png)
 
 
@@ -3832,17 +3832,17 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 ## **SKY_L3 - SKY_L4 - OpenLANE Project Git Link Description**
 
 #### Steps: 
->> run_synthesis
->> run_floorplan
->> run_placement
->> run_cts
->> run_routing
->> write_powered_verilog followed by set_netlist ::env(DESIGN_NAME).powered.v
->> run_magic
->> run_magic_spice_export
->> run_magic_drc
->> run_lvs
->> run_antenna_check
+>> run_synthesis </br>
+>> run_floorplan </br>
+>> run_placement </br>
+>> run_cts </br>
+>> run_routing </br>
+>> write_powered_verilog followed by set_netlist ::env(DESIGN_NAME).powered.v </br>
+>> run_magic </br>
+>> run_magic_spice_export </br>
+>> run_magic_drc </br>
+>> run_lvs </br>
+>> run_antenna_check </br>
  
 #### Result: 
 <Pending..tbc>
