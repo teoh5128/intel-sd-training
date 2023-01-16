@@ -250,8 +250,7 @@
 + **[ Day 15 -Inception of EDA and PDK](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky_l1---sky130_d1_sk1---how-to-talk-to-computers)**
   <details><summary> Theory </summary>
    
-  
-  * [Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pvt-1)
+  * [Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky_l1---sky130_d1_sk1---how-to-talk-to-computers)
   * [Theory - SKY130_D1_SK2 - SoC design and OpenLANE](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky130_d1_sk2---soc-design-and-openlane)
    
   </details>  
@@ -3752,7 +3751,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    </details>  
 
 ## Day 15
-## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers  </br>
+## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers
 
 <details open><summary> ## Theory - SKY130_D1_SK1 - How to talk to computers </summary>
  
