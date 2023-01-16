@@ -262,7 +262,7 @@
     * [Lab Topic - SKY_L2 - Design Preparation Step](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l2---design-preparation-step)   
     * [Lab Topic - SKY_L3 - Review files after design prep and run synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---review-files-after-design-prep-and-run-synthesis)   
     * [Lab Topic - SKY_L4 - OpenLANE Project Git Link Description](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---sky_l4---openlane-project-git-link-description) 
-    * []()
+    * [Lab Topic - SKY_L5 - Steps to characterize synthesis results](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l5---steps-to-characterize-synthesis-results)
   
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
@@ -3820,6 +3820,14 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 
 #### Result: 
 ![Review files after design prep and run synthesis_0](https://user-images.githubusercontent.com/62828746/212579488-275b714d-6b6b-4d53-9e1b-33f40f4894dc.png)
+
+## **SKY_L3 - Review files after design prep and run synthesis**
+
+#### Result: 
+![Review files after design prep and run synthesis_1](https://user-images.githubusercontent.com/62828746/212579492-d03468e7-20a4-4dea-965b-472876a59dba.png)
+![Design Preparation Step_0](https://user-images.githubusercontent.com/62828746/212579494-74c04647-ba30-4609-95fb-31168254d046.png)
+![Design Preparation Step_1](https://user-images.githubusercontent.com/62828746/212579495-550debcd-83d3-44ca-b00a-3a62e8075870.png)
+![Design Preparation Step_2](https://user-images.githubusercontent.com/62828746/212579498-116902b7-02e7-40c9-8d6a-594b5e5b26e0.png)
 
 ## **SKY_L4 - SKY_L4 - OpenLANE Project Git Link Description**
 
