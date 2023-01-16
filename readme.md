@@ -3677,6 +3677,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 >> *gtkwave gls.vcd*
 > 5.Back to vnc load pre-synthesis simulations waveform generated in previous lab.
 
+#### Result:
 ![Run simulation_0](https://user-images.githubusercontent.com/62828746/212596121-cb3b5544-0e58-4a0e-914b-511b01e434d1.png)
 ![Run simulation_1](https://user-images.githubusercontent.com/62828746/212596125-af8b4fdc-dfc4-4647-9360-d204f2ddf744.png)
 ![Run simulation_2](https://user-images.githubusercontent.com/62828746/212596126-25af1f32-284f-451d-913a-ad749d62c1b8.png)
