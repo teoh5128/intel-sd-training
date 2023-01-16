@@ -247,7 +247,22 @@
     
     * [Lab Topic - PVT Table of Different Lib](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pvt-table-of-different-lib)
     
++ **[ Day 15 -Inception of EDA and PDK](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky_l1---sky130_d1_sk1---how-to-talk-to-computers)**
+  <details><summary> Theory </summary>
+   
+  
+  * [Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pvt-1)
+  * [Theory - SKY130_D1_SK2 - SoC design and OpenLANE](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky130_d1_sk2---soc-design-and-openlane)
+   
+  </details>  
+  
+  <details><summary>  Lab  </summary>
     
+    * [Lab Topic - SKY130_D1_SK3 - Get familiar to open-source EDA tools](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130_d1_sk3---get-familiar-to-open-source-eda-tools)   
+    * [Lab Topic - SKY_L1 - OpenLANE Directory structure in detail](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l1---openlane-directory-structure-in-detail)   
+    * [Lab Topic - SKY_L2 - Design Preparation Step](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l2---design-preparation-step)   
+    * [Lab Topic - SKY_L3 - Review files after design prep and run synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---review-files-after-design-prep-and-run-synthesis)   
+    * [Lab Topic - SKY_L3 - SKY_L4 - OpenLANE Project Git Link Description](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---sky_l4---openlane-project-git-link-description)   
   
 ## Day 0
 ## Theory - System/Tool Setup Check. GitHub ID creation
