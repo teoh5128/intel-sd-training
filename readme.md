@@ -3752,7 +3752,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    </details>  
 
 ## Day 15
-## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers
+## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers  </br>
 
 <details open><summary> ## Theory - SKY130_D1_SK1 - How to talk to computers </summary>
  
