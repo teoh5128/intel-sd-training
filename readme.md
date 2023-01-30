@@ -315,7 +315,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
 
    </details>
 
-### Lab - Setup Labs
+### :pencil2:	Lab - Setup Labs
 
 <details><summary> Steps to enable labs </summary>
  
@@ -330,8 +330,8 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
    </details>
 
 
-## Day 1
-### Theory - Introduction to Verilog RTL design and Synthesis
+## :bookmark: Day 1
+### :bulb: Theory - Introduction to Verilog RTL design and Synthesis
 
 <details><summary> HDL (Hardware description Language) </summary>
 
@@ -580,8 +580,8 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
   </details>
 
 
-## Day 2
-### Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
+## :bookmark: Day 2
+### :bulb: Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
 
 <details><summary> Cell Library Characterization </summary>
   
@@ -882,8 +882,8 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
 
-## Day 3
-### Theory - Combinational and sequential optmizations
+## :bookmark: Day 3
+### :bulb: Theory - Combinational and sequential optmizations
 
 <details><summary> Optimisation of Synthesis Tools </summary>
   
@@ -1226,8 +1226,8 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-## Day 4
-### Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+## :bookmark: Day 4
+### :bulb: Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 <details><summary> Gate Level Simulation (GLS) </summary>
   
@@ -1439,8 +1439,8 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
   </details>
 
 
-## Day 5
-### Theory - DFT (Design for Testability)
+## :bookmark: Day 5
+### :bulb: Theory - DFT (Design for Testability)
 <details><summary> DFT (Design for Testability) </summary>
 
 ## **What is testability in VLSI means**
@@ -1600,8 +1600,8 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
   </details>
 
   
-## Day 6
-### Theory - Introduction to Logic Synthesis
+## :bookmark: Day 6
+### :bulb: Theory - Introduction to Logic Synthesis
 
 <details><summary> Digital logic </summary>
   
@@ -1709,7 +1709,7 @@ Used for | High frequency circuit | Meet hold time
  
      </details>
      
-## Theory - Introduction to Design Compiler (DC)
+## :bulb: Theory - Introduction to Design Compiler (DC)
 
 <details><summary> Design Compiler (DC) </summary>
  
@@ -1777,7 +1777,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
 
-### Theory - TCL quick refresher
+### :bulb: Theory - TCL quick refresher
 
 <details><summary> Basic TCL Command Used in DC </summary>
 
@@ -1931,8 +1931,8 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
  
   
-## Day 7 
-### Theory - Introduction to STA
+## :bookmark: Day 7 
+### :bulb: Theory - Introduction to STA
 
 
 <details ><summary> Introduction to STA </summary>
@@ -1974,7 +1974,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
    </details>
  
-### Theory - What are constraints?
+### :bulb: Theory - What are constraints?
 <details><summary> What are constraints </summary>
 
 ![timing path](https://user-images.githubusercontent.com/62828746/209027830-ee44f46c-5e6a-4809-900b-2a05dc6af6ff.jpg)
@@ -2001,7 +2001,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
    </details>
  
-### Theory - Inp Trans Output Load
+### :bulb: Theory - Inp Trans Output Load
 <details><summary> Inp Trans Output Load </summary>
 
 ![Model transition delay](https://user-images.githubusercontent.com/62828746/209027827-0052c41e-f37b-4453-913e-3d416a4723a6.jpg)
@@ -2129,8 +2129,8 @@ echo $my_pin_name $pin_dir;
  
   
   
-## Day 8
-### Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
+## :bookmark: Day 8
+### :bulb: Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
 
 <details><summary> Clock Tree Modelling - Uncertainty </summary>
 
@@ -2198,7 +2198,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
    </details>
 
 
-### Theory - SDC Part3 generated_clk
+### :bulb: Theory - SDC Part3 generated_clk
 
 <details><summary> SDC Part3 generated_clk </summary>
 
@@ -2505,8 +2505,8 @@ echo $my_cell_name $rname;
   
   
   
-## Day 9 
-### Theory - Optimizations Combinational Opt
+## :bookmark: Day 9 
+### :bulb: Theory - Optimizations Combinational Opt
 
 
 <details><summary> Optimizations Combinational Opt </summary>
@@ -2534,7 +2534,7 @@ Meet Power | Power goals
    </details>
 
 
-### Theory - Sequential Optimizations
+### :bulb: Theory - Sequential Optimizations
 
 <details><summary> Sequential Optimizations </summary>
   
@@ -2556,7 +2556,7 @@ Meet Power | Power goals
    </details>
 
 
-### Theory - Special optimizations
+### :bulb: Theory - Special optimizations
 
 
 <details><summary> Special optimizations </summary>
@@ -2869,8 +2869,8 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
    </details>  
  
    
-## Day 10 
-### Theory - Lecture Report timing
+## :bookmark: Day 10 
+### :bulb: Theory - Lecture Report timing
 
 
 <details><summary> Lecture Report timing </summary>
@@ -3007,8 +3007,8 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
    </details> 
  
    
-## Day 11 
-### Theory - Introduction to Baby SoC
+## :bookmark: Day 11 
+### :bulb: Theory - Introduction to Baby SoC
 
 <details><summary> Baby SoC </summary>
 
@@ -3091,8 +3091,8 @@ Qualcomm’s Snapdragon processors are one of the the most ubiquitous SoCs in th
 
 
 
-## Day 12
-### Theory - BabySoC Modelling
+## :bookmark: Day 12
+### :bulb: Theory - BabySoC Modelling
 
 <details><summary> BabySoC Modelling </summary>
 
@@ -3384,8 +3384,8 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
    
 
-## Day 13
-### Theory - Post-synthesis simulation
+## :bookmark: Day 13
+### :bulb: Theory - Post-synthesis simulation
 
 <details><summary> Post-synthesis simulation </summary>
 
@@ -3566,8 +3566,8 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
    </details> 
  
 
-## Day 14
-### Theory -  Synopsys DC and timing analysis 
+## :bookmark: Day 14
+### :bulb: Theory -  Synopsys DC and timing analysis 
 
 <details><summary> PVT </summary>
  
@@ -3652,8 +3652,8 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
  
    </details>  
 
-## Day 15
-### Theory - How to talk to computers
+## :bookmark: Day 15
+### :bulb: Theory - How to talk to computers
 
 <details><summary> How to talk to computers </summary>
  
@@ -3676,7 +3676,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
  
    </details> 
    
-### Theory - SoC design and OpenLANE
+### :bulb: Theory - SoC design and OpenLANE
 
 <details><summary> SoC design and OpenLANE </summary>
     
@@ -3769,8 +3769,8 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
    </details> 
 
    
-## Day 16  Good floorplan vs bad floorplan and introduction to library cells
-### Theory - Chip Floor planning considerations
+## :bookmark: Day 16  Good floorplan vs bad floorplan and introduction to library cells
+### :bulb: Theory - Chip Floor planning considerations
 
 <details><summary> Utilization factor and aspect ratio </summary>
  
@@ -3819,7 +3819,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
    </details> 
    
  
-### Theory - Library Binding and Placement
+### :bulb: Theory - Library Binding and Placement
  
 <details><summary> Netlist binding and initial place design </summary>
  
@@ -3842,7 +3842,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 </details> 
  
  
-### Theory - Cell design and characterization flows
+### :bulb: Theory - Cell design and characterization flows
  
 <details><summary> Inputs for cell design flow </summary>
  
@@ -3861,7 +3861,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 </details> 
  
  
-### Theory - General timing characterization parameters
+### :bulb: Theory - General timing characterization parameters
  
 <details><summary> Timing threshold definitions </summary>
  
@@ -3910,8 +3910,8 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
  
  
  
-## Day 17  - Design library cell using Magic Layout and ngspice characterization
-### Theory - Labs for CMOS inverter ngspice simulations
+## :bookmark: Day 17  - Design library cell using Magic Layout and ngspice characterization
+### :bulb: Theory - Labs for CMOS inverter ngspice simulations
 
 <details><summary> SPICE deck creation for CMOS inverter </summary>
  
@@ -3925,7 +3925,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
  
 </details> 
  
-### Theory - Inception of Layout Â CMOS fabrication process
+### :bulb: Theory - Inception of Layout Â CMOS fabrication process
  
 <details><summary>  Create Active regions </summary>
  
@@ -4134,8 +4134,8 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 
 
-## Day 18  - Pre-layout timing analysis and importance of good clock tree
-### Theory - Timing modelling using delay tables
+## :bookmark: Day 18  - Pre-layout timing analysis and importance of good clock tree
+### :bulb: Theory - Timing modelling using delay tables
  
 <details><summary> Introduction to delay tables </summary>
  
@@ -4149,7 +4149,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  
 </details> 
  
-### Theory - Timing analysis with ideal clocks using openSTA
+### :bulb: Theory - Timing analysis with ideal clocks using openSTA
 
 <details><summary> Setup timing analysis and introduction to flip-flop setup time </summary>
  
@@ -4159,7 +4159,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  
 </details> 
 
-### Theory - Clock tree synthesis TritonCTS and signal integrity
+### :bulb: Theory - Clock tree synthesis TritonCTS and signal integrity
 <details><summary> Clock tree routing and buffering using H-Tree algorithm </summary>
  
 </details> 
@@ -4168,7 +4168,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  
 </details> 
 
-### Theory - Timing analysis with real clocks using openSTA
+### :bulb: Theory - Timing analysis with real clocks using openSTA
 
 <details><summary> Setup timing analysis using real clocks </summary>
  
@@ -4282,8 +4282,8 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  </details>
 
 
-## Day 19  - Final steps for RTL2GDS using tritonRoute and openSTA
-### Theory - Routing and design rule check (DRC)
+## :bookmark: Day 19  - Final steps for RTL2GDS using tritonRoute and openSTA
+### :bulb: Theory - Routing and design rule check (DRC)
  
 <details><summary> Introduction to Maze Routing Â LeeÂs algorithm </summary>
  
@@ -4297,7 +4297,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  
 </details> 
 
-### Theory - TritonRoute Features
+### :bulb: Theory - TritonRoute Features
 <details><summary> TritonRoute feature 1 - Honors pre-processed route guides </summary>
  
 </details> 
