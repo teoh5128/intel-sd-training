@@ -463,7 +463,7 @@ Concern in hold time violation                   | Failed required performance
 
   </details>
 
-### Lab Topic- Labs using iverilog and gtkwave
+### :pencil2: Lab Topic- Labs using iverilog and gtkwave
 
 <details><summary> Lab1 introduction to lab </summary>
 
@@ -485,7 +485,7 @@ Concern in hold time violation                   | Failed required performance
 
   </details>
  
-### Lab Topic- Labs using Yosys and Sky130 PDKs
+### :pencil2: Lab Topic- Labs using Yosys and Sky130 PDKs
   
 <details><summary> Lab2 Introduction iverilog gtkwave part1 </summary>
   
@@ -671,7 +671,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
   </details>
   
 
-### Lab Topic - Introduction to timing .libs
+### :pencil2: Lab Topic - Introduction to timing .libs
 
 <details><summary> Lab4 Introduction to dot Lib part1 </summary>
 
@@ -727,7 +727,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-### Lab Topic - Hierarchical vs Flat Synthesis
+### :pencil2: Lab Topic - Hierarchical vs Flat Synthesis
 
 <details><summary> Lab05 Hier synthesis flat synthesis part1 </summary>
 
@@ -785,7 +785,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
 
-### Lab Topic - Various Flop Coding Styles and optimization
+### :pencil2: Lab Topic - Various Flop Coding Styles and optimization
   
 <details><summary> Lab flop synthesis simulations part1 </summary>
 
@@ -847,7 +847,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-### Lab Topic - Various Flop Coding Styles and optimization
+### :pencil2: Lab Topic - Various Flop Coding Styles and optimization
 <details><summary> SKY130RTL D2SK3 L5 Interesting optimisations part1 </summary>
   
 #### Steps:
@@ -937,11 +937,11 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 *  For example: Boundary optimisation will remove unused buffers that are inserted for allowing signal out of the module, then it will replace an inverters to see is it good enough for signal going out.
   </details>
 
-### Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
+### :pencil2: Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
 
 <details><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
   
-### Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
+### :pencil2: Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
 #### Steps:
 > 1. Review optimization verilog file (opt_check.v and opt_check2.v).
@@ -1044,7 +1044,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
   
-### Lab Topic - Sequential logic optimizations
+### :pencil2: Lab Topic - Sequential logic optimizations
 
 <details><summary> Lab07 Sequential Logic Optimisations part1 </summary>
   
@@ -1175,7 +1175,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-### Lab Topic - Sequential optimzations for unused outputs
+### :pencil2: Lab Topic - Sequential optimzations for unused outputs
 
 <details><summary> Seq optimisation unused outputs part1 </summary>
   
@@ -1309,7 +1309,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
   </details>
   
-### Lab Topic - Labs on GLS and Synthesis-Simulation Mismatch
+### :pencil2: Lab Topic - Labs on GLS and Synthesis-Simulation Mismatch
 
 <details><summary> Lab GLS Synth Sim Mismatch part1 </summary>
 
@@ -1793,7 +1793,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
   </details>
         
-### Lab Topic - Introduction to Logic Synthesis
+### :pencil2: Lab Topic - Introduction to Logic Synthesis
 
 <details><summary> Lab1 - Invoking dc basic setup </summary>
 
@@ -2023,7 +2023,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
 
 
-### Lab Topic - Basics of STA
+### :pencil2: Lab Topic - Basics of STA
 
 <details><summary> Lab5 - Timing dot Libs </summary>
 
@@ -2217,7 +2217,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
    </details>
 
 
-### Lab Topic - Advanced constraints
+### :pencil2: Lab Topic - Advanced constraints
 
 <details><summary> Lab - Loading design get_cells, get_ports, get_nets </summary>
 
@@ -2608,7 +2608,7 @@ Meet Power | Power goals
 
  
  
-### Lab Topic - Combinational optimizations
+### :pencil2: Lab Topic - Combinational optimizations
 
 <details><summary> Lab16 - part1 Combinational_optimizations </summary>
 
@@ -2904,7 +2904,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
    </details> 
  
  
-### Lab Topic - Lab Report timing
+### :pencil2: Lab Topic - Lab Report timing
 
 <details><summary>  Lab Report timing </summary>
 
@@ -3210,7 +3210,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
  
  
-### Lab Topic - VSDbabySoC Modelling
+### :pencil2: Lab Topic - VSDbabySoC Modelling
 <details><summary>  RVMYTH modelling  </summary>
  
 ### Lab -  RVMYTH modelling 
@@ -3415,9 +3415,8 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
   
    </details> 
  
-<details><summary>  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis  </summary>
- 
-### Lab -  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis 
+### :pencil2: Lab Topic - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis simulation
+<details><summary>  Lab - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis  </summary>
  
 #### Steps:
 > 1. Convert .lib to .dc
@@ -3607,7 +3606,7 @@ THS | Total Hold Slack = sum of the negative hold slack paths
    </details> 
 
 
-### Lab Topic -  PVT Table of Different Lib 
+### :pencil2: Lab Topic -  PVT Table of Different Lib 
 <details><summary>  PVT Table of Different Lib   </summary>
  
 ### Lab -  PVT Table of Different Lib  
@@ -3711,7 +3710,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    </details>    
    
 
-### Lab - Get familiar to open-source EDA tools
+### :pencil2: Lab - Get familiar to open-source EDA tools
 
 <details><summary> OpenLANE Directory structure in detail </summary>
 
@@ -3872,7 +3871,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 </details> 
  
 
-### Lab - Chip Floor planning considerations
+### :pencil2: Lab - Chip Floor planning considerations
 
 <details><summary> Steps to run floorplan using OpenLANE </summary>
 
@@ -3956,7 +3955,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 </details> 
  
  
-### Lab -  Labs for CMOS inverter ngspice simulations
+### :pencil2: Lab -  Labs for CMOS inverter ngspice simulations
 
 <details><summary>  IO placer revision </summary>
 
@@ -3971,7 +3970,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 
 </details> 
  
-### Lab -  Inception of Layout Â CMOS fabrication process
+### :pencil2: Lab -  Inception of Layout Â CMOS fabrication process
 <details><summary> Lab introduction to Sky130 basic layers layout and LEF using inverter </summary>
 
 ![image](https://user-images.githubusercontent.com/62828746/215457844-c606b31b-fcfa-409e-b8b1-ca8fab58f94d.png)
@@ -3998,7 +3997,7 @@ Can refer this github link for introduction on LEF: https://github.com/nickson-
 
 </details> 
 
-### Lab - Sky130 Tech File Labs
+### :pencil2: Lab - Sky130 Tech File Labs
 <details><summary> Lab steps to create final SPICE deck using Sky130 tech </summary>
 
 ![image](https://user-images.githubusercontent.com/62828746/215460795-f3655e1d-fc8b-44b3-8947-99fedebc4ba7.png)
@@ -4176,7 +4175,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 
 
-### Lab - Timing modelling using delay tables
+### :pencil2: Lab - Timing modelling using delay tables
 
 <details><summary> Lab steps to convert grid info to track info </summary>
 
@@ -4219,7 +4218,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 </details> 
 
 
-### Lab - Timing analysis with ideal clocks using openSTA
+### :pencil2: Lab - Timing analysis with ideal clocks using openSTA
 <details><summary> Lab steps to configure OpenSTA for post-synth timing analysis </summary>
 
 ![image](https://user-images.githubusercontent.com/62828746/215496865-71b1940e-5248-47ba-9366-beb61494c3ec.png)
@@ -4242,7 +4241,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
  </details>
 
-### Lab - Clock tree synthesis TritonCTS and signal integrity
+### :pencil2: Lab - Clock tree synthesis TritonCTS and signal integrity
 
 <details><summary> Lab steps to run CTS using TritonCTS </summary>
  
@@ -4257,7 +4256,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
  </details>
  
-### Lab- Timing analysis with real clocks using openSTA
+### :pencil2: Lab- Timing analysis with real clocks using openSTA
 
 <details><summary> Lab steps to analyze timing with real clocks using OpenSTA </summary>
  
@@ -4310,7 +4309,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  
 </details> 
 
-### Lab - Power Distribution Network and routing
+### :pencil2: Lab - Power Distribution Network and routing
 <details><summary> Lab steps to build power distribution network </summary>
  
 ![image](https://user-images.githubusercontent.com/62828746/215501812-972fb45d-9741-45bf-a6a0-dab46c76c93b.png)
@@ -4342,7 +4341,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 </details> 
 
-### Lab - TritonRoute Features
+### :pencil2: Lab - TritonRoute Features
 
 <details><summary> Routing topology algorithm and final files list post-route </summary>
 
