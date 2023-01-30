@@ -2424,9 +2424,7 @@ echo $my_cell_name $rname;
 ![DC_D3SK3_L2 - lab13 - generated_clocks_2](https://user-images.githubusercontent.com/62828746/209567299-55fd671c-3103-4329-a564-f5b054c9d156.jpg)
 ![DC_D3SK3_L2 - lab13 - generated_clocks_4](https://user-images.githubusercontent.com/62828746/209567301-64967c1a-20cc-4709-9663-179b39f7fcd3.jpg)
  
- 
- 
- 
+
    </details>
 
 
@@ -2471,7 +2469,7 @@ echo $my_cell_name $rname;
    </details>
    
    
- <details><summary> Lab15 - part2 - VCLK </summary>
+<details><summary> Lab15 - part2 - VCLK </summary>
 
 #### Steps:  
 > 1. Create virtual clock   
@@ -2495,8 +2493,7 @@ echo $my_cell_name $rname;
 ![DC_D3SK4_L3 - Lab15 - part2 - VCLK_2](https://user-images.githubusercontent.com/62828746/209607222-3107179d-da8f-449a-9b01-b7006fd276bc.jpg)
    
    
-    </details>  
-   
+   </details>
 
   
   
