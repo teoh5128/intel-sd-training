@@ -3902,3 +3902,588 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
    </details> 
 
    
+## Day 16  Good floorplan vs bad floorplan and introduction to library cells
+### Theory - Chip Floor planning considerations
+
+<details><summary> Utilization factor and aspect ratio </summary>
+ 
+ ![image](https://user-images.githubusercontent.com/62828746/215449490-1e6776dc-5ef7-4b24-8a40-803842e21924.png)
+ ![image](https://user-images.githubusercontent.com/62828746/215449936-94168ea5-8b9e-4aa7-9ae1-3262ce9fa648.png)
+
+   </details> 
+
+<details><summary> Concept of pre-placed cells </summary>
+![image](https://user-images.githubusercontent.com/62828746/215450003-2dccad1c-df4a-494a-8131-00eaa5fd934e.png)
+![image](https://user-images.githubusercontent.com/62828746/215450384-fceb1a48-e77b-458b-9573-b289174a48b5.png)
+![image](https://user-images.githubusercontent.com/62828746/215450437-2bfe12b5-70b5-4604-af04-c46613fb7d0a.png)
+
+   </details> 
+   
+<details><summary> De-coupling capacitors </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215450734-cf941de6-fea5-41b9-8d8e-b94204f4c6f3.png)
+![image](https://user-images.githubusercontent.com/62828746/215450823-75aea596-dfa0-415c-8d53-a0f4f12979ac.png)
+![image](https://user-images.githubusercontent.com/62828746/215450861-f1a2f572-3c68-46bb-8729-5dd09c841b97.png)
+![image](https://user-images.githubusercontent.com/62828746/215450916-a392cc4d-eb9c-4c38-94d6-190a8c0c05ab.png)
+![image](https://user-images.githubusercontent.com/62828746/215450964-8766fd5b-c869-4cd4-a94e-810b2e555f4d.png)
+
+   </details> 
+
+<details><summary> Power planning </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215451026-0ba04153-722c-4cb4-aaea-f5a54b9fd88c.png)
+![image](https://user-images.githubusercontent.com/62828746/215451084-c220c722-5562-43c1-9707-898a6a167692.png)
+![image](https://user-images.githubusercontent.com/62828746/215451485-0d89a98e-844e-4e08-9ef1-fbfc36d76976.png)
+![image](https://user-images.githubusercontent.com/62828746/215451532-96c50e4f-f52f-406c-b729-8d4efca8aa8e.png)
+![image](https://user-images.githubusercontent.com/62828746/215451576-5869000f-a728-4ef7-ba38-e4af6ef9e5c9.png)
+![image](https://user-images.githubusercontent.com/62828746/215451633-160e0b01-f2ca-4701-9a1c-080c7f8aa1ad.png)
+![image](https://user-images.githubusercontent.com/62828746/215451669-69d32396-b60c-458d-9e56-457283291d92.png)
+ 
+   </details> 
+ 
+<details><summary> Pin placement and logical cell placement blockage </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215451836-18cfa1f8-4170-42a3-b08e-ff6ef4568ce9.png)
+![image](https://user-images.githubusercontent.com/62828746/215451868-025d2968-70d9-4fb9-b650-a3a2f252f3bd.png)
+![image](https://user-images.githubusercontent.com/62828746/215451911-8c2178ef-bda2-4d32-be67-2d6a52f16bea.png)
+
+<WIP...>
+ 
+   </details> 
+   
+ 
+### Theory - Library Binding and Placement
+ 
+<details><summary> Netlist binding and initial place design </summary>
+ 
+</details> 
+ 
+<details><summary> Optimize placement using estimated wire-length and capacitance </summary>
+ 
+</details> 
+ 
+<details><summary> Final placement optimization </summary>
+ 
+</details> 
+ 
+<details><summary> Need for libraries and characterization </summary>
+ 
+</details> 
+ 
+<details><summary> Netlist binding and initial place design </summary>
+ 
+</details> 
+ 
+ 
+### Theory - Cell design and characterization flows
+ 
+<details><summary> Inputs for cell design flow </summary>
+ 
+</details> 
+ 
+<details><summary> Circuit design step </summary>
+ 
+</details> 
+ 
+<details><summary> Layout design step </summary>
+ 
+</details> 
+ 
+<details><summary> Typical characterization flow </summary>
+ 
+</details> 
+ 
+ 
+### Theory - General timing characterization parameters
+ 
+<details><summary> Timing threshold definitions </summary>
+ 
+</details> 
+ 
+<details><summary> Propagation delay and transition time </summary>
+ 
+</details> 
+ 
+
+### Lab - Chip Floor planning considerations
+
+<details><summary> Steps to run floorplan using OpenLANE </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215453764-aa3794ce-9195-4102-bf34-2033513192ad.png)
+![image](https://user-images.githubusercontent.com/62828746/215453807-bfc10882-e0e1-402e-b967-9ab0ce6b6206.png)
+![image](https://user-images.githubusercontent.com/62828746/215453844-70570f19-a46c-4f91-9f49-0076a18fc7c1.png)
+![image](https://user-images.githubusercontent.com/62828746/215453891-a0ff19bb-ad17-48e8-b28c-546094b91ba7.png)
+
+</details> 
+ 
+<details><summary> Review floorplan files and steps to view floorplan </summary>
+![image](https://user-images.githubusercontent.com/62828746/215453949-4fd1a600-e8bd-429f-9550-ac7a021f2478.png)
+
+</details>    
+
+<details><summary> Review floorplan layout in Magic </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215454112-3a3b8467-2bb5-4469-b34e-d18d10277bd3.png)
+![image](https://user-images.githubusercontent.com/62828746/215454169-426a31a7-292e-4171-801e-abacd5c577d0.png)
+![image](https://user-images.githubusercontent.com/62828746/215454333-172599f1-583f-4f8a-b91f-17eece44daeb.png)
+![image](https://user-images.githubusercontent.com/62828746/215454397-f123a29f-64e5-483b-9dae-24ee10c4e456.png)
+
+</details> 
+  
+ 
+<details><summary> Congestion aware placement using RePlAce </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215454517-bf06461c-a179-4e41-bbf6-98fbf5d4feb0.png)
+![image](https://user-images.githubusercontent.com/62828746/215454575-8907b733-2637-4456-a777-c3977327ab38.png)
+![image](https://user-images.githubusercontent.com/62828746/215454880-65bc0838-84c0-4e19-859e-c03aa5080c05.png)
+
+
+</details>  
+ 
+ 
+ 
+ 
+## Day 17  - Design library cell using Magic Layout and ngspice characterization
+### Theory - Labs for CMOS inverter ngspice simulations
+
+<details><summary> SPICE deck creation for CMOS inverter </summary>
+ 
+</details> 
+ 
+<details><summary> Switching Threshold Vm </summary>
+ 
+</details> 
+ 
+<details><summary> Static and dynamic simulation of CMOS inverter </summary>
+ 
+</details> 
+ 
+### Theory - Inception of Layout Â CMOS fabrication process
+ 
+<details><summary>  Create Active regions </summary>
+ 
+</details> 
+ 
+<details><summary> Formation of N-well and P-well </summary>
+ 
+</details> 
+ 
+<details><summary> Formation of gate terminal </summary>
+ 
+</details> 
+
+<details><summary> Lightly doped drain (LDD) formation </summary>
+ 
+</details> 
+ 
+<details><summary>  Source Â drain formation </summary>
+ 
+</details> 
+  
+<details><summary> Local interconnect formation </summary>
+ 
+</details> 
+ 
+<details><summary> Higher level metal formation </summary>
+ 
+</details> 
+ 
+ 
+### Lab -  Labs for CMOS inverter ngspice simulations
+
+<details><summary>  IO placer revision </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215456123-daa8e363-ea92-464d-9f39-1ba50d6ae918.png)
+![image](https://user-images.githubusercontent.com/62828746/215456347-6602cb50-2d09-4d6e-a26c-6ab3b8d82006.png)
+
+</details> 
+
+<details><summary> Lab steps to git clone vsdstdcelldesign </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215456975-4c2fe249-3731-4387-a951-1001414ee97b.png)
+
+</details> 
+ 
+### Lab -  Inception of Layout Â CMOS fabrication process
+<details><summary> Lab introduction to Sky130 basic layers layout and LEF using inverter </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215457844-c606b31b-fcfa-409e-b8b1-ca8fab58f94d.png)
+![image](https://user-images.githubusercontent.com/62828746/215458506-4b5cf7b3-9a0e-4ce4-9b7f-52d305b1d2dc.png)
+![image](https://user-images.githubusercontent.com/62828746/215459445-a6ce83e3-a558-49d3-8fbb-441761b7963b.png)
+
+LEF only have metal layer, no information on logic path, only provide info on boundary/cell/length to place a cell 
+-> Cell LEF - It's an abstract view of the cell and only gives information about PR boundary, pin position and metal layer information of the cell.
+ 
+Can refer this github link for introduction on LEF: https://github.com/nickson-jose/vsdstdcelldesign#introduction-to-lef![image](https://user-images.githubusercontent.com/62828746/215459485-e76a789c-5b15-4710-a553-f804b12b4cbf.png)
+
+![image](https://user-images.githubusercontent.com/62828746/215459712-37ada681-8975-4894-925c-510174d9392a.png)
+
+</details> 
+
+<details><summary> Lab steps to create std cell layout and extract spice netlist </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215459945-4dd5b125-20e7-4439-a3d6-32250c4c70d8.png)
+![image](https://user-images.githubusercontent.com/62828746/215460060-06a55c10-534f-46f0-9a1f-38ed49195935.png)
+![image](https://user-images.githubusercontent.com/62828746/215460227-c66a28bb-03e3-4650-bd46-20260e623e20.png)
+![image](https://user-images.githubusercontent.com/62828746/215460291-5bd8a03f-9f0f-4476-8e6e-4a10d735d653.png)
+![image](https://user-images.githubusercontent.com/62828746/215460330-a8a3157f-0162-42ee-b784-1e63bf1dc052.png)
+![image](https://user-images.githubusercontent.com/62828746/215460647-9cba4d7a-a747-470c-8e58-88435827c61a.png)
+
+</details> 
+
+### Lab - Sky130 Tech File Labs
+<details><summary> Lab steps to create final SPICE deck using Sky130 tech </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215460795-f3655e1d-fc8b-44b3-8947-99fedebc4ba7.png)
+![image](https://user-images.githubusercontent.com/62828746/215460995-160231de-4b64-4d54-9894-901137e00c48.png)
+![image](https://user-images.githubusercontent.com/62828746/215461518-a9037109-d6c2-4fcf-8425-be6d48b62e37.png)
++ **Cell characterization means find value of 4 parameters:**
+  * Rise transition: time taken for the output waveform to transit from 20% of maximum value to 80% of maximum value (VDD).
+  * Fall transition: time taken for the output to fall from 80% to 20%.
+  * Cell rise/fall delay/propagation delay: is a time difference where the output is rising/falling 50%.
+![image](https://user-images.githubusercontent.com/62828746/215461820-ecbdd392-c758-4bba-a21f-e975194f44c0.png)
+
+</details> 
+ 
+
+   
+<details><summary> Lab introduction to Magic tool options and DRC rules </summary>
+
+To know more about open circuit design: 
+Refer page: http://opencircuitdesign.com/
+![image](https://user-images.githubusercontent.com/62828746/214840887-45ed4c16-0771-4dd8-b2a6-288aafd423db.png)
+
+To know more about magic/tutorial of magic tool:
+Refer page: http://opencircuitdesign.com/magic/index.html
+![image](https://user-images.githubusercontent.com/62828746/214842473-8ce8030c-ea3e-4c3b-9e6f-713a12be96c2.png)
+
+To know more about magic/tutorial of DRC in magic tool:
+Refer page: http://opencircuitdesign.com/magic/tutorials/tut6.html
+![image](https://user-images.githubusercontent.com/62828746/214848344-ad46328f-7e33-475f-9bd8-05a31ef80cbf.png)
+
+${\color{lightgreen}What \space is \space Magic?}$
+* Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl.
+* Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow.
+ 
+${\color{lightgreen}DRC \space}$
+* To recheck the area underneath the box, and print out the reasons for any violations that were found. It will rechecks the entire area under the box, so it may take a long time if the box is very large. </br>
+*drc why*
+*  To help locate the errors, select a cell and then use the command. </br>
+*drc find*
+* To find out about errors in a design that wasn't created with Magic, you must force Magic to recheck everything in the design. Once this global recheck has been done, Magic will use its continuous checker to deal with any changes you make to the design; you should only need to do the global recheck once. To make the global recheck, load your design, place the box around the entire design, and type </br>
+*drc check*
+* To turn the checker off altogether, there is a check button on the left side of the title bar. Click on the checkbutton to stop the DRC checker. Click it again to restart. Unselecting the checkbutton is equivalent to typing the command.  </br>
+*drc off*
+* Run the checker and wait until everything has been rechecked and errors are completely up to date. When the command completes, the checker will still be enabled or disabled just as it was before the command. </br>
+*drc catchup*
+* To turn the checker back on permanently, invoke the command. </br>
+*drc on*
+ 
+${\color{lightgreen}What \space is \space CIF \space and \space GDS?}$
+* CIF (Caltech Intermediate Form) and GDSII (GDS) Stream Format are standard layout description languages used to transfer mask-level layouts between organizations and design tools. 
+* Magic can be used to read and write files in CIF and GDS formats.
+* To write out a CIF file, place the cursor over a layout window and type the command. This will generate a CIF file called name.cif, where name is the name of the root cell in the window. </br>
+*cif*
+* If you wish to use a name different from the root cell, type the command. This will store the CIF in file.cif. </br>
+*cif write file*
+* To read a CIF file into Magic, place the cursor over a layout window and type the command. This will read the file file.cif (which must be in CIF format), generate Magic cells for the hierarchy described in the file, make the entire hierarchy a subcell of the edit cell, and run the design-rule checker to verify everything read from the file. Information in the top-level cell (usually just a call on the "main" cell of the layout) will be placed into the edit cell. </br>
+*cif read file*
+* To read and write GDS-format files, use the commands. </br>
+*gds read gds write*
+ 
+ 
+   </details> 
+   
+   
+<details><summary> Lab introduction to Sky130 pdk's and steps to download labs </summary>
+
+To refer SkyWater Open Source PDK documents: 
+Refer page: https://skywater-pdk.readthedocs.io/en/main/
+![image](https://user-images.githubusercontent.com/62828746/214856047-1c8057da-c65d-4861-b4f3-c0ae861cb39c.png)
+or refer github: https://github.com/google/skywater-pdk
+![image](https://user-images.githubusercontent.com/62828746/214856604-706d04d7-ae35-453d-8973-b0f6f15d6f92.png)
+
+![image](https://user-images.githubusercontent.com/62828746/215462622-d31759e0-45b8-471d-9b38-7b288c0d2b79.png)
+![image](https://user-images.githubusercontent.com/62828746/215462712-07a8d8da-86b9-4faa-99b4-98d855361576.png)
+![image](https://user-images.githubusercontent.com/62828746/215462753-f99fdf6e-cc12-4889-891c-7fa21f2f73d7.png)
+
+
+   </details> 
+
+
+<details><summary> Lab introduction to Magic and steps to load Sky130 tech-rules </summary>
+
+To refer Periphery Rules	: 
+Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+![image](https://user-images.githubusercontent.com/62828746/214856886-691472aa-7535-411f-a438-32d3bd93fb1d.png)
+
+![image](https://user-images.githubusercontent.com/62828746/215462926-a7b0b193-2407-498c-96e8-ca7a9f3c1411.png)
+![image](https://user-images.githubusercontent.com/62828746/215463102-16fa6909-3f76-4759-b10a-e406ed06c9dc.png)
+![image](https://user-images.githubusercontent.com/62828746/215463278-efd461e9-4cb7-4a4a-8943-72a8ff399dd3.png)
+![image](https://user-images.githubusercontent.com/62828746/215463403-f3017a80-66a3-48b6-a774-a6b0e6506c6e.png)
+![image](https://user-images.githubusercontent.com/62828746/215463483-7eb07c58-66b8-44c7-8c37-671aa4b207e2.png)
+![image](https://user-images.githubusercontent.com/62828746/215463561-bd1ab772-da82-498d-8049-8297a36ddd86.png)
+
+ 
+   </details> 
+
+<details><summary> Lab exercise to fix poly.9 error in Sky130 tech-file </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215463763-46c7876c-0e94-4f6f-a434-90d8a9f5d163.png)
+![image](https://user-images.githubusercontent.com/62828746/215463909-3b62bcf4-1d15-48b5-bcda-a6f936d07d8e.png)
+![image](https://user-images.githubusercontent.com/62828746/215463983-4f13a5d7-1292-4595-851e-27fc65ce3735.png)
+![image](https://user-images.githubusercontent.com/62828746/215485485-b285d2f6-aae6-4f5b-befe-a4263c6f98ee.png)
+![image](https://user-images.githubusercontent.com/62828746/215485633-a730db23-575b-4e5a-ab4c-739b6b24e820.png)
+
+   </details> 
+   
+<details><summary> Lab exercise to implement poly resistor spacing to diff and tap </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215485750-6b77c55e-56c0-47ac-87eb-6b1ad8ef4933.png)
+
+   </details> 
+
+<details><summary>  Lab challenge exercise to describe DRC error as geometrical construct </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215486048-3d36e9ac-aab8-459d-b113-ccc7abbcbf72.png)
+![image](https://user-images.githubusercontent.com/62828746/215486215-5e23ccbc-5e39-4324-a71e-471ee26c9e79.png)
+![image](https://user-images.githubusercontent.com/62828746/215486278-84f308d2-edef-4b8b-bbd5-3f2c0fe8111c.png)
+![image](https://user-images.githubusercontent.com/62828746/215486468-bfcd3887-536b-435d-9663-77dc7ef2eec4.png)
+![image](https://user-images.githubusercontent.com/62828746/215486569-faad37bd-2f04-4e5c-b853-ef173d91a57f.png)
+![image](https://user-images.githubusercontent.com/62828746/215486650-eda651fc-9cb4-45fc-93a2-cd9032c42b60.png)
+![image](https://user-images.githubusercontent.com/62828746/215486758-66ad8213-1b29-4c47-a811-6cb734b7ba33.png)
+
+   </details> 
+
+<details><summary>  Lab challenge to find missing or incorrect rules and fix them </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215486979-5f3ea29c-e1e4-4f4e-8d7b-6c9a6b49b884.png)
+![image](https://user-images.githubusercontent.com/62828746/215487234-ee5e4510-0f3c-4cf0-a301-df0b0afbea14.png)
+
+   </details> 
+
+
+
+
+
+
+## Day 18  - Pre-layout timing analysis and importance of good clock tree
+### Theory - Timing modelling using delay tables
+ 
+<details><summary> Introduction to delay tables </summary>
+ 
+</details> 
+ 
+<details><summary> Delay table usage Part 1 </summary>
+ 
+</details> 
+ 
+<details><summary> Delay table usage Part 2 </summary>
+ 
+</details> 
+ 
+### Theory - Timing analysis with ideal clocks using openSTA
+
+<details><summary> Setup timing analysis and introduction to flip-flop setup time </summary>
+ 
+</details> 
+
+<details><summary>  Introduction to clock jitter and uncertainty </summary>
+ 
+</details> 
+
+### Theory - Clock tree synthesis TritonCTS and signal integrity
+<details><summary> Clock tree routing and buffering using H-Tree algorithm </summary>
+ 
+</details> 
+
+<details><summary> Crosstalk and clock net shielding </summary>
+ 
+</details> 
+
+### Theory - Timing analysis with real clocks using openSTA
+
+<details><summary> Setup timing analysis using real clocks </summary>
+ 
+</details> 
+
+
+
+### Lab - Timing modelling using delay tables
+
+<details><summary> Lab steps to convert grid info to track info </summary>
+
+* LEF is an ASCII representation of the abstract of standard cell.
+* LEF file contains all physical information of the cells (technology and macro) and nets. It also contains Layer definition, Via’s definition, Site definition, Metal capacitance definitions, Macro cell definition, Layout of pins, Blockage information, DRC information given by foundry and etc.
+
+![image](https://user-images.githubusercontent.com/62828746/215488174-ab9956d6-3869-4d02-80da-6f0dcd1067cd.png)
+![image](https://user-images.githubusercontent.com/62828746/215492715-f6fdea32-1671-4061-a7e3-5c02ccd38065.png)
+![image](https://user-images.githubusercontent.com/62828746/215492809-3a2048f4-6e48-400c-8ed0-c063ffa362a8.png)
+
+</details> 
+
+
+<details><summary> Lab steps to convert magic layout to std cell LEF </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215493276-ef470c8c-0c49-403e-afcb-f426714a05b9.png)
+![image](https://user-images.githubusercontent.com/62828746/215493374-6a44ec95-eaf2-4f2f-9f39-eb2729083bd3.png)
+![image](https://user-images.githubusercontent.com/62828746/215493604-ee664974-fc0c-4048-a307-89dc7c77ebba.png)
+
+
+</details> 
+
+<details><summary> Introduction to timing libs and steps to include new cell in synthesis </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215493897-c7fd1bfd-0965-4795-a676-5e6f677c795f.png)
+![image](https://user-images.githubusercontent.com/62828746/215494037-3846ca8a-f430-48c5-9c03-b87ac8da9358.png)
+![image](https://user-images.githubusercontent.com/62828746/215494463-df7bb8c6-f853-4b56-991e-ee261febdf33.png)
+![image](https://user-images.githubusercontent.com/62828746/215494508-1955b165-e246-48f6-88cd-13e4a36c7cdf.png)
+
+</details> 
+
+
+<details><summary> Lab steps to configure synthesis settings to fix slack and include vsdinv </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215495176-676832af-04a6-4c7b-850b-09e3c7003c0a.png)
+![image](https://user-images.githubusercontent.com/62828746/215495553-dd7558b2-ebde-4d8c-bf36-74dea8845724.png)
+![image](https://user-images.githubusercontent.com/62828746/215495797-f6ad6c87-b5d7-4d12-8bee-1241f77af6b0.png)
+![image](https://user-images.githubusercontent.com/62828746/215496047-b36bacc3-3140-4e4e-a418-3fd8ca2f2d09.png)
+
+</details> 
+
+
+### Lab - Timing analysis with ideal clocks using openSTA
+<details><summary> Lab steps to configure OpenSTA for post-synth timing analysis </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215496865-71b1940e-5248-47ba-9366-beb61494c3ec.png)
+![image](https://user-images.githubusercontent.com/62828746/215496928-fe39cf26-0d80-44b2-9513-df9bd603ccef.png)
+![image](https://user-images.githubusercontent.com/62828746/215497001-e370c0fa-741d-4880-a333-3d9ac1071d6c.png)
+
+ </details> 
+ 
+<details><summary> Lab steps to optimize synthesis to reduce setup violations </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215497206-007ce333-1528-4af4-87f5-c767ceb780a8.png)
+![image](https://user-images.githubusercontent.com/62828746/215497254-e8cfb0d1-859b-4a86-8044-b03065a06e93.png)
+![image](https://user-images.githubusercontent.com/62828746/215497416-f8aa35c3-dd52-4f60-9d47-b5f1791f9ff4.png)
+
+ </details> 
+ 
+<details><summary> Lab steps to do basic timing ECO </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215497801-c68ec081-e456-4412-bf8d-0807fda5023a.png)
+
+ </details>
+
+### Lab - Clock tree synthesis TritonCTS and signal integrity
+
+<details><summary> Lab steps to run CTS using TritonCTS </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215498961-796d83cd-f14a-4152-9f54-7ff103d903fb.png)
+
+ </details>
+ 
+<details><summary> Lab steps to verify CTS runs </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215499202-a8b8f066-c084-4802-bc7a-3919956d18bb.png
+![image](https://user-images.githubusercontent.com/62828746/215499278-3b02906f-7b96-4a01-abd5-354faa7bf602.png)
+
+ </details>
+ 
+### Lab- Timing analysis with real clocks using openSTA
+
+<details><summary> Lab steps to analyze timing with real clocks using OpenSTA </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215499810-78a8c4c2-7012-4244-8c5a-205f42280633.png)
+![image](https://user-images.githubusercontent.com/62828746/215500037-f5f941b7-0fc4-4f42-9608-624a5a9fa9a2.png)
+
+ </details>
+
+<details><summary> Lab steps to execute OpenSTA with right timing libraries and CTS assignment </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215500508-cc44905a-0bb5-46d9-b12a-bdd2a6591b59.png)
+
+ </details>
+
+
+<details><summary> Lab steps to observe impact of bigger CTS buffers on setup and hold timing </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215500740-485ba8f2-ebb4-44e4-924a-5f7842254fd0.png)
+![image](https://user-images.githubusercontent.com/62828746/215500814-156f0ecf-154f-462a-8767-b7396148badc.png)
+
+
+ </details>
+
+
+## Day 19  - Final steps for RTL2GDS using tritonRoute and openSTA
+### Theory - Routing and design rule check (DRC)
+ 
+<details><summary> Introduction to Maze Routing Â LeeÂs algorithm </summary>
+ 
+</details> 
+
+<details><summary> LeeÂs Algorithm conclusion </summary>
+ 
+</details> 
+
+<details><summary> Design Rule Check </summary>
+ 
+</details> 
+
+### Theory - TritonRoute Features
+<details><summary> TritonRoute feature 1 - Honors pre-processed route guides </summary>
+ 
+</details> 
+
+<details><summary> TritonRoute Feature2 & 3 - Inter-guide connectivity and intra- & inter-layer routing </summary>
+ 
+</details> 
+
+<details><summary> TritonRoute method to handle connectivity </summary>
+ 
+</details> 
+
+### Lab - Power Distribution Network and routing
+<details><summary> Lab steps to build power distribution network </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215501812-972fb45d-9741-45bf-a6a0-dab46c76c93b.png)
+![image](https://user-images.githubusercontent.com/62828746/215501946-0a02d61b-be52-4595-86bc-ad8637262d00.png)
+![image](https://user-images.githubusercontent.com/62828746/215502191-8b2706a0-2103-447f-882f-62c4eea01cf3.png)
+![image](https://user-images.githubusercontent.com/62828746/215502252-6d640ae6-8509-4861-b104-f7154f149f29.png)
+![image](https://user-images.githubusercontent.com/62828746/215502357-19be35f1-75b4-490f-9a06-3bc2d3be9f60.png)
+
+</details> 
+
+<details><summary> Lab steps from power straps to std cell power </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215502612-d925fad7-53ce-4fc9-9ed9-7cc58f1ccf45.png)
+![image](https://user-images.githubusercontent.com/62828746/215503041-daab362c-a32e-4285-b196-6966ccb40286.png)
+![image](https://user-images.githubusercontent.com/62828746/215503168-42a2d44d-976a-4671-ac34-6e8971cdaf37.png)
+
+</details> 
+
+
+<details><summary> Basics of global and detail routing and configure TritonRoute </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215504141-dac43371-b6d2-4cbe-b8d8-bea85092dc46.png)
+
+</details> 
+
+<details><summary> Basics of global and detail routing and configure TritonRoute </summary>
+ 
+![image](https://user-images.githubusercontent.com/62828746/215504141-dac43371-b6d2-4cbe-b8d8-bea85092dc46.png)
+
+</details> 
+
+### Lab - TritonRoute Features
+
+<details><summary> Routing topology algorithm and final files list post-route </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/215505600-de29d478-6431-403d-b337-726cb87dc685.png)
+![image](https://user-images.githubusercontent.com/62828746/215505912-e3eb109b-f01c-460f-b6b9-c25b3ee92f5b.png)
+![image](https://user-images.githubusercontent.com/62828746/215506012-c010e2ea-c268-49b0-9d55-c9a49e32ea21.png)
+![image](https://user-images.githubusercontent.com/62828746/215506066-2404ad74-8e74-4740-8117-0d167fd93937.png)
+ 
+</details> 
+
+
