@@ -3361,7 +3361,8 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 -debug_region* |  Controls what regions in the design debug capability (specified by -debug_access*) gets added. | </br>
 -debug_report<+debug.report> | Generates a debug.report file containing a list of where all the  debug capability added to the design came from. | </br>
 
- 
+   </details> 
+   
 <details><summary>  4-bit Adder by using Full Adder   </summary>
  
 ### Lab -  4-bit Adder by using Full Adder 
