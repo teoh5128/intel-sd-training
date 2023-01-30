@@ -2210,7 +2210,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
 
 ## Lab Topic - Advanced constraints
 
-<details><summary> Loading design get_cells, get_ports, get_nets </summary>
+<details><summary> Lab - Loading design get_cells, get_ports, get_nets </summary>
 
 #### Steps:
 > 1. Invoke dc 
@@ -2272,7 +2272,7 @@ echo $my_cell_name $rname;
    
 
 
-<details><summary> get_pins, get_clocks, querying_clocks </summary>
+<details><summary> Lab - get_pins, get_clocks, querying_clocks </summary>
 
 #### Steps:
  
