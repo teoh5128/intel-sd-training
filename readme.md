@@ -271,8 +271,17 @@
     * [Lab Topic - SKY_L4 - OpenLANE Project Git Link Description](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---sky_l4---openlane-project-git-link-description) 
     * [Lab Topic - SKY_L5 - Steps to characterize synthesis results](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l5---steps-to-characterize-synthesis-results)
   
+    
+    
+    
+    
+    
+    
+    
+    
+    
 ## Day 0
-## Theory - System/Tool Setup Check. GitHub ID creation
+### Theory - System/Tool Setup Check. GitHub ID creation
 
 <details><summary> Package </summary>
  
@@ -306,7 +315,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
 
    </details>
 
-## Lab - Setup Labs
+### Lab - Setup Labs
 
 <details><summary> Steps to enable labs </summary>
  
@@ -322,7 +331,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
 
 
 ## Day 1
-## Theory - Introduction to Verilog RTL design and Synthesis
+### Theory - Introduction to Verilog RTL design and Synthesis
 
 <details><summary> HDL (Hardware description Language) </summary>
 
@@ -454,7 +463,7 @@ Concern in hold time violation                   | Failed required performance
 
   </details>
 
-## Lab Topic- Labs using iverilog and gtkwave
+### Lab Topic- Labs using iverilog and gtkwave
 
 <details><summary> Lab1 introduction to lab </summary>
 
@@ -476,7 +485,7 @@ Concern in hold time violation                   | Failed required performance
 
   </details>
  
- ## Lab Topic- Labs using Yosys and Sky130 PDKs
+### Lab Topic- Labs using Yosys and Sky130 PDKs
   
 <details><summary> Lab2 Introduction iverilog gtkwave part1 </summary>
   
@@ -572,7 +581,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 
 
 ## Day 2
-## Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
+### Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles
 
 <details><summary> Cell Library Characterization </summary>
   
@@ -662,7 +671,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
   </details>
   
 
-## Lab Topic - Introduction to timing .libs
+### Lab Topic - Introduction to timing .libs
 
 <details><summary> Lab4 Introduction to dot Lib part1 </summary>
 
@@ -718,7 +727,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-## Lab Topic - SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis
+### Lab Topic - Hierarchical vs Flat Synthesis
 
 <details><summary> Lab05 Hier synthesis flat synthesis part1 </summary>
 
@@ -776,7 +785,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
 
-## Lab Topic - Various Flop Coding Styles and optimization
+### Lab Topic - Various Flop Coding Styles and optimization
   
 <details><summary> Lab flop synthesis simulations part1 </summary>
 
@@ -838,7 +847,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-## Lab Topic - Various Flop Coding Styles and optimization
+### Lab Topic - Various Flop Coding Styles and optimization
 <details><summary> SKY130RTL D2SK3 L5 Interesting optimisations part1 </summary>
   
 #### Steps:
@@ -874,7 +883,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   </details>
 
 ## Day 3
-## Theory - Combinational and sequential optmizations
+### Theory - Combinational and sequential optmizations
 
 <details><summary> Optimisation of Synthesis Tools </summary>
   
@@ -928,7 +937,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 *  For example: Boundary optimisation will remove unused buffers that are inserted for allowing signal out of the module, then it will replace an inverters to see is it good enough for signal going out.
   </details>
 
-## Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
+### Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
 
 <details><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
   
@@ -1035,7 +1044,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
   
-## Lab Topic - SKY130RTL D3SK3 - Sequential logic optimizations
+### Lab Topic - Sequential logic optimizations
 
 <details><summary> Lab07 Sequential Logic Optimisations part1 </summary>
   
@@ -1166,7 +1175,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-## Lab Topic - Sequential optimzations for unused outputs
+### Lab Topic - Sequential optimzations for unused outputs
 
 <details><summary> Seq optimisation unused outputs part1 </summary>
   
@@ -1218,7 +1227,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   </details>
 
 ## Day 4
-## Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+### Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 <details><summary> Gate Level Simulation (GLS) </summary>
   
@@ -1300,7 +1309,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
   </details>
   
-## Lab Topic - Labs on GLS and Synthesis-Simulation Mismatch
+### Lab Topic - Labs on GLS and Synthesis-Simulation Mismatch
 
 <details><summary> Lab GLS Synth Sim Mismatch part1 </summary>
 
@@ -1431,7 +1440,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
 
 ## Day 5
-## Theory - DFT (Design for Testability)
+### Theory - DFT (Design for Testability)
 <details><summary> DFT (Design for Testability) </summary>
 
 ## **What is testability in VLSI means**
@@ -1592,7 +1601,7 @@ Reduces the chances of going into loss due to faulty devices | Design time incre
 
   
 ## Day 6
-## Theory - Introduction to Logic Synthesis
+### Theory - Introduction to Logic Synthesis
 
 <details><summary> Digital logic </summary>
   
@@ -1768,7 +1777,7 @@ Used for | High frequency circuit | Meet hold time
 
   </details>
 
-## Theory - TCL quick refresher
+### Theory - TCL quick refresher
 
 <details><summary> Basic TCL Command Used in DC </summary>
 
@@ -1784,7 +1793,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
   </details>
         
-## Lab Topic - Introduction to Logic Synthesis
+### Lab Topic - Introduction to Logic Synthesis
 
 <details><summary> Lab1 - Invoking dc basic setup </summary>
 
@@ -1923,7 +1932,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
   
 ## Day 7 
-## Theory - Introduction to STA
+### Theory - Introduction to STA
 
 
 <details ><summary> Introduction to STA </summary>
@@ -1965,7 +1974,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
    </details>
  
-## Theory - What are constraints?
+### Theory - What are constraints?
 <details><summary> What are constraints </summary>
 
 ![timing path](https://user-images.githubusercontent.com/62828746/209027830-ee44f46c-5e6a-4809-900b-2a05dc6af6ff.jpg)
@@ -1992,7 +2001,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
    </details>
  
-## Theory - Inp Trans Output Load
+### Theory - Inp Trans Output Load
 <details><summary> Inp Trans Output Load </summary>
 
 ![Model transition delay](https://user-images.githubusercontent.com/62828746/209027827-0052c41e-f37b-4453-913e-3d416a4723a6.jpg)
@@ -2014,7 +2023,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
 
 
-## Lab Topic - Basics of STA
+### Lab Topic - Basics of STA
 
 <details><summary> Lab5 - Timing dot Libs </summary>
 
@@ -2120,8 +2129,8 @@ echo $my_pin_name $pin_dir;
  
   
   
-  ## Day 8
-## Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
+## Day 8
+### Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
 
 <details><summary> Clock Tree Modelling - Uncertainty </summary>
 
@@ -2208,7 +2217,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
    </details>
 
 
-## Lab Topic - Advanced constraints
+### Lab Topic - Advanced constraints
 
 <details><summary> Lab - Loading design get_cells, get_ports, get_nets </summary>
 
@@ -2497,7 +2506,7 @@ echo $my_cell_name $rname;
   
   
 ## Day 9 
-## Theory - Optimizations Combinational Opt
+### Theory - Optimizations Combinational Opt
 
 
 <details><summary> Optimizations Combinational Opt </summary>
@@ -2525,7 +2534,7 @@ Meet Power | Power goals
    </details>
 
 
-## Theory - Sequential Optimizations
+### Theory - Sequential Optimizations
 
 <details><summary> Sequential Optimizations </summary>
   
@@ -2547,7 +2556,7 @@ Meet Power | Power goals
    </details>
 
 
-## Theory - Special optimizations
+### Theory - Special optimizations
 
 
 <details><summary> Special optimizations </summary>
@@ -2599,7 +2608,7 @@ Meet Power | Power goals
 
  
  
-## Lab Topic - Combinational optimizations
+### Lab Topic - Combinational optimizations
 
 <details><summary> Lab16 - part1 Combinational_optimizations </summary>
 
@@ -2861,7 +2870,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
    
 ## Day 10 
-## Theory - Lecture Report timing
+### Theory - Lecture Report timing
 
 
 <details><summary> Lecture Report timing </summary>
@@ -2895,7 +2904,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
    </details> 
  
  
-## Lab Topic - Lab Report timing
+### Lab Topic - Lab Report timing
 
 <details><summary>  Lab Report timing </summary>
 
@@ -2999,7 +3008,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
  
    
 ## Day 11 
-## Theory - Introduction to Baby SoC
+### Theory - Introduction to Baby SoC
 
 <details><summary> Baby SoC </summary>
 
@@ -3083,7 +3092,7 @@ Qualcomm’s Snapdragon processors are one of the the most ubiquitous SoCs in th
 
 
 ## Day 12
-## Theory - BabySoC Modelling
+### Theory - BabySoC Modelling
 
 <details><summary> BabySoC Modelling </summary>
 
@@ -3201,7 +3210,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
  
  
-## Lab Topic - VSDbabySoC Modelling
+### Lab Topic - VSDbabySoC Modelling
 <details><summary>  RVMYTH modelling  </summary>
  
 ### Lab -  RVMYTH modelling 
@@ -3376,7 +3385,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    
 
 ## Day 13
-## Theory - Post-synthesis simulation
+### Theory - Post-synthesis simulation
 
 <details><summary> Post-synthesis simulation </summary>
 
@@ -3558,7 +3567,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
  
 
 ## Day 14
-## Theory -  Synopsys DC and timing analysis 
+### Theory -  Synopsys DC and timing analysis 
 
 <details><summary> PVT </summary>
  
@@ -3598,7 +3607,7 @@ THS | Total Hold Slack = sum of the negative hold slack paths
    </details> 
 
 
-## Lab Topic -  PVT Table of Different Lib 
+### Lab Topic -  PVT Table of Different Lib 
 <details><summary>  PVT Table of Different Lib   </summary>
  
 ### Lab -  PVT Table of Different Lib  
@@ -3644,7 +3653,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    </details>  
 
 ## Day 15
-## Theory - How to talk to computers
+### Theory - How to talk to computers
 
 <details><summary> How to talk to computers </summary>
  
@@ -3667,7 +3676,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
  
    </details> 
    
-## Theory - SoC design and OpenLANE
+### Theory - SoC design and OpenLANE
 
 <details><summary> SoC design and OpenLANE </summary>
     
@@ -3702,7 +3711,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    </details>    
    
 
-## Lab - Get familiar to open-source EDA tools
+### Lab - Get familiar to open-source EDA tools
 
 <details><summary> OpenLANE Directory structure in detail </summary>
 
