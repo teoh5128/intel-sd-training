@@ -1,276 +1,284 @@
 # Intel SD Training 
 
 ## Table of contents
-+ **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training#day-0)**
++ **[ Day 0 - System/Tool Setup Check. GitHub ID creation ](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmarkday-0)**
   <details><summary> Theory </summary>
   
-  [Theory - System/Tool Setup Check. GitHub ID creation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---systemtool-setup-check-github-id-creation)
+  [Theory - System/Tool Setup Check. GitHub ID creation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---systemtool-setup-check-github-id-creation)
   </details>
   <details><summary> Lab </summary>
   
-  * [ Lab -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#steps-to-enable-labs)
+  * [ Lab -Setup Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2lab---setup-labs)
   </details>
   
-- **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#day-1)**
+- **[ Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-1)**
   <details><summary> Theory </summary>
   
-  [Theory - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training#theory---introduction-to-verilog-rtl-design-and-synthesis)
+  [Theory - Introduction to Verilog RTL design and Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---introduction-to-verilog-rtl-design-and-synthesis)
   
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab) 
-  * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part1)
-  * [Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l2-lab2-introduction-iverilog-gtkwave-part2)
-  * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part1)
-  * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part2)
-  * [Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part3)
+  * [Lab Topic- Labs using iverilog and gtkwave](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d1sk2-l1-lab1-introduction-to-lab) 
+  * [Lab Topic- Labs using Yosys and Sky130 PDKs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic--labs-using-yosys-and-sky130-pdks) 
+
+  </details>
   
-+ **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-2)**
++ **[ Day 2 - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-2)**
   <details><summary> Theory </summary>
     
-   [Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---timing-libsqtmsetms-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
+   [Theory - Timing libs(QTMs/ETMs), hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-libsqtmsetms-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
     
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l1-lab4-introduction-to-dot-lib-part1)
-  * [Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l2-lab4-introduction-to-dot-lib-part2)
-  * [Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk1-l3-lab4-introduction-to-dot-lib-part3)
-  * [Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk2-l1-lab05-hier-synthesis-flat-synthesis-part1)
-  * [Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk2-l2-lab05-hier-synthesis-flat-synthesis-part2)
-  * [Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l3-lab-flop-synthesis-simulations-part1)
-  * [Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l4-lab-flop-synthesis-simulations-part2)
-  * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part1)
-  * [Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d2sk3-l5-interesting-optimisations-part2)
+  * [Lab Topic - Introduction to timing .libs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---introduction-to-timing-libs)
+  * [Lab Topic - Hierarchical vs Flat Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---hierarchical-vs-flat-synthesis)
+  * [Lab Topic - Various Flop Coding Styles and optimization](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---various-flop-coding-styles-and-optimization)
+  * [Lab Topic - Various Flop Coding Styles and optimization](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---various-flop-coding-styles-and-optimization-1)
+  
    </details>
   
-- **[ Day 3 - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-3)**
+- **[ Day 3 - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-3)**
   <details><summary> Theory </summary>
     
-    [Theory - Combinational and sequential optmizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---combinational-and-sequential-optmizations)
+    [Theory - Combinational and sequential optmizations]()
     
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l1-lab06-combinational-logic-optimisations-part1)
-  * [Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l2-lab06-combinational-logic-optimisations-part2)
-  * [Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk2-l2-lab06-combinational-logic-optimisations-exercise)
-  * [Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk3-l1-lab07-sequential-logic-optimisations-part1)
-  * [Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk3-l2-lab07-sequential-logic-optimisations-part2)
-  * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3)
-  * [Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab--sky130rtl-d3sk3-l3-lab07-sequential-logic-optimisations-part3-exercise)
-  * [Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l1-seq-optimisation-unused-outputs-part1)
-  * [Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d3sk4-l2-seq-optimisation-unused-outputs-part2)
+  * [Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---sky130rtl-d3sk2---combinational-logic-optimizations)
+  * [Lab Topic - Sequential logic optimizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---sequential-logic-optimizations)
+  * [Lab Topic - Sequential optimzations for unused outputs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---sequential-optimzations-for-unused-outputs)
   
   </details>
   
-+ **[ Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-4))**
++ **[ Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-4))**
   <details><summary> Theory </summary>
     
-   [Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
+   [Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
     
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk2-l1-lab-gls-synth-sim-mismatch-part1)
-  * [Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk2-l2-lab-gls-synth-sim-mismatch-part2)
-  * [Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l1-lab-synth-sim-mismatch-blocking-statement-part1)
-  * [Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130rtl-d4sk3-l2-lab-synth-sim-mismatch-blocking-statement-part2)
+  * [Lab Topic - Labs on GLS and Synthesis-Simulation Mismatch](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---labs-on-gls-and-synthesis-simulation-mismatch)
   
   </details>
  
  
-- **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-6)**
+- **[ Day 5 - DFT(Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-5)**
   
   <details><summary> Theory </summary>
     
-  * [Theory - DFT (Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dft-design-for-testability)
+  * [Theory - DFT (Design for Testability)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---dft-design-for-testability)
     
   </details>
  
   
-+ **[ Day 6 - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-6))**
++ **[ Day 6 - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-6)**
   <details><summary> Theory </summary>
     
-  * [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-logic-synthesis)
-  * [Theory - Introduction to Design Compiler (DC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-design-compiler-dc)
-  * [Theory - TCL quick refresher](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---tcl-quick-refresher)
+  * [Theory - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---introduction-to-logic-synthesis)
+  * [Theory - Introduction to Design Compiler (DC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---introduction-to-design-compiler-dc)
+  * [Theory - TCL quick refresher](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---tcl-quick-refresher)
     
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - DC_D1SK2_L1 - lab1 - Invoking dc basic setup](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk2_l1---lab1---invoking-dc-basic-setup)
-  * [Lab - DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk2_l2---lab2---intro-to-ddc-gui-with-design_vision)
-  * [Lab - DC_D1SK2_L3 - lab3 - dc synopsys dc setup](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk2_l3---lab3---dc-synopsys-dc-setup)
-  * [Lab - DC_D1SK3_L2 - lab4 - tcl scripting](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d1sk3_l2---lab4---tcl-scripting)
-    
+  * [Lab Topic - Introduction to Logic Synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---introduction-to-logic-synthesis)
+
   </details>
   
   
-+ **[ Day 7 - Basic of STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-7)**
++ **[ Day 7 - Basic of STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-7)**
   <details><summary> Theory </summary>
     
-  * [Theory - Introduction to STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#introduction-to-sta)
-  * [Theory - What are constraints?](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---what-are-constraints)
-  * [Theory - Inp Trans Output Load](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---inp-trans-output-load)
+  * [Theory - Introduction to STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---introduction-to-sta)
+  * [Theory - What are constraints?](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---what-are-constraints)
+  * [Theory - Inp Trans Output Load](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---inp-trans-output-load)
     
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - DC_D2SK2_L1 - Lab5 - Timing dot Libs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d2sk2_l1---lab5---timing-dot-libs)
-  * [Lab -DC_D2SK2_L2 - Lab6 - Exploring dotLib](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d2sk2_l2---lab6---exploring-dotlib)
-  * [Lab - DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d2sk2_l3---lab7---exploring---dotlib-part2)
- 
+  * [Lab Topic - Basics of STA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---basics-of-sta)
     
   </details>
  
   
-+ **[ Day 8 - Advanced sdc constraints](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-8)**
++ **[ Day 8 - Advanced sdc constraints](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-8)**
   <details><summary> Theory </summary>
     
-  * [Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sdc-part1-clock---clock-tree-modelling---uncertainty)
-  * [Theory - DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dc_d3sk1_l2---lecture8---sdc-part2-io-delays)
-  * [Theory - DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---dc_d3sk3_l1---lecture9---sdc-part3-generated_clk)
+  * [Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---sdc-part1-clock---clock-tree-modelling---uncertainty)
+  * [Theory - SDC Part3 generated_clk](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---sdc-part3-generated_clk)
+
     
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab - DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l1---lab8---loading-design-get_cells-get_ports-get_nets)
-  * [Lab - DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l2---lab9-get_pins-get_clocks-querying_clocks)
-  * [Lab - DC_D3SK2_L3 - lab10 - create_clock waveform](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l3---lab10---create_clock-waveform)
-  * [Lab - DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l4---lab11--clock-network-modelling---uncertainty-report_timing)
-  * [Lab - DC_D3SK2_L5 - Lab12- IO Delays](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk2_l5---lab12--io-delays)    
-  * [Lab - DC_D3SK3_L2 - lab13 - generated_clocks](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---dc_d3sk3_l2---lab13---generated_clocks)   
-  * [Lab - DC_D3SK4_L2 - lab15 - part1 Set_Max_delay](https://github.com/teoh5128/intel-sd-training#lab---dc_d3sk4_l2---lab15---part1-set_max_delay)             
-  * [Lab - DC_D3SK4_L3 - Lab15 - part2 - VCLK](https://github.com/teoh5128/intel-sd-training#lab---dc_d3sk4_l3---lab15---part2---vclk)      
-    
+  * [Lab Topic - Advanced constraints](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---advanced-constraints)
     
   </details>
   
   
-+ **[ Day 9 - Optimization in synthesis](https://github.com/teoh5128/intel-sd-training#day-9)**
++ **[ Day 9 - Optimization in synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-9)**
   <details><summary> Theory </summary>
-   
   
-  * [Theory - DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt](https://github.com/teoh5128/intel-sd-training#theory---dc_d4sk1_l1---lecture11---optimizations-combinational-opt)
-  * [Theory - DC_D4SK1_L2 - Lecture12 Sequential Optimizations](https://github.com/teoh5128/intel-sd-training#theory---dc_d4sk1_l2---lecture12-sequential-optimizations)
-  * [Theory - DC_D4SK3_L1 - Lecture13 special optimizations](https://github.com/teoh5128/intel-sd-training#theory---dc_d4sk3_l1---lecture13-special-optimizations)
-    
+  * [Theory - Optimizations Combinational Opt](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---optimizations-combinational-opt)
+  * [Theory - Sequential Optimizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---sequential-optimizations)
+  * [Theory - Special optimizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---special-optimizations)
+ 
+  
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab Topic - DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk2_l1---lab16---part1-combinational_optimizations)
-  * [Lab Topic - DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk2_l2---lab16---part2-resource-sharing-optimizations)   
-  * [Lab Topic - DC_D4SK2_L3 - lab17 - seq optimizations](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk2_l3---lab17---seq-optimizations)
-  * [Lab Topic - DC_D4SK4_L1 - Lab18 - Boundary Optimization](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l1---lab18---boundary-optimization)   
-  * [Lab Topic - DC_D4SK4_L2 - Lab19 - Register Retiming](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l2---lab19---register-retiming)
-  * [Lab Topic - DC_D4SK4_L3 - Lab20 - Isolating output ports](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l3---lab20---isolating-output-ports)           
-  * [Lab Topic - DC_D4SK4_L4 - Lab21 - MultiCycle path](https://github.com/teoh5128/intel-sd-training#lab-topic---dc_d4sk4_l4---lab21---multicycle-path)      
+  * [Lab Topic - Combinational optimizations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---combinational-optimizations)
   
   </details>  
   
   
-+ **[ Day 10 -QOR](https://github.com/teoh5128/intel-sd-training#day-10)**
++ **[ Day 10 -QOR](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-10)**
   <details><summary> Theory </summary>
    
   
-  * [Theory - DC_D5SK1_L1 - Lecture Report timing](https://github.com/teoh5128/intel-sd-training#theory---dc_d5sk1_l1---lecture-report-timing)
+  * [Theory - Lecture Report timing](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---lecture-report-timing)
  
   </details>
   <details><summary> Lab </summary>
   
-  * [Lab Topic - DC_D5SK1_L2 - Lab Report timing](https://github.com/teoh5128/intel-sd-training#lab-topic----dc_d5sk1_l2---lab-report-timing)
-  * [Lab Topic - DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN](https://github.com/teoh5128/intel-sd-training#lab-topic----dc_d5sk1_l3---lab-check_timing-check_design-set_max_capacitance-hfn)
+  * [Lab Topic - Lab Report timing](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---lab-report-timing)
   
   </details>  
   
   
-+ **[ Day 11 -Introduction to Baby SoC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-11)**
++ **[ Day 11 -Introduction to Baby SoC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-11)**
   <details><summary> Theory </summary>
    
   
-  * [Theory - Introduction to Baby SoC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---introduction-to-baby-soc)
+  * [Theory - Introduction to Baby SoC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---introduction-to-baby-soc)
  
   </details>
   
  
-+ **[ Day 12 - BabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-12)**
++ **[ Day 12 - BabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-12)**
   <details><summary> Theory </summary>
    
   
-  + [Theory - BabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---babysoc-modelling)
-    * [What is Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#what-is-modelling)
-    * [RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#rvmyth-modelling)
-    * [PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pll-modelling)
-    * [DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#dac-modelling)
-    * [Simulating using VCS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#simulating-using-vcs)
-    
+  + [Theory - BabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---babysoc-modelling)
+
   </details>  
   
   <details><summary>  Lab  </summary>
   
-    * [Lab Topic - RVMYTH modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-modelling)
-    * [Lab Topic - DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----dac-modelling)
-    * [Lab Topic - PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pll-modelling)
-    * [Lab Topic - RVMYTH_PLL modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_pll-modelling) 
-    * [Lab Topic - RVMYTH_DAC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth_dac-modelling) 
-    * [Lab Topic - VSDBabySoC modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----vsdbabysoc-modelling) 
-    * [Lab Topic - Differences in Interactive Mode](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----differences-in-interactive-mode)
-    * [Lab Topic - 4-bit Adder by using Full Adder](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----4-bit-adder-by-using-full-adder) 
+    * [Lab Topic - VSDbabySoC Modelling](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---vsdbabysoc-modelling)
    
   </details>    
   
-+ **[ Day 13 -Post-synthesis simulation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-13)**
++ **[ Day 13 -Post-synthesis simulation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-13)**
   <details><summary> Theory </summary>
    
   
-  * [Theory - Pre-synthesis VS Post-synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pre-synthesis-vs-post-synthesis)
-  * [Theory - The list of synthesizable and non-synthesizable Verilog constructs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#the-list-of-synthesizable-and-non-synthesizable-verilog-constructs)
+  * [Theory - Post-synthesis simulation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---post-synthesis-simulation)
+
    
   </details>  
   
   <details><summary>  Lab  </summary>
     
-    * [Lab Topic - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----rvmyth-avsddac-pre-synthesis-and-post-synthesis)
-    * [Convert .lib to .dc](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#steps-60)
-    * [Synthesis of rvmyth_avsddac](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-63)
-    * [Synthesis ofrvmyth_pll](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-64)
-    * [Synthesis ofvsdbabysoc](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-65)
-    * [Set constraints and optimize vsdbabysoc](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-66)
-    * [Compare Pre-synthesis and Post-synthesis simulation waveform](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#result-67)
+    * [Lab Topic - RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis simulation](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic---rvmyth-avsddac-pre-synthesis-and-post-synthesis-simulation)
     
     
-+ **[ Day 14 -Synopsys DC and timing analysis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#day-14)**
++ **[ Day 14 - Synopsys DC and timing analysis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-14)**
   <details><summary> Theory </summary>
-   
   
-  * [Theory - PVT](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pvt-1)
-  * [Theory - WNS,TNS,WHS and THS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#wnstnswhs-and-ths)
+  * [Theory - Synopsys DC and timing analysis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory----synopsys-dc-and-timing-analysis)
    
   </details>  
   
   <details><summary>  Lab  </summary>
     
-    * [Lab Topic - PVT Table of Different Lib](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab-topic----pvt-table-of-different-lib)
+    * [Lab Topic - PVT Table of Different Lib](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab-topic----pvt-table-of-different-lib)
     
-+ **[ Day 15 -Inception of EDA and PDK](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky_l1---sky130_d1_sk1---how-to-talk-to-computers)**
+  </details>  
+    
++ **[ Day 15 - Inception of EDA and PDK](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-15)**
   <details><summary> Theory </summary>
    
-  * [Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky_l1---sky130_d1_sk1---how-to-talk-to-computers)
-  * [Theory - SKY130_D1_SK2 - SoC design and OpenLANE](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#theory---sky130_d1_sk2---soc-design-and-openlane)
+  * [Theory - How to talk to computers](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---how-to-talk-to-computers)
+  * [Theory - SoC design and OpenLANE](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---soc-design-and-openlane)
    
   </details>  
   
   <details><summary>  Lab  </summary>
     
-    * [Lab Topic - SKY130_D1_SK3 - Get familiar to open-source EDA tools](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#lab---sky130_d1_sk3---get-familiar-to-open-source-eda-tools)   
-    * [Lab Topic - SKY_L1 - OpenLANE Directory structure in detail](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l1---openlane-directory-structure-in-detail)   
-    * [Lab Topic - SKY_L2 - Design Preparation Step](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l2---design-preparation-step)   
-    * [Lab Topic - SKY_L3 - Review files after design prep and run synthesis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---review-files-after-design-prep-and-run-synthesis)   
-    * [Lab Topic - SKY_L4 - OpenLANE Project Git Link Description](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l3---sky_l4---openlane-project-git-link-description) 
-    * [Lab Topic - SKY_L5 - Steps to characterize synthesis results](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#sky_l5---steps-to-characterize-synthesis-results)
+    * [Lab - Get familiar to open-source EDA tools](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---get-familiar-to-open-source-eda-tools)
+    
+  </details>  
+    
++ **[ Day 16 - Good floorplan vs bad floorplan and introduction to library cells]()**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Chip Floor planning considerations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---chip-floor-planning-considerations)
+  * [Theory - Library Binding and Placement](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---library-binding-and-placement)
+  * [Theory - Cell design and characterization flows](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---cell-design-and-characterization-flows)
+  * [Theory - General timing characterization parameters](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---general-timing-characterization-parameters)
+    
+  </details>  
   
+  <details><summary>  Lab  </summary>
+    
+    * [Lab - Chip Floor planning considerations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---chip-floor-planning-considerations)
+    
+  </details>  
+    
++ **[ Day 17 - Design library cell using Magic Layout and ngspice characterization]()**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Labs for CMOS inverter ngspice simulations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---labs-for-cmos-inverter-ngspice-simulations)
+  * [Theory - Inception of Layout Â CMOS fabrication process](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---inception-of-layout-%C3%A2-cmos-fabrication-process)
+    
+  </details>  
+  
+  <details><summary>  Lab  </summary>
+    
+  * [Lab - Labs for CMOS inverter ngspice simulations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab----labs-for-cmos-inverter-ngspice-simulations)
+  * [Lab - Inception of Layout Â CMOS fabrication process](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab----inception-of-layout-%C3%A2-cmos-fabrication-process) 
+  * [Lab - Sky130 Tech File Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---sky130-tech-file-labs)  
+    
+  </details>  
+    
++ **[ Day 18 - Pre-layout timing analysis and importance of good clock tree]()**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Timing modelling using delay tables](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-modelling-using-delay-tables)
+  * [Theory - Timing analysis with ideal clocks using openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-analysis-with-ideal-clocks-using-opensta)  
+  * [Theory - Clock tree synthesis TritonCTS and signal integrity](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---clock-tree-synthesis-tritoncts-and-signal-integrity)
+  * [Theory - Timing analysis with real clocks using openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-analysis-with-real-clocks-using-opensta)
+    
+  </details>  
+  
+  <details><summary>  Lab  </summary>
+    
+  * [Lab - Timing modelling using delay tables](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---timing-modelling-using-delay-tables) 
+  * [Lab - Timing analysis with ideal clocks using openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---timing-analysis-with-ideal-clocks-using-opensta)    
+  * [Lab - Clock tree synthesis TritonCTS and signal integrity](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---clock-tree-synthesis-tritoncts-and-signal-integrity)  
+  * [Lab- Timing analysis with real clocks using openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab--timing-analysis-with-real-clocks-using-opensta)  
+    
+  </details>  
+    
++ **[ Day 19 - Final steps for RTL2GDS using tritonRoute and openSTA]()**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Routing and design rule check (DRC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---routing-and-design-rule-check-drc)
+  * [Theory - TritonRoute Features](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---tritonroute-features)  
+
+  </details>  
+  
+  <details><summary>  Lab  </summary>
+    
+  * [Lab - Power Distribution Network and routing](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---power-distribution-network-and-routing) 
+  * [Lab - TritonRoute Features](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---tritonroute-features)    
+
+  </details>   
     
     
     
