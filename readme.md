@@ -2270,8 +2270,6 @@ echo $my_cell_name $rname;
 
    </details>
    
-
-
 <details><summary> Lab - get_pins, get_clocks, querying_clocks </summary>
 
 #### Steps:
@@ -2599,14 +2597,9 @@ Meet Power | Power goals
    </details> 
  
 
-
-
-
-
  
  
- 
-## Lab Topic - Lab16 - part1 Combinational_optimizations
+## Lab Topic - Combinational optimizations
 
 <details><summary> Lab16 - part1 Combinational_optimizations </summary>
 
@@ -2654,11 +2647,6 @@ Meet Power | Power goals
    </details>
 
 
-
-
-
-## Lab Topic - Lab16 - part2 resource sharing optimizations
-
 <details><summary> Lab16 - part2 resource sharing optimizations </summary>
 
 #### Steps:
@@ -2697,9 +2685,6 @@ Meet Power | Power goals
    </details>
  
  
-
-## Lab Topic - Lab17 - seq optimizations
-
 <details><summary> Lab17 - seq optimizations </summary>
 
 #### Steps:
@@ -2777,9 +2762,6 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 
    </details>
  
-
-## Lab Topic - Lab18 - Boundary Optimization
-
 <details><summary> Lab18 - Boundary Optimization </summary>
 
 #### Steps:
@@ -2804,10 +2786,6 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 ![DC_D4SK4_L1 - Lab18 - Boundary Optimization_3](https://user-images.githubusercontent.com/62828746/210261000-84efaad2-aa50-4ac9-b174-f392768a3cc1.jpg)
 
    </details>
-
-
- 
-## Lab Topic - Lab19 - Register Retiming
 
 <details><summary> Lab19 - Register Retiming </summary>
 
@@ -2834,8 +2812,6 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
    </details> 
  
  
-## Lab Topic - Lab20 - Isolating output ports
-
 <details><summary> Lab20 - Isolating output ports </summary>
 
 #### Steps:
@@ -2856,10 +2832,6 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
    </details> 
  
-
- 
-## Lab Topic - Lab21 - MultiCycle path
-
 <details><summary> Lab21 - MultiCycle path </summary>
 
 #### Steps:
@@ -2954,9 +2926,6 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
    </details> 
  
  
- 
-## Lab Topic -  Lab Check_timing, Check_design, Set_max_capacitance, HFN
-
 <details><summary>  Lab Check_timing, Check_design, Set_max_capacitance, HFN </summary>
 
 #### Steps:
@@ -3232,7 +3201,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
  
  
-## Lab Topic -  RVMYTH modelling
+## Lab Topic - VSDbabySoC Modelling
 <details><summary>  RVMYTH modelling  </summary>
  
 ### Lab -  RVMYTH modelling 
@@ -3256,9 +3225,6 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
 
 
-
-
-## Lab Topic -  DAC modelling
 <details><summary>  DAC modelling  </summary>
  
 ### Lab -  DAC modelling 
@@ -3284,9 +3250,6 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
 
 
-
-
-## Lab Topic -  PLL modelling
 <details><summary>  PLL modelling  </summary>
  
 ### Lab -  PLL modelling 
@@ -3311,8 +3274,6 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
 
 
-
-## Lab Topic -  RVMYTH_PLL modelling
 <details><summary>  RVMYTH_PLL modelling  </summary>
  
 ### Lab -  RVMYTH_PLL modelling 
@@ -3335,8 +3296,6 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
    </details> 
 
 
-
-## Lab Topic -  RVMYTH_DAC modelling
 <details><summary>  RVMYTH_DAC modelling  </summary>
  
 ### Lab -  RVMYTH_DAC modelling 
@@ -3359,9 +3318,6 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
  
    </details> 
 
-
-
-## Lab Topic -  VSDBabySoC modelling
 <details><summary>  VSDBabySoC modelling  </summary>
  
 ### Lab -  VSDBabySoC modelling 
@@ -3383,8 +3339,6 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
  
    </details> 
 
-
-## Lab Topic -  Differences in Interactive Mode
 <details><summary>  Differences in Interactive Mode  </summary>
  
 ### Lab -  Differences in Interactive Mode 
@@ -3398,8 +3352,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 -debug_region* |  Controls what regions in the design debug capability (specified by -debug_access*) gets added. | </br>
 -debug_report<+debug.report> | Generates a debug.report file containing a list of where all the  debug capability added to the design came from. | </br>
 
-
-## Lab Topic -  4-bit Adder by using Full Adder 
+ 
 <details><summary>  4-bit Adder by using Full Adder   </summary>
  
 ### Lab -  4-bit Adder by using Full Adder 
@@ -3453,7 +3406,6 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
   
    </details> 
  
-## Lab Topic -  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis
 <details><summary>  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis  </summary>
  
 ### Lab -  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis 
@@ -3692,9 +3644,9 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    </details>  
 
 ## Day 15
-## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers
+## Theory - How to talk to computers
 
-<details><summary> ## Theory - SKY130_D1_SK1 - How to talk to computers </summary>
+<details><summary> How to talk to computers </summary>
  
 ## **RISC-V Instruction Set**
 
@@ -3724,7 +3676,10 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 * The flow performs full ASIC implementation steps from RTL all the way down to GDSII. </br>
 ![SKY130_D1_SK2 - SoC design and OpenLANE_0](https://user-images.githubusercontent.com/62828746/212574758-0b929d29-090e-4d32-8a66-137f7e6c532c.png)
 
-
+   </details> 
+   
+<details><summary> Simplified RTL2GDS Flow </summary>
+  
 **Simplified RTL2GDS Flow**
 ![SKY130_D1_SK2 - SoC design and OpenLANE_1](https://user-images.githubusercontent.com/62828746/212574762-e069b4c4-4853-44af-b21c-6cabc01ac652.png)
 
@@ -3759,7 +3714,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 #### Result: 
 ![OpenLANE Directory structure in detai_0](https://user-images.githubusercontent.com/62828746/212579482-3ca52333-4e9f-4b59-a130-ce0b14828215.png)
 
-## **Design Preparation Step**
+   </details>    
 
 #### Steps:
 >> *make mount* -> to invoke OpenLANE </br> 
@@ -3777,7 +3732,8 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 ![Design Preparation Step_0](https://user-images.githubusercontent.com/62828746/212579494-74c04647-ba30-4609-95fb-31168254d046.png)
 ![Design Preparation Step_1](https://user-images.githubusercontent.com/62828746/212579495-550debcd-83d3-44ca-b00a-3a62e8075870.png)
 ![Design Preparation Step_2](https://user-images.githubusercontent.com/62828746/212579498-116902b7-02e7-40c9-8d6a-594b5e5b26e0.png)
-
+   
+    
 ## **OpenLANE Project Git Link Description**
 
 #### Result: 
