@@ -3708,7 +3708,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 
 ![SKY130_D1_SK2 - SoC design and OpenLANE_2](https://user-images.githubusercontent.com/62828746/212574764-f2966929-7cb9-47a7-af30-89be1ac21d42.png)
  
-   </details>    
+   </details>  
    
 
 ### :pencil2: Lab - Get familiar to open-source EDA tools
@@ -3722,8 +3722,6 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
   
 #### Result: 
 ![OpenLANE Directory structure in detai_0](https://user-images.githubusercontent.com/62828746/212579482-3ca52333-4e9f-4b59-a130-ce0b14828215.png)
-
-   </details>    
 
 #### Steps:
 >> *make mount* -> to invoke OpenLANE </br> 
