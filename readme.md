@@ -214,7 +214,7 @@
     
   </details>  
     
-+ **[ Day 16 - Good floorplan vs bad floorplan and introduction to library cells]()**
++ **[ Day 16 - Good floorplan vs bad floorplan and introduction to library cells](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-16)**
   <details><summary> Theory </summary>
    
   * [Theory - Chip Floor planning considerations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---chip-floor-planning-considerations)
@@ -230,7 +230,7 @@
     
   </details>  
     
-+ **[ Day 17 - Design library cell using Magic Layout and ngspice characterization]()**
++ **[ Day 17 - Design library cell using Magic Layout and ngspice characterization](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-17)**
   <details><summary> Theory </summary>
    
   * [Theory - Labs for CMOS inverter ngspice simulations](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---labs-for-cmos-inverter-ngspice-simulations)
@@ -246,7 +246,7 @@
     
   </details>  
     
-+ **[ Day 18 - Pre-layout timing analysis and importance of good clock tree]()**
++ **[ Day 18 - Pre-layout timing analysis and importance of good clock tree](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-18)**
   <details><summary> Theory </summary>
    
   * [Theory - Timing modelling using delay tables](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-modelling-using-delay-tables)
@@ -265,7 +265,7 @@
     
   </details>  
     
-+ **[ Day 19 - Final steps for RTL2GDS using tritonRoute and openSTA]()**
++ **[ Day 19 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-19)**
   <details><summary> Theory </summary>
    
   * [Theory - Routing and design rule check (DRC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---routing-and-design-rule-check-drc)
