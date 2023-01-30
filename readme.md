@@ -308,7 +308,7 @@ Example of package - Quadruple in-line package (QIP) and Dual in-line package (D
 
 ## Lab - Setup Labs
 
-<details open><summary> Steps to enable labs </summary>
+<details><summary> Steps to enable labs </summary>
  
 #### Steps to enable labs:
 
@@ -455,7 +455,7 @@ Concern in hold time violation                   | Failed required performance
   </details>
 
 ## Lab Topic-  SKY130RTL D1SK2 Labs using iverilog and gtkwave
-<details open><summary> SKY130RTL D1SK2 L1 Lab1 introduction to lab </summary>
+<details><summary> SKY130RTL D1SK2 L1 Lab1 introduction to lab </summary>
  
 ### Lab - SKY130RTL D1SK2 L1 Lab1 introduction to lab
 
@@ -479,7 +479,7 @@ Concern in hold time violation                   | Failed required performance
  
  ## Lab Topic- SKY130RTL D1SK4 Labs using Yosys and Sky130 PDKs
   
-<details open><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
+<details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 </summary>
   
 ### Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
 Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#iverilog-icarus-verilog-based-synthesized-netlist-simulation-flow)
@@ -501,7 +501,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 ![SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1_result_2_a](https://user-images.githubusercontent.com/62828746/205514717-bdef7d9c-0f8a-4c13-a65e-58a95c6f1df0.jpg)
   </details>
   
-<details open><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
+<details><summary> SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2  </summary>
   
 ### Lab - SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part2
 
@@ -525,7 +525,7 @@ Related with theory part: [iVerilog (Icarus Verilog) Based RTL Design Simulation
 
   </details>
 
-<details open><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
+<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 </summary>
  
 ### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
 Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Flow](https://github.com/teoh5128/intel-sd-training/edit/main/readme.md#yosys-yosys-open-synthesis-suite-based-synthesis-flow)
@@ -549,7 +549,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
 *Total inputs, library version used and total outputs shown in graphic should be the same with the ABC results.*
   </details>
  
-<details open><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
+<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2 </summary>
  
 ### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part2
 
@@ -563,7 +563,7 @@ Related with theory part: [yosys (Yosys Open SYnthesis Suite) Based Synthesis Fl
      
   </details>
 
-<details open><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
+<details><summary> SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3 </summary>
  
 ### Lab - SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part3
 
@@ -673,7 +673,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
 ## Lab Topic - SKY130RTL D2SK1 - Introduction to timing .libs
 
-<details open><summary> SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1 </summary>
+<details><summary> SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1 </summary>
   
 ### Lab - SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
 
@@ -692,7 +692,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
   </details>
  
 
-<details open><summary> SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2 </summary>
+<details><summary> SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2 </summary>
   
 ### Lab - SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
 
@@ -717,7 +717,7 @@ Prefered | Prefered for human read-ability and debug purposes | Prefered when de
 
   </details>
   
-<details open><summary> SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3 </summary>
+<details><summary> SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3 </summary>
   
 ### Lab - SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
 Related with theory part: [How Capacitance Effect Circuit's Speed](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#how-capacitance-effect-circuits-speed)
@@ -734,7 +734,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
   
 ## Lab Topic - SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis
 
-<details open><summary> SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1 </summary>
+<details><summary> SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1 </summary>
     
 ### Lab - SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
 
@@ -766,7 +766,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-<details open><summary> SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2 </summary>
+<details><summary> SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2 </summary>
   
 ### Lab - SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
 
@@ -796,7 +796,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
 ## Lab Topic - SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
   
-<details open><summary> SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1 </summary>
+<details><summary> SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1 </summary>
   
 ### Lab - SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
 
@@ -822,7 +822,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-<details open><summary> SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2 </summary>
+<details><summary> SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2 </summary>
   
 ### Lab - SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
@@ -880,7 +880,7 @@ Related with theory part: [How Capacitance Effect Circuit's Speed](https://githu
 
   </details>
   
-<details open><summary>  SKY130RTL D2SK3 L5 Interesting optimisations part2 </summary>
+<details><summary>  SKY130RTL D2SK3 L5 Interesting optimisations part2 </summary>
   
 ### Lab - SKY130RTL D2SK3 L5 Interesting optimisations part2
 
@@ -956,7 +956,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 ## Lab Topic - SKY130RTL D3SK2 - Combinational logic optimizations
 
-<details open><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
+<details><summary> SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1 </summary>
   
 ### Lab - SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
@@ -993,7 +993,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details open><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2 </summary>
+<details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2 </summary>
   
 ### Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
@@ -1015,7 +1015,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   </details>
   
 
-<details open><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise) </summary>
+<details><summary> SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise) </summary>
   
 ### Lab - SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations (exercise)
 
@@ -1067,7 +1067,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   
 ## Lab Topic - SKY130RTL D3SK3 - Sequential logic optimizations
 
-<details open><summary> SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1 </summary>
+<details><summary> SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1 </summary>
   
 ### Lab - SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
 
@@ -1103,7 +1103,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details open><summary> SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2 </summary>
+<details><summary> SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2 </summary>
   
 ### Lab - SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 #### Steps:
@@ -1125,7 +1125,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
   </details>
   
 
-<details open><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 </summary>
+<details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 </summary>
 
 ### Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 #### Steps:
@@ -1152,7 +1152,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details open><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise) </summary>
+<details><summary> SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise) </summary>
 
 ### Lab -SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3 (exercise)
 > 1. Review the dff file.
@@ -1203,7 +1203,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
 ## Lab Topic - SKY130RTL D3SK4 - Sequential optimzations for unused outputs
 
-<details open><summary> SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1 </summary>
+<details><summary> SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1 </summary>
   
 ### Lab - SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
@@ -1227,7 +1227,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
   
-<details open><summary> SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2 </summary>
+<details><summary> SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2 </summary>
   
 ### Lab - SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
@@ -1259,7 +1259,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 ## Day 4
 ## Theory - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
-<details open><summary> Gate Level Simulation (GLS) </summary>
+<details><summary> Gate Level Simulation (GLS) </summary>
   
 ## **Gate Level Simulation (GLS):**
 * **GLS** process also used to verify design's functionality but it includes standard cell/gate propagation delay into consideration in the verification process. And delays will change according to library used for synthesis.
@@ -1268,7 +1268,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details open><summary> GLS using Iverilog Flow </summary>
+<details><summary> GLS using Iverilog Flow </summary>
   
 ## **GLS using Iverilog Flow:**
 ![GLS using Iverilog Flow](https://user-images.githubusercontent.com/62828746/206912462-bf416918-dbad-49f7-b07b-232ffbe067a4.jpg)
@@ -1277,7 +1277,7 @@ Optimization | constant propagation is Boolean algebra. | constant propagation i
 
   </details>
 
-<details open><summary> RTL Simulation vs Gate-level Simulation(GLS) </summary>
+<details><summary> RTL Simulation vs Gate-level Simulation(GLS) </summary>
   
 ## **RTL Simulation vs Gate-level Simulation(GLS)**
 Key   | RTL Simulation | Gate-level Simulation(GLS)
@@ -1289,7 +1289,7 @@ Key   | RTL Simulation | Gate-level Simulation(GLS)
 
   </details>
   
-<details open><summary> Gate Level Verilog Model </summary>
+<details><summary> Gate Level Verilog Model </summary>
 
 ## **Gate Level Verilog Model:**
 * **Gate-level modeling** involves gates and has a one to one relationship between a hardware schematic and the Verilog code.
@@ -1302,7 +1302,7 @@ Key   | RTL Simulation | Gate-level Simulation(GLS)
 
   </details>
 
-<details open><summary> Sensitivity List </summary>
+<details><summary> Sensitivity List </summary>
   
 ## **Sensitivity List**
 * Simulators are event based. This means that simulators operate by taking events one at a time and propagating them through design until reached steady condition.
@@ -1323,7 +1323,7 @@ Key   | RTL Simulation | Gate-level Simulation(GLS)
   </details>
 
  
-<details open><summary> Blocking and Non-Blocking Statements in Verilog </summary>
+<details><summary> Blocking and Non-Blocking Statements in Verilog </summary>
   
  ## **Blocking and Non-Blocking Statements in Verilog:**
 
@@ -1341,7 +1341,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
   
 ## Lab Topic - SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch
 
-<details open><summary> SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1 </summary>
+<details><summary> SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1 </summary>
 
 ### Lab - SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
 
@@ -1378,7 +1378,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
   
   </details>
   
-<details open><summary> SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2 </summary>
+<details><summary> SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2 </summary>
   
 ### Lab - SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
 
@@ -1414,7 +1414,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
   </details>
   
-<details open><summary> SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1 </summary>
+<details><summary> SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1 </summary>
   
 ### Lab - SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
 
@@ -1447,7 +1447,7 @@ Preserves logic flow, works better for combinational logic | Doesn't preserve lo
 
   </details>
 
-<details open><summary> SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2 </summary>
+<details><summary> SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2 </summary>
 
 ### Lab - SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
 
@@ -1833,7 +1833,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
         
 ## Lab Topic - Introduction to Logic Synthesis
 
-<details open><summary> DC_D1SK2_L1 - lab1 - Invoking dc basic setup </summary>
+<details><summary> DC_D1SK2_L1 - lab1 - Invoking dc basic setup </summary>
 
 ### Lab - DC_D1SK2_L1 - lab1 - Invoking dc basic setup
 #### Steps:
@@ -1897,7 +1897,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
  
    </details>
    
-<details open><summary> DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision </summary>
+<details><summary> lab2 - Intro to ddc gui with design_vision </summary>
 
 ### Lab - DC_D1SK2_L2 - lab2 - Intro to ddc gui with design_vision
 
@@ -1923,7 +1923,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
    
    
    
-<details open><summary> DC_D1SK2_L3 - lab3 - dc synopsys dc setup </summary>
+<details><summary> lab3 - dc synopsys dc setup </summary>
 
 ### Lab - DC_D1SK2_L3 - lab3 - dc synopsys dc setup
 #### Steps:
@@ -1952,7 +1952,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
  </details>
 
-<details open><summary> DC_D1SK3_L2 - lab4 - tcl scripting </summary>
+<details><summary> lab4 - tcl scripting </summary>
  
 ### Lab - DC_D1SK3_L2 - lab4 - tcl scripting
  
@@ -1979,7 +1979,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 ## Theory - Introduction to STA
 
 
-<details open><summary> Introduction to STA </summary>
+<details ><summary> Introduction to STA </summary>
  
 ## **Introduction to STA**
 * **What is STA?:**
@@ -2019,7 +2019,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
    </details>
  
 ## Theory - What are constraints?
-<details open><summary> What are constraints </summary>
+<details><summary> What are constraints </summary>
 
 ![timing path](https://user-images.githubusercontent.com/62828746/209027830-ee44f46c-5e6a-4809-900b-2a05dc6af6ff.jpg)
 
@@ -2046,7 +2046,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
    </details>
  
 ## Theory - Inp Trans Output Load
-<details open><summary> Inp Trans Output Load </summary>
+<details><summary> Inp Trans Output Load </summary>
 
 ![Model transition delay](https://user-images.githubusercontent.com/62828746/209027827-0052c41e-f37b-4453-913e-3d416a4723a6.jpg)
 
@@ -2069,7 +2069,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
 
 ## Lab Topic - Basics of STA
 
-<details open><summary> DC_D2SK2_L1 - Lab5 - Timing dot Libs </summary>
+<details><summary> Lab5 - Timing dot Libs </summary>
 
 ### Lab - DC_D2SK2_L1 - Lab5 - Timing dot Libs
 #### Steps:
@@ -2105,7 +2105,7 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
    
    
 
-<details open><summary> DC_D2SK2_L2 - Lab6 - Exploring dotLib </summary>
+<details><summary> Lab6 - Exploring dotLib </summary>
  
 ### Lab - DC_D2SK2_L2 - Lab6 - Exploring dotLib
 #### Steps:
@@ -2128,9 +2128,9 @@ foreach_in_collection | Similar to the foreach, just it was used to iterate thro
    </details>
    
    
-<details open><summary> DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2 </summary>
+<details><summary> Lab7 - Exploring - dotLib part2 </summary>
  
-### Lab - DC_D2SK2_L3 - Lab7 - Exploring - dotLib part2
+### Lab - Lab7 - Exploring - dotLib part2
  
 #### Steps:
 >1.List what library has linked
@@ -2180,7 +2180,7 @@ echo $my_pin_name $pin_dir;
   ## Day 8
 ## Theory - SDC Part1 Clock - Clock Tree Modelling - Uncertainty
 
-<details open><summary> Clock Tree Modelling - Uncertainty </summary>
+<details><summary> Clock Tree Modelling - Uncertainty </summary>
 
 ## **Introduction to CTS (Clock Tree Synthesis)**
 
@@ -2232,7 +2232,7 @@ Post-CTS | Only Jitter | Practical clock tree is built, no more ideal clock. | J
 
 ## Theory - DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays
 
-<details open><summary> DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays </summary>
+<details><summary> DC_D3SK1_L2 - Lecture8 - SDC Part2 IO delays </summary>
 
 **TCL command**      | **Function**                                   | **Example**
 ------------------   | ---------------------------------------------   | --------------------------------------------- 
@@ -2251,7 +2251,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
 
 ## Theory - DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk
 
-<details open><summary> DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk </summary>
+<details><summary> DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk </summary>
 
 ![DC_D3SK3_L1 - Lecture9 - SDC Part3 generated_clk](https://user-images.githubusercontent.com/62828746/209567323-21f89200-7286-4711-9e55-23f296e7dce4.jpg)
  
@@ -2270,7 +2270,7 @@ set_input_transition | Sets the max_transition_rise, max_transition_fall, min_tr
 
 ## Lab Topic - Advanced constraints
 
-<details open><summary> DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets </summary>
+<details><summary> DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets </summary>
 
 ### Lab - DC_D3SK2_L1 - Lab8 - Loading design get_cells, get_ports, get_nets
 #### Steps:
@@ -2333,7 +2333,7 @@ echo $my_cell_name $rname;
    
 
 
-<details open><summary> DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks </summary>
+<details><summary> DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks </summary>
 
 ### Lab - DC_D3SK2_L2 - Lab9 get_pins, get_clocks, querying_clocks
 
@@ -2365,7 +2365,7 @@ echo $my_cell_name $rname;
 
 
 
-<details open><summary> DC_D3SK2_L3 - lab10 - create_clock waveform </summary>
+<details><summary> DC_D3SK2_L3 - lab10 - create_clock waveform </summary>
 
 ### Lab - DC_D3SK2_L3 - lab10 - create_clock waveform
 
@@ -2392,7 +2392,7 @@ echo $my_cell_name $rname;
    </details>
 
 
-<details open><summary> DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing </summary>
+<details><summary> DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing </summary>
 
 ### Lab - DC_D3SK2_L4 - Lab11- Clock Network Modelling - Uncertainty, report_timing
 
@@ -2421,7 +2421,7 @@ echo $my_cell_name $rname;
    </details>
    
 
-<details open><summary> DC_D3SK2_L5 - Lab12- IO Delays </summary>
+<details><summary> DC_D3SK2_L5 - Lab12- IO Delays </summary>
 
 ### Lab - DC_D3SK2_L5 - Lab12- IO Delays
 
@@ -2469,7 +2469,7 @@ echo $my_cell_name $rname;
    </details>
 
 
-<details open><summary> DC_D3SK3_L2 - lab13 - generated_clocks </summary>
+<details><summary> DC_D3SK3_L2 - lab13 - generated_clocks </summary>
 
 ### Lab - DC_D3SK3_L2 - lab13 - generated_clocks
 
@@ -2501,7 +2501,7 @@ echo $my_cell_name $rname;
    </details>
 
 
-<details open><summary> DC_D3SK4_L2 - lab15 - part1 Set_Max_delay </summary>
+<details><summary> DC_D3SK4_L2 - lab15 - part1 Set_Max_delay </summary>
 
 ### Lab - DC_D3SK4_L2 - lab15 - part1 Set_Max_delay
 
@@ -2544,7 +2544,7 @@ echo $my_cell_name $rname;
    </details>
    
    
- <details open><summary> DC_D3SK4_L3 - Lab15 - part2 - VCLK </summary>
+ <details><summary> DC_D3SK4_L3 - Lab15 - part2 - VCLK </summary>
 
 ### Lab - DC_D3SK4_L3 - Lab15 - part2 - VCLK
 
@@ -2580,7 +2580,7 @@ echo $my_cell_name $rname;
 ## Theory - DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt
 
 
-<details open><summary> DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt </summary>
+<details><summary> DC_D4SK1_L1 - Lecture11 - Optimizations Combinational Opt </summary>
 
 ## **Optimization Goals**
 + Cost function based optimizations:
@@ -2607,7 +2607,7 @@ Meet Power | Power goals
 
 ## Theory - DC_D4SK1_L2 - Lecture12 Sequential Optimizations
 
-<details open><summary> DC_D4SK1_L2 - Lecture12 Sequential Optimizations </summary>
+<details><summary> DC_D4SK1_L2 - Lecture12 Sequential Optimizations </summary>
   
 ## **Sequential Logic Optimisation** 
 ![DC_D4SK1_L2 - Lecture12 Sequential Optimizations_0](https://user-images.githubusercontent.com/62828746/210125158-2cc5fc40-1bf4-42bf-ac86-4e476d944e5a.jpg)
@@ -2630,7 +2630,7 @@ Meet Power | Power goals
 ## Theory - DC_D4SK3_L1 - Lecture13 special optimizations
 
 
-<details open><summary> DC_D4SK3_L1 - Lecture13 special optimizations </summary>
+<details><summary> DC_D4SK3_L1 - Lecture13 special optimizations </summary>
 
 ## **Retiming Optimization**
  
@@ -2686,7 +2686,7 @@ Meet Power | Power goals
  
 ## Lab Topic - DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations
 
-<details open><summary> DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations </summary>
+<details><summary> DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations </summary>
 
 ### Lab - DC_D4SK2_L1 - Lab16 - part1 Combinational_optimizations
  
@@ -2739,7 +2739,7 @@ Meet Power | Power goals
 
 ## Lab Topic - DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations
 
-<details open><summary> DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations </summary>
+<details><summary> DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations </summary>
 
 ### Lab - DC_D4SK2_L2 - Lab16 - part2 resource sharing optimizations
 
@@ -2782,7 +2782,7 @@ Meet Power | Power goals
 
 ## Lab Topic - DC_D4SK2_L3 - lab17 - seq optimizations
 
-<details open><summary> DC_D4SK2_L3 - lab17 - seq optimizations </summary>
+<details><summary> DC_D4SK2_L3 - lab17 - seq optimizations </summary>
 
 ### Lab - DC_D4SK2_L3 - lab17 - seq optimizations
 
@@ -2864,7 +2864,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 
 ## Lab Topic - DC_D4SK4_L1 - Lab18 - Boundary Optimization
 
-<details open><summary> DC_D4SK4_L1 - Lab18 - Boundary Optimization </summary>
+<details><summary> DC_D4SK4_L1 - Lab18 - Boundary Optimization </summary>
 
 ### Lab - DC_D4SK4_L1 - Lab18 - Boundary Optimization
 
@@ -2895,7 +2895,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
 ## Lab Topic - DC_D4SK4_L2 - Lab19 - Register Retiming
 
-<details open><summary> DC_D4SK4_L2 - Lab19 - Register Retiming </summary>
+<details><summary> DC_D4SK4_L2 - Lab19 - Register Retiming </summary>
 
 ### Lab - DC_D4SK4_L2 - Lab19 - Register Retiming
 
@@ -2924,7 +2924,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
 ## Lab Topic - DC_D4SK4_L3 - Lab20 - Isolating output ports
 
-<details open><summary> DC_D4SK4_L3 - Lab20 - Isolating output ports </summary>
+<details><summary> DC_D4SK4_L3 - Lab20 - Isolating output ports </summary>
 
 ### Lab - DC_D4SK4_L3 - Lab20 - Isolating output ports
 
@@ -2950,7 +2950,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
  
 ## Lab Topic - DC_D4SK4_L4 - Lab21 - MultiCycle path
 
-<details open><summary> DC_D4SK4_L4 - Lab21 - MultiCycle path </summary>
+<details><summary> DC_D4SK4_L4 - Lab21 - MultiCycle path </summary>
 
 ### Lab - DC_D4SK4_L4 - Lab21 - MultiCycle path
 
@@ -2984,7 +2984,7 @@ set rn [get_attr [get_cells $cell_name] ref_name]; echo $cell_name $rn;
 ## Theory - DC_D5SK1_L1 - Lecture Report timing
 
 
-<details open><summary> DC_D5SK1_L1 - Lecture Report timing </summary>
+<details><summary> DC_D5SK1_L1 - Lecture Report timing </summary>
 
 ## **Propagation Delay**
 ![DC_D5SK1_L2 - Lab Report timing_0](https://user-images.githubusercontent.com/62828746/210286621-632d6186-b9e4-4b0b-bc8f-9da8b801b909.jpg)
@@ -3017,7 +3017,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
  
 ## Lab Topic -  DC_D5SK1_L2 - Lab Report timing
 
-<details open><summary>  DC_D5SK1_L2 - Lab Report timing </summary>
+<details><summary>  DC_D5SK1_L2 - Lab Report timing </summary>
 
 ### Lab -  DC_D5SK1_L2 - Lab Report timing
  
@@ -3051,7 +3051,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
  
 ## Lab Topic -  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN
 
-<details open><summary>  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN </summary>
+<details><summary>  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN </summary>
 
 ### Lab -  DC_D5SK1_L3 - Lab Check_timing, Check_design, Set_max_capacitance, HFN
  
@@ -3128,7 +3128,7 @@ set_max_transition |  Sets the max_transition attribute to a specified value on 
 ## Day 11 
 ## Theory - Introduction to Baby SoC
 
-<details open><summary> Baby SoC </summary>
+<details><summary> Baby SoC </summary>
 
 ## **What is SoC (System on Chip)**
 * SoC is a single die chip that has some different IP cores on it.
@@ -3212,7 +3212,7 @@ Qualcomm’s Snapdragon processors are one of the the most ubiquitous SoCs in th
 ## Day 12
 ## Theory - BabySoC Modelling
 
-<details open><summary> BabySoC Modelling </summary>
+<details><summary> BabySoC Modelling </summary>
 
 ## **What is Modelling**
 
@@ -3329,7 +3329,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
  
  
 ## Lab Topic -  RVMYTH modelling
-<details open><summary>  RVMYTH modelling  </summary>
+<details><summary>  RVMYTH modelling  </summary>
  
 ### Lab -  RVMYTH modelling 
  
@@ -3355,7 +3355,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  DAC modelling
-<details open><summary>  DAC modelling  </summary>
+<details><summary>  DAC modelling  </summary>
  
 ### Lab -  DAC modelling 
  
@@ -3383,7 +3383,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  PLL modelling
-<details open><summary>  PLL modelling  </summary>
+<details><summary>  PLL modelling  </summary>
  
 ### Lab -  PLL modelling 
  
@@ -3409,7 +3409,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  RVMYTH_PLL modelling
-<details open><summary>  RVMYTH_PLL modelling  </summary>
+<details><summary>  RVMYTH_PLL modelling  </summary>
  
 ### Lab -  RVMYTH_PLL modelling 
  
@@ -3433,7 +3433,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  RVMYTH_DAC modelling
-<details open><summary>  RVMYTH_DAC modelling  </summary>
+<details><summary>  RVMYTH_DAC modelling  </summary>
  
 ### Lab -  RVMYTH_DAC modelling 
  
@@ -3458,7 +3458,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  VSDBabySoC modelling
-<details open><summary>  VSDBabySoC modelling  </summary>
+<details><summary>  VSDBabySoC modelling  </summary>
  
 ### Lab -  VSDBabySoC modelling 
  
@@ -3481,7 +3481,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  Differences in Interactive Mode
-<details open><summary>  Differences in Interactive Mode  </summary>
+<details><summary>  Differences in Interactive Mode  </summary>
  
 ### Lab -  Differences in Interactive Mode 
  
@@ -3496,7 +3496,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 
 
 ## Lab Topic -  4-bit Adder by using Full Adder 
-<details open><summary>  4-bit Adder by using Full Adder   </summary>
+<details><summary>  4-bit Adder by using Full Adder   </summary>
  
 ### Lab -  4-bit Adder by using Full Adder 
  
@@ -3521,7 +3521,7 @@ Case statement behaviour | In VCS,  z does not stand for don’t care in a case 
 ## Day 13
 ## Theory - Post-synthesis simulation
 
-<details open><summary> Post-synthesis simulation </summary>
+<details><summary> Post-synthesis simulation </summary>
 
 ## **Pre-synthesis VS Post-synthesis**
 * Simulation is the process of verifying the functionality and timing of a design against its original specifications. 
@@ -3550,7 +3550,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
    </details> 
  
 ## Lab Topic -  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis
-<details open><summary>  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis  </summary>
+<details><summary>  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis  </summary>
  
 ### Lab -  RVMYTH-AVSDDAC Pre-synthesis and Post-synthesis 
  
@@ -3704,7 +3704,7 @@ Do not takes the synthesized input as netlist| Takes the synthesized input as ne
 ## Day 14
 ## Theory -  Synopsys DC and timing analysis 
 
-<details open><summary> PVT </summary>
+<details><summary> PVT </summary>
  
 ## **PVT**
 * Cells behavior strongly depends on factors such as PVT, input signals and output load.
@@ -3723,7 +3723,7 @@ Different task or die area (center/boundary) has different process variation dur
 
   </details>
 
-<details open><summary> WNS,TNS,WHS and THS </summary>
+<details><summary> WNS,TNS,WHS and THS </summary>
  
 ## **WNS,TNS,WHS and THS**
  
@@ -3743,7 +3743,7 @@ THS | Total Hold Slack = sum of the negative hold slack paths
 
 
 ## Lab Topic -  PVT Table of Different Lib 
-<details open><summary>  PVT Table of Different Lib   </summary>
+<details><summary>  PVT Table of Different Lib   </summary>
  
 ### Lab -  PVT Table of Different Lib  
  
@@ -3790,7 +3790,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 ## Day 15
 ## Theory - SKY_L1 - SKY130_D1_SK1 - How to talk to computers
 
-<details open><summary> ## Theory - SKY130_D1_SK1 - How to talk to computers </summary>
+<details><summary> ## Theory - SKY130_D1_SK1 - How to talk to computers </summary>
  
 ## **RISC-V Instruction Set**
 
@@ -3813,7 +3813,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
    
 ## Theory - SKY130_D1_SK2 - SoC design and OpenLANE
 
-<details open><summary> ## Theory - SKY130_D1_SK2 - SoC design and OpenLANE </summary>
+<details><summary> ## Theory - SKY130_D1_SK2 - SoC design and OpenLANE </summary>
     
 * OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization.  </br>
 
@@ -3845,7 +3845,7 @@ sky130_fd_sc_hd__ss_n40C_1v76 | 1.60 | 0 | 798.92 | 0
 
 ## Lab - SKY130_D1_SK3 - Get familiar to open-source EDA tools
 
-<details open><summary> SKY_L1 - OpenLANE Directory structure in detail </summary>
+<details><summary> SKY_L1 - OpenLANE Directory structure in detail </summary>
 
 ## **SKY_L1 - OpenLANE Directory structure in detail**
 
