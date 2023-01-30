@@ -280,8 +280,8 @@
     
     
     
-## Day 0
-### Theory - System/Tool Setup Check. GitHub ID creation
+## :bookmark:	Day 0
+### :bulb: Theory - System/Tool Setup Check. GitHub ID creation
 
 <details><summary> Package </summary>
  
