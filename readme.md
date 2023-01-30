@@ -3775,7 +3775,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
    </details> 
 
    
-## :bookmark: Day 16  Good floorplan vs bad floorplan and introduction to library cells
+## :bookmark: Day 16
 ### :bulb: Theory - Chip Floor planning considerations
 
 <details><summary> Utilization factor and aspect ratio </summary>
@@ -3916,7 +3916,7 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
  
  
  
-## :bookmark: Day 17  - Design library cell using Magic Layout and ngspice characterization
+## :bookmark: Day 17
 ### :bulb: Theory - Labs for CMOS inverter ngspice simulations
 
 <details><summary> SPICE deck creation for CMOS inverter </summary>
@@ -4140,7 +4140,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 
 
-## :bookmark: Day 18  - Pre-layout timing analysis and importance of good clock tree
+## :bookmark: Day 18
 ### :bulb: Theory - Timing modelling using delay tables
  
 <details><summary> Introduction to delay tables </summary>
@@ -4288,7 +4288,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  </details>
 
 
-## :bookmark: Day 19  - Final steps for RTL2GDS using tritonRoute and openSTA
+## :bookmark: Day 19
 ### :bulb: Theory - Routing and design rule check (DRC)
  
 <details><summary> Introduction to Maze Routing Â LeeÂs algorithm </summary>
