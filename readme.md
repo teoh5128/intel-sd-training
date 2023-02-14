@@ -4361,8 +4361,8 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 
 
-## :bookmark: ## Day 20  Floorplanning and power planning labs
-### :bulb: ### Theory - Floorplanning
+:bookmark: ## Day 20  Floorplanning and power planning labs
+:bulb: ### Theory - Floorplanning
 
 <details><summary> Floorplanning </summary>
  
@@ -4372,7 +4372,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 </details> 
 
-### :bulb: ### Theory - What is physical design?
+:bulb: ### Theory - What is physical design?
 <details><summary> What is physical design? </summary>
 
 • Transformation of circuit design -> physical representation for manufacturing
@@ -4389,7 +4389,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
  
  </details> 
  
-### :pencil2: ### Lab - Floorplanning and power planning labs
+:pencil2: ### Lab - Floorplanning and power planning labs
 
 <details><summary> Synthesis </summary>
 
