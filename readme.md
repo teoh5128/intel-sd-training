@@ -4360,3 +4360,103 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 </details> 
 
 
+
+## :bookmark: ## Day 20  Floorplanning and power planning labs
+### :bulb: ### Theory - Floorplanning
+
+<details><summary> Floorplanning </summary>
+ 
+* Floorplanning is the process of partitioning logical blocks into physical blocks, sizing the blocks, placing cells, and creating a power plan.
+* The goal of floorplanning is to increase the efficiency of downstream physical design steps to enable a robust, optimized design.
+* A well and perfect floorplan leads to an ASIC design with higher performance and optimum area.
+
+</details> 
+
+### :bulb: ### Theory - What is physical design?
+<details><summary> What is physical design? </summary>
+
+• Transformation of circuit design -> physical representation for manufacturing
+• The circuit design is described through a netlist
+• The end product from a physical design is a layout which passes 
+	○ DRC (Design Rule Checks)
+	○ Connectivity Checks
+	○ Timing Analysis Checks
+	○ Power Analysis Checks
+• Layout data is sent to foundry to generate masks and fabrication
+
+![image](https://user-images.githubusercontent.com/62828746/218883799-72173ae9-66ca-46e2-ba69-58556b5a74dd.png)
+
+ 
+ </details> 
+ 
+### :pencil2: ### Lab - Floorplanning and power planning labs
+
+<details><summary> Synthesis </summary>
+
+**First, get input collaterals from github:** </br>
+git clone https://github.com/bharath19-gs/VSDBabySoC_ICC2.git </br>
+git clone https://github.com/manili/VSDBabySoC.git </br>
+git clone https://github.com/bharath19-gs/synopsys_ICC2flow_130nm.git </br>
+
+Source vsdbabysoc.tcl [refer script here](https://github.com/teoh5128/intel-sd-training/blob/main/day20_vsdbabysoc.tcl) script file for generating the Gate-Level Netlist as vsdbabysoc_gtlvl.v file.  </br>
+>> source vsdbabysoc.tcl </br>
+![image](https://user-images.githubusercontent.com/62828746/218882110-2f53c633-ce7d-494e-9276-253e497b0498.png)
+![image](https://user-images.githubusercontent.com/62828746/218882148-bf5dbfc3-4165-46b5-9a95-e8d75d8d4abb.png)
+![image](https://user-images.githubusercontent.com/62828746/218882184-56efbfe2-3acb-4c7a-9610-61373a669a86.png)
+![image](https://user-images.githubusercontent.com/62828746/218882218-8a3b23ea-c4eb-4322-8491-1e613c9fcfe2.png)
+![image](https://user-images.githubusercontent.com/62828746/218882255-fc9c6928-b922-43a5-a87e-cd163cc55de5.png)
+![image](https://user-images.githubusercontent.com/62828746/218882290-35c89466-8e5a-4d03-896e-6a90ce5b4bbf.png)
+![image](https://user-images.githubusercontent.com/62828746/218882329-96364327-bd52-4054-a152-90707f8b4c55.png)
+![image](https://user-images.githubusercontent.com/62828746/218882360-6ef93661-18aa-425c-95ce-193939254a95.png)
+![image](https://user-images.githubusercontent.com/62828746/218882383-9c1eb9d0-b6b1-47ee-9aac-a5a31f3e3581.png)
+![image](https://user-images.githubusercontent.com/62828746/218882434-b78070b9-0bee-4843-818d-7dea468f342b.png)
+![image](https://user-images.githubusercontent.com/62828746/218882459-c24b36d6-faef-4462-a760-eaab1efda756.png)
+![image](https://user-images.githubusercontent.com/62828746/218882490-3429e88b-4928-4b5d-bb8f-036e1cc12f18.png)
+
+
+</details> 
+
+
+<details><summary> Schematic </summary>
+
+**After run Synthesis flow, the review schematic view of blocks:** </br>
+![image](https://user-images.githubusercontent.com/62828746/218882522-07b403fc-419b-4600-8b05-2eeb07e95297.png)
+![image](https://user-images.githubusercontent.com/62828746/218882564-7f47c6fe-c07d-42c4-8ad1-02f9cc764e2a.png)
+
+ 
+</details> 
+ 
+ 
+<details><summary> Physical Design </summary>
+
+**The top.tcl script file that is run in the icc2_shell that generates the Final Layout.**
+ 
+>> source top.tcl
+![image](https://user-images.githubusercontent.com/62828746/218882587-2e8005be-1ab7-4db1-819f-1c30b78778ad.png)
+![image](https://user-images.githubusercontent.com/62828746/218882617-86db9eb2-3d7c-41c1-9c6d-ef9107127538.png)
+![image](https://user-images.githubusercontent.com/62828746/218882644-eb6a0a5b-1bb3-4bbb-ac53-8cd850d5599e.png)
+![image](https://user-images.githubusercontent.com/62828746/218882664-9c614406-2a28-4aea-9ca9-f9db6b60e5e6.png)
+![image](https://user-images.githubusercontent.com/62828746/218882686-e23e9f69-b619-403c-8be2-f81e3d9c1223.png)
+![image](https://user-images.githubusercontent.com/62828746/218882708-606dfa46-7d51-4a43-8794-51cab0281742.png)
+![image](https://user-images.githubusercontent.com/62828746/218882734-b014b261-e12c-407f-aefd-26d71c72e641.png)
+![image](https://user-images.githubusercontent.com/62828746/218882800-3b14009a-d4b5-42e3-8132-b8e1bed2b387.png)
+![image](https://user-images.githubusercontent.com/62828746/218882823-709c4b98-a3e8-4b25-a709-6e0b84f27da5.png)
+![image](https://user-images.githubusercontent.com/62828746/218882846-a82d7149-1143-49f8-9a5a-5c1d14063d74.png)
+![image](https://user-images.githubusercontent.com/62828746/218882872-9360b41b-ebf7-4fcc-acf6-50fd4d04117e.png)
+![image](https://user-images.githubusercontent.com/62828746/218882901-96fd0016-495b-49e1-bad8-1f02f4a650ad.png)
+![image](https://user-images.githubusercontent.com/62828746/218882933-2fea1ead-f31c-403c-b4c0-6a79cd5d4c3a.png)
+![image](https://user-images.githubusercontent.com/62828746/218882976-812fe0b5-2b39-4af8-9ef9-5adcb065532c.png)
+![image](https://user-images.githubusercontent.com/62828746/218883001-32699f91-e2de-4047-8a5a-5b06f95a4c05.png)
+![image](https://user-images.githubusercontent.com/62828746/218883031-b3abe859-5057-4484-962a-29355cd03db7.png)
+![image](https://user-images.githubusercontent.com/62828746/218883055-ade171c4-68cc-4b27-b1c0-eda9a48f89c4.png)
+![image](https://user-images.githubusercontent.com/62828746/218883079-2e594334-21af-44eb-8f27-c9a64ec632d0.png)
+ 
+**Once the top.tcl file is run, type start_gui in icc2_shell and review block:**
+ 
+ 
+</details> 
+ 
+
+
+<details><summary> Review Result of Core Utilization for 70% </summary>
+
