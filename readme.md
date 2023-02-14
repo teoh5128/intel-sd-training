@@ -281,7 +281,19 @@
   </details>   
     
     
++ **[ Day 20 - Floorplanning and power planning labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-20--floorplanning-and-power-planning-labs)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Floorplanning](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---floorplanning)
+  * [Theory - What is physical design?](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---what-is-physical-design)  
+
+  </details>  
+  
+  <details><summary>  Lab  </summary>
     
+  * [Lab - Floorplanning and power planning labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---floorplanning-and-power-planning-labs) 
+  
+  </details>   
     
     
     
