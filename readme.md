@@ -4465,10 +4465,36 @@ Source vsdbabysoc.tcl [refer script here](https://github.com/teoh5128/intel-sd-t
  
 **Once the top.tcl file is run, type start_gui in icc2_shell and review block:**
  
- 
 </details> 
- 
 
 
 <details><summary> Review Result of Core Utilization for 70% </summary>
 
+**Re-run vsdbabysoc.tcl and top.tcl with 40% utilization and review the differences with 7% utilization.**
+	
+![image](https://user-images.githubusercontent.com/62828746/218918389-fcc2ec4d-b59d-4206-b57c-5f2a9e0f66e1.png)
+![image](https://user-images.githubusercontent.com/62828746/218918442-b371808d-8d50-4c1f-b54d-2e637ae26bbd.png)
+![image](https://user-images.githubusercontent.com/62828746/218918465-1cba03a9-8051-47a0-bbb4-ff103a77e443.png)
+![image](https://user-images.githubusercontent.com/62828746/218918496-82ab8d6a-117f-4b94-bbc3-6d420969a7c5.png)
+![image](https://user-images.githubusercontent.com/62828746/218918527-a9c26f93-920f-48db-99ed-65b80022b74b.png)
+![image](https://user-images.githubusercontent.com/62828746/218918552-010deacb-90cc-4b09-a38e-e6406cdb1d83.png)
+
+**Physical design generated.**
+![image](https://user-images.githubusercontent.com/62828746/218918576-cbfe7fb7-264a-4c7f-b217-0b56456ae5fa.png)
+![image](https://user-images.githubusercontent.com/62828746/218918603-fd0ba761-f425-4615-a00c-0363d527c5cb.png)
+![image](https://user-images.githubusercontent.com/62828746/218918654-d776e5e5-cd86-4365-9f09-90449759a976.png)
+	
+</details> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
