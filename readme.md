@@ -4494,12 +4494,31 @@ Source vsdbabysoc.tcl [refer script here](https://github.com/teoh5128/intel-sd-t
 ### Theory - Placement and CTS
 
 <details><summary> Placement and CTS </summary>
+
+**Placement**
+* Goal of placement is to get routable design, minimum cell/pin density, minimum timing DRC and also to optimize timing, are and power.
+* Placement is the process of finding a suitable physical location for each cell in the block. Tool only determine the location of each standard cell on the die.
+* Placement does not just place the standard cell available in the synthesized netlist, it also optimized the design.
+
++ Method to handle placements:
+  * Global placement - aims at generating a rough placement solution that may violate some placement constraints (such as overlapping) while maintaining a global view of the whole netlist.
+  * Legalization - makes the rough solution from global placement legal (no placement constraint violation) by moving modules around locally.
+  * Detailed placement - further improves the legalized placement solution in an iterative manner by rearranging a small group of modules in a local region while keeping all other modules fixed.
 	
-	
+
 </details> 
 
 <details><summary> CTS </summary>
-
+	
+**CTS**
+* The goal of CTS is to minimize skew and insertion delay. Clock is not propagated before CTS.
+* After CTS hold slack should improve. Clock tree begins at .sdc defined clock source and ends at stop pins of flop.
+* In Clock Tree Optimization (CTO) clock can be shielded so that noise is not coupled to other signals.
+* We try to improve setup slack in pre-placement, in placement and post placement optimization before CTS stages while neglecting hold slack. 
+* In post placement optimization after CTS hold slack is improved. 
+* As a result of CTS lot of buffers are added.
+![image](https://user-images.githubusercontent.com/62828746/219490159-be26705f-c2ad-4ece-b7bc-d9155d8e8581.png)
+Reference from: https://asic-soc.blogspot.com/2007/10/clock-tree-synthesis-cts.html
 	
 </details> 
 
