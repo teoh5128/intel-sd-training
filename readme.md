@@ -4490,8 +4490,8 @@ Source vsdbabysoc.tcl [refer script here](https://github.com/teoh5128/intel-sd-t
 	
 	
 
-## Day 21  Placement and CTS labs
-### Theory - Placement and CTS
+## :bookmark: Day 21  Placement and CTS labs
+### :bulb: Theory - Placement and CTS
 
 <details><summary> Placement and CTS </summary>
 
@@ -4522,7 +4522,7 @@ Reference from: https://asic-soc.blogspot.com/2007/10/clock-tree-synthesis-cts.h
 	
 </details> 
 
-### Lab - Placement and CTS
+### :pencil2: Lab - Placement and CTS
 
 <details><summary> Placement and CTS </summary>
 
@@ -4550,8 +4550,8 @@ Compare QoR result before and after set propagated clock.
 </details> 
 
 
-## Day 22  CTS analysis labs
-### Theory - CTS
+## :bookmark:  Day 22  CTS analysis labs
+### :bulb:  Theory - CTS
 
 <details><summary> CTS </summary>
 
@@ -4577,7 +4577,7 @@ Compare QoR result before and after set propagated clock.
 	
 </details> 
 
-### Lab - CTS analysis
+### :pencil2: Lab - CTS analysis
 
 <details><summary> CTS analysis </summary>
 
@@ -4610,8 +4610,8 @@ report_clock_timing –type transition <skew,latency and summary>
 </details> 
 
 
-## Day 23  Clock gating technique
-### Theory - Clock gating technique
+## :bookmark:  Day 23  Clock gating technique
+### :bulb:  Theory - Clock gating technique
 
 <details><summary> Clock gating technique </summary>
 
@@ -4634,7 +4634,7 @@ Refer from: (https://ieeexplore.ieee.org/document/8544281)
 	
 </details> 
 
-### Lab - Routing
+### :pencil2: Lab - Routing
 
 <details><summary> Routing </summary>
 
@@ -4651,8 +4651,8 @@ Refer from: (https://ieeexplore.ieee.org/document/8544281)
 
 	
 	
-## Day 24  Timing violations and ECO  
-### Theory - Timing violations and ECO 
+## :bookmark:  Day 24  Timing violations and ECO  
+### :bulb: Theory - Timing violations and ECO 
 <details><summary> Timing violations </summary>
 	
 + If a timing path is violating setup timing (assuming we are targetting a certain clock frequency), can try following method to bring the setup slack back to a positive value by:
@@ -4676,7 +4676,7 @@ Refer from: (https://ieeexplore.ieee.org/document/8544281)
 	
 </details> 
 
-### Lab - ECO 
+### :pencil2:  Lab - ECO 
 
 <details><summary> ECO </summary>
 
@@ -4692,7 +4692,7 @@ Power result before and after ECO.
 </details> 
 	
 	
-### Lab - Decap cell 
+### :pencil2:  Lab - Decap cell 
 
 <details><summary> Decap cell </summary>	
 	
@@ -4702,8 +4702,8 @@ Power result before and after ECO.
 	
 	
 	
-## Day 25  RISC-V core RTL2GDS flow
-### Theory - RTL2GDS flow
+## :bookmark: Day 25  RISC-V core RTL2GDS flow
+### :bulb:  Theory - RTL2GDS flow
 
 <details><summary> RTL2GDS flow </summary>
 	
@@ -4715,8 +4715,8 @@ Power result before and after ECO.
 
 
 
-## Day 26  Introduction to mixed-signal flow
-### Theory - Introduction to mixed-signal flow 
+## :bookmark:  Day 26  Introduction to mixed-signal flow
+### :bulb:  Theory - Introduction to mixed-signal flow 
 
 <details><summary> Introduction to mixed-signal flow </summary>
 	
