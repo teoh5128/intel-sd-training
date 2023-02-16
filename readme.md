@@ -4617,6 +4617,27 @@ report_clock_timing –type transition <skew,latency and summary>
 
 	
 	
+## Day 24  Timing violations and ECO  
+### Theory - 
+<details><summary> CTS </summary>
+	
+	
+</details> 
+
+### Lab - ECO 
+
+<details><summary> ECO </summary>
+
+ECO done by upsizing cell size and the slack has improved after ECO.
+![image](https://user-images.githubusercontent.com/62828746/219496622-a9bc8e13-bdd2-48e5-bca7-59c3e8704c42.png)
+
+Constraints and area result before and after ECO.
+![image](https://user-images.githubusercontent.com/62828746/219497202-5ffe206e-7c0c-4d89-9d2e-2f0a4409437d.png)
+
+Power result before and after ECO.
+![image](https://user-images.githubusercontent.com/62828746/219497248-c46157fb-2408-4873-ba3a-f0df458100be.png)
+
+</details> 
 	
 	
 	
