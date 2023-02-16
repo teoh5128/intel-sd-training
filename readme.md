@@ -296,10 +296,78 @@
   </details>   
     
     
++ **[ Day 21 - Placement and CTS labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-21--placement-and-cts-labs)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Placement and CTS] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---placement-and-cts)
+ 
+  </details>  
+  
+  <details><summary>  Lab  </summary>
     
+  * [Lab - Placement and CTS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---placement-and-cts) 
+  
+  </details>   
     
++ **[ Day 22 - Day 22 CTS analysis labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-22--cts-analysis-labs)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - CTS] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---cts)
+ 
+  </details>  
+  
+  <details><summary>  Lab  </summary>
     
+  * [Lab - CTS analysis](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---cts-analysis) 
+  
+  </details>   
     
+
++ **[ Day 23 - Clock gating technique](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-23--clock-gating-technique)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Clock gating technique] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---clock-gating-technique)
+ 
+  </details>  
+  
+  <details><summary>  Lab  </summary>
+    
+  * [Lab - Routing](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2-lab---routing) 
+  
+  </details>  
+	
+	
+	
++ **[ Day 24 - Timing violations and ECO](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-24--timing-violations-and-eco)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Timing violations and ECO] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-violations-and-eco)
+ 
+  </details>  
+  
+  <details><summary>  Lab  </summary>
+    
+  * [Lab - ECO](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---eco) 
+  * [Lab - Decap cell](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---decap-cell) 
+	  
+  </details>  	
+	
+	
+	
++ **[ Day 25 - RISC-V core RTL2GDS flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-25--risc-v-core-rtl2gds-flow)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - RTL2GDS flow] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---rtl2gds-flow)
+ 
+  </details>  
+  
+
+	
+	
+	
+	
+	
+	
 ## :bookmark:	Day 0
 ### :bulb: Theory - System/Tool Setup Check. GitHub ID creation
 
