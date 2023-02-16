@@ -4618,9 +4618,27 @@ report_clock_timing –type transition <skew,latency and summary>
 	
 	
 ## Day 24  Timing violations and ECO  
-### Theory - 
-<details><summary> CTS </summary>
+### Theory - Timing violations and ECO 
+<details><summary> Timing violations </summary>
 	
++ If a timing path is violating setup timing (assuming we are targetting a certain clock frequency), can try following method to bring the setup slack back to a positive value by:
+  * Decreasing data path delay
+  * Choosing a flip-flop with less setup time requirement
+  * Increasing clock skew
+	
+</details> 
+
+<details><summary> ECO (Engineering Change Order) </summary>
+* ECO refers to the phase of physical design stage where engineers seal all of the signoff checks that were left open during PnR stage.
+* Timing, DRC and IR are usually closeable in PnR but ultimate closed in ECO phase.
+* ECO is the practice of introducing logic directly into the gate level netlist corresponding to a change that happens in the RTL.
+* This owes to design mistake repairs or a change request from customer.
+
++ Goal of ECO:
+  * complete PnR implementation operation and resolve any outstanding issues.
+  * comes in role when all of the final stage accomplishments are made.
+  * to accomodate last-minutes design revision. 
+  * compared to full chip resin, ECO save more time and money.
 	
 </details> 
 
