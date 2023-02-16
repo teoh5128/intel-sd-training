@@ -4531,6 +4531,45 @@ Compare QoR result before and after set propagated clock.
 </details> 
 
 
+## Day 22  CTS analysis labs
+### Theory - CTS
+
+<details><summary> CTS </summary>
+	
+	
+</details> 
+
+### Lab - CTS analysis
+
+<details><summary> CTS analysis </summary>
+
+check clock tree - 
+![image](https://user-images.githubusercontent.com/62828746/219478471-7c654622-9bd6-4b31-9c67-f8e0cf68cb7d.png)
+
+Review warning using "man" command
+![image](https://user-images.githubusercontent.com/62828746/219478664-edfb1e5f-06f3-43f1-8625-1de77f2f462d.png)
+
+* legalize placement - To avoid cell overlapping, cells have their own legalized locations hence can use legalize placement to place cell on their legal position.
+* Placement legalization - placed macros are legally oriented with standard cell rows.
+![image](https://user-images.githubusercontent.com/62828746/219478613-71d4fdae-f363-436e-816b-927af17789a7.png)
+
+* check legality - check legality such as orientation and overlapping for the objects present in design.
+* if there's issues, need to fix warning/violations before proceed to next steps.
+![image](https://user-images.githubusercontent.com/62828746/219478737-49f1e5e4-33ff-4240-92ef-bef0fa11c637.png)
+	
+report_clock_timing –type transition <skew,latency and summary>
+* summary : Specify  a  summary  report,  which  shows  the  worst instances  of transition time, latency and skew over the clock networks or subnetworks of interest. If you specify a  summary report,  you  can  use only the -clock, -to_list,  -from_list, -include_uncertainty_in_skew, -nosplit, and  -significant_dig- its options.
+![image](https://user-images.githubusercontent.com/62828746/219478805-dc4747b7-4d5f-42aa-b1ba-afddc4ae6ba3.png)
+
+* report_clock_timing - Reports timing attributes of clock networks. </br>
+ -type report_type: Specifies  the  type  of report to be generated.  Allowed values are as follows:
+* transition : Specify a transition time report.
+* latency : Specify a latency report. Note that only  clock  paths that reach right trigger edge at endpoint will be reported.
+* skew  : Specify a skew report; you cannot use the -launch, -cap- ture, -rise, -fall, and -lesser_than options if you specify  a skew  report, and you can use the -include_uncertainty_in_skew option only in a skew, interclock_skew, or summary report.
+![image](https://user-images.githubusercontent.com/62828746/219478851-cd7d4038-eecc-40b6-b222-042ff05de851.png)
+
+	
+</details> 
 
 
 	
