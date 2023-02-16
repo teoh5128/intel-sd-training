@@ -4554,7 +4554,26 @@ Compare QoR result before and after set propagated clock.
 ### Theory - CTS
 
 <details><summary> CTS </summary>
+
+* Clock is not propagated before CTS so after clock tree build in CTS stage we consider hold timings and try to meet all hold violations.
+
++ CTS target:
+  * Skew
+  * Insertion delay
+
++ CTS goal:
+  * Max Tran
+  * Max cap
+  * Max fan-out
+  * A buffer tree is built to balance the loads and minimize skew, there are levels of buffer in the clock tree between the clock source and clock sinks.
 	
++ Checks after CTS:
+  * In latency report check is skew is minimum? And insertion delay is balanced or not.
+  * In qor report check is timing (especially HOLD) met, if not why?
+  * In utilization report check Standard cell utilization is acceptable or not?
+  * Check global route congestion?
+  * Check placement legality of cells.
+  * Check whether the timing violations are related to the constrained paths or not like not defining false paths, asynchronous paths, half-cycle paths, multi-cycle paths in the design.
 	
 </details> 
 
@@ -4595,12 +4614,27 @@ report_clock_timing –type transition <skew,latency and summary>
 ### Theory - Clock gating technique
 
 <details><summary> Clock gating technique </summary>
+
+* Clock gating is one of the techniques used to save the dynamic power of clock elements in the design.
+* The principle behind clock gating is to stop the clock of those sequential elements whose data is not toggling. RTL level code talks only about data transfer.
+* Clock gating is one of the most popular techniques used in many synchronous circuits for reducing dynamic power dissipation and it is helpful for decreasing the ability of power wasted by digital circuits. 
+* In clock gating technique, the unwanted clock signal is deactivated or blocked and by this activity, low dynamic power consumption can be achieved.
++ Clock gating techniques used for dynamic power reduction:
+  * Gate based clock gating
+  * Latch based clock gating
+  * Flip-flop based clock gating
+  * Synthesis based clock gating
+  * Data driven based clock gating
+  * Auto gated clock gating
+  * Look ahead based clock gating
 	
+Comparison of clock gating techniques:
+![image](https://user-images.githubusercontent.com/62828746/219501457-38dbc4ed-1bbb-4b0a-9286-452a08fd2675.png)
+Refer from: (https://ieeexplore.ieee.org/document/8544281)
 	
 </details> 
 
 ### Lab - Routing
-
 
 <details><summary> Routing </summary>
 
@@ -4658,6 +4692,35 @@ Power result before and after ECO.
 </details> 
 	
 	
+### Lab - Decap cell 
+
+<details><summary> Decap cell </summary>	
+	
+</details> 
 	
 	
 	
+	
+	
+## Day 25  RISC-V core RTL2GDS flow
+### Theory - RTL2GDS flow
+
+<details><summary> RTL2GDS flow </summary>
+	
+![image](https://user-images.githubusercontent.com/62828746/219503845-a32ee599-c30d-447a-8d22-900b903ed478.png)
+
+</details> 	
+
+
+
+
+
+## Day 26  Introduction to mixed-signal flow
+### Theory - Introduction to mixed-signal flow 
+
+<details><summary> Introduction to mixed-signal flow </summary>
+	
+</details> 
+
+
+
