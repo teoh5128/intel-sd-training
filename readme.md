@@ -4489,7 +4489,52 @@ Source vsdbabysoc.tcl [refer script here](https://github.com/teoh5128/intel-sd-t
 	
 	
 	
+
+## Day 21  Placement and CTS labs
+### Theory - Placement
+
+<details><summary> Placement </summary>
 	
+	
+</details> 
+
+### Theory - CTS
+
+<details><summary> CTS </summary>
+
+	
+</details> 
+
+### Lab - Placement and CTS
+
+<details><summary> Placement and CTS </summary>
+
+report_pin_placement -self > $REPORTS_DIR_PLACE_PINS/report_port_placement.rpt
+![image](https://user-images.githubusercontent.com/62828746/219468930-ac77b217-691e-4d27-8d8f-7728dc9480aa.png)
+
+redirect -file $REPORTS_DIR_TIMING_ESTIMATION/${DESIGN_NAME}.post_estimated_timing.rpt
+![image](https://user-images.githubusercontent.com/62828746/219469064-9ca62a40-9ae8-41b8-a53f-0ee89eb60c29.png)
+
+redirect -file $REPORTS_DIR_TIMING_ESTIMATION/${DESIGN_NAME}.post_estimated_timing.qor
+![image](https://user-images.githubusercontent.com/62828746/219469148-c8152a33-832d-4c15-9634-4b3cf6c02dd1.png)
+
+redirect -file $REPORTS_DIR_TIMING_ESTIMATION/${DESIGN_NAME}.post_estimated_timing.qor.sum
+![image](https://user-images.githubusercontent.com/62828746/219469255-799f4d4b-56d1-42b9-9d51-bd6e41c923b2.png)
+
+After run CTS, review clock connection in visual mode window.
+![image](https://user-images.githubusercontent.com/62828746/219469348-ece12677-1b27-4378-9203-bd510069dd20.png)
+
+Compare report timing result before and after set propagated clock.
+![image](https://user-images.githubusercontent.com/62828746/219469407-e3a09175-e1f5-49be-b8e3-f6a4225ae682.png)
+
+Compare QoR result before and after set propagated clock.
+![image](https://user-images.githubusercontent.com/62828746/219469460-6492ca01-63f9-4a6a-9a8f-a1ba817c37ee.png)
+
+</details> 
+
+
+
+
 	
 	
 	
