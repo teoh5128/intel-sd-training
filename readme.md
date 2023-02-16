@@ -4491,14 +4491,12 @@ Source vsdbabysoc.tcl [refer script here](https://github.com/teoh5128/intel-sd-t
 	
 
 ## Day 21  Placement and CTS labs
-### Theory - Placement
+### Theory - Placement and CTS
 
-<details><summary> Placement </summary>
+<details><summary> Placement and CTS </summary>
 	
 	
 </details> 
-
-### Theory - CTS
 
 <details><summary> CTS </summary>
 
