@@ -4572,7 +4572,30 @@ report_clock_timing –type transition <skew,latency and summary>
 </details> 
 
 
+## Day 23  Clock gating technique
+### Theory - Clock gating technique
+
+<details><summary> Clock gating technique </summary>
 	
+	
+</details> 
+
+### Lab - Routing
+
+
+<details><summary> Routing </summary>
+
+* Power routing also called pre-routing.
+* Pre-routing includes creating Power rings, stripes/mesh/grid and standard cell power rails.	
+![image](https://user-images.githubusercontent.com/62828746/219487658-38eed277-9f2f-4012-a00c-f4488465979d.png)
+
+* Clock routing - after done with clock tree balancing after all the clock cells placement, will go for the final routing of clock nets and fix it.
+* After clock routing, whatever left out will be ised for signal routing.
+![image](https://user-images.githubusercontent.com/62828746/219489095-b6235356-0df5-4da7-be44-9170b6b20389.png)
+
+</details> 
+
+
 	
 	
 	
