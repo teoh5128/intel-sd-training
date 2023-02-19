@@ -4595,6 +4595,25 @@ Reference from: https://asic-soc.blogspot.com/2007/10/clock-tree-synthesis-cts.h
 	
 </details> 
 
+
+<details><summary> Core Utilization </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/219945526-aa32c15f-87b7-43a3-9bf0-da202d8175a3.png)
+	
++ **Core Utilization (Cu):**
+  * It indicates the amount of core area used for cell placement.
+  * The number is calculated as a ratio of the total cell area (for hard macros and standard cells or soft macro cells) to the core area. 
+  * In general 70 to 80% of utilization is fixed because more number of inverters and buffers will be added during the process of CTS (Clock Tree Synthesis) in order to maintain minimum skew.   
+	
+![image](https://user-images.githubusercontent.com/62828746/219945561-a66b56dc-b7ae-4ca9-b972-713a1243e896.png)
+
+* A core utilization of 0.8, for example, means that 80% of the core area is used for cell placement and 20 percent is available for routing.
+* If chips is fully covering the core area, the core utilization will be 100%.
+	
+</details> 
+
+
+
 ### :pencil2: Lab - Placement and CTS
 
 <details><summary> Placement and CTS </summary>
