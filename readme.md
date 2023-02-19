@@ -4800,16 +4800,29 @@ Power result before and after ECO.
 
 <details><summary> What are mixed signal design </summary>
 
+* Analog signal: continuous time-varying signal
+* Digital signal: noncontinuous signal that takes on only a finite number of values
+* Mixed sigbal: make use of both of analog and digital signals.
+* Mixed-signal ICs are integrated circuits that contain both analog and digital circuitry on one chip or a single design.
+* Mixed signal designs providing the most powerful features of both analog and digital circuitry in a single chip solution.
+* Mixed-signal ICs are used in a wide variety of applications and application-specific integrated circuits (ASICs).
 	
 </details> 
 
+
 <details><summary> Analog and Mixed signal(Digital and Analog) FLow </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/219940144-cfe83188-6eed-4424-b3ed-d870c703ce9e.png)
 
 	
 </details> 
 
 <details><summary> Block Diagram Representation for Mixed Signal Design </summary>
 
+![image](https://user-images.githubusercontent.com/62828746/219940167-9290f93d-3162-4c34-b62e-ce62b2d2d90d.png)
+
+ADCs and DACs
+The two clearest examples of mixed-signal ICs are analog to digital converters (ADCs) and digital to analog converters (DACs). Since these convert analog to digital or digital to analog, they must contain circuitry for both.
 	
 </details> 
 
