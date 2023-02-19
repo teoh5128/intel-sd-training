@@ -4795,15 +4795,39 @@ Power result before and after ECO.
 </details> 	
 
 
-
-
-
 ## :bookmark:  Day 26  Introduction to mixed-signal flow
 ### :bulb:  Theory - Introduction to mixed-signal flow 
 
-<details><summary> Introduction to mixed-signal flow </summary>
+<details><summary> What are mixed signal design </summary>
+
 	
 </details> 
 
+<details><summary> Analog and Mixed signal(Digital and Analog) FLow </summary>
+
+	
+</details> 
+
+<details><summary> Block Diagram Representation for Mixed Signal Design </summary>
+
+	
+</details> 
+
+<details><summary> Introduction to Various Files </summary>
+
+	
+</details> 
+
+
+## :bookmark:  Day 26  Introduction to crosstalk - glitch and delta delay
+### :bulb:  Theory - Glitch and Delta delay
+
+<details><summary> Glitch </summary>
+	
+</details> 
+
+<details><summary> Delta Delay </summary>
+	
+</details> 
 
 
