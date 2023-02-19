@@ -4758,9 +4758,6 @@ Power result before and after ECO.
 ![image](https://user-images.githubusercontent.com/62828746/219497248-c46157fb-2408-4873-ba3a-f0df458100be.png)
 
 </details> 
-	
-	
-### :pencil2:  Lab - Decap cell 
 
 <details><summary> Decap cell </summary>	
 
