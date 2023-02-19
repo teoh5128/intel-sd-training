@@ -4763,9 +4763,24 @@ Power result before and after ECO.
 ### :pencil2:  Lab - Decap cell 
 
 <details><summary> Decap cell </summary>	
-	
+
+**Decap Cells vs Filler Cells**
++ Decap cells: 
+  * Decap cells are on-chip decoupling capacitors (Extrinsic Capacitances) 
+  * Decap cells are typically poly gate transistors where source and drain are connected to the ground rail, and the gate is connected to the power rail.
+  * They are added in the design between power and ground rails to counter functional failures due to dynamic IR drop or to reduce noise in mixed signal designs.
+  * Decap cells help to smoothen out the glitches and ground bounce.
+
++ Filler cells:
+  * Physical only cells which provide N-well continuity and avoid N-Well spacing DRC.
+  * Are inserting for density tules to meet core utilization targets and to avoid sagging of layer.
+  * Are inserted at last stage of PnR (Placement and Routing)
+  * Filler cells are also useful for ECO.
+  
+![image](https://user-images.githubusercontent.com/62828746/219937064-798fa630-c9c8-4925-addb-dde1729d29ea.png)
+![image](https://user-images.githubusercontent.com/62828746/219937077-e40e70a8-2724-4ad7-a7d0-15148adec731.png)
+
 </details> 
-	
 	
 	
 	
