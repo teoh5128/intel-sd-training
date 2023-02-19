@@ -4878,6 +4878,30 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 
 <details><summary> What are IP Cores </summary>
 
+* IP (intellectual property) core is a functional block of logic or data used to make a field-programmable gate array (FPGA) or application-specific integrated circuit (ASIC) for a product.
+* IP core consists of a block of logic or data that is used in a semiconductor chip.
+
+* **Benefits of IP Cores:** support design re-use, accomodate repeated reuse of previously designed components.
+	
++ **Example of cores**
+    * universal asynchronous receiver/transmitter
+    * Central Processing Unit (CPU)
+    * Ethernet controllers
+    * Peripheral Component Interconnect interfaces
+    * Microcontrollers
+    * Standard bus interfaces
+
++ **Two types of IP Cores:**
+    * Hard IP Cores: physical layout of a hard macro-IP is finished and fixed in a particular process technology.
+    * Soft IP Cores: can be customized during the physical design phase and mapped to any process technology.
+
+* **How it actually works in the semiconductor industry**
+
+![image](https://user-images.githubusercontent.com/62828746/219944636-b2254e44-6da1-412c-b28a-d543da50e4b7.png)
+
+* Driven by rapid speed of development of various electronic products in consumer market, semiconductor design industry is facing high pressure on delivering newer solutions at equality high speed.
+* There's are ways of dealing with such pressures, such as in term of Designer, Design Methodologies (using different type of design methodology or restrict number of features of the IC)), Tools and Flows (using better automation tools)
+* Moore's Law states that the number of transistors on a microchip doubles every two years.
 	
 </details> 
 
