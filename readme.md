@@ -4875,7 +4875,7 @@ cell .tf | Cell TF | Contains information of cell's width and height
 .lib |  Technology Library source file | Technology libraries contain information about the characteristics and functions of each cell provided in a semiconductor vendor’s library	
 .gds and .oasis | GDS and Oasis File | Final output file givn to fabricate person. GDS II is a file format similar to JPEG, DOCX, XLSX etc to enable a layout design to be transferred from one place to another  (IP owner handoff to PD team, PD tea, to foundry for fabrication), to be viewed/used for verifications like Physical verfifications checks by EDA tools.
 
-**VLSI Physical Design Flow**
+**VLSI Physical Design Flow** </br>
 ![image](https://user-images.githubusercontent.com/62828746/219942464-90f0b2e2-3b98-423e-8f2b-2841a1dc6d3d.png)
 
 + **We need these files for the flow:**
