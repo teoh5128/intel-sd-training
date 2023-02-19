@@ -4814,20 +4814,65 @@ Power result before and after ECO.
 
 ![image](https://user-images.githubusercontent.com/62828746/219940144-cfe83188-6eed-4424-b3ed-d870c703ce9e.png)
 
+* For the analog part, after capture schematic, analog simulation is used to simulate both analog and mixed signals.
+* While for digital part, design specifications are taken first and followed by behavioral simulation for the required circuit.
+* Analog design physical layout and verifications will be performed for the analog part
+* Logic synthesis and place and route shall be performed for the digital part.
+* At the end, full chip assembly, physical and functional verification will be performed.
 	
 </details> 
 
 <details><summary> Block Diagram Representation for Mixed Signal Design </summary>
 
+The two clearest examples of mixed-signal ICs are analog to digital converters (ADCs) and digital to analog converters (DACs). Since these convert analog to digital or digital to analog, they must contain circuitry for both.
+	
 ![image](https://user-images.githubusercontent.com/62828746/219940167-9290f93d-3162-4c34-b62e-ce62b2d2d90d.png)
 
-ADCs and DACs
-The two clearest examples of mixed-signal ICs are analog to digital converters (ADCs) and digital to analog converters (DACs). Since these convert analog to digital or digital to analog, they must contain circuitry for both.
+* Mixed signal design includes analog input components, which are connected to the digital core (e.g. RAM, ROM or DSP) through an ADC. 
+* The digital output of the digital core is fed into a DAC, whose analog output is further transmitted to an analog output unit.
+* ADC (analog-to-digital converter):  converts a analog signal into an digital signal
+* DAC (digital-to-analog converter): converts a digital signal into an analog signal
 	
 </details> 
 
 <details><summary> Introduction to Various Files </summary>
 
+There are different types of file generated during a design cycle or data received by the library vendor/foundry.
+Few of them have different extensions, we can identify the type of content in that file by knowing the extensions.
+
+List of the various input file required in physical deisgn:
+![image](https://user-images.githubusercontent.com/62828746/219943642-a3486e43-a61d-4e4c-9fb2-7a1cec23edc0.png)
+
+**Various type of file**
+**File Extensions**    | **Name**                  | **Contents** 
+---------------------- | ------------------------- | ------------------------- 
+.lef |  Library Exchange Format | Standard cells are often saved in this format, contains physical properties such as width, height ot std cell
+.tf |  Vendor Technology File | This file contains technology-specific information such as the names, characteristics (physical and electrical) for each metal layer, and design rules. These information are required to route a design
+cell .tf | Cell TF | Contains information of cell's width and height
+.view | MMMC (Multi Mode Multi corner) view | Used during the physical design gives the analysis of the design over varied modes & corners.
+.tluplus | RC Coefficient | TLUPlus models are a set of models containing advanced process effects that can be used by the parasitic extractors in Synopsys place-and-route tools for modeling
+.lib |  Technology Library source file | Technology libraries contain information about the characteristics and functions of each cell provided in a semiconductor vendor’s library	
+.gds and .oasis | GDS and Oasis File | Final output file givn to fabricate person. GDS II is a file format similar to JPEG, DOCX, XLSX etc to enable a layout design to be transferred from one place to another  (IP owner handoff to PD team, PD tea, to foundry for fabrication), to be viewed/used for verifications like Physical verfifications checks by EDA tools.
+
+**VLSI Physical Design Flow**
+![image](https://user-images.githubusercontent.com/62828746/219942464-90f0b2e2-3b98-423e-8f2b-2841a1dc6d3d.png)
+
++ **We need these files for the flow:**
+  * LEF File
+  * LIB File
+  * TF File (TLU+ File)
+
+	
+**Source of Various Files**	
+**Name of Inputs**                | **File Format**                                 | **Given by**
+-------------------------------   | ---------------------------------------------   | --------------------------------------------- 
+Netlist                           | .v (verilog ) | Synthesis Team
+Synopsys Design Constraints (SDC) | .sdc (which written in tcl) | Synthesis Team
+Timing Library/Logical Library    | .lib (liberty file) | Vendors
+Physical Library                  | .lef (layout format exchange) | Vendors
+Technology File                   | .tf/.techlef | Foundry
+TLU+ (Table Look Up)              | .tlup | Foundry
+	
 	
 </details> 
 
