@@ -4818,6 +4818,11 @@ Power result before and after ECO.
 	
 </details> 
 
+<details><summary> What are IP Cores </summary>
+
+	
+</details> 
+
 
 ## :bookmark:  Day 26  Introduction to crosstalk - glitch and delta delay
 ### :bulb:  Theory - Glitch and Delta delay
