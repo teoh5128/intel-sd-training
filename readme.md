@@ -347,8 +347,8 @@
   
   <details><summary>  Lab  </summary>
     
-  * [Lab - ECO](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---eco) 
-  * [Lab - Decap cell](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---decap-cell) 
+  * [Lab - ECO and Decap Cells](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---eco-and-decap-cells) 
+
 	  
   </details>  	
 	
@@ -362,7 +362,12 @@
   </details>  
   
 
-	
++ **[ Day 26 - Day 26 Introduction to mixed-signal flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-26--introduction-to-mixed-signal-flow)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Theory - Introduction to mixed-signal flow] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-mixed-signal-flow)
+ 
+  </details>  	
 	
 	
 	
@@ -4903,7 +4908,7 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 </details> 
 
 
-## :bookmark:  Day 26  Introduction to crosstalk - glitch and delta delay
+## :bookmark:  Day 27  Introduction to crosstalk - glitch and delta delay
 ### :bulb:  Theory - Glitch and Delta delay
 
 <details><summary> Glitch </summary>
