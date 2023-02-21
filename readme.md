@@ -3914,14 +3914,14 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
  
 <details><summary> Netlist binding and initial place design </summary>
 
-* **First and very important stage in placement and routing is to bind netlist with physical cells.
+* First and very important stage in placement and routing is to bind netlist with physical cells.
 
 ![image](https://user-images.githubusercontent.com/62828746/220431184-294854e0-927c-4832-876a-41cec2df91c4.png)
 
 ![image](https://user-images.githubusercontent.com/62828746/220431254-49022db8-0dc3-4817-a1be-7e9b8260bef5.png)
 
 	
-* **After give proper size for the gates, next steps taken will be the Placement
+* After give proper size for the gates, next steps taken will be the Placement.
 	
 ![image](https://user-images.githubusercontent.com/62828746/220431304-ebcca5de-6134-43f4-bf37-28b1ff2f4fca.png)
 	
@@ -3932,10 +3932,17 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
  
 <details><summary> Optimize placement using estimated wire-length and capacitance </summary>
  
+* In this stage where we estimate wire length and capacitance, based on that, repeaters are inserted.
+
+![image](https://user-images.githubusercontent.com/62828746/220436894-f86e9ccd-2794-45a4-b152-e5f5b64d9015.png)
+
+	
 </details> 
  
 <details><summary> Final placement optimization </summary>
- 
+
+![image](https://user-images.githubusercontent.com/62828746/220439006-390b0e2f-596d-4213-8389-909c7a97aae9.png)
+	
 </details> 
  
 <details><summary> Need for libraries and characterization </summary>
