@@ -4951,12 +4951,50 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 ## :bookmark:  Day 27  Introduction to crosstalk - glitch and delta delay
 ### :bulb:  Theory - Glitch and Delta delay
 
+<details><summary> What is Signal Integrity and Crosstalk? </summary>
+
+* Both signal integrity and crosstalk are the quality checks of the clock routes.
+	
+ * **Signal integrity:** is the ability of an electrical signal to carry information reliably and resist the effects of high-frequency electromagnetic interference from nearby signals.
+
++ **Signal Integrity effects that might occur in design**
+    * Crosstalk
+    * Electromigration and its issues prevention
+    * Antennae Effect: more formally plasma induced gate oxide damage, is an effect that can potentially cause yield and reliability problems during the manufacture of MOS integrated circuits.
+	
+* **Crosstalk:** is the undesirable electrical interaction between two or more physically adjacent nets due to capacitive cross-coupling. It's a type of noise signal that corrupts the actual signal while transmission through the communication medium. If teo signals are close enough, they can cause crosstalk due to coupling capacitance.
+	
++ **Crosstalk has two effects**
+    * **Crosstalk Delay:** Due to timing error of signals. When the one net is switching at a faster rate and the other is switching at a slower speed, due to corsstalk, the speedy net will boost-up slower net.
+    * **Crosstalk Noise:** One net is idle (logic 0 or 1) and the other net is on transition mode (switching from 0 or 1). There maybe the introduction of unwanted signal transition due to coupling capacitor.
+
+</details> 
+
+<details><summary> Aggressor and Victim Nets </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/220447969-4e4df9e0-f4b8-4677-ade2-b7db080c9bc3.png)
+Refer page: https://www.vlsi4freshers.com/2020/04/crosstalk-and-noise.html
+	
+• Aggressor net: a net that creates effects/impacts on the other net.
+* Victim net: a net that receives undesirable cross-coupling effects from aggressor net.
+	
+</details> 
+
 <details><summary> Glitch </summary>
+
+
+Refer page: https://link.springer.com/content/pdf/10.1007/978-0-387-93820-2_6.pdf
 	
 </details> 
 
 <details><summary> Delta Delay </summary>
 	
+</details> 
+
+### :pencil2:  Lab - ECO and Decap Cells
+
+<details><summary> Glitch and Delta delay </summary>
+
 </details> 
 
 ## :bookmark:  Day 28 Introduction to DRC/LVS 
@@ -4971,20 +5009,7 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 </details> 
 
 
-
-## :bookmark:  Day 27  Introduction to crosstalk - glitch and delta delay
-### :bulb:  Theory - Glitch and Delta delay
-
-<details><summary> Glitch </summary>
-	
-</details> 
-
-<details><summary> Delta Delay </summary>
-	
-</details> 
-
-
-### :pencil2:  Lab - ECO and Decap Cells
+### :pencil2:  Lab - Physical Verification using SKY130
 
 <details><summary> Physical Verification using SKY130 </summary>
 
@@ -4993,5 +5018,18 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 <details><summary> VSDIAT </summary>
 
 </details> 
+
+
+## :bookmark:  Day 29  DRC/LVS Labs
+### :bulb:  Theory - DRC/LVS Labs
+
+<details><summary>  </summary>
+	
+</details> 
+
+<details><summary>  </summary>
+	
+</details> 
+
 
 	
