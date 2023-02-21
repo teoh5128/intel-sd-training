@@ -3913,7 +3913,21 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 ### :bulb: Theory - Library Binding and Placement
  
 <details><summary> Netlist binding and initial place design </summary>
- 
+
+* **First and very important stage in placement and routing is to bind netlist with physical cells.
+
+![image](https://user-images.githubusercontent.com/62828746/220431184-294854e0-927c-4832-876a-41cec2df91c4.png)
+
+![image](https://user-images.githubusercontent.com/62828746/220431254-49022db8-0dc3-4817-a1be-7e9b8260bef5.png)
+
+	
+* **After give proper size for the gates, next steps taken will be the Placement
+	
+![image](https://user-images.githubusercontent.com/62828746/220431304-ebcca5de-6134-43f4-bf37-28b1ff2f4fca.png)
+	
+![image](https://user-images.githubusercontent.com/62828746/220431347-157402e7-9bc2-4478-84bb-5e78ef7c1403.png)
+
+	
 </details> 
  
 <details><summary> Optimize placement using estimated wire-length and capacitance </summary>
