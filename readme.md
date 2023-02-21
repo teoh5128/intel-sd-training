@@ -4981,7 +4981,7 @@ Refer page: https://www.vlsi4freshers.com/2020/04/crosstalk-and-noise.html
 	
 </details> 
 
-<details><summary> Glitch </summary>
+<details><summary> Crosstalk - Glitch </summary>
 
 
 Refer page: https://link.springer.com/content/pdf/10.1007/978-0-387-93820-2_6.pdf
@@ -4992,7 +4992,50 @@ Refer page: https://link.springer.com/content/pdf/10.1007/978-0-387-93820-2_6.pd
 	
 </details> 
 
-### :pencil2:  Lab - ECO and Decap Cells
+<details><summary> Crosstalk Analysis </summary>
+
+
+**Function**                | **Command**                                 
+----------------------------| ---------------------------------------------
+Enable Prime Time SI        | set_app_var si_enable_analysis true 
+Back-annotate the design with cross-coupling capacitance information in a SPEF or GPD file | read_parasitics -keep_capacitive_couplingfile_name.spf 
+Viewing the Crosstalk Analysis Report	| report_timing -transition_time -crosstalk_delta -input_pins -significant_digits 4	
+To get a list of all the victim nets with a delay violationor within2.0time units of a violation, listed in order of delta delay | report_si_bottleneck -cost_type delta_delay \ -slack_lesser_than2.0
+Bottleneck command reports nets where three or more active aggressors are affecting the net | report_si_bottleneck -cost_type delta_delay \ - minimum_active_aggressors 3	
+Crosstalk Net Delay Calculation | report_delay_calculation -crosstalk \ -from[get_pins g1/Z] -to[get_pins g2/A]
+	
+	
+**Checking/Report Type**    | **Command**                        
+----------------------------| --------------- 
+check timing | no_driving_cell
+check timing | ideal_clocks	
+check timing | partial_input_delay	
+check timing | unexpandable_clocks
+timing reports | report_timing
+timing reports | -crosstalk_delta
+timing reports | report_si_bottleneck
+timing reports | report_delay_calculation –crosstalk
+timing reports | report_si_double_switching
+timing reports | report_noise	
+bottleneck reports | report_si_bottleneck
+bottleneck reports | report_bottleneck
+bottleneck reports | delta_delay
+bottleneck reports | delta_delay_ratio
+bottleneck reports | total_victim_delay_bump
+bottleneck reports | delay_bump_per_aggressor
+bottleneck reports | report_delay_calculation –crosstalk
+bottleneck reports | size_cell
+bottleneck reports | set_coupling_separation
+bottleneck reports | -include_clock_nets
+bottleneck reports | minimum_active_aggressor	
+check crosstalk setting | report_si_delay_analysis
+check crosstalk setting | report_si_noise_analysis
+check crosstalk setting | report_si_aggressor_exclusion
+	
+</details> 
+
+
+### :pencil2:  Lab - Glitch and Delta delay
 
 <details><summary> Glitch and Delta delay </summary>
 
