@@ -4959,4 +4959,39 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 	
 </details> 
 
+## :bookmark:  Day 28 Introduction to DRC/LVS 
+### :bulb:  Theory - Introduction to DRC/LVS 
 
+<details><summary> Physical Design Flow </summary>
+	
+</details> 
+
+<details><summary> Physical Verification </summary>
+	
+</details> 
+
+
+
+## :bookmark:  Day 27  Introduction to crosstalk - glitch and delta delay
+### :bulb:  Theory - Glitch and Delta delay
+
+<details><summary> Glitch </summary>
+	
+</details> 
+
+<details><summary> Delta Delay </summary>
+	
+</details> 
+
+
+### :pencil2:  Lab - ECO and Decap Cells
+
+<details><summary> Physical Verification using SKY130 </summary>
+
+</details> 	
+
+<details><summary> VSDIAT </summary>
+
+</details> 
+
+	
