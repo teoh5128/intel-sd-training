@@ -4972,10 +4972,11 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 
 <details><summary> Aggressor and Victim Nets </summary>
 
-![image](https://user-images.githubusercontent.com/62828746/220447969-4e4df9e0-f4b8-4677-ade2-b7db080c9bc3.png)
+![image](https://user-images.githubusercontent.com/62828746/220450393-76133b2c-4f6b-4c64-9394-c5cb4e6abe68.png)
+
 Refer page: https://www.vlsi4freshers.com/2020/04/crosstalk-and-noise.html
 	
-• Aggressor net: a net that creates effects/impacts on the other net.
+* Aggressor net: a net that creates effects/impacts on the other net.
 * Victim net: a net that receives undesirable cross-coupling effects from aggressor net.
 	
 </details> 
