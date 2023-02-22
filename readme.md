@@ -362,13 +362,30 @@
   </details>  
   
 
-+ **[ Day 26 - Day 26 Introduction to mixed-signal flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-26--introduction-to-mixed-signal-flow)**
++ **[ Day 26 - Introduction to mixed-signal flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-26--introduction-to-mixed-signal-flow)**
   <details><summary> Theory </summary>
    
-  * [Theory - Theory - Introduction to mixed-signal flow] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-mixed-signal-flow)
+  * [Theory - Introduction to mixed-signal flow] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-mixed-signal-flow)
  
   </details>  	
 	
++ **[ Day 27 - Introduction to crosstalk - glitch and delta delay](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-27--introduction-to-crosstalk---glitch-and-delta-delay)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Glitch and Delta delay] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---glitch-and-delta-delay)
+	  
+  * [Lab - Glitch and Delta delay] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---glitch-and-delta-delay) 
+	  
+  </details>  	
+	
++ **[ Day 28 - Introduction to DRC/LVS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-28-introduction-to-drclvs)**
+  <details><summary> Theory </summary>
+   
+  * [Theory - Introduction to DRC/LVS] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-drclvs)
+ 
+  * [Lab - Physical Verification using SKY130] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---physical-verification-using-sky130) 
+	  
+  </details>  		
 	
 	
 	
