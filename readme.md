@@ -5061,6 +5061,8 @@ check crosstalk setting | report_si_aggressor_exclusion
 
 <details><summary> Glitch and Delta delay </summary>
 
+	
+	
 </details> 
 
 ## :bookmark:  Day 28 Introduction to DRC/LVS 
