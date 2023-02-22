@@ -4981,6 +4981,7 @@ Refer page: https://www.vlsi4freshers.com/2020/04/crosstalk-and-noise.html
 	
 </details> 
 
+
 <details><summary> Crosstalk - Glitch </summary>
 
 When one net is switching (Agressor Net), and another net (Victim Net) is constant then switching signal may cause spikes on other net becauseof which coupling capacitance (Cc) occurs between two nets, this is called as crosstalk noise.
@@ -4990,6 +4991,8 @@ When one net is switching (Agressor Net), and another net (Victim Net) is consta
 Refer page: https://link.springer.com/content/pdf/10.1007/978-0-387-93820-2_6.pdf
 
 * Glitch (positive or negative) due to charge transferred by the switching aggressors through the coupling capacitances.
+
+</details> 
 
 <details><summary> Types of Glitches </summary>
 
