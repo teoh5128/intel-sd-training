@@ -5157,13 +5157,6 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 ## :bookmark:  Day 29  DRC/LVS Labs
 ### :bulb:  Theory - DRC/LVS Labs
 
-<details><summary>  </summary>
-	
-</details> 
-
-<details><summary>  </summary>
-	
-</details> 
 
 
 	
