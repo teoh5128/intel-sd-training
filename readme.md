@@ -5061,21 +5061,84 @@ check crosstalk setting | report_si_aggressor_exclusion
 
 <details><summary> Glitch and Delta delay </summary>
 
+* Since pt_shell only do converting but not extracting, we use icc2_shell to do the extraction.
+>> invoke icc2_shell, to extract spef from verilog file
+>> write_parasitics -format spef -output vsdbabysoc.spef
 	
+![image](https://user-images.githubusercontent.com/62828746/220747467-95ba97fb-adf9-4d08-a2ec-5ffd3f96d017.png)
+
+* Setup Design
+>> pt_shell -> start the PrimeTime tool by using the command </br>
+>> set search_path </br>
+>> set link_library </br>
+>> set target_library </br>
+>> read_verilog  </br>
+>> link_design </br>
+>> check current design </br>
+>> read_sdc  </br>
+>> set_app_var si_enable_analysis true </br>
+>> read_parasitics -format SPEF -keep_capacitive_coupling <.spef>  </br>
+
+* Refer to pt user manual to review useful command. </br>
+![image](https://user-images.githubusercontent.com/62828746/220747603-e9a3abaa-0d53-464f-8eed-45f3b2b7db61.png)
+
+* Invoke prime time shell and read in design. </br>
+![image](https://user-images.githubusercontent.com/62828746/220747771-abaa3ade-863e-49c7-af16-aefa619c52e3.png)
+![image](https://user-images.githubusercontent.com/62828746/220747811-e8111523-ff5b-49b0-a533-6047b625a361.png)
+
+* Enable signal integrity analysis and read parasitic file. Errors found, reported bottleneck result seems incorrect. </br>
+![image](https://user-images.githubusercontent.com/62828746/220747878-6060372f-9d80-4f6a-bfca-c0d4623e35cd.png)
+![image](https://user-images.githubusercontent.com/62828746/220747911-23d55007-e141-439f-8e8c-497c1b1b024a.png)
+
+* Edit vsdbabysoc verilog file and re-load deisgn. </br>
+![image](https://user-images.githubusercontent.com/62828746/220747954-3967cc09-a1a9-4c5a-990e-07c124e061f7.png)
+![image](https://user-images.githubusercontent.com/62828746/220748025-d71a45df-e969-40f6-9222-611e357b3b04.png)
+![image](https://user-images.githubusercontent.com/62828746/220748255-b7d0e8a7-901c-4074-ab76-44491e323364.png)
+![image](https://user-images.githubusercontent.com/62828746/220748298-cfee3980-71fb-47dc-8524-c50be78a79ab.png)
+
+[Pending debug...]	
 	
 </details> 
+
 
 ## :bookmark:  Day 28 Introduction to DRC/LVS 
 ### :bulb:  Theory - Introduction to DRC/LVS 
 
 <details><summary> Physical Design Flow </summary>
-	
+
+![image](https://user-images.githubusercontent.com/62828746/220750778-9f8cdb8f-9c85-453a-8046-48bb59688418.png)
+
+* After routing, design layout is complete. 
+* To ensure design works as expected, need to undegoes a number of checks to verify that the drawn layout works as intended.
+* Physical verification and sign-off stage in physical design flow is to check whether you have a mask layout that matches what you think the circuit should be. 	
 </details> 
 
 <details><summary> Physical Verification </summary>
+
+* Physical verification will verify that the post-layout netlist and the layout are equivalent. 
+* For example, this process will make sure all connections specified in the netlist is present in the layout
+* We use dedicated physical verification tools for signoff LVS and DRC checks. 
+	
++ Major physical verification checks:
+  * **DRC (Design Rule Check):** to ensure that your layout matches all the rules provided by the foundy for that specific process. It determine if the layout satisfies a set of rules required for manufacturing. The most common of these are spacing rules between metals, minimum width rules, via rules.
+  * **LVS (Layout vs Schematic):** to ensure that your layout netlist matches with your schematic netlist. It verify that the layout you have created is functionally the same as the schematic/netlist of the design. And ensure all the connections and there shouldn’t any missing connections.
+  * **ARC (Antenna Rule Checking):** Process antenna effect or “plasma induced gate oxide damage” is a manufacturing effect.
+  * **ERC (Electrical rule check):** Involves checking a designfor all electrical connections that are considered dangerous.	
 	
 </details> 
 
+<details><summary> Understanding Skywater PDK – Layers </summary>
+	
+![image](https://user-images.githubusercontent.com/62828746/220750168-82f18194-13bc-4750-9a43-3e8e05eebf5a.png)
+Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
+	
+* The SKY130 is a mature 180nm-130nm hybrid technology.
+* Mostly MOSFeT has minimum length of 150nm, while memory layout use 130nm.
+
+![image](https://user-images.githubusercontent.com/62828746/220750348-212481ce-b5d7-482c-9b75-52c241b99dbc.png)
+	
+	
+</details> 
 
 ### :pencil2:  Lab - Physical Verification using SKY130
 
