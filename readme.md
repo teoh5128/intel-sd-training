@@ -4983,12 +4983,34 @@ Refer page: https://www.vlsi4freshers.com/2020/04/crosstalk-and-noise.html
 
 <details><summary> Crosstalk - Glitch </summary>
 
+When one net is switching (Agressor Net), and another net (Victim Net) is constant then switching signal may cause spikes on other net becauseof which coupling capacitance (Cc) occurs between two nets, this is called as crosstalk noise.
 
+![image](https://user-images.githubusercontent.com/62828746/220521274-f1cefe24-a388-46f7-92f6-6ba21b86675e.png)
+	
 Refer page: https://link.springer.com/content/pdf/10.1007/978-0-387-93820-2_6.pdf
+
+* Glitch (positive or negative) due to charge transferred by the switching aggressors through the coupling capacitances.
+
+<details><summary> Types of Glitches </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/220522115-9a8c312e-02f2-4111-9dcc-3f9e9e99dbf7.png)
+	
+* **Rise:** positive or rise glitch on a victim net which is steady low.
+* **Fall:** negative glitch on a steady high signal. A falling aggressor net induces a fall glitch on a steady high signal.
+* **Overshoot:** Happens when a rising aggressor couples to a victim net which is steady high. There is still a glitch which takes the victim net voltage above its steady high value.
+* **Undershoot:** Happebs when a falling aggressor when coupled to a steady low victim net causes an undershoot glitch on the victim net.
 	
 </details> 
 
+
 <details><summary> Delta Delay </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/220523437-79dc6acd-2c53-46ca-98eb-331443c7591d.png)
+
+* In case of crosstalk delta delay both aggressor and victim nets are switching and that impacts the delay of the cell. 
++ Here two types of switching can take place.
+  * Aggressor and victim nets switching in the opposite direction.
+  * Aggressor and victim nets switching in the same direction.
 	
 </details> 
 
