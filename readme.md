@@ -5160,7 +5160,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 	
 </details> 
 
-### :pencil2:  Lab - Physical Verification using SKY130
+### :pencil2:  Lab - Tool installations and basic DRC/LVS design flow
 
 <details><summary> Check Tool Installations </summary>
 
