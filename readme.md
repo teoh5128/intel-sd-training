@@ -5162,13 +5162,195 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 
 ### :pencil2:  Lab - Physical Verification using SKY130
 
-<details><summary> Physical Verification using SKY130 </summary>
+<details><summary> Check Tool Installations </summary>
+
+* Setup required directory. </br>
+ >> cd /home/huifen.teoh/Desktop/training </br>
+ >> mkdir inverter </br>
+ >> cd inverter </br>
+ >> mkdir xschem </br>
+ >> mkdir mag </br>
+ >> mkdir netgen </br>
+ >> cd xschem </br>
+ >> ln -s /usr/share/pdk/sky130A/libs.tech/xschem/xschemrc </br>
+ >> ln -s /usr/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit </br>
+ >> cd ../mag/ </br>
+ >> ln -s /usr/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc </br>
+ >> cd ../netgen/ </br>
+ >> ln -s /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl </br>
+
+![image](https://user-images.githubusercontent.com/62828746/221076447-070816a5-ad93-4a37-8873-9588539a9bf0.png)
+
+</details>
+
+<details><summary> Creating Sky130 Device Layout In Magic </summary>
+	
+* Review SKY130 schematic in xschem. </br>
+>> cd inverter/xschem/ </br>
+>> xschem </br>
+![image](https://user-images.githubusercontent.com/62828746/221101452-8368d171-0eac-4ba2-a626-89d2d39fac7b.png)
+
+* Review SKY130 layout in magic. </br>
+>> cd ../mag/ </br>
+>> magic </br>
+>> magic -d XR     (To invoke a cairo graphics package that uses 3D acceleration to get better rendering than the default graphics) </br>
+>> magic -d -OGL   (An OpenGL based graphics package) </br>
+
+![image](https://user-images.githubusercontent.com/62828746/221101492-fe43a446-53c5-45f5-8323-228c57bb1a27.png)
+![image](https://user-images.githubusercontent.com/62828746/221101684-13d35fe7-b37c-4b4c-b6fe-a681cb158282.png)
+![image](https://user-images.githubusercontent.com/62828746/221101722-a6dfe9d0-ac49-4e19-a742-3f55f8f7850c.png)
+![image](https://user-images.githubusercontent.com/62828746/221101756-9f922cc9-3579-4664-b55e-f4ef6cb16bff.png)
+
+</details>
+
+<details><summary> Creating Simple Schematic In Xschem </summary>
+	
+![image](https://user-images.githubusercontent.com/62828746/221101783-5e150dd7-4858-4f35-9619-d8a367fb7607.png)
+![image](https://user-images.githubusercontent.com/62828746/221101818-56d33270-af08-4197-84d5-6e43de2a571c.png)
 
 </details> 	
 
-<details><summary> VSDIAT </summary>
+
+<details><summary> Creating Symbol And Exporting Schematic In Xschem </summary>
+	
+* To validate the created schematic (inverter.sch), need to create a testbench to test it. </br>
+ 
+![image](https://user-images.githubusercontent.com/62828746/221110435-b61aa85c-59ee-41c4-8773-570fe5cb2d78.png)
+![image](https://user-images.githubusercontent.com/62828746/221110744-cb58d447-14c6-4544-a856-1240b05d6540.png)
+![image](https://user-images.githubusercontent.com/62828746/221110798-a2ac1976-dd5e-4769-ad45-1978cc810909.png)
+	
+* After save inverter testbench, inverter_tb.sch, generate netlist and run simulation. </br>
+
+![image](https://user-images.githubusercontent.com/62828746/221113369-e7034bf5-d114-448e-a63c-06efc6313a07.png)
+
+* Verify simulated waveform, create a layout for it. </br>
+
+>> close simulation window, go to open and load inverter schematic. </br>
+>> Under "simulation" tab, choose "LVS netlist: Top level is a subckt". </br>
+>> After done, generate netlist for schmeatic and exit Xschem. </br>
+
+![image](https://user-images.githubusercontent.com/62828746/221113418-6e3e3590-6266-47bf-a3a6-901aa31e30ba.png)
+	
+</details> 
+
+<details><summary> Importing Schematic To Layout And Inverter Layout Steps </summary>
+
+* Import schematic to layout in Magic
+
+![image](https://user-images.githubusercontent.com/62828746/221118419-8a9afef3-a883-4e38-84c8-8ecd6c2ffc49.png)
+
+* Set parameters for pfet and nfet to make layout wire-up easier: </br>
+>> pfet : Top guard ring via coverage -> 100 (wil put a local interconnect to metal1 via the top of the guard ring) </br>
+>> pfet : Drain via coverage -> +40 (to split source, drain and contacts) </br>
+>> pfet : Source via coverage -> -40 (to split source, drain and contacts) </br>
+	
+>> nfet : ottom guard ring via coverage -> 100 (to split source, drain and contacts) </br>
+>> nfet : Drain via coverage -> +40 (to split source, drain and contacts) </br>
+>> nfet : Source via coverage -> -40 (to split source, drain and contacts) </br>
+	
+![image](https://user-images.githubusercontent.com/62828746/221118480-2ad55c17-673f-4ec5-907b-c87042d2b48d.png)
+	
+</details> 
+
+<details><summary> Final DRC/LVS Checks And Post Layout Simulations </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221125195-c088f205-13e7-44d7-8022-456beb0fc98c.png)
+![image](https://user-images.githubusercontent.com/62828746/221125305-6b7a9f34-8b25-4edb-acaa-19ea0935d8ae.png)
 
 </details> 
+
+### :pencil2:  Lab - Labs for GDS read/write, extraction, DRC, LVS and XOR setup
+
+<details><summary>  GDS Read </summary>
+
+>> cif list istyle > list current effected style
+>> cif listall istyle -> let us know all the possible style
+
+![image](https://user-images.githubusercontent.com/62828746/221138721-d92bd79f-eaf8-4dd5-85b9-5bcc6ea43a6b.png)
+![image](https://user-images.githubusercontent.com/62828746/221138762-6a66d620-ab8f-4b88-9fc5-d9137fc27f55.png)
+![image](https://user-images.githubusercontent.com/62828746/221138810-a202db9a-f947-4b6d-9e6e-a13feb71eb9b.png)
+
+</details> 
+
+<details><summary> Ports </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221184978-8ee2f72d-e3ae-46d1-9bdd-31ba2465248d.png)
+![image](https://user-images.githubusercontent.com/62828746/221185030-59e06b37-9dd7-44a9-bbf9-82784c661bcf.png)
+![image](https://user-images.githubusercontent.com/62828746/221185076-cb64286c-669e-4182-80eb-52e200c3445f.png)
+![image](https://user-images.githubusercontent.com/62828746/221185128-29d311c5-f13b-431e-ad45-9f227d223194.png)
+![image](https://user-images.githubusercontent.com/62828746/221185163-2f340a3c-c888-489a-a9ac-dc6e8f0e57a6.png)
+
+</details> 
+
+<details><summary> Abstract Views </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221185227-5ab4fd5f-5d51-4d13-823d-5f8ac9efed03.png)
+![image](https://user-images.githubusercontent.com/62828746/221185274-2c28e283-13de-4600-bac3-c84e14a09877.png)
+![image](https://user-images.githubusercontent.com/62828746/221185320-0b94597f-9eef-49d3-bd3b-e2776cbc00f0.png)
+![image](https://user-images.githubusercontent.com/62828746/221185353-c14def57-d332-4088-9a7f-1153b0a8344b.png)
+![image](https://user-images.githubusercontent.com/62828746/221185431-441728c4-f22d-4b69-982e-7d8796eab176.png)
+	
+</details> 
+
+<details><summary> Basic Extraction </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221196032-2c5e08ff-4aa8-4122-ae9b-4daa346bb04e.png)
+![image](https://user-images.githubusercontent.com/62828746/221196069-9e44935a-be6d-415d-871f-6a2d0327b877.png)
+![image](https://user-images.githubusercontent.com/62828746/221196109-5034e8ba-4f7d-4d41-a44a-ffcb038beee8.png)
+![image](https://user-images.githubusercontent.com/62828746/221196157-d1cfd541-c431-4e2c-88da-062dba0fbf1e.png)
+![image](https://user-images.githubusercontent.com/62828746/221196204-ec10d534-fb6c-473d-9a14-3988a1d5cfc3.png)
+![image](https://user-images.githubusercontent.com/62828746/221196238-f9043760-cb4e-4b57-832c-2916125d7652.png)
+
+</details> 
+
+<details><summary> Setup For DRC </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221248224-b256934b-b095-402c-858b-723026216c13.png)
+![image](https://user-images.githubusercontent.com/62828746/221248264-be4c3f66-59f1-4b1e-a65f-85db36a7c28e.png)
+![image](https://user-images.githubusercontent.com/62828746/221248315-a0ab37cb-57c2-4321-846d-1a147379a522.png)
+![image](https://user-images.githubusercontent.com/62828746/221248359-6668f67f-26df-46c3-9e38-ae5f427dc20c.png)
+![image](https://user-images.githubusercontent.com/62828746/221248398-71d32107-6539-4af2-85d9-836dff7cbd02.png)
+	
+</details> 
+ 
+<details><summary> Setup For LVS </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221252375-fa512b5a-f4a1-44cb-b22a-6f9a396a4003.png)
+![image](https://user-images.githubusercontent.com/62828746/221252447-92cad2cf-806e-41d6-90ad-3039e650c946.png)
+	
+</details> 
+
+<details><summary> Setup For XOR </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221256639-7363173b-75fe-43aa-905f-a483c0329706.png)
+
+</details> 
+
+
+### :pencil2:  Lab - Labs for GDS read/write, extraction, DRC, LVS and XOR setup
+
+<details><summary> Lab For Width Rule and Spacing Rule </summary>
+
+* Experince design rule checking using open source tool, Magic </br>
+>> git clone https://github.com/RTimothyEdwards/vsd_drc_lab	
+
+![image](https://user-images.githubusercontent.com/62828746/221267958-e0705d9f-e5e7-4d23-a2c2-bfcb21254eda.png)
+
+* Review and fix drc error in exercise 1. </br>
+![image](https://user-images.githubusercontent.com/62828746/221268010-19da24e5-84ea-43c1-bc34-27fd9838695b.png)
+![image](https://user-images.githubusercontent.com/62828746/221268123-b3e7cf52-8eab-401b-8d3f-be749d8e39e3.png)
+![image](https://user-images.githubusercontent.com/62828746/221268173-f58172a8-f9a9-435c-b1b2-97607cfff011.png)
+
+* Review and fix drc error in exercise 1b. </br>
+![image](https://user-images.githubusercontent.com/62828746/221268226-248903a5-8d3e-416d-81c8-6460a20f7f11.png)
+![image](https://user-images.githubusercontent.com/62828746/221268296-04bdaee9-350f-44ce-acbb-cd5330c99772.png)
+
+</details> 
+
+
+
+
+
 
 
 ## :bookmark:  Day 29  DRC/LVS Labs
