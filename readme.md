@@ -4847,7 +4847,7 @@ The two clearest examples of mixed-signal ICs are analog to digital converters (
 	
 ![image](https://user-images.githubusercontent.com/62828746/219940167-9290f93d-3162-4c34-b62e-ce62b2d2d90d.png)
 
-Refer from: https://onedrive.live.com/?authkey=%21AGGlQctwDok8dXs&id=E0E9B5EEF85B162E%21101023&cid=E0E9B5EEF85B162E&parId=root&parQt=sharedby&o=OneUp
+Refer from: [Live Session](https://onedrive.live.com/?authkey=%21AGGlQctwDok8dXs&id=E0E9B5EEF85B162E%21101023&cid=E0E9B5EEF85B162E&parId=root&parQt=sharedby&o=OneUp)
 	
 * Mixed signal design includes analog input components, which are connected to the digital core (e.g. RAM, ROM or DSP) through an ADC. 
 * The digital output of the digital core is fed into a DAC, whose analog output is further transmitted to an analog output unit.
