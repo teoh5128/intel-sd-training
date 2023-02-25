@@ -4922,7 +4922,7 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 
 ![image](https://user-images.githubusercontent.com/62828746/219944636-b2254e44-6da1-412c-b28a-d543da50e4b7.png)
 
-Refer from: https://onedrive.live.com/?authkey=%21AGGlQctwDok8dXs&id=E0E9B5EEF85B162E%21101023&cid=E0E9B5EEF85B162E&parId=root&parQt=sharedby&o=OneUp	
+Refer from: [Live Session](https://onedrive.live.com/?authkey=%21AGGlQctwDok8dXs&id=E0E9B5EEF85B162E%21101023&cid=E0E9B5EEF85B162E&parId=root&parQt=sharedby&o=OneUp)
 	
 * Driven by rapid speed of development of various electronic products in consumer market, semiconductor design industry is facing high pressure on delivering newer solutions at equality high speed.
 * There's are ways of dealing with such pressures, such as in term of Designer, Design Methodologies (using different type of design methodology or restrict number of features of the IC)), Tools and Flows (using better automation tools)
