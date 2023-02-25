@@ -5308,9 +5308,8 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 ![image](https://user-images.githubusercontent.com/62828746/221268173-f58172a8-f9a9-435c-b1b2-97607cfff011.png)
 
 * Review and fix drc error in exercise 1b. </br>
-![image](https://user-images.githubusercontent.com/62828746/221268226-248903a5-8d3e-416d-81c8-6460a20f7f11.png)
-![image](https://user-images.githubusercontent.com/62828746/221268296-04bdaee9-350f-44ce-acbb-cd5330c99772.png)
 ![image](https://user-images.githubusercontent.com/62828746/221372947-1b220ad6-84f7-44fa-847a-981a1f479cbb.png)
+![image](https://user-images.githubusercontent.com/62828746/221268296-04bdaee9-350f-44ce-acbb-cd5330c99772.png)
 
 </details> 
 
