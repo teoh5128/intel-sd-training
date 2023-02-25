@@ -3921,8 +3921,6 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 ![image](https://user-images.githubusercontent.com/62828746/215451836-18cfa1f8-4170-42a3-b08e-ff6ef4568ce9.png)
 ![image](https://user-images.githubusercontent.com/62828746/215451868-025d2968-70d9-4fb9-b650-a3a2f252f3bd.png)
 ![image](https://user-images.githubusercontent.com/62828746/215451911-8c2178ef-bda2-4d32-be67-2d6a52f16bea.png)
-
-<WIP...>
  
    </details> 
    
@@ -3960,44 +3958,6 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 
 ![image](https://user-images.githubusercontent.com/62828746/220439006-390b0e2f-596d-4213-8389-909c7a97aae9.png)
 	
-</details> 
- 
-<details><summary> Need for libraries and characterization </summary>
- 
-</details> 
- 
-<details><summary> Netlist binding and initial place design </summary>
- 
-</details> 
- 
- 
-### :bulb: Theory - Cell design and characterization flows
- 
-<details><summary> Inputs for cell design flow </summary>
- 
-</details> 
- 
-<details><summary> Circuit design step </summary>
- 
-</details> 
- 
-<details><summary> Layout design step </summary>
- 
-</details> 
- 
-<details><summary> Typical characterization flow </summary>
- 
-</details> 
- 
- 
-### :bulb: Theory - General timing characterization parameters
- 
-<details><summary> Timing threshold definitions </summary>
- 
-</details> 
- 
-<details><summary> Propagation delay and transition time </summary>
- 
 </details> 
  
 
@@ -4887,6 +4847,8 @@ The two clearest examples of mixed-signal ICs are analog to digital converters (
 	
 ![image](https://user-images.githubusercontent.com/62828746/219940167-9290f93d-3162-4c34-b62e-ce62b2d2d90d.png)
 
+Refer from: https://onedrive.live.com/?authkey=%21AGGlQctwDok8dXs&id=E0E9B5EEF85B162E%21101023&cid=E0E9B5EEF85B162E&parId=root&parQt=sharedby&o=OneUp
+	
 * Mixed signal design includes analog input components, which are connected to the digital core (e.g. RAM, ROM or DSP) through an ADC. 
 * The digital output of the digital core is fed into a DAC, whose analog output is further transmitted to an analog output unit.
 * ADC (analog-to-digital converter):  converts a analog signal into an digital signal
@@ -4902,6 +4864,8 @@ Few of them have different extensions, we can identify the type of content in th
 List of the various input file required in physical deisgn:
 ![image](https://user-images.githubusercontent.com/62828746/219943642-a3486e43-a61d-4e4c-9fb2-7a1cec23edc0.png)
 
+Refer from: https://www.slideshare.net/vlsisyst/vlsi-physical-design-flow
+	
 **Various type of file**
 **File Extensions**    | **Name**                  | **Contents** 
 ---------------------- | ------------------------- | ------------------------- 
@@ -4958,6 +4922,8 @@ TLU+ (Table Look Up)              | .tlup | Foundry
 
 ![image](https://user-images.githubusercontent.com/62828746/219944636-b2254e44-6da1-412c-b28a-d543da50e4b7.png)
 
+Refer from: https://onedrive.live.com/?authkey=%21AGGlQctwDok8dXs&id=E0E9B5EEF85B162E%21101023&cid=E0E9B5EEF85B162E&parId=root&parQt=sharedby&o=OneUp	
+	
 * Driven by rapid speed of development of various electronic products in consumer market, semiconductor design industry is facing high pressure on delivering newer solutions at equality high speed.
 * There's are ways of dealing with such pressures, such as in term of Designer, Design Methodologies (using different type of design methodology or restrict number of features of the IC)), Tools and Flows (using better automation tools)
 * Moore's Law states that the number of transistors on a microchip doubles every two years.
