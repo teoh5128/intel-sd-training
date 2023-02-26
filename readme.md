@@ -4028,7 +4028,8 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 * Example of SPICE deck: 
 
 ![image](https://user-images.githubusercontent.com/62828746/221365863-adad9f16-38a7-42f3-a5fe-61a49431e94c.png)
-	
+
+ </details>
  
 ### :bulb: Theory - Inception of Layout Â CMOS fabrication process
  
