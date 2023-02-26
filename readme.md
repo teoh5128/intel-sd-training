@@ -5380,7 +5380,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 
 </details> 
 
-<details><summary> And Antenna Rules </summary>
+<details><summary> Latch-up And Antenna Rules </summary>
 
 ![image](https://user-images.githubusercontent.com/62828746/221421761-8a486cb4-3c71-4928-8872-8fa1676eca6c.png)
 ![image](https://user-images.githubusercontent.com/62828746/221421776-4bc38f2b-9ccb-455a-87b0-f1d8d350833f.png)
