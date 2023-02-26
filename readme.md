@@ -370,6 +370,10 @@
   <details><summary> Theory </summary>
    
   * [Theory - Glitch and Delta delay](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---glitch-and-delta-delay)
+
+  </details> 
+	
+  <details><summary>  Lab  </summary>
 	  
   * [Lab - Glitch and Delta delay](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---glitch-and-delta-delay) 
 	  
@@ -380,7 +384,11 @@
    
   * [Theory - Introduction to DRC/LVS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-drclvs)
  
-  * [Lab - Introduction to SkyWater SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---introduction-to-skywater-sky130)  		
+  </details> 
+	
+  <details><summary>  Lab  </summary>
+	  
+  * [Lab - Introduction to SkyWater SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---introduction-to-skywater-sky130)  	
   * [Lab - DRC/LVS Theory and Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---drclvs-theory-and-labs)   
   * [Lab - Front-end and Back-end DRC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---front-end-and-back-end-drc) 
 	  
