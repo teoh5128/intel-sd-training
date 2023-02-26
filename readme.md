@@ -380,10 +380,9 @@
    
   * [Theory - Introduction to DRC/LVS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-drclvs)
  
-  * [Lab - Physical Verification using SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---physical-verification-using-sky130)  		
-  * [](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---gds-readwrite-extraction-drc-lvs-and-xor-setup) 
-	  
-  * [](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---gds-readwrite-extraction-drc-lvs-and-xor-setup-1) 
+  * [Lab - Introduction to SkyWater SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---introduction-to-skywater-sky130)  		
+  * [Lab - DRC/LVS Theory and Labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---drclvs-theory-and-labs)   
+  * [Lab - Front-end and Back-end DRC](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---front-end-and-back-end-drc) 
 	  
   </details>  		
 	
