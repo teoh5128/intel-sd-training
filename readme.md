@@ -4004,44 +4004,40 @@ Yotube video can be refered for further information:(https://www.youtube.com/pla
 
 <details><summary> SPICE deck creation for CMOS inverter </summary>
  
-</details> 
- 
-<details><summary> Switching Threshold Vm </summary>
- 
-</details> 
- 
-<details><summary> Static and dynamic simulation of CMOS inverter </summary>
- 
-</details> 
+* **SPICE deck:** is a characteristic information about the netlist. Contains connectivity information, input for simulation and tap points.
++ Inside SPICE desk includes: 
+  * Component Connectivity
+  * Component Values
+  * Identify Nodes and Name Nodes
+
+![image](https://user-images.githubusercontent.com/62828746/221365852-96c6b7a2-6d81-4d74-add0-6d6784288da5.png)
+
++ **Component Connectivity:**
+  * **Substrate pin:** In spice deck/netlist need to describe the connectivity of substrate, while the substrate might be the connection pin in PMOS/NMOS hence need to describe clearly the connectivity of the substrate pins.
+  * **Ouput load capacitor:** Basically decided by the input capacitance of the circuit. 
+
++ **Component Values:**
+  * Describe components value such as channel width and PMOS/NMOS size
+  * Ideally, PNOMS should be twice or thrice bigger in size than the NMOS. 
+
++ **Identify Nodes and Name Nodes:**
+  * **Nodes:** means those 2 point which between has a components.
+  * For example if want to define output load capacitor (cload), will say the cload lies between out and 0. 
+	
+	
+* Example of SPICE deck: 
+
+![image](https://user-images.githubusercontent.com/62828746/221365863-adad9f16-38a7-42f3-a5fe-61a49431e94c.png)
+	
  
 ### :bulb: Theory - Inception of Layout Â CMOS fabrication process
  
 <details><summary>  Create Active regions </summary>
  
-</details> 
- 
-<details><summary> Formation of N-well and P-well </summary>
- 
-</details> 
- 
-<details><summary> Formation of gate terminal </summary>
- 
-</details> 
+![image](https://user-images.githubusercontent.com/62828746/221367807-fe9903b8-8909-4967-bcc2-8ef5221d63a9.png)
+![image](https://user-images.githubusercontent.com/62828746/221367834-1fe9a330-741a-43f8-a900-213dfa605ae8.png)
+![image](https://user-images.githubusercontent.com/62828746/221367861-206344bd-b118-498b-aab9-bafe89a1fec0.png)
 
-<details><summary> Lightly doped drain (LDD) formation </summary>
- 
-</details> 
- 
-<details><summary>  Source Â drain formation </summary>
- 
-</details> 
-  
-<details><summary> Local interconnect formation </summary>
- 
-</details> 
- 
-<details><summary> Higher level metal formation </summary>
- 
 </details> 
  
  
@@ -4220,49 +4216,30 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 
 
-
-
-
 ## :bookmark: Day 18
 ### :bulb: Theory - Timing modelling using delay tables
  
 <details><summary> Introduction to delay tables </summary>
  
+* Power gating helps to reduce power consumption, by shutting off the current to blocks of the circuit that are not in use.
+	
+![image](https://user-images.githubusercontent.com/62828746/221370553-95224744-b517-4c9b-98fb-94a0b0494f76.png)
+![image](https://user-images.githubusercontent.com/62828746/221370564-1e510202-96e6-454a-971b-6f9031c1e88c.png)
+![image](https://user-images.githubusercontent.com/62828746/221370570-b05916f1-1d73-4067-b5fb-a9ffb7e0d23f.png)
+
 </details> 
  
 <details><summary> Delay table usage Part 1 </summary>
- 
+
+* Delay table (Look-up table) provide delay of each cell with different size and threshold voltage.
+* Cell delay and output transtion listed in the delay table are based on input transition and output load of the cell.
+* Delay table is used for standard cell timing model.
+	
+![image](https://user-images.githubusercontent.com/62828746/221370582-42929b99-8f21-4995-b6c8-48564bb8a5f4.png)
+![image](https://user-images.githubusercontent.com/62828746/221370590-7a3da73e-6fa2-48c2-951a-2863fcc8cb82.png)
+	
 </details> 
  
-<details><summary> Delay table usage Part 2 </summary>
- 
-</details> 
- 
-### :bulb: Theory - Timing analysis with ideal clocks using openSTA
-
-<details><summary> Setup timing analysis and introduction to flip-flop setup time </summary>
- 
-</details> 
-
-<details><summary>  Introduction to clock jitter and uncertainty </summary>
- 
-</details> 
-
-### :bulb: Theory - Clock tree synthesis TritonCTS and signal integrity
-<details><summary> Clock tree routing and buffering using H-Tree algorithm </summary>
- 
-</details> 
-
-<details><summary> Crosstalk and clock net shielding </summary>
- 
-</details> 
-
-### :bulb: Theory - Timing analysis with real clocks using openSTA
-
-<details><summary> Setup timing analysis using real clocks </summary>
- 
-</details> 
-
 
 
 ### :pencil2: Lab - Timing modelling using delay tables
@@ -4374,29 +4351,33 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 ## :bookmark: Day 19
 ### :bulb: Theory - Routing and design rule check (DRC)
  
-<details><summary> Introduction to Maze Routing Â LeeÂs algorithm </summary>
+## :bookmark: Day 19
+### :bulb: Theory - Final steps for RTL2GDS
  
+<details><summary> Introduction to Maze Routing Lee's algorithm </summary>
+ 
++ **Maze Routing Lee's algorithm:**
+   * It is most widely used algorithm to find path between 2 points.
+   * It guarantess there's exists a valid and shortest path in the routing.
+   * Disadvantages: too time and memory consuming
+   * To overcome this cons, other mode advanced algorithm are introduced: Line search alogoithm and Steiner algorithm.
+   * Has 3 steps, refer to example below.
+	
+* Step1: create best connection between source and target.
+	
+![image](https://user-images.githubusercontent.com/62828746/221371881-d9da2584-e548-4bbf-afe5-a7a653b0b851.png)
+
+* Step2: based on wave-front distance, adjacent filled until S hit T.
+	
+![image](https://user-images.githubusercontent.com/62828746/221371952-ce1dcd41-d91a-4d94-b178-15172f52a622.png)
+
 </details> 
 
-<details><summary> LeeÂs Algorithm conclusion </summary>
- 
-</details> 
+<details><summary> Lee's Algorithm conclusion </summary>
 
-<details><summary> Design Rule Check </summary>
- 
-</details> 
-
-### :bulb: Theory - TritonRoute Features
-<details><summary> TritonRoute feature 1 - Honors pre-processed route guides </summary>
- 
-</details> 
-
-<details><summary> TritonRoute Feature2 & 3 - Inter-guide connectivity and intra- & inter-layer routing </summary>
- 
-</details> 
-
-<details><summary> TritonRoute method to handle connectivity </summary>
- 
+* Step3: shortest and least detoured path is back-traced from T to S.
+![image](https://user-images.githubusercontent.com/62828746/221371970-ee55f1ba-1c00-4059-acd0-3b4a8d357075.png)
+	
 </details> 
 
 ### :pencil2: Lab - Power Distribution Network and routing
@@ -5295,7 +5276,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 
 ### :pencil2:  Lab - Labs for GDS read/write, extraction, DRC, LVS and XOR setup
 
-<details><summary> Lab For Width Rule and Spacing Rule </summary>
+<details><summary> Width Rule and Spacing Rule </summary>
 
 * Experince design rule checking using open source tool, Magic </br>
 >> git clone https://github.com/RTimothyEdwards/vsd_drc_lab	
@@ -5313,6 +5294,114 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 
 </details> 
 
+<details><summary> Wide Spacing Rule And Notch Rule </summary>
+
+* Review and fix drc error in exercise 1c. </br>
+![image](https://user-images.githubusercontent.com/62828746/221374678-43c9daa0-da75-45f6-8595-bffab17f24ee.png)
+![image](https://user-images.githubusercontent.com/62828746/221374690-71edb42c-71ba-4ba3-b238-c8f7f71f4567.png)
+![image](https://user-images.githubusercontent.com/62828746/221374697-3e84b01c-27de-4592-a84a-c9868a012863.png)
+![image](https://user-images.githubusercontent.com/62828746/221374705-9c59bbee-f9f0-4ec9-9561-922335619433.png)
+
+</details> 
+
+<details><summary> Via Size, Multiple Vias, Via Overlap and Autogenerate Vias </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221398004-41826e8d-8e85-4384-917b-5d5d9086a705.png)
+![image](https://user-images.githubusercontent.com/62828746/221398010-697b1241-9ca0-4e45-8895-228c6de10927.png)
+![image](https://user-images.githubusercontent.com/62828746/221398018-3e2a5c96-cee8-4b11-8d7e-14476a05d711.png)
+![image](https://user-images.githubusercontent.com/62828746/221398026-13d4f2a4-d454-4d51-9523-81e85c35d3de.png)
+![image](https://user-images.githubusercontent.com/62828746/221398029-25db9dfa-7318-4589-baf2-94f2dda48f62.png)
+![image](https://user-images.githubusercontent.com/62828746/221398037-a6b64ff0-0962-408b-b5d7-de1dc68c1cda.png)
+
+</details> 
+
+<details><summary> Minumum Area Rule And Minimum Hole Rule </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221399713-cd9615d9-5177-48cf-b830-fab569526a46.png)
+![image](https://user-images.githubusercontent.com/62828746/221399723-d47c0189-9cd9-4a3c-b01d-53e69032ced7.png)
+![image](https://user-images.githubusercontent.com/62828746/221399736-8ec8433d-5dd1-4c8d-a7f6-bb5dc376f3b5.png)
+
+
+</details> 
+
+<details><summary> Wells And Deep N-Well </summary>
+	
+![image](https://user-images.githubusercontent.com/62828746/221401982-cf725035-65ed-4a78-9c7d-faade9921557.png)
+![image](https://user-images.githubusercontent.com/62828746/221401992-845c2054-97a0-4a59-88c1-8646273142dc.png)
+![image](https://user-images.githubusercontent.com/62828746/221401996-456f5088-3227-4c0b-9fac-c19598df4710.png)
+![image](https://user-images.githubusercontent.com/62828746/221402004-58d5a115-98e3-4462-a327-7da0a8a741eb.png)
+![image](https://user-images.githubusercontent.com/62828746/221402017-ebd3b4b0-b70a-4a73-9886-46dae722cba1.png)
+![image](https://user-images.githubusercontent.com/62828746/221402029-14790ef1-03aa-40b3-bf6e-d8afcfbda79e.png)
+![image](https://user-images.githubusercontent.com/62828746/221402040-0f217ba3-142c-430f-a188-9eee100f65d3.png)
+
+</details> 
+
+<details><summary> Derived Layers </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221404188-ce42ae4a-60e3-4533-a704-865a38289f15.png)
+![image](https://user-images.githubusercontent.com/62828746/221404199-5dc7383d-7bb9-4807-855b-937a0b3e7684.png)
+![image](https://user-images.githubusercontent.com/62828746/221404205-1fb546f4-c57c-445d-809e-1df9000e548c.png)
+![image](https://user-images.githubusercontent.com/62828746/221404213-8e6ff24c-05a0-477f-8c24-37259d1a73f8.png)
+![image](https://user-images.githubusercontent.com/62828746/221404220-cb5d9daa-75de-48cc-bb76-026eebdb8901.png)
+
+	
+</details> 
+
+<details><summary>  Paramterized And PDK Devices </summary>
+	
+![image](https://user-images.githubusercontent.com/62828746/221406005-835d04e5-010d-4c2f-a2ce-317b78ce2b19.png)
+![image](https://user-images.githubusercontent.com/62828746/221406010-90095c93-5823-475f-aa99-96d6c8f15a1b.png)
+![image](https://user-images.githubusercontent.com/62828746/221406032-6707a027-0fd4-4246-a393-96bc9a62e145.png)
+
+</details> 
+
+<details><summary> Angle Error And Overlap Rule </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221412751-c81d96c8-3449-4809-a0d9-aa3ba02beb27.png)
+![image](https://user-images.githubusercontent.com/62828746/221412766-c6b615bb-dd98-402b-a014-94bf0939721d.png)
+![image](https://user-images.githubusercontent.com/62828746/221412772-f202ff72-98c6-47cb-8f46-99561aaccab2.png)
+![image](https://user-images.githubusercontent.com/62828746/221412792-e25ea0e5-7403-4771-9232-3eb959a4a05d.png)
+![image](https://user-images.githubusercontent.com/62828746/221412806-998e6970-a07f-492c-87dd-e392c515f442.png)
+![image](https://user-images.githubusercontent.com/62828746/221412814-18b2549a-48fe-4124-b69b-39168e00c82d.png)
+![image](https://user-images.githubusercontent.com/62828746/221412822-41e628c8-9a83-48ac-a618-9ee3bf6f73e8.png)
+![image](https://user-images.githubusercontent.com/62828746/221412827-eb5ed501-4956-47fb-b48b-402635b90388.png)
+![image](https://user-images.githubusercontent.com/62828746/221412838-beeb6821-8e62-4203-92af-798cbe28807d.png)
+![image](https://user-images.githubusercontent.com/62828746/221412851-760b5577-d532-4465-b92d-8438f1d4d7c4.png)
+
+</details> 
+
+<details><summary>  Unimplemented Rules </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221414449-49e4ee29-0251-4482-a9ad-063d0a724c07.png)
+![image](https://user-images.githubusercontent.com/62828746/221414459-a4abe21e-2940-4cc0-bc9b-c67c91ec9898.png)
+![image](https://user-images.githubusercontent.com/62828746/221414465-546e21de-0c7e-476c-9064-7f49fe64982e.png)
+
+</details> 
+
+<details><summary> And Antenna Rules </summary>
+
+![image](https://user-images.githubusercontent.com/62828746/221421761-8a486cb4-3c71-4928-8872-8fa1676eca6c.png)
+![image](https://user-images.githubusercontent.com/62828746/221421776-4bc38f2b-9ccb-455a-87b0-f1d8d350833f.png)
+![image](https://user-images.githubusercontent.com/62828746/221421791-3e6f9c9c-bd4b-4402-80c0-e34c44e20c89.png)
+![image](https://user-images.githubusercontent.com/62828746/221421801-9cdbdd3d-ec11-42d5-958b-8fcc3726cc85.png)
+![image](https://user-images.githubusercontent.com/62828746/221421813-f82bf328-bdae-4367-93c3-72e77f9be361.png)
+![image](https://user-images.githubusercontent.com/62828746/221421830-8c27ed3e-2a7c-4412-9932-e5155758de43.png)
+![image](https://user-images.githubusercontent.com/62828746/221421844-5951f4ad-fc6d-47f7-8c55-69c4537932fa.png)
+
+</details> 
+
+<details><summary> Density Rules </summary>
+	
+![image](https://user-images.githubusercontent.com/62828746/221421857-494e8800-8b22-4b65-92e6-be3289eff326.png)
+![image](https://user-images.githubusercontent.com/62828746/221421873-24b4b6e3-02fc-4aca-86ea-ba7f95604033.png)
+![image](https://user-images.githubusercontent.com/62828746/221421884-dfc80484-4158-49a4-8240-8662cf21072b.png)
+![image](https://user-images.githubusercontent.com/62828746/221421894-b1b7a541-0db2-4e08-8841-39d16407304c.png)
+![image](https://user-images.githubusercontent.com/62828746/221421904-446420ce-b61e-4c56-8027-da28323f55a7.png)
+![image](https://user-images.githubusercontent.com/62828746/221421911-8ee45396-bbcf-48f8-be56-3da169dc028a.png)
+![image](https://user-images.githubusercontent.com/62828746/221421922-b7030c8d-6671-456c-b0ac-5606c9b5d191.png)
+![image](https://user-images.githubusercontent.com/62828746/221421932-124abcc1-4e73-4f7f-8f62-1a91f23bdb24.png)
+
+</details> 
 
 
 
