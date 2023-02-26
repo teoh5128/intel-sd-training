@@ -250,9 +250,7 @@
   <details><summary> Theory </summary>
    
   * [Theory - Timing modelling using delay tables](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-modelling-using-delay-tables)
-  * [Theory - Timing analysis with ideal clocks using openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-analysis-with-ideal-clocks-using-opensta)  
-  * [Theory - Clock tree synthesis TritonCTS and signal integrity](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---clock-tree-synthesis-tritoncts-and-signal-integrity)
-  * [Theory - Timing analysis with real clocks using openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-analysis-with-real-clocks-using-opensta)
+
     
   </details>  
   
@@ -268,8 +266,7 @@
 + **[ Day 19 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-19)**
   <details><summary> Theory </summary>
    
-  * [Theory - Routing and design rule check (DRC)](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---routing-and-design-rule-check-drc)
-  * [Theory - TritonRoute Features](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---tritonroute-features)  
+  * [Theory - Final steps for RTL2GDS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---final-steps-for-rtl2gds)
 
   </details>  
   
@@ -299,7 +296,7 @@
 + **[ Day 21 - Placement and CTS labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-21--placement-and-cts-labs)**
   <details><summary> Theory </summary>
    
-  * [Theory - Placement and CTS] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---placement-and-cts)
+  * [Theory - Placement and CTS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---placement-and-cts)
  
   </details>  
   
@@ -312,7 +309,7 @@
 + **[ Day 22 - Day 22 CTS analysis labs](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-22--cts-analysis-labs)**
   <details><summary> Theory </summary>
    
-  * [Theory - CTS] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---cts)
+  * [Theory - CTS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---cts)
  
   </details>  
   
@@ -326,7 +323,7 @@
 + **[ Day 23 - Clock gating technique](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-23--clock-gating-technique)**
   <details><summary> Theory </summary>
    
-  * [Theory - Clock gating technique] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---clock-gating-technique)
+  * [Theory - Clock gating technique](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---clock-gating-technique)
  
   </details>  
   
@@ -341,7 +338,7 @@
 + **[ Day 24 - Timing violations and ECO](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-24--timing-violations-and-eco)**
   <details><summary> Theory </summary>
    
-  * [Theory - Timing violations and ECO] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-violations-and-eco)
+  * [Theory - Timing violations and ECO](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb-theory---timing-violations-and-eco)
  
   </details>  
   
@@ -357,7 +354,7 @@
 + **[ Day 25 - RISC-V core RTL2GDS flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark-day-25--risc-v-core-rtl2gds-flow)**
   <details><summary> Theory </summary>
    
-  * [Theory - RTL2GDS flow] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---rtl2gds-flow)
+  * [Theory - RTL2GDS flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---rtl2gds-flow)
  
   </details>  
   
@@ -365,25 +362,25 @@
 + **[ Day 26 - Introduction to mixed-signal flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-26--introduction-to-mixed-signal-flow)**
   <details><summary> Theory </summary>
    
-  * [Theory - Introduction to mixed-signal flow] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-mixed-signal-flow)
+  * [Theory - Introduction to mixed-signal flow](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-mixed-signal-flow)
  
   </details>  	
 	
 + **[ Day 27 - Introduction to crosstalk - glitch and delta delay](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-27--introduction-to-crosstalk---glitch-and-delta-delay)**
   <details><summary> Theory </summary>
    
-  * [Theory - Glitch and Delta delay] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---glitch-and-delta-delay)
+  * [Theory - Glitch and Delta delay](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---glitch-and-delta-delay)
 	  
-  * [Lab - Glitch and Delta delay] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---glitch-and-delta-delay) 
+  * [Lab - Glitch and Delta delay](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---glitch-and-delta-delay) 
 	  
   </details>  	
 	
 + **[ Day 28 - Introduction to DRC/LVS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bookmark--day-28-introduction-to-drclvs)**
   <details><summary> Theory </summary>
    
-  * [Theory - Introduction to DRC/LVS] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-drclvs)
+  * [Theory - Introduction to DRC/LVS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-drclvs)
  
-  * [Lab - Physical Verification using SKY130] (https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---physical-verification-using-sky130) 
+  * [Lab - Physical Verification using SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---physical-verification-using-sky130) 
 	  
   </details>  		
 	
