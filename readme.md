@@ -4347,10 +4347,6 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
 
 
  </details>
-
-
-## :bookmark: Day 19
-### :bulb: Theory - Routing and design rule check (DRC)
  
 ## :bookmark: Day 19
 ### :bulb: Theory - Final steps for RTL2GDS
