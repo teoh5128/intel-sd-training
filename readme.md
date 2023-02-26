@@ -380,11 +380,12 @@
    
   * [Theory - Introduction to DRC/LVS](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#bulb--theory---introduction-to-drclvs)
  
-  * [Lab - Physical Verification using SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---physical-verification-using-sky130) 
+  * [Lab - Physical Verification using SKY130](https://github.com/teoh5128/intel-sd-training/blob/main/readme.md#pencil2--lab---physical-verification-using-sky130)  		
+  * []() 
+	  
+  * []() 
 	  
   </details>  		
-	
-	
 	
 	
 ## :bookmark:	Day 0
@@ -5200,7 +5201,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 
 </details> 
 
-### :pencil2:  Lab - Labs for GDS read/write, extraction, DRC, LVS and XOR setup
+### :pencil2:  Lab - GDS read/write, extraction, DRC, LVS and XOR setup
 
 <details><summary>  GDS Read </summary>
 
@@ -5268,7 +5269,7 @@ Refer page: https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
 </details> 
 
 
-### :pencil2:  Lab - Labs for GDS read/write, extraction, DRC, LVS and XOR setup
+### :pencil2:  Lab - GDS read/write, extraction, DRC, LVS and XOR setup
 
 <details><summary> Width Rule and Spacing Rule </summary>
 
